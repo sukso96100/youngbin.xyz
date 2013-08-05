@@ -3,9 +3,9 @@
 # ----------------------- #
 
 url: http://sukso96100.github.io
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+title: Young Bin's Press
+subtitle: Just a Press managed by Young Bin
+author: Young Bin, Han
 simple_search: http://google.com/search
 description:
 
@@ -69,7 +69,7 @@ github_show_profile_link: true
 github_skip_forks: true
 
 # Twitter
-twitter_user:
+twitter_user:sukso96100
 twitter_tweet_button: true
 
 # Google +1

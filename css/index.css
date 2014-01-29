@@ -1,3 +1,8 @@
 .container {
-    padding: 10em;
+    padding: 5em;
+}
+
+.ui.inverted.mainbg.segment {
+background-image: url(../img/mainbg.jpg) !important; 
+  color: #FFFFFF !important;
 }

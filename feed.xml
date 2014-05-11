@@ -27,5 +27,16 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
         <guid isPermaLink="true">http://sukso96100.github.io/jekyll/update/2014/05/12/welcome-to-jekyll/</guid>
       </item>
     
+      <item>
+        <title>Jekyll로 갈아탔습니다</title>
+        <description>&lt;p&gt;블로그 Jekyll 기반으로 갈아타려고, 원래 제가 깃허브에 만들어둔 프로필 페이지.
+방금 Jekyll 로 갈아 엎었습니다. 일단 블로그 삽질 좀 하고, 삽질 어느정도 되면,
+기존 운영하던 블로그에서 포스트들을 모드 옯겨올 생각입니다.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 11 May 2014 00:00:00 +0900</pubDate>
+        <link>http://sukso96100.github.io/2014/05/11/switchinigtojekyll/</link>
+        <guid isPermaLink="true">http://sukso96100.github.io/2014/05/11/switchinigtojekyll/</guid>
+      </item>
+    
   </channel>
 </rss>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Youngbin Han</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</description>
+    <description>Jekyll 기반으로 만들어진 한영빈 의 블로그 입니다. 이 블로그는 아직 미완성이며, 삽질 중입니다. 대략 삽질 끝나면, 기존 Blooger 에서 운영하는 블로그에서 모든 포스트 마이그레이션 예정입니다.</description>
     <link>http://sukso96100.github.io/</link>
     <atom:link href="http://sukso96100.github.io/feed.xml" rel="self" type="application/rss+xml" />
     

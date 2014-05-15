@@ -1,0 +1,18 @@
+.site-header-custom {
+  border-top: 5px solid #333;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 56px;
+  background-image: url(../images/backbg.jpg)
+}
+
+/* Utility */
+
+.wrap-header:before,
+.wrap-header:after { content:""; display:table; }
+.wrap-header:after { clear: both; }
+.wrap-header {
+  max-width: 800px;
+  padding: 0 30px;
+  margin: 0 auto;
+  zoom: 1;
+}

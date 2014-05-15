@@ -2,7 +2,8 @@
 <html>
 
   {% include head.html %}
-
+<!--상단 막대-->
+   
     <body>
 
     {% include header.html %}
@@ -14,6 +15,8 @@
     </div>
 
     {% include footer.html %}
-
+<script src="{{ "/javascript/jquery-1.10.2.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/javascript/semantic.min.js" | prepend: site.baseurl }}"></script>
+        <script src="{{ "/javascript/sidebar.js" | prepend: site.baseurl }}"></script>
     </body>
 </html>

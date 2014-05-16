@@ -1,15 +1,22 @@
-<div class="ui fixed secondary menu">
- <div class="large ui black labeled icon toggle button">
- <i class="list layout icon"></i> 메뉴</div></div>
+
 <header class="site-header-custom">
 <div class="wrap-header">
 
+<div class="ui fixed top menu">
+<div class="wrap-header">
+
+ <a class="toggle button item">
+ <i class="list layout icon"></i> 메뉴</a></div></div>
     <br><br><br>
-    <a href="{{ site.baseurl }}/"><h1 class="ui huge inverted header">{{ site.title }}</h1></a>
+    <a href="{{ site.baseurl }}/"><h1 class="ui huge inverted header">{{ site.title }}</h1></a> 
+
     <br>
+ 
 <!--사이드바-->
         <div class="ui vertical sidebar menu">
+        {% for page in site.pages %}
   <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+  {% endfor %}
         </div>
   </div>
 

@@ -11,7 +11,7 @@
 .wrap-header:after { content:""; display:table; }
 .wrap-header:after { clear: both; }
 .wrap-header {
-  max-width: 800px;
+  max-width: 1000px;
   padding: 0 30px;
   margin: 0 auto;
   zoom: 1;

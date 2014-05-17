@@ -1,0 +1,28 @@
+---
+layout: default
+title: Categories
+---
+
+<div class="home">
+
+  <h1>Categories</h1>
+
+{% for category in site.categories %}
+<div class="ui stacked segment">
+  <h1><a name="{{ category | first }}"><i class="tag icon"></i> {{ category | first }}</h1>
+    {% for posts in category %}
+      {% for post in posts %}
+<div class="ui list">
+  <div class="item">
+    <a href="{{ post.url }}"><div class="header">{{ post.title }}</div></a>
+    {{ post.date | date: "%b %-d, %Y" }}
+  </div>
+</div>
+      {% endfor %}
+    {% endfor %}
+</div>
+{% endfor %}
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

@@ -6,16 +6,19 @@
 <div class="wrap-header">
 
  <a class="toggle button item">
- <i class="list layout icon"></i> 메뉴</a>
+ <i class="list layout icon"></i> MENU</a>
      <a class="item">{{ page.title }}</a>
  </div></div>
     <br><br><br><br>
-    <a href="{{ site.baseurl }}/"><h1 class="ui huge inverted header">{{ site.title }}</h1></a> 
+    <a href="{{ site.baseurl }}/"><h1 class="ui huge inverted header">{{ site.title }}</h1></a>
 
     <br><br>
- 
+
 <!--사이드바-->
         <div class="ui vertical sidebar menu">
+          <div class="item">
+          <a class="toggle button item"><i class="remove icon"></i>CLOSE MENU</a>
+        </div>
         {% for page in site.pages %}
   <a class="item" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
   {% endfor %}

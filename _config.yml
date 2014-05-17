@@ -2,7 +2,7 @@
 title: Youngbin Han
 email: sukso96100@gmail.com
 description: "My own Jekyll based blog"
-baseurl: "http://sukso96100.github.io"
+baseurl: ""
 url: "http://sukso96100.github.io"
 
 # Build settings

@@ -12,7 +12,7 @@
 .wrap-header:after { clear: both; }
 .wrap-header {
   max-width: 1000px;
-  padding: 0 30px;
+  padding: 0 20px;
   margin: 0 auto;
   zoom: 1;
 }

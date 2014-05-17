@@ -2,14 +2,25 @@
 <html>
 
   {% include head.html %}
-<!--상단 막대-->
-   
+
     <body>
 
     {% include header.html %}
 
     <div class="page-content">
       <div class="wrap">
+        <!--Old Web Browser Warning-->
+
+        <!--[if lt IE 9]>
+        <div class="red ui message">
+        <font color="red">
+          The web browser that you are using is too old that it can't display contents properly
+          Please switch to modern web browsers such as Chrome, Firefox, Opera, Internet Explorer 9+
+          사용중인 웹 브라우저가 너무 낡아, 이 웹사이트의 컨텐츠를 제대로 표시하지 못합니다.
+          크롬, 파이어폭스, 오페라, 인터넷 익스플로러9 이상 버전 등의 최신 웹 브라우저를 사용하세요.
+        </font>
+        </div>
+        <![endif]-->
       {{ content }}
       </div>
     </div>

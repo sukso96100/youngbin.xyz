@@ -10,6 +10,9 @@ layout: default
 
   <article class="post-content">
   <div class="ui stacked segment">
+    {% for category in page.categories %}
+    <div class="ui ribbon label">{{ category | capitalize }}</div>
+    {% endfor %}
   {{ content }}
   </div>
   </article>

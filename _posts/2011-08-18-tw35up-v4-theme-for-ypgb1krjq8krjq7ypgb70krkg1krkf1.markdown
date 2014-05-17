@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "TW3.5up v4 테마 뱌포합니다. YP-GB1:KRJQ8,KRJQ7/YP-GB70:KRKG1,KRKF1"
+title: "TW3.5up v4 테마 배포합니다. YP-GB1:KRJQ8,KRJQ7/YP-GB70:KRKG1,KRKF1"
 date: 2011-08-18
-categories: migrated(old) android theme yp-gb1
+categories: migrated(old) android theme yp-gb1 yp-gb70
 ---
 
 전까지 갤플 카페에 배포하다가 이제는 블로그를 통해 배포할려고 합니다.<br>

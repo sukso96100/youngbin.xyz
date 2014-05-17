@@ -24,7 +24,7 @@ https://play.google.com/store/apps/details?id=mobi.cyann.nstools&amp;feature=sea
 <br>
 커널 플레싱 방법은, 커널을 다운받으시고, 기기를 다운로드 모드로 진입한후 컴퓨터와 연결하고, 컴퓨터에서는 오딘이란 프로그램(검색하면 쉽게 구할수 있습니다.) 을 켜고, PDA눌러서 다운받은 커널 파일(확장자는 .tar) 선택하고, start 눌러서 플래싱 하시면 됩니다.
 <br><br>
-아, YP-GB1 KRKPC펌웨어에서만 됩니다.
+아, YP-GB1 KRKPC펌웨어에서만 됩니다.<br>
 
 ![Device Info]({{ site.url }}/resources/SC20120701-181312.png)
 ![Device Info]({{ site.url }}/resources/SC20120701-175608.png)

@@ -37,4 +37,4 @@ http://www.mediafire.com/?zanjeezl2ldpfo3<br>
 ![Img]({{ site.url }}/resources/SC20111226-224441.png)
 ![Img]({{ site.url }}/resources/SC20111226-224454.png)
 ![Img]({{ site.url }}/resources/SC20111226-224542.png)
-![Img]({{ site.url }}/resources/SC20111227-175648.png)
+![Img]({{ site.url }}/resources/SC20111227-175648.jpg)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "이전 블로그 포스트들 마이그레이션 할 예정입니다."
+title: "이전 블로그 포스트들 여기로 예정입니다."
 date: 2014-05-17
 categories: migrating update
 ---

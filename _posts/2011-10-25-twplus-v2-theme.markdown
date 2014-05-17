@@ -30,7 +30,7 @@ rw-r--r--로 설정하시면 됩니다,<br>
 <br>
 ![Img]({{ site.url }}/resources/lock1_qotkd1481.png)
 ![Img]({{ site.url }}/resources/myf2_qotkd1481.png)
-![Img]({{ site.url }}/resources/SC20111025-180718.png)
-![Img]({{ site.url }}/resources/SC20111025-180750.png)
-![Img]({{ site.url }}/resources/SC20111025-180823.png)
+![Img]({{ site.url }}/resources/SC20111025-180718.jpg)
+![Img]({{ site.url }}/resources/SC20111025-180750.jpg)
+![Img]({{ site.url }}/resources/SC20111025-180823.jpg)
 ![Img]({{ site.url }}/resources/snap20111018_002649_qotkd1481.png)

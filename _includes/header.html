@@ -40,33 +40,11 @@
         <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon glyphicon-search"></span> SEARCH</h4>
       </div>
       <div class="modal-body">
-
 <!-- Search Box -->
-<div class="col-lg-6">
-  <form method="get" action="/search" data-search-form>
-    <div class="input-group">
-      <input type="search" name="q" id="q" class="form-control" placeholder="Search..." data-search-input/>
-      <span class="input-group-btn">
-        <button class="btn btn-default" type="submit" value="Search">Search</button>
-      </span>
-    </div>
-  </form>
-  </div>
-<br><br>
-      <!-- Search results placeholder -->
-      <p data-search-found>
-        &ldquo;<span data-search-found-term></span>&rdquo; 에 대한 <span data-search-found-count></span> 개의 검색결과 입니다.
-      </p>
-      <div data-search-results></div>
-<br>
-      <!-- Search result template -->
-      <script type="text/x-template" id="search-result">
-        <div>
-          <h1><a href="##Url##">##Title##</a></h1>
-          <h2><a href="##Url##">##Date##</a></h2>
-          <a href="##Url##">&ldquo;##Title##&rdquo; 게시물 읽기</a>
-        </div>
-      </script>
+<input type="text" class="search-field" placeholder="Search for articles (e.g. type 'Jekyll')">
+<!-- Search Results -->
+<div class="results"></div>
+
 <br><br>
       </div>
       <div class="modal-footer">

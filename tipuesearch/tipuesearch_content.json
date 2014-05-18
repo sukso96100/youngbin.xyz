@@ -1,6 +1,6 @@
 ---
 ---
-var tipuesearch = {"pages": [
+[
   {% for post in site.posts %}
     {
       "title"    : "{{ post.title | escape }}",
@@ -9,4 +9,4 @@ var tipuesearch = {"pages": [
       "date"     : "{{ post.date }}"
     } {% if forloop.last %}{% else %},{% endif %}
   {% endfor %}
-]};
+]

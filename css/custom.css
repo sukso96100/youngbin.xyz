@@ -16,3 +16,8 @@
   margin: 0 auto;
   zoom: 1;
 }
+
+.g-custom-search
+{
+min-width:300px;
+}

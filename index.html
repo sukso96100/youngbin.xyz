@@ -9,13 +9,15 @@ title: Home
 
   <ul class="posts">
     {% for post in site.posts %}
-    <div class="ui stacked segment">
-      <li>
-        <span class="post-date">{{ post.date | date: "%Y/%m/%d" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        <p class="postlistexcerpt">{{ post.content | strip_html | truncatewords:20 }}</p>
-      </li>
-      </div>
+    <div class="panel panel-default">
+  <div class="panel-body">
+  <li>
+      <span class="post-date"><span class="glyphicon glyphicon-calendar"></span> {{ post.date | date: "%Y/%m/%d" }}</span>
+      <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      <p class="postlistexcerpt">{{ post.content | strip_html | truncatewords:20 }}</p>
+    </li>
+  </div>
+</div>
     {% endfor %}
   </ul>
 <br><br>

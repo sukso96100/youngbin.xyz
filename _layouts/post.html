@@ -8,18 +8,23 @@ layout: default
     <p class="meta">{{ page.date | date: "%Y/%m/%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     <br>
     {% for category in page.categories %}
-    <div class="ui label"><i class="tag icon"></i> {{ category }}</div>
+    <a href="{{ site.baseurl }}/categories/#{{ category }}">
+    <span class="label label-default"><span class="glyphicon glyphicon-tag"></span> {{ category }}</span>
+  </a>
     {% endfor %}
   </header>
   <article class="post-content">
-  <div class="ui stacked segment">
+  <div class="panel panel-default">
+<div class="panel-body">
 
   {{ content }}
   </div>
+</div>
   </article>
 
   <!--COMMENT-->
-  <div class="ui stacked segment">
+  <div class="panel panel-default">
+<div class="panel-body">
           <div id="disqus_thread"></div>
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -35,6 +40,7 @@ layout: default
     <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 
-  </div>
+</div>
+</div>
 
 </div>

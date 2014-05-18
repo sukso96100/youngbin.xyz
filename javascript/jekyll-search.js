@@ -2,15 +2,15 @@
 
 	       __________ ____  ____    __       _____ _________    ____  ________  __
 	      / / ____/ //_/\ \/ / /   / /      / ___// ____/   |  / __ \/ ____/ / / /
-	 __  / / __/ / ,<    \  / /   / /       \__ \/ __/ / /| | / /_/ / /   / /_/ / 
-	/ /_/ / /___/ /| |   / / /___/ /___    ___/ / /___/ ___ |/ _, _/ /___/ __  /  
-	\____/_____/_/ |_|  /_/_____/_____/   /____/_____/_/  |_/_/ |_|\____/_/ /_/   
-	                                                                              
+	 __  / / __/ / ,<    \  / /   / /       \__ \/ __/ / /| | / /_/ / /   / /_/ /
+	/ /_/ / /___/ /| |   / / /___/ /___    ___/ / /___/ ___ |/ _, _/ /___/ __  /
+	\____/_____/_/ |_|  /_/_____/_____/   /____/_____/_/  |_/_/ |_|\____/_/ /_/
+
 
 */
 window.JekyllSearch = (function(window,document){
 	var searchInput = document.querySelector(".search"),
-		jsonFile = "../json/search.json",
+		jsonFile = "/search.json",
 		jsonData = null,
 		template = "<a href='{url}' title='{desc}'>{title}</a>",
 		searchResults = document.querySelector(".results"),
@@ -103,7 +103,7 @@ window.JekyllSearch = (function(window,document){
 				searchResults.innerHTML += output;
 			}
 		}else{
-			searchResults.innerHTML = searchResultsHeader + noResults;		
+			searchResults.innerHTML = searchResultsHeader + noResults;
 		}
 	}
 

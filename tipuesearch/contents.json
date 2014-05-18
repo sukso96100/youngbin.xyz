@@ -1,6 +1,6 @@
 ---
 ---
-var tipuesearch = {"pages": [
+"pages": [
   {% for post in site.posts %}
      {"title": "{{ post.title | escape }}",
      "text": "{{ post.content | strip_html | truncatewords:20 }}",
@@ -8,4 +8,4 @@ var tipuesearch = {"pages": [
      "loc": "{{ post.url }}"},
      {% if forloop.last %}{% else %},{% endif %}
    {% endfor %}
-]};
+]

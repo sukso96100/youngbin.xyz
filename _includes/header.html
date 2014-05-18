@@ -17,7 +17,7 @@
           </ul>
         </li>
 <!-- Search Modal Trigger -->
-<li data-toggle="modal" data-target="#myModal"><a href="#">Link</a></li>
+<li data-toggle="modal" data-target="#myModal"><a href="#"><span class="glyphicon glyphicon glyphicon-search"></span> SEARCH</a></li>
       </ul>
   </div>
 </nav>
@@ -31,36 +31,27 @@
 </header>
 
 
-<!-- Modal -->
+<!-- Search Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel"></h4>
+        <h4 class="modal-title" id="myModalLabel"><span class="glyphicon glyphicon glyphicon-search"></span> SEARCH</h4>
       </div>
       <div class="modal-body">
 
-
+<!-- Search Box -->
 <div class="col-lg-6">
   <form method="get" action="/search" data-search-form>
-
     <div class="input-group">
       <input type="search" name="q" id="q" class="form-control" placeholder="Search..." data-search-input/>
       <span class="input-group-btn">
         <button class="btn btn-default" type="submit" value="Search">Search</button>
       </span>
-
-    </div><!-- /input-group -->  </form>
-  </div><!-- /.col-lg-6 -->
-
-      <!-- Search form -->
-      <!--
-      <form method="get" action="/search" data-search-form>
-        <input type="search" name="q" id="q" placeholder="Type Keyword here" data-search-input />
-        <input type="submit" value="Search" />
-      </form>
-    -->
+    </div>
+  </form>
+  </div>
 
       <!-- Search results placeholder -->
       <p data-search-found>
@@ -77,10 +68,6 @@
         </div>
       </script>
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
   </div>

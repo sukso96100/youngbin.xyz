@@ -23,7 +23,17 @@ min-width:300px;
 }
 
 
-.big-header{
+.big-title{
     font-size:200px;
+    color:white;
+}
+
+.custom-title{
+    font-size:60px;
+    color:white;
+}
+
+.custom-subtitle{
+    font-size:20px;
     color:white;
 }

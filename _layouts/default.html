@@ -25,15 +25,9 @@
     {% include footer.html %}
         <script src="{{ "/javascript/jquery-1.10.2.min.js" | prepend: site.baseurl }}"></script>
         <script src="{{ "/javascript/bootstrap.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/tipuesearch/tipuesearch_set.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/tipuesearch/tipuesearch.js" | prepend: site.baseurl }}"></script>
-        <script>
-        $(document).ready(function() {
-          $('#tipue_search_input').tipuesearch({
-            'mode': 'json',
-            'contentLocation': '{{ "/tipuesearch/contents.json" | prepend: site.baseurl }}'
-          });
-        });
-        </script>
+        <script src="{{ "/javascript/jquery-tapir.min.js" | prepend: site.baseurl }}"></script>
+      <script>
+        $('#search_results').tapir({'token': '537a0f5b2432b10200000001'});
+      </script>
         </body>
       </html>

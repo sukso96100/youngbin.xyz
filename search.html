@@ -1,0 +1,21 @@
+---
+layout: default
+title: Search
+---
+
+<div class="home">
+<!-- Search Box -->
+<form action="{{ "/search" | prepend: site.baseurl }}" method="get">
+<div class="input-group">
+    <input type="text" class="form-control" placeholder="Search..." name="query" value="">
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="submit">Search</button>
+    </span>
+  </div>
+</form>
+
+<br>
+<!-- Search Result -->
+<div id="search_results"></div>
+
+</div>

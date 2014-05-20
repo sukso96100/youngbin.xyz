@@ -227,6 +227,7 @@ a:visited { color: #205caa; }
 
 .post pre,
 .post code {
+    font-family: monospace, monospace;
   border: 1px solid #d5d5e9;
   background-color: #eef;
   padding: 8px 12px;
@@ -236,7 +237,9 @@ a:visited { color: #205caa; }
   font-size: 15px;
 }
 
-.post code { padding: 1px 5px; }
+.post code { 
+    padding: 1px 5px;
+    font-family: monospace, monospace;}
 
 .post ul,
 .post ol { margin-left: 1.35em; }
@@ -245,10 +248,12 @@ a:visited { color: #205caa; }
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  font-family: monospace, monospace;
 }
 
 /* terminal */
 .post pre.terminal {
+    font-family: monospace, monospace;
   border: 1px solid #000;
   background-color: #333;
   color: #FFF;
@@ -257,7 +262,10 @@ a:visited { color: #205caa; }
   border-radius: 3px;
 }
 
-.post pre.terminal code { background-color: #333; }
+.post pre.terminal code { 
+    background-color: #333; 
+    font-family: monospace, monospace;
+}
 
 /* Syntax highlighting styles */
 /* ----------------------------------------------------------*/

@@ -18,16 +18,16 @@
 }
 
 .big-title{
-    font-size:180em;
-    color:white;
-}
-
-.custom-title{
     font-size:50em;
     color:white;
 }
 
+.custom-title{
+    font-size:10em;
+    color:white;
+}
+
 .custom-subtitle{
-    font-size:20em;
+    font-size:5em;
     color:white;
 }

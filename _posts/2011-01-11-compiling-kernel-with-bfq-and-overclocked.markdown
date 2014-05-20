@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "compiling-kernel-with-bfq-and-overclocked"
-date: 2011-01-11
+title: "BFQ스케쥴러랑, 1.2오버클럭한 커널 컴파일 하고 있습니다 ㅎㅎ"
+date: 2012-01-11
 categories: migrated(old) android kernel
 ---
 

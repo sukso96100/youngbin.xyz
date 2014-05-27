@@ -17,19 +17,13 @@
   zoom: 1;
 }
 
-.g-custom-search
-{
-min-width:300px;
-}
-
-
 .big-title{
-    font-size:200px;
+    font-size:20vw;
     color:white;
 }
 
 .custom-title{
-    font-size:60px;
+    font-size:50px;
     color:white;
 }
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "지금까지 개발해다가  안드로이드 앱 입니다"
+title: "지금까지 개발해온  안드로이드 앱 간단히 소개합니다."
 date: 2014-07-27
 categories: android app
 ---

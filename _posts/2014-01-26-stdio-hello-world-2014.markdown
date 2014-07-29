@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Std.IO 애서 개최했던 Hello, World! 후기"
-date: 2014-01-26
+date: 2014-01-26  
 categories: migrated(old), review
 ---
 

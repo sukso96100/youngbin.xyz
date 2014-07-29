@@ -1,0 +1,42 @@
+---
+layout: default
+title: Archive
+---
+
+<div class="archive">
+
+  <h1>Archive</h1><br>
+
+  {% for post in site.posts  %}
+
+    {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+    {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+    {% if forloop.first %}
+    <div class="panel panel-default">
+    <div class="panel-body">
+    <h2 id="{{ this_year }}-ref">{{this_year}}</h2><br>
+    <!-- <ul> -->
+    {% endif %}
+
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+
+    {% if forloop.last %}
+    <!-- </ul> -->
+  </div>
+      </div>
+    {% else %}
+        {% if this_year != next_year %}
+        <!-- </ul> -->
+      </div>
+          </div>
+          <div class="panel panel-default">
+          <div class="panel-body">
+        <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+        <!-- <ul> -->
+        {% endif %}
+    {% endif %}
+
+{% endfor %}
+
+</div>

@@ -27,4 +27,4 @@ sudo apt-get install budgie-desktop
 메인 데스크탑 환경으로 사용하시기에는 불편하신 점이 많으실 수도 있습니다.<br><br>
 
 <img class="image-wrapper" src="{{ site.url }}/resources/menu_51.png">
-Source - https://evolve-os.com/release_images/menu_51.png
+이미지 출처 - https://evolve-os.com/release_images/menu_51.png

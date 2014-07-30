@@ -11,7 +11,8 @@ categories: budgie-desktop ubuntu ppa
 
 현재 저의 PPA에 있는 Budgie Desktop 패키지는 Ubuntu 14.04 Trusty Thar 와,<br>
 Ubuntu 14.10 Utopic Unicorn 용 패키지가 있습니다.<br>
-빌드는 시간날때 해서 불규칙적으로(?) 올립니다.<br><br>
+빌드는 시간날때 해서 불규칙적으로(?) 올립니다.<br>
+이 글 작성시간 기준으로	5.1r1버전의 패키지까지 PPA에 업로드 되어 있습니다.<br><br>
 
 Ubuntu 14.04 또는 14.10사용하시는 분이시면, 사용하실 수 있습니다.<br>
 터미널에서 아래 명령어를 실행하시면, PPA를 추가하고, Budgie Desktop을 설치하실 수 있습니다.<br><br>

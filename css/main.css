@@ -238,8 +238,6 @@ a:visited { color: #205caa; }
 }
 
 .post code {
-    background-color: black;
-    color: white;
     padding: 1px 5px;
     font-family: monospace, monospace;}
 

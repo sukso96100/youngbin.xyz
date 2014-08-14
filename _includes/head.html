@@ -12,7 +12,7 @@
     </style>
     <!--Roboto Google Web Font-->
     <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">
@@ -22,5 +22,13 @@
 <script src="{{ "/javascript/respond.src.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/javascript/html5shiv-printshiv.js" | prepend: site.baseurl }}"></script>
 <![endif]-->
+
+  <!-- Polymer Components -->
+   <!-- 1. Load platform.js for polyfill support. -->
+    <script src="{{ "/polymer/platform/platform.js" | prepend: site.baseurl }}"></script>
+
+    <!-- 2. Use an HTML Import to bring in the element. -->
+    <link rel="import"
+          href="bower_components/core-ajax/core-ajax.html">
 
 </head>

@@ -3,10 +3,9 @@ layout: default
 ---
 <div class="post">
  <div class="panel panel-default">
- <div class="panel-body">
-
- <div class="well">
-  <header class="post-header">
+ 
+ <div class="panel-heading"> 
+<header class="post-header">
     <p class="meta">{{ page.date | date: "%Y/%m/%d" }}
     {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     {% for category in page.categories %}
@@ -15,8 +14,9 @@ layout: default
   </a>
     {% endfor %}
   </header>
-  </div><br>
+  </div>
   
+ <div class="panel-body">
   <article class="post-content">
 
   {{ content }}

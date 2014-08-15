@@ -2,20 +2,22 @@
 layout: default
 ---
 <div class="post">
-
-  <header class="post-header">
-    <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date | date: "%Y/%m/%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    <br>
+ <div class="panel panel-default">
+ 
+ <div class="panel-heading"> 
+<header class="post-header">
+    <p class="meta">{{ page.date | date: "%Y/%m/%d" }}
+    {% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     {% for category in page.categories %}
     <a href="{{ site.baseurl }}/categories/#{{ category }}">
     <span class="label label-default"><span class="glyphicon glyphicon-tag"></span> {{ category }}</span>
   </a>
     {% endfor %}
   </header>
+  </div>
+  
+ <div class="panel-body">
   <article class="post-content">
-  <div class="panel panel-default">
-<div class="panel-body">
 
   {{ content }}
 

@@ -2,7 +2,7 @@
 layout: default
 ---
 <div class="post">
-
+ <div class="panel panel-default">
   <header class="post-header">
     <p class="meta">{{ page.date | date: "%Y/%m/%d" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
     <br>
@@ -13,7 +13,7 @@ layout: default
     {% endfor %}
   </header>
   <article class="post-content">
-  <div class="panel panel-default">
+ 
 <div class="panel-body">
 
   {{ content }}

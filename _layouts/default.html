@@ -29,5 +29,21 @@
       <script>
         $('#search_results').tapir({'token': '537a0f5b2432b10200000001'});
       </script>
+
+    <!-- Facebook 좋아요 버튼 -->
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+      <!-- 구글플러스 +1 버튼 -->
+      <!-- 이 태그를 head 태그에 배치하거나 닫는 body 태그 바로 앞에 배치하세요. -->
+<script src="https://apis.google.com/js/platform.js" async defer>
+  {lang: 'ko'}
+</script>
         </body>
       </html>

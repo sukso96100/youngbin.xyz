@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "담임선생님꼐서 부탁하셔서 만들어 본... 간단한 웹기반 자리바꾸기 도구"
+title: "간단한 웹기반 자리바꾸기 도구"
 date: "2014-08-21"
 categories: web app update seat_changer
 ---

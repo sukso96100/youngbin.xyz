@@ -13,3 +13,4 @@ categories: web app update seat_changer
 <a href="http://sukso96100.github.io/211seatchanger/">http://sukso96100.github.io/211seatchanger/</a><br>
 아주 허접한건대... 그래도 소스코드 필요하신 분은 소스코드 공개해 두었으니 가져다 쓰셔도 됩니다.<br>
 <a href="https://github.com/sukso96100/211seatchanger/tree/gh-pages">https://github.com/sukso96100/211seatchanger/tree/gh-pages/</a><br>
+P.S. 그런대 자리 바꾸기 프로그램 이미 많은대 담임선생님꼐서 저에게 만들어달라고 부탁하신 이유가 뭘까요...(?)

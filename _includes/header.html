@@ -33,8 +33,21 @@
 
           </ul>
         </li>
+         
+          <!-- DropDown Profiles -->
+    <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="glyphicon glyphicon-user"></span> PROFILES <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+            <li><a class="item" href="{{ "/about" | prepend: site.baseurl }}">ABOUT ME</a></li>
+            <li><a class="item" href="http://github.com/sukso96100">GITHUB</a></li>
+            <li><a class="item" href="http://facebook.com/hanyoungbin">FACEBOOK</a></li>        
+            <li><a class="item" href="http://google.com/+한영빈96">GOOGLE PLUS</a></li>
+          </ul>
+        </li>
         <!-- RSS feed -->
         <li><a class="item" href="{{ "/feed.xml" | prepend: site.baseurl }}"><span class="glyphicon glyphicon-book"></span> RSS</a></li>
+        <li><a class="item"
 <!-- Search Box -->
 <form class="navbar-form navbar-left" role="search" action="{{ "/search" | prepend: site.baseurl }}" method="get">
         <div class="form-group">

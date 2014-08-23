@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "간단한 웹기반 자리바꾸기 도구"
-date: "2014-08-21"
+title: "Budgie Desktop을 공식 Evolve OS PPA를 통해 사용해 보세요"
+date: "2014-08-23"
 categories: update budgie-desktop ubuntu ppa
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/evolve-os-ppa.png"><br>

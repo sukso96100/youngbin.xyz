@@ -2,7 +2,7 @@
 layout: post
 title: "대입 자기소개서 작성 연습 도구"
 date: "2014-08-24"
-categories: web app update seat_changer
+categories: web app update university_enterance
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/univ-self-intro-form-tool.png"><br>
 대입 모의 면접을 하게되서 자기소개서를 쓰게 되었는대. 이런게 있으면 자기소개서 작성이 좀더 편하지 않을까 싶어 하나 만들어 보았습니다<br>

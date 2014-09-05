@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "대입 자기소개서 작성 연습 도구"
+title: "안드로이드용 시온고등학교 앱 0.1 버전 업데이트"
 date: "2014-09-05"
 categories: android app update zion_high_school
 ---

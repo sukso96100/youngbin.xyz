@@ -87,6 +87,7 @@ sudo apt-get install android-studio
 필요한 것들을 선택하시고, Install [n] Packages 를 눌러 설치하세요.
 
 보통 설치하는 항목들은 아래와 같습니다.
+
 * Tools 항목들
 * 앱 테스트에 사용될 기기에 설치된 안드로이드 버전에 해당되는 항목들
 * Extras 항목들

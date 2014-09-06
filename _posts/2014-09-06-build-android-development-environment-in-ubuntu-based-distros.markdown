@@ -24,11 +24,11 @@ categories: android app develop tutorial
 터미널을 열고, 아래 명령어를 실행하여 저장소 정보를 추가하고 설치합니다.
 
 * 오라클 자바 저장소 추가
-<pre>sudo add-apt-repository ppa:webupd8team/java</code>
+<pre>sudo add-apt-repository ppa:webupd8team/java</pre>
 * 저장소 정보 업데이트
-<pre>sudo apt-get update</code>
+<pre>sudo apt-get update</pre>
 * 오라클 자바7 설치하기
-<pre>sudo apt-get install oracle-java7-installer</code>
+<pre>sudo apt-get install oracle-java7-installer</pre>
 
 ---
 

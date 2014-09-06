@@ -56,7 +56,7 @@ cd ~/다운로드/android-studio/bin
 
 ### PPA 로부터 설치하기.
 
-Paolo Rotolo 의 PPA로 부터 설치해 봅시다.
+<a href="https://launchpad.net/~paolorotolo/+archive/ubuntu/android-studio">Paolo Rotolo 의 PPA</a>로 부터 설치해 봅시다.
 아래 명령어로, PPA를 추가하고 설치를 진행하세요.
 
 <pre>

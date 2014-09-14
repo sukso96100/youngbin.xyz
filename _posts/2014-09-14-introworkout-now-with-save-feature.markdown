@@ -15,7 +15,7 @@ categories: web app update university_enterance introworkout parse_backend
 참고로 이번에 기능 추가하는 김에 서비스 이름을 IntroWorkout 으로 붙이고. 소스 저장소 이름도 바뀌면서,
 사이트 주소도 바뀌었습니다. 변경된 사이트 주소는
 
-<a href="https://sukso9610.github.io/introworkout">https://sukso9610.github.io/introworkout</a>
+<a href="https://sukso96100.github.io/introworkout">https://sukso96100.github.io/introworkout</a>
 
 이 주소입니다. 예전처럼 작성 해보시면서, 글자수 세기도 가능하고. 계정을 하나 만드시면. 
 작성하신 양식을 저장 하시는 것도 가능합니다. 시간 날때 다른 기능도 넣을까 하는대. 의견 있으면 말해주세요^^

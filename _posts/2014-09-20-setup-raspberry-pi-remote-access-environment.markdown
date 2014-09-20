@@ -51,7 +51,7 @@ ssh 192.168.1.5 -l pi #접속 예시
 {% highlight bash %}
 ssh pi@(라즈베리파이에 할당된 IP주소)
 ssh pi@192.168.1.5 #접속 예시
-{% enshighlight %}
+{% endhighlight %}
 
 접속 후에 이제 라즈베리파이 에서 사용 가능한 명령어들을 쓸 수 있습니다.
 접속을 종료하려면, 간단히 아래 명령어를 실행하세요.
@@ -68,19 +68,19 @@ vnc 서버는 기본적으로 제공되지 않으니, 설치해야 합니다. �
 {% highlight bash %}
 sudo apt-get update #패키지 저장소 정보 업데이트
 sudo apt-get install tightvncserver #TightVNC 설치
-{% enshighlight %}
+{% endhighlight %}
 
 설치가 끝났으니 vnc 서버를 켜 봅시다. 아래 명령어를 실행하세요.
 {% highlight bash %}
 vncserver
-{% enshighlight %}
+{% endhighlight %}
 
 처음 하는 경우 vnc 접속시 사용할 비밀번호를 설정합니다. 그렇치 않으면 바로 vnc 접속이 켜집니다.
 잘 작동중인지 확인해 봅시다. 아래 명령어를 통해 Xtightvnc 가 5901 포트와 6001 포트에서 작동중인지 확인해보세요.
 TightVNC는 기본적으로 5901 포트와 6001 포트에서 작동합니다.
 {% highlight bash %}
 netstat -tcpul
-{% enshighlight %}
+{% endhighlight %}
 
 설정은 끝났습니다. VNC 뷰어 앱에서. 주소 란에 (라즈베리파이의 IP):(포트번호) [예시 192.168.1.5:5901] 라즈베리파이 주소를,
 비밀번호는 본인이 정한걸로 하고 접속을 시도해 보세요. 보통 잘 나타나야 정상입니다.

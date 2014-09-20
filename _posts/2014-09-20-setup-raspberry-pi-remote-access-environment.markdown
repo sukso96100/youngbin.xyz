@@ -44,13 +44,17 @@ sudo raspi-config
 ssh로 라즈베리 파이에 접속하려면, 아래 명령어를 이용하세요. ssh 를 이용하여 라즈베리 파이의 pi 사용자에 접속합니다.
 {% highlight bash %}
 ssh (라즈베리파이에 할당된 IP주소) -ㅣ pi
-ssh 192.168.1.5 -l pi #접속 예시
+
+#접속 예시
+ssh 192.168.1.5 -l pi
 {% endhighlight %}
 
 이 명령어로도 접속이 가능합니다.
 {% highlight bash %}
 ssh pi@(라즈베리파이에 할당된 IP주소)
-ssh pi@192.168.1.5 #접속 예시
+
+#접속 예시
+ssh pi@192.168.1.5
 {% endhighlight %}
 
 접속 후에 이제 라즈베리파이 에서 사용 가능한 명령어들을 쓸 수 있습니다.
@@ -66,8 +70,10 @@ vnc 서버는 기본적으로 제공되지 않으니, 설치해야 합니다. �
 
 설치는 apt-get 을 이용합니다.
 {% highlight bash %}
-sudo apt-get update #패키지 저장소 정보 업데이트
-sudo apt-get install tightvncserver #TightVNC 설치
+#패키지 저장소 정보 업데이트
+sudo apt-get update
+#TightVNC 설치
+sudo apt-get install tightvncserver
 {% endhighlight %}
 
 설치가 끝났으니 vnc 서버를 켜 봅시다. 아래 명령어를 실행하세요.

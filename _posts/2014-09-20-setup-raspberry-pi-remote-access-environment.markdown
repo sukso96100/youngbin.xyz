@@ -32,9 +32,9 @@ hdmi 케이블은 당연히 모니터에 연결시면 됩니다.
 
 라즈베리파이 설정화면을 열어주세요. 보통 Raspbian 을 처음 부팅하시는 경우에 설정 화면이 나타납니다.
 나타나지 않는 경우, 터미널을 열고 아래 명령어를 실행하셔서, 설정 화면을 열어보세요.
-{% highlight %}
+<pre><code>
 sudo raspi-config
-{% endhighlight %}
+</code></pre>
 
 설정 화면에서, "8 Advanced Options > A4 SSH" 로 들어가서, <Enable> 을 선택해 주세요.
 그럼 ssh 서버가 활성됩니다. 설정 후에 설정 초기 화면으로 돌아오는대, <Finish> 를 선택해서, 설정을 마칩시다.

@@ -32,22 +32,24 @@ layout: default
 
   <br><br>
   <!-- Pagination links -->
-  <ul class="pager">
-        {% if page.previous.url %}
-        <li class="previous"><a href="{{page.previous.url}}" title="{{page.previous.title}}">
-        <span class="glyphicon glyphicon-chevron-left"></span> Previous Post</a></li>
+    <div class="btn-group btn-group-justified">
+ 
+  
+   {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="{{page.previous.title}}" class="btn btn-default">
+         <span class="glyphicon glyphicon-chevron-left"></span> Previous Post</a>
         {% else %}
-        <li class="previous disabled">
-        <span class="glyphicon glyphicon-chevron-left"></span> Previous Post</a></li>
+        <a href="{{page.previous.url}}" title="{{page.previous.title}}" class="btn btn-default disabled">
+         <span class="glyphicon glyphicon-chevron-left"></span> Previous Post</a>
         {% endif %}
         {% if page.next.url %}
-        <li class="next"><a href="{{page.next.url}}" title="{{page.next.title}}">
-          Next Post <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        <a href="{{page.next.url}}" title="{{page.next.title}}" class="btn btn-default">
+         Next Post <span class="glyphicon glyphicon-chevron-right"></span></a>
         {% else %}
-        <li class="next disabled"><a>
-        Next Post <span class="glyphicon glyphicon-chevron-right"></span></a></li>
+        <a href="{{page.next.url}}" title="{{page.next.title}}" class="btn btn-default disabled">
+         Next Post <span class="glyphicon glyphicon-chevron-right"></span></a>
         {% endif %}
-    </ul>
+</div>
 
   </div>
 </div>

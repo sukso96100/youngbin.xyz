@@ -5,7 +5,7 @@ date: "2014-11-02"
 categories: tutorial python simplecv develop development raspberry-pi linux computer-vision
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/SM_logo_color.png"><br>
-SimpleCV 는 파이선 언어를 이용하여 컴퓨터 비전 앱을 쉽게 작성 할 수 있도록 도와주는 오픈소스 프레임워크 입니다.
+SimpleCV 는 파이썬 언어를 이용하여 컴퓨터 비전 앱을 쉽게 작성 할 수 있도록 도와주는 오픈소스 프레임워크 입니다.
 이 프레임워크를 활용하면 고유값,다양하고 복잡한 얼굴인식 알고리즘, 행렬 대 비트맵 스토리지, 비트 깊이 등등의
 복잡하고 어려운 것들을 사전에 공부하실 필요 없이 쉽게 컴퓨터 비전 앱을 작성 하실 수 있습니다.
 
@@ -86,10 +86,10 @@ SimpleCV:1>
 exit()
 {% endhighlight %}
 
-### 파이선으로 작성해서 실행 해보기.
-파이선으로 SimpleCV 를 사용하는 간단한 코드를 작성해서 실행해 보는 방식으로 테스트 해 볼 수도 있습니다.
+### 파이썬으로 작성해서 실행 해보기.
+파이썬으로 SimpleCV 를 사용하는 간단한 코드를 작성해서 실행해 보는 방식으로 테스트 해 볼 수도 있습니다.
 아래 코드는 simplecv.org 에서 가져온 예제 입니다(주석만 우리말로 수정 해봤습니다).
-아래 코드들을 파이선 스크립트 파일(확장자가 *.py인)로 저장해 보세요.
+아래 코드들을 파이썬 스크립트 파일(확장자가 *.py인)로 저장해 보세요.
 {% highlight python %}
 #-*- coding: utf-8 -*-
 from SimpleCV import Camera

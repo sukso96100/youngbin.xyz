@@ -84,7 +84,7 @@ SimpleCV:1>
 인터렉티브 쉘에서 나가려면, 아래 코드를 실행하세요.
 {% highlight bash %}
 exit()
-{% endhighlisgt %}
+{% endhighlight %}
 
 ### 파이선으로 작성해서 실행 해보기.
 파이선으로 SimpleCV 를 사용하는 간단한 코드를 작성해서 실행해 보는 방식으로 테스트 해 볼 수도 있습니다.
@@ -105,13 +105,13 @@ while True:
     img.drawText("Hello World!")
     # 이미지 보여주기.
     img.show()
-{% endhighlisgt %}
+{% endhighlight %}
 
 저장 하셨으면, 웹캠 등의 카메라를 연결하시고,
 한 번 실행 해 보세요, 예를 들어 파일 이름이 simplecv.py 인 경우, 아래와 같은 명령어로 실행합니다.
 {% highlight bash %}
 python simplecv.py
-{% endhighlisgt %}
+{% endhighlight %}
 
 정상적으로 실행이 된다면, 아래와 같은 화면이 나타날 것입니다.
 <img class="image-wrapper" src="{{ site.url }}/resources/simplecv_example.png"><br>

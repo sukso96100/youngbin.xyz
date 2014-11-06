@@ -116,8 +116,8 @@ python simplecv.py
 정상적으로 실행이 된다면, 아래와 같은 화면이 나타날 것입니다.
 <img class="image-wrapper" src="{{ site.url }}/resources/simplecv_example.png"><br>
 
-#### 오류 해결하기
-##### svgwrite 모듈이 설치되어 있지 않아 오류가 나는 경우.
+### 오류 해결하기
+#### svgwrite 모듈이 설치되어 있지 않아 오류가 나는 경우.
 
 인터렉티브 쉘로 들어가려 할떄 svgwrite 모듈 미설치로 인한 오류가 나면 아마 아래과 같은 것이 나타날 것입니다.
 {% highlight bash %}

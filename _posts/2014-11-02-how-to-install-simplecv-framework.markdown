@@ -116,6 +116,38 @@ python simplecv.py
 정상적으로 실행이 된다면, 아래와 같은 화면이 나타날 것입니다.
 <img class="image-wrapper" src="{{ site.url }}/resources/simplecv_example.png"><br>
 
+#### 오류 해결하기
+##### svgwrite 모듈이 설치되어 있지 않아 오류가 나는 경우.
+
+인터렉티브 쉘로 들어가려 할떄 svgwrite 모듈 미설치로 인한 오류가 나면 아마 아래과 같은 것이 나타날 것입니다.
+{% highlight bash %}
+youngbin@youngbin-ultrabook:~$ simplecv
+ERROR:
+Traceback (most recent call last):
+  File "/usr/local/bin/simplecv", line 9, in <module>
+    load_entry_point('SimpleCV==1.3', 'console_scripts', 'simplecv')()
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 337, in load_entry_point
+    return get_distribution(dist).load_entry_point(group, name)
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 2279, in load_entry_point
+    return ep.load()
+  File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 1989, in load
+    entry = __import__(self.module_name, globals(),globals(), ['__name__'])
+  File "/usr/local/lib/python2.7/dist-packages/SimpleCV/__init__.py", line 4, in <module>
+    from SimpleCV.Camera import *
+  File "/usr/local/lib/python2.7/dist-packages/SimpleCV/Camera.py", line 5, in <module>
+    from SimpleCV.ImageClass import Image, ImageSet, ColorSpace
+  File "/usr/local/lib/python2.7/dist-packages/SimpleCV/ImageClass.py", line 14768, in <module>
+    from SimpleCV.DrawingLayer import *
+  File "/usr/local/lib/python2.7/dist-packages/SimpleCV/DrawingLayer.py", line 5, in <module>
+    import svgwrite
+ImportError: No module named svgwrite
+{% endhighlight %}
+
+아래 명령어를 이용해, pip을 사용해 svgwrite 모듈을 설치 하시면 됩니다.
+{% highlight bash %}
+sudo pip install svgwrite
+{% endhighlight %}
+
 ## 끝.
 SimpleCV에 대해서는, SimpleCV 웹사이트를 방문하시면, 문서자료나 튜터리얼 같은 다양한 정보들을 얻으실 수 있습니다.
 관심 있으신 분들은 방문해 보시길.

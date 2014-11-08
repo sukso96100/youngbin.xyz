@@ -54,7 +54,7 @@ refImg = cam.getImage()
 {% endhighlight %}
 
 아래는 기준 이미지 예시 입니다.<br>
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#image-arithmetic)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person1.png"><br>
 
 
@@ -70,11 +70,11 @@ diff = refImg - img
 {% endhighlight %}
 
 아래는 추가로 얻은 이미지 예시 입니다.<br>
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#image-arithmetic)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person2.png"><br>
 
 기준 이미지에서, 추가로 얻은 이미지 사이 차이를 나타낸 이미지 예시 입니다.<br>
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#image-arithmetic)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person-sub.png"><br>
 
 diff 이미지에는 차이가 있는 부분만 나타나는대, 그것을 수치상으로 표현해서.

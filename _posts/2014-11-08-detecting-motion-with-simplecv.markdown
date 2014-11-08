@@ -19,8 +19,8 @@ SimpleCV를 이용하면 어렴지 않게 카메라를 통해 움직임을 감�
 2. 사진 하나를 더 얻는다.
 3. 기준 이미지와 추가로 얻은 이미지를 비교한다.
 4. 비교했을 때, 다른 정도가 정해진 것 보다 크다면, 움직임을 감지한 것으로 인식한다
-  1. 시간차를 두고 얻은 이미지를 새로운 기준 이미지로 정한다
-  2. "2." 부터 다시 반복한다
+  * 시간차를 두고 얻은 이미지를 새로운 기준 이미지로 정한다
+  * "2." 부터 다시 반복한다
 5. 비교했을 때, 다른 정도가 정해진 것 보다 작다면, "2." 부터 다시 반복한다
 
 # 코드로 작성해 보기
@@ -51,8 +51,8 @@ print "기준 이미지 얻는중"
 refImg = cam.getImage()
 {% endhighlight %}
 
-아래는 기준 이미지 예시 입니다.
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)
+아래는 기준 이미지 예시 입니다.<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person1.png"><br>
 
 
@@ -67,30 +67,30 @@ img = cam.getImage()
 diff = refImg - img
 {% endhighlight %}
 
-아래는 추가로 얻은 이미지 예시 입니다.
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)
+아래는 추가로 얻은 이미지 예시 입니다.<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person2.png"><br>
 
-기준 이미지에서, 추가로 얻은 이미지 사이 차이를 나타낸 이미지 예시 입니다.
-(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)
+기준 이미지에서, 추가로 얻은 이미지 사이 차이를 나타낸 이미지 예시 입니다.<br>
+(출처 : http://tutorial.simplecv.org/en/latest/examples/image-math.html#exceptions-in-image-math)<br>
 <img class="image-wrapper" src="{{ site.url }}/resources/image-math-person-sub.png"><br>
 
 diff 이미지에는 차이가 있는 부분만 나타나는대, 그것을 수치상으로 표현해서.
 처음에 정한 임계값과 비교해 봅시다. 임계값 보다 크면, 기준 이미지를 갱신하고,
 그렇치 않으면 기준 이미지를 그대로 유지해 봅시다.
 {% highlight python %}
-    #getNumpy()는 이미지를 다차원 배열로 나타냄
-    #getNumpy().mean() 은 getNumpy()로 얻은 다차원 배열을 실수로 나타냄
-    if imgmath.getNumpy().mean() > threshold:
-        #차이가 임계값 보다 크면
-        print "움직임 감지됨"
-        #기준 이미지 갱신
-        refImg = img
-        print "기준 이미지 갱신"
-        print "갱신시각" + time.strftime("%H:%M:%S")
-    else:
-        #그렇치 않다면
-        print "기준 이미지와 큰 차이 없음 기준 이미지 유지"
+#getNumpy()는 이미지를 다차원 배열로 나타냄
+#getNumpy().mean() 은 getNumpy()로 얻은 다차원 배열을 실수로 나타냄
+if imgmath.getNumpy().mean() > threshold:
+  #차이가 임계값 보다 크면
+  print "움직임 감지됨"
+  #기준 이미지 갱신
+  refImg = img
+  print "기준 이미지 갱신"
+  print "갱신시각" + time.strftime("%H:%M:%S")
+else:
+  #그렇치 않다면
+  print "기준 이미지와 큰 차이 없음 기준 이미지 유지"
 {% endhighlight %}
 
 대략적인 코드가 다 짜여 졌군요. 위 코드를 다 이으면 완전한 코드가 완성 되지만.

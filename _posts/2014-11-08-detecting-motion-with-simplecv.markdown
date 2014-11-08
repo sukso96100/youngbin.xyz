@@ -2,7 +2,7 @@
 layout: post
 title: "SimpleCV 로 움직임 감지하기"
 date: "2014-11-08"
-categories: tutorial python simplecv develop development raspberry-pi linux computer-vision
+categories: tutorial python simplecv develop development raspberry-pi linux computer-vision motion
 ---
 
 SimpleCV를 이용하면 어렴지 않게 카메라를 통해 움직임을 감지해 낼 수 있습니다.

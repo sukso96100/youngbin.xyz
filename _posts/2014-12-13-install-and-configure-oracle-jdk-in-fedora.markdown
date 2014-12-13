@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Fedora 에서 Oracle JDK 설치하고 설정하기"
-date: "2014-11-08"
+date: "2014-12-13"
 categories: tutorial develop development raspberry-pi linux fedora jdk oracle
 ---
 

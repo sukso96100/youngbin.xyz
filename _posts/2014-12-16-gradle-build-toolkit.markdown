@@ -29,7 +29,8 @@ Gradle은 JDK위에서 작동합니다. 쓸려면 JDK(Java Development Kit) 먼�
 
 Gradle 빌드 스크립트 예제(개인적으로 작성했습니다.)
 http://gist.github.com/sukso96100/4ae0db5827be2eddff6f
-{% highlight %}
+
+{% highlight groovy lineos%}
 /* Gradle 빌드 스크립트 예제
  *
  * 아래 GitHub 저장소를 참조하여 작성하였습니다.

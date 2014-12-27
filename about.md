@@ -4,14 +4,21 @@ title: About
 permalink: /about/
 ---
 
-A medium inspired Jekyll blog theme. The basic idea came from the Ghost theme 
-[Readium 2.0](http://www.svenread.com/readium-ghost-theme/). I use mediator on my own blog [The Base](blog.base68.com).
+고등학교 다니는 잉여로운 고등학생 입니다. 컴퓨터로 프로그래밍 삽질 하는 것이 취미입니다.
+멋진 온라인 서비스를 하나 개발하는 프로그래머가 되는 것이 저의 꿈 입니다.
+문제는 제가 수학을 잘 못합니다 낄낄낄낄낄.....(먼산) 그래서 수학 공부에 시간은 꽤 쓰긴 합니다만. 프로그래밍 삽질이 더 재미있어서...
+프로그래밍에 시간을 더 쓰고 있내요...ㅋㅋㅋㅋㅋ 아무튼 일단 여기는 저의 블로그 구요. 개인적인 글이나 유용한 것들을 주로 정리해서 여기에 올립니다.
 
-You can **download** the theme here:
-[https://github.com/dirkfabisch/mediator](https://github.com/dirkfabisch/mediator) 
+## 프로젝트
+제가 지금까지 해 온 프로젝트 목록 입니다.
 
-You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+- [모바일 일신 안드로이드 앱 - 중학교 다닐 적 만든 학교 앱 입니다. 지금은 제가 관리 안합니다](https://github.com/sukso96100/mobileilsin)
+- [SidePanel - 우분투 터치의 사이드바에 영감을 받아서 만든 앱. 역시 지금은 관리 안함(?)](https://github.com/sukso96100/SidePanel)
+- [GlowNotifier - 2013년 크리스마스 떄 할짓 없어서 방콕하려 당일 완성하여 출시한 앱](https://github.com/sukso96100/GlowNotifier)
+- [Have a Nice Training - 고등학교 2학년때 담임선생님 장기 연수 떄 잘 다녀 오시라고 간단히 만든 웹사이트](https://github.com/sukso96100/have-a-nice-training)
+- [AssistScreen - 처음으로 만든 안드로이드 홈 런처 앱. 출시 안한건 함정](https://github.com/sukso96100/assist-screen)
+- [211 Seat Changer - 고등학교 2학년떄 만은 간단한 웹기반 자리바꾸기 도구](https://github.com/sukso96100/211seatchanger)
+- [IntroWorkout - 고등학교 2학년때 모의면접때 쓸 자기소개서 쓰다가. 망할 hwp 파일 보고 화나서 즉석에서 본인이 쓰려고 만든 웹사이드](https://github.com/sukso96100/introworkout)
+- [안드로이드용 시온고등학교 앱](https://github.com/sukso96100/zionhs)
+- [안드로이드용 시온고등학교 백향제 2014 앱](https://github.com/sukso96100/baekhyang14-android)
+- [시온고등학교 백향제 2014 웹사이트](https://github.com/sukso96100/baekhyang14)

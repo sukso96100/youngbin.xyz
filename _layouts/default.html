@@ -3,48 +3,23 @@
 
   {% include head.html %}
 
-    <body style="font-family: 'Nanum Gothic', sans-serif;">
+  <body>
 
     {% include header.html %}
 
+    <!-- content start -->
+
     <div class="page-content">
-      <div class="wrap">
-        <!--Old Web Browser Warning-->
-        <!--[if lt IE 9]>
-        <div class="alert alert-danger">
-          The web browser that you are using is too old that it can't display contents properly<br>
-          Please switch to modern web browsers such as Chrome, Firefox, Opera, Internet Explorer 9+<br>
-          사용중인 웹 브라우저가 너무 낡아, 이 웹사이트의 컨텐츠를 제대로 표시하지 못합니다.<br>
-          크롬, 파이어폭스, 오페라, 인터넷 익스플로러9 이상 버전 등의 최신 웹 브라우저를 사용하세요.<br>
-        </div>
-        <![endif]-->
-      {{ content }}
+      <div class="wrapper">
+        {{ content }}
       </div>
     </div>
 
+    <!-- content end -->
+
     {% include footer.html %}
-        <script src="{{ "/javascript/jquery-1.10.2.min.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/javascript/bootstrap.js" | prepend: site.baseurl }}"></script>
-        <script src="{{ "/javascript/jquery-tapir.min.js" | prepend: site.baseurl }}"></script>
-      <script>
-        $('#search_results').tapir({'token': '537a0f5b2432b10200000001'});
-      </script>
+    {% include javascripts.html %}
 
-    <!-- Facebook 좋아요 버튼 -->
-    <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ko_KR/sdk.js#xfbml=1&version=v2.0";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  </body>
 
-      <!-- 구글플러스 +1 버튼 -->
-      <!-- 이 태그를 head 태그에 배치하거나 닫는 body 태그 바로 앞에 배치하세요. -->
-<script src="https://apis.google.com/js/platform.js" async defer>
-  {lang: 'ko'}
-</script>
-
-        </body>
-      </html>
+</html>

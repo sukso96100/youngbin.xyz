@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: page
 title: Categories
+permalink: /categories/
 ---
 
 <div class="home">
@@ -10,7 +11,7 @@ title: Categories
   <div class="panel-body">
   {% for category in site.categories %}
     <a href="#{{ category | first }}">
-        <span class="label label-default"><span class="glyphicon glyphicon-tag"></span> {{ category | first }}</span>
+        <span class="label label-default"><span class="glyphicon glyphicon-tag"></span>/{{ category | first }}/</span>
       </a>
   {% endfor %}
 </div>

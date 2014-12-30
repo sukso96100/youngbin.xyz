@@ -124,3 +124,16 @@ http://developer.android.com/sdk/index.html
 - Windows 는, 다운로드 받은 것을 실행하여, 설치 마법사에 따라 설치를 진행합니다
 - Linux 에서는, 다운로드 반은 파일 압축을 풀고, bin 폴더 안의 studio.sh 를 실행하세요.
 
+## 필요한 SDK 도구 설치
+앱 개발 및 빌드에 필요한 각종 API 패키지나 빌드툴 등을 SDK Manager 를 통해 다운로드 합시다.
+
+- Android Studio 를 처음 실행 하시는 경우, Welcome to Android Studio 창이 나타납니다.
+- Configure > SDK Manager 항목으로 들어가서 SDK Manager 를 켭니다.
+- 필요한 항목을 선택하여 다운로드 합니다. 보통 최신 버전의 안드로이드 버전에 해당되는 항목과 Extra 항목을 다운로드 받습니다.
+- Install ** packages 버튼 (**는 선택한 항목 수)을 클릭하여 설치합니다.
+- 완료되면, SDK Manager 를 닫고, Welcome to Android Studio 창에서 상위 목록으로 이동합니다.
+
+## 새로운 프로젝트 생성
+이제 프로젝트를 하나 새롭게 생성 해 봅시다. 생성 과정 중에 Minimum SDK, Target SDK, Package Name 등을 정하게 됩니다.
+
+

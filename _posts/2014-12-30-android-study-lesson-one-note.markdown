@@ -423,6 +423,10 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
  
  사진과 같이 잘 나오나요? Lesson 1 내용은 여기까지 입니다. 
  
+## 소스코드
+Lesson 1 에 해당되는 소스코드 입니다.
+[https://github.com/sukso96100/zionhs_android_study/tree/lesson1](https://github.com/sukso96100/zionhs_android_study/tree/lesson1)
+ 
 ## 곁들여 보면 좋은 추가자료들...
 - [Building Your First App](http://developer.android.com/training/basics/firstapp/index.html)
 - [Activities](http://developer.android.com/guide/components/activities.html)

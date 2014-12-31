@@ -7,6 +7,13 @@ categories: develop development android app study note
 
 몇 주 전 부터 교내에서 친구 몇명 모아서 안드로이드 스터디를 하고 있습니다. 구글 코드아 측에서 스터디 그룹 프로그램을 해서 해 보게 되었는대. 2차 지필평가로 인해 진도가 많이 밀렸습니다. Udacity(udacity.com) 에 있는 Developing Android Apps코스를 기반으로 진행 중입니다. 7~8개의 레슨으로 구성 되어 있는대. 레슨 하나가 마무리 될 때마다. 이렇게 글로 정리를 해 보고자 합니다. 한참 진도가 늦습니다만... 일단 드디어 레슨 1 을 마무리 했으므로. 레슨 1 을 정리해 보고자 합니다.
 
+## 시작하기 앞서...
+- Java 프로그래밍을 접해보신 적이 없나요? 먼저 공부 하고 오시는 것이 좋습니다. 아래 사이트들이 유용합니다.
+ - [생활코딩 Java 코스](http://opentutorials.org/course/1223)
+ - [점프 투 자바 Ebook](https://wikidocs.net/book/31)
+- Java 객체 지향 프로그래밍 개념에 대해 이해 하고 계셔야 이 글을 원할히 이해 하실 수 있습니다.
+- 하나 이상의 안드로이드 디바이스와 USB 케이블을 준비하세요.
+
 ## 레슨 1 의 내용들
 레슨 1 은 대략 아래와 같은 내용으로 구성되어 있습니다. 하나씩 자세히 알아봅시다. 스터디 에서는 가장 처음에 Git에 대해서도 다뤘고, 간단히 안드로이드 플랫폼에 대한 설명도 했었으나, Git 사용법은 검색 좀 해보면 나오고, 안드로이드가 뭔지는 다들 알기 떄문에 이 글에서는 생략 하겠습니다.
 
@@ -415,4 +422,14 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
  <img src="/resources/study_lesson1_result.png"><br>
  
  사진과 같이 잘 나오나요? Lesson 1 내용은 여기까지 입니다. 
+ 
+## 곁들여 보면 좋은 추가자료들...
+- [Building Your First App](http://developer.android.com/training/basics/firstapp/index.html)
+- [Activities](http://developer.android.com/guide/components/activities.html)
+- [Fragments](http://developer.android.com/guide/components/fragments.html)
+- [User Interface - UI Overview](http://developer.android.com/guide/topics/ui/overview.html)
+- [User Interface - Layouts](http://developer.android.com/guide/topics/ui/declaring-layout.html)
+- [ListView](http://developer.android.com/guide/topics/ui/layout/listview.html)
+- [Dadhboards](http://developer.android.com/about/dashboards/index.html)
+- [Context](http://developer.android.com/reference/android/content/Context.html)
 

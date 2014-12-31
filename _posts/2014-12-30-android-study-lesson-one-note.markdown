@@ -22,16 +22,16 @@ categories: develop development android app study note
 ### JDK 설치파일 다운로드
 Ubuntu, Arch Linux 계열 리눅스를 사용하시면, 이 부분을 건너 뛰세요.
 
-- [Oracle](http://oracle.com)웹사이트에 접속하세요.
-- Downloads 메뉴에 마우스를 올리면, 다양한 하위 메뉴가 나타나는대. 좌측에 있는 Popular Downloads 섹션에 있는 Java for Developers 를 선택합니다.
-- JDK 항목을 선택합니다
-- Java SE Development Kit 섹션에서 다운로드 받습니다. 먼저 Accept License Agreement 를 클릭하여, 라이선스에 동의하고, 자신의 시스템에 맞는 것으로 다운로드 합니다.
+ * [Oracle](http://oracle.com)웹사이트에 접속하세요.
+ * Downloads 메뉴에 마우스를 올리면, 다양한 하위 메뉴가 나타나는대. 좌측에 있는 Popular Downloads 섹션에 있는 Java for Developers 를 선택합니다.
+ * JDK 항목을 선택합니다
+ * Java SE Development Kit 섹션에서 다운로드 받습니다. 먼저 Accept License Agreement 를 클릭하여, 라이선스에 동의하고, 자신의 시스템에 맞는 것으로 다운로드 합니다.
 
 ### Winidows
-- 다운로드 받은 설치 파일을 실행하여, 설치 마법사의 안내에 따라 설치를 진행합니다.
+ * 다운로드 받은 설치 파일을 실행하여, 설치 마법사의 안내에 따라 설치를 진행합니다.
 
 ### Linux - RPM 패키지 사용 하는경우
-- 다운로드 받은 RPM 파일을 아래 명령어를 사용하여 설치하거나, GUI 기반의 패키지 설치 프록램이 있다면, 그냥 클릭해서 설치합니다.
+ * 다운로드 받은 RPM 파일을 아래 명령어를 사용하여 설치하거나, GUI 기반의 패키지 설치 프로그램이 있다면, 그냥 클릭해서 설치합니다.
 {% highlight bash %}
 # "<파일이름>" 은 다운로드 받은 파일의 이름으로 합니다
 sudo rpm -i <파일이름>
@@ -53,19 +53,19 @@ yaourt -S jdk
 {% endhighlight %}
 
 ### Linux - 그 외 배포판
-- 먼저 루트 권한이 필요합니다. 루트로 전환하거나. 매번 명령어 앞에 sudo 를 붙여서 실행하세요. 여기에서를 루트로 전환하여 하는 방법을 소개합니다. 아래 명령어로, 루트로 전환합니다.
+ * 먼저 루트 권한이 필요합니다. 루트로 전환하거나. 매번 명령어 앞에 sudo 를 붙여서 실행하세요. 여기에서를 루트로 전환하여 하는 방법을 소개합니다. 아래 명령어로, 루트로 전환합니다.
 {% highlight bash %}
 sudo -i
 {% endhighlight %}
-- JDK를 설치할 디렉터리에 접근합니다. 예를들어, /usr/java/ 라면. 아래 명령어를 실행하여 접근합니다
+ * JDK를 설치할 디렉터리에 접근합니다. 예를들어, /usr/java/ 라면. 아래 명령어를 실행하여 접근합니다
 {% highlight bash %}
 cd /usr/java/
 {% endhighlight %}
-- 다운로드한 *.tar.gz 파일을 지금 접근중인 경로로 옮기거나 복사합니다. 여기에서는 복사합니다.
+ * 다운로드한 *.tar.gz 파일을 지금 접근중인 경로로 옮기거나 복사합니다. 여기에서는 복사합니다.
 {% highlight bash %}
 cp (*.tar.gz 파일의 상위 경로)/(해당 파일 이름).tar.gz (해당 파일 이름).tar.gz 
 {% endhighlight %}
-- 압축을 해제합니다.
+ * 압축을 해제합니다.
 {% highlight bash %}
 tar zxvf
 {% endhighlight %}
@@ -74,13 +74,13 @@ tar zxvf
 Java 로 작성된 프로그램을 실행하기 위해, JAVA_HOME 변수와, Path 변수를 설정해 주어야 합니다.
 
 ### Windows
-- 제어판 > 시스템 으로 이동하고, 좌측에서 "고급 시스템 설정"을 누릅니다.
-- 새로 열리는 "시스템 속성" 창에서 "고급" 탭으로 이동합니다.
-- 하단에 위치한 "환경 변수" 눌러서, 환경 변수 설정창을 엽니다.
-- 사용자 변수나 시스템 변수 섹션에 JAVA_HOME 이 이미 있으면, 지우고 "새로 만들기" 를 클릭하여 새로 생성합니다.
-- 변수 이름은 JAVA_HOME, 변수 값은 JDK 경로로 합니다 (예 : C:\Program Files\Java\jdk1.7.0_11)
-- 시스템 변수 섹션에서 Path 를 찾아보세요. 있으면 편집하고, 없으면 새로 생성하세요.
-- 변수 이름은 Path, 변수 값은 ;%JAVA_HOME%bin; 를 입력합니다. 이미 값이 다른 것이 있다면, 가장 뒤에 추가합니다.
+ * 제어판 > 시스템 으로 이동하고, 좌측에서 "고급 시스템 설정"을 누릅니다.
+ * 새로 열리는 "시스템 속성" 창에서 "고급" 탭으로 이동합니다.
+ * 하단에 위치한 "환경 변수" 눌러서, 환경 변수 설정창을 엽니다.
+ * 사용자 변수나 시스템 변수 섹션에 JAVA_HOME 이 이미 있으면, 지우고 "새로 만들기" 를 클릭하여 새로 생성합니다.
+ * 변수 이름은 JAVA_HOME, 변수 값은 JDK 경로로 합니다 (예 : C:\Program Files\Java\jdk1.7.0_11)
+ * 시스템 변수 섹션에서 Path 를 찾아보세요. 있으면 편집하고, 없으면 새로 생성하세요.
+ * 변수 이름은 Path, 변수 값은 ;%JAVA_HOME%bin; 를 입력합니다. 이미 값이 다른 것이 있다면, 가장 뒤에 추가합니다.
 
 ### Linux
 먼저 프로필 파일을 텍스트 에디터로 열어주세요. 
@@ -141,14 +141,224 @@ http://developer.android.com/sdk/index.html
 - Application name 에 원하는 앱 이름을, Package name 에 원하시는 앱의 Package name을, Project location 에는 프로젝트를 어디에 둘지 경로를 설정합니다. 프로젝트 경로는 영어로만 이뤄져 있어야 합니다.
 
 ### Package Name 정하기
-- Package Name 은 각 앱의 고유한 이름으로, 다른 앱과 구별하는대 사용됩니다.
-- 보통 회사 도메인(Company domain)을 거꾸로 하여 사용합니다.
-- 다른 앱의 것과 중복 될 수 없읍니다. 
-Package Name 예시 : Company domain 이 example.com 이고, 앱 이름이 appname 이면, Package Name 은 com.example.appname
+ * Package Name 은 각 앱의 고유한 이름으로, 다른 앱과 구별하는대 사용됩니다.
+ * 보통 회사 도메인(Company domain)을 거꾸로 하여 사용합니다.
+ * 다른 앱의 것과 중복 될 수 없읍니다. 
+ * Package Name 예시 : Company domain 이 example.com 이고, 앱 이름이 appname 이면, Package Name 은 com.example.appname
 
-- 다음 화면으로 넘어가서 어떤 디바이스를 위한 앱을 개발할지 선택하고, Minimum SDK 를 지정합니다. 이 글에서는 휴대전화/태블릿 앱을 개발한다고 보고 Phone and Tablet 만 선택하고 Minimum SDK 를 선택하겠습니다.
+다음 화면으로 넘어가서 어떤 디바이스를 위한 앱을 개발할지 선택하고, Minimum SDK 를 지정합니다. 이 글에서는 휴대전화/태블릿 앱을 개발한다고 보고 Phone and Tablet 만 선택하고 Minimum SDK 를 선택하겠습니다.
 
 ### Minimum SDK, Target SDK
-- Minimum SDK 와 Target SDK 는 앱이 실행할수 있는 안드로이드 버전을 나타냅니다.
-- Minimum SDK : 앱이 동작하기 위해서 필요한 최소 버전을 의미합니다.
-- Target SDK : 앱의 동작이 확인된 최신의 안드로이드 버전을 의미합니다. 보통 가장 최근 출시된 안드로이드 버전으로 설정합니다.
+ * Minimum SDK 와 Target SDK 는 앱이 실행할수 있는 안드로이드 버전을 나타냅니다.
+ * Minimum SDK : 앱이 동작하기 위해서 필요한 최소 버전을 의미합니다.
+ * Target SDK : 앱의 동작이 확인된 최신의 안드로이드 버전을 의미합니다. 보통 가장 최근 출시된 안드로이드 버전으로 설정합니다.
+ * Android Developers 사이트에 있는 [Dashboard](http://developer.android.com/about/dashboards/index.html)를 이용해 보세요. Minimum SDK, Target SDK 를 정하시는 대 도움이 됩니다.
+
+다음 화면에서 새로 만들 Activity 형태를 선택합니다. 지금은 Blank Activity with Fragment 를 선택합니다. 그리고 마지막으로 Activity 이름을 지정하고 프로젝트 생성을 마칩니다.
+
+## 안드로이드 디바이스에서 테스트 하기
+- 설정 > 개발자 옵션 으로 이동하여, "USB 디버깅" 항목을 체크하여 USB 디버깅을 활성화 합니다.
+- 만약 사용중인 안드로이드 버전이 4.2 이상이라면, 기본적으로 개발자 옵션이 숨겨져 있으므로. 설정 > 휴대전화 정보(또는 태블릿 정보) 에서 빌드 번호는 7회 연타하여 개발자 옵션이 보이도록 하세요.
+- 디바이스를 컴퓨터와 USB 케이블을 이용해 연결합니다.
+- Android Studio 프로젝트 화면에서 상단 메뉴에 위치한. Run 버튼(초록색 색상의 동영상 플레이어 재생버튼 아이콘 모양을 하고 있음)을 누릅니다.
+- 앱이 빌드되며 빌드가 완료하면 디바이스 선택 창이 나옵니다. 디바이스를 선택하고 계속합니다
+- 기다리면, 여러분들의 안드로이드 디바이스에 테스트 하고자 하는 앱이 설치되고 실행 됩니다.
+
+## Gradle 빌드 시스템
+<img src="/resources/app_build.png"><br>
+안드로이드 스튜디오에서, 앱은 Gradle 이라는 빌드 시스템에 의해 빌드 됩니다. Gradle 은 일종의 세련된(?) 빌드 시스템으로 안드로이드 스튜디오와 함께 공개 되었습니다. DSL 이라는 선언문 형태의 언어로 빌드 스크립트를 작성하여 빌드를 설정합니다. 간단히 빌드 과정에 대해 알아봅시다.
+
+- 안드로이드 프로젝트 빌드가 시작됩니다.
+- Gradle 에 의해서 앱이 빌드 됩니다.
+- 앱은 Gradle 에 의해 *.apk 파일로 빌드 됩니다. 이 안에는 여러분들의 코드가 안드로이드 런타임들(ART 또는 Dalvik)이 읽을 수 있는 Byte Code 로 변환되어 포함되어 있고, 컴파일된 리소스와 Manifest 가 있습니다.
+- Jar Signer 로 앱 개발자를 확인 할 수 있게 빌드된 *.apk 파일에 서명 합니다.
+- 빌드가 끝났습니다. adb(Android Debug Bridge)를 통해 안드로이드 디바이스에 앱이 설치됩니다.
+
+### Windows 를 사용 하십니까?
+별도로 USB 드라이버를 설치해야, Android Studio 에서 디바이스를 인식 할 수 있습니다. 설치 방법은 제조사 마다 차이가 있으므로, 여기에서는 다루지 않겠습니다. 구글링 하시면 금방 알아내실 수 있습니다.
+
+## 코드 살펴보기 
+기본적으로 생성된 코드를 한번 살펴 봅시다. 좌측 프로젝트 탐색 메뉴에서 MainActivity.java 를 열어주세요.
+<img src="/resources/mainactivity.png"><br>
+
+코드의 상단에는 아래와 같은 내용이 있습니다.
+MainActivity 클래스가 정의 되어 있는 것을 보실 수 있습니다.
+{% highlight java %}
+//ActionBarActivity 를 상속 하는 MainActivity 클래스가 정의되어 있습니다.
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        ...
+{% endhighlight %}
+
+그리고 스크롤을 하다 보면 다음과 같이 PlaceholderFragment 클래스가 MainActivity 클래스 내부에 정의 되어 있습니다.
+{% highlight java %}
+/**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            return rootView;
+        }
+    }
+    ...
+{% endhighlight %}
+
+Activity 는 뭐고, Fragment 는 뭘까요?
+
+- Activity 는 안드로이드 앱 에서의 하나의 화면을 의미합니다. 보통 레이아웃을 정의하는 xml 파일과, 동작을 처리하는 Java 소스 파일로 구성됩니다.
+- Fragment 는 Activity 내부에 표시 될 수 있는 화면 모듈 입니다. Activity 처럼 xml로 레이아웃을 정의하고 Java 로 동작을 처리 합니다. 하나의 Activity 에 여려 Fragment 를 포함 시키실 수 있습니다. Activity 내부에 표시되는 화면 모듈이라서, Activity 가 없으면 화면에 표시되지 못합니다.
+<img src="/resources/activity_and_fragment.png"><br>
+
+## 레이아웃 만들기
+간단한 Fragment 레이아웃을 하나 만들어 봅시다. 좌측 프로젝트 탐색 메뉴에서 fragment_main.xml 파일을 열어주세요.
+
+<img src="/resources/fragment_layout.png"><br>
+사진과 같은 화면이 보이나요? 왼쪽 팔레트에서 원하시는 뷰(View) 를 마우스로 드래그해서 배치해 보세요. 안드로이드 에서는 화면에 표시되는 각각의 구성요소(예 : 버튼, 텍스트, 이미지 등) 을 통틀어서 뷰(View) 라고 합니다. View 도 종류가 매우 다양합니다. 
+
+## 각종 View 에 대해 알아봅시다.
+View 도 상당히 그 종류가 다양합니다. 나눠보자면 대략 이렇게 나눠집니다.
+
+- Widget (TextView, Button, ImageView ...)
+- ViewGroup
+ - AdapterView(ListView, GridView ...)
+ - Layout (FrameLayout, RelativeLayout, LinearLayout)
+ 
+### Widget 
+ 딱히 자세히 설명하지 않아도 될 것 같내요. 버튼이나 텍스트, 드롭다운 박스, 텍스트 같은 조그마한 컨트롤이나 기본적인 요소 들입니다.(예 : TextView, Button, ImageVIew, Spinner ...)
+ 
+### ViewGroup
+ 하나 이상의 View 를 포함 내부에 할 수 있는 View 입니다.(예 : 각종 Layout, AdapterView)
+ 
+### Layout
+ Layout 은 여러 뷰들을 화면상에 어떻게 배치할지 정해주는 ViewGroup 입니다. 대표적으로 FrameLayout, LinearLayout, RelativeLayout 이 있습니다.
+ 
+ - FrameLayout : 하나의 View 로 한 화면 전체를 가득 체우고자 할 때 사용합니다.
+ - LinearLayout : 수평 또는 수직 방향으로 View 를 나란히 배치해 주는 Layout 입니다.
+ - RelativeLayout : 다른 View 나 화면 가장자리 등을 중심으로 하여 관계적으로 배치해 주는 Layout 입니다.
+ <img src="/resources/layout_managers.png"><br>
+ 
+### AdapterView
+목록과 같이 일련의 데이터들을 표시 하고자 할때 사용합니다. 데이터들을 화면에 표시할 때, Adapter 를 이용하여 표시해서 AdapterView 라고 합니다. (예 : ListView, GridView ...)
+
+## 간단한 ListView 구현하기
+아래와 같은 과정을 거쳐, 간단한 ListView 를 구현해 봅시다.
+
+### 화면 ListView 체우기.
+fragment_main.xml 파일을 수정하여, Layout 을 변경해 봅시다. 우리는 화면을 ListView로 가득 체울 것이므로. FrameLayout 을 사용하고 그 내부에 RelativeLayout 을 배치 할 것입니다.
+
+먼저 fragment_main.xml 을 열고, 하단에 탭을 Design 에서 Text 로 변경하여, 텍스트 편집 화면으로 바꾸세요. 아래와 같은 코드가 보이나요?
+{% highlight xml %}
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+{% endhighlight %}
+
+이 코드에서, RelativeLayout을 FramgLayout 으로 변경하고. 기존에 내부에 있던 TextView 를 지운다음, ListView 를 넣읍시다. 그러면 아래와 같이 코드가 바뀝니다.
+{% highlight xml %}
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity$PlaceholderFragment">
+
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/listView"/>
+
+</FrameLayout>
+{% endhighlight %}
+
+### Java 코드 작성하기
+MainActivity.java 를 열어 동작을 구현해 봅시다. 우리듣 Fragment 에 동작을 구현할 것이므로, Framgnet 코드를 먼저 찾으세요. 아래와 같은 코드를 찾았나요?
+{% highlight java %}
+/**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            return rootView;
+        }
+    }
+    ...
+{% endhighlight %}
+
+문자열 배열로 ListView 에 넣을 데이터를 하나 만듭시다. 이름은 myArray 라고 하겠습니다.
+{% highlight java %}
+...
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
+            String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            return rootView;
+        }
+    }
+    ...
+{% endhighlight %}
+
+그리고 우리가 준비한 데이터와 ListView 사이에서 다리 역할을 하는 Adapter 를 하나 초기화 해서 만들어 줘야 합니다. 먼저 Adapter 에 대해 알아 봅시다.
+
+### Adapter
+Adapter 는 언급한 바와 같이, AdapterView 와 AdapterView에 표시될 데이터 사이에서 다리 역할을 해 줍니다. Adapter 는 처음에 초기화 될때 매개변수로 받은 데이터를 가지게 되고 가진 데이터를 관리하며, AdapterView 에 표시될 View 를 필요한 만큼 가지고 있는 데이터에서 항목을 확인해 각 데이터에 해당되는 View 를 만들어 줍니다.
+
+- AdapterView 가 Adapter 에 표시할 View 를 만들어 달라고 예기합니다. 예를들어 0~4번 항목 데이터에 해당되는 View 를 만들어 달라고 한다고 합니다.
+- Adapter 는 자신이 처음에 받은 데이터에서 0~4번 항목에 해당되는 데이터가 무엇인지 확인합니다.
+- 확인 되었으면 해당 데이터에 대한 View 를 Adapter 가 만들어 냅니다.
+- 만들어진 View 가 AdapterView 에 전달되어 화면상에 표시 됩니다.
+
+### ArrayAdapter 초기화 하기
+우리는 다양한 Adapter 중. ArrayAdapter 를 사용 할 것 입니다. 아래와 같이 초기화 합니다. 몇가지 매개변수를 요구하는대, 아래 코드를 참고해서 입력 하시면 됩니다.
+{% highlight java %}
+...
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
+            String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            //ArrayAdapter 초기화
+            ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
+                    getActivity(), //Context
+                    android.R.layout.simple_list_item_2, //각 항목별 Layout
+                    myArray); //ListView 에 표시될 데이터
+            return rootView;
+        }
+    ...
+{% endhighlight %}
+
+### Context

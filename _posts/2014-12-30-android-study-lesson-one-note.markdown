@@ -21,6 +21,7 @@ categories: develop development android app study note
 
 ### JDK 설치파일 다운로드
 Ubuntu, Arch Linux 계열 리눅스를 사용하시면, 이 부분을 건너 뛰세요.
+
 - [Oracle](http://oracle.com)웹사이트에 접속하세요.
 - Downloads 메뉴에 마우스를 올리면, 다양한 하위 메뉴가 나타나는대. 좌측에 있는 Popular Downloads 섹션에 있는 Java for Developers 를 선택합니다.
 - JDK 항목을 선택합니다
@@ -30,7 +31,7 @@ Ubuntu, Arch Linux 계열 리눅스를 사용하시면, 이 부분을 건너 뛰
 - 다운로드 받은 설치 파일을 실행하여, 설치 마법사의 안내에 따라 설치를 진행합니다.
 
 ### Linux - RPM 패키지 사용 하는경우
--다운로드 받은 RPM 파일을 아래 명령어를 사용하여 설치하거나, GUI 기반의 패키지 설치 프록램이 있다면, 그냥 클릭해서 설치합니다.
+- 다운로드 받은 RPM 파일을 아래 명령어를 사용하여 설치하거나, GUI 기반의 패키지 설치 프록램이 있다면, 그냥 클릭해서 설치합니다.
 {% highlight bash %}
 # "<파일이름>" 은 다운로드 받은 파일의 이름으로 합니다
 sudo rpm -i <파일이름>
@@ -136,4 +137,18 @@ http://developer.android.com/sdk/index.html
 ## 새로운 프로젝트 생성
 이제 프로젝트를 하나 새롭게 생성 해 봅시다. 생성 과정 중에 Minimum SDK, Target SDK, Package Name 등을 정하게 됩니다.
 
+- Welcome to Android Studio 화면에서 Start a new Android Studio project 를 선택합니다.
+- Application name 에 원하는 앱 이름을, Package name 에 원하시는 앱의 Package name을, Project location 에는 프로젝트를 어디에 둘지 경로를 설정합니다. 프로젝트 경로는 영어로만 이뤄져 있어야 합니다.
 
+### Package Name 정하기
+- Package Name 은 각 앱의 고유한 이름으로, 다른 앱과 구별하는대 사용됩니다.
+- 보통 회사 도메인(Company domain)을 거꾸로 하여 사용합니다.
+- 다른 앱의 것과 중복 될 수 없읍니다. 
+Package Name 예시 : Company domain 이 example.com 이고, 앱 이름이 appname 이면, Package Name 은 com.example.appname
+
+- 다음 화면으로 넘어가서 어떤 디바이스를 위한 앱을 개발할지 선택하고, Minimum SDK 를 지정합니다. 이 글에서는 휴대전화/태블릿 앱을 개발한다고 보고 Phone and Tablet 만 선택하고 Minimum SDK 를 선택하겠습니다.
+
+### Minimum SDK, Target SDK
+- Minimum SDK 와 Target SDK 는 앱이 실행할수 있는 안드로이드 버전을 나타냅니다.
+- Minimum SDK : 앱이 동작하기 위해서 필요한 최소 버전을 의미합니다.
+- Target SDK : 앱의 동작이 확인된 최신의 안드로이드 버전을 의미합니다. 보통 가장 최근 출시된 안드로이드 버전으로 설정합니다.

@@ -74,7 +74,7 @@ cp (*.tar.gz 파일의 상위 경로)/(해당 파일 이름).tar.gz (해당 파�
 {% endhighlight %}
  * 압축을 해제합니다.
 {% highlight bash %}
-tar zxvf
+tar zxvf (해당 파일 이름).tar.gz
 {% endhighlight %}
 
 ## JAVA_HOME, Path 변수 설정하기.

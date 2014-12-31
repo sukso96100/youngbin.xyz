@@ -353,8 +353,8 @@ Adapter 는 언급한 바와 같이, AdapterView 와 AdapterView에 표시될 �
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
-                    getActivity(), //Context
-                    android.R.layout.simple_list_item_2, //각 항목별 Layout
+                    getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
+                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
                     myArray); //ListView 에 표시될 데이터
             return rootView;
         }
@@ -362,3 +362,57 @@ Adapter 는 언급한 바와 같이, AdapterView 와 AdapterView에 표시될 �
 {% endhighlight %}
 
 ### Context
+- 시스템 서비스에 접근하거나 앱의 서비스에 접근하기 위해 사용 됩니다.
+- Context 를 이용해 앱의 리소스나 클래스를 얻는대 사용할 수 있습니다. 예를 들면 새 Activity 로 이동하는대 사용하거나, 앱에 포함된 이미지를 로드하는대 쓰입니다.
+
+### ListView 찾기
+findViewById 를 이용해 ListView를 id값으로 찾습니다.
+{% highlight java %}
+...
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
+            String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            //ArrayAdapter 초기화
+            ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
+                    getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
+                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                    myArray); //ListView 에 표시될 데이터
+            //ListView 찾기
+            ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
+            return rootView;
+        }
+    ...
+{% endhighlight %}
+
+## ListView 에 Adapter 설정하기
+마지막으로 LitView 에 Adapter 를 설정해 ListView 와 Adapter 가 서로 작용하도록 합시다.
+{% highlight java %}
+...
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+            //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
+            String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            //ArrayAdapter 초기화
+            ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
+                    getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
+                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                    myArray); //ListView 에 표시될 데이터
+            //ListView 찾기
+            ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
+            //Adapter 설정
+            LV.setAdapter(myAdapter);
+            return rootView;
+        }
+    ...
+{% endhighlight %}
+
+## 앱 실행 결과
+ <img src="/resources/study_lesson1_result.png"><br>
+ 
+ 사진과 같이 잘 나오나요? Lesson 1 내용은 여기까지 입니다. 
+

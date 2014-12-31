@@ -2,7 +2,7 @@
 layout: post
 title: "안드로이드용 시온고등학교 앱을 사용해 보세요."
 date: "2014-08-16"
-categories: android app update zion_high_school
+tags: android app update zion_high_school
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/zion.png"><br>
 

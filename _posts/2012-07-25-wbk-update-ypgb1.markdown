@@ -2,7 +2,7 @@
 layout: post
 title: "(Update | 2012.07.25)WhiteBeam Kernel For YP-GB1"
 date: 2012-07-25
-categories: migrated(old) android kernel development yp-gb1
+tags: migrated(old) android kernel development yp-gb1
 ---
 
 dmb문제를 고쳐, 하루만에!!(?) 업데이트 릴리즈 합니다 ㅎㅎ<br>

@@ -2,7 +2,7 @@
 layout: post
 title: "Google I/O Extended @ Gangnam 2013에 다녀 왔습니다"
 date: 2013-03-18
-categories: migrated(old) ioextended13 googleio
+tags: migrated(old) ioextended13 googleio
 ---
 
 5/15 오후 10시 ~ 5/16 오전5시 30분 까지 했던 Google I/O Extended @ Gangnam 2013에 다녀 왔습니다.<br>

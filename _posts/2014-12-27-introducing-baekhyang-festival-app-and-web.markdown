@@ -2,7 +2,7 @@
 layout: post
 title: "시온고등학교 백향제 2014 앱/웹사이트를 소개합니다."
 date: "2014-12-27"
-categories: develop development android app zion_high_school
+tags: develop development android app zion_high_school
 image: /resources/baekhyang14.png
 ---
 

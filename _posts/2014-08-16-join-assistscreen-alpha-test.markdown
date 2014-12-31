@@ -2,7 +2,7 @@
 layout: post
 title: "Assist Screen 알파 테스트에 참여해 보세요."
 date: 2014-08-16
-categories: android app update test assist_screen
+tags: android app update test assist_screen
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/assistscreen_website.png"><br>
 

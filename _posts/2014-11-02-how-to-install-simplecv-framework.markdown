@@ -2,7 +2,7 @@
 layout: post
 title: "SimpleCV 설치하고 테스트 해 보기."
 date: "2014-11-02"
-categories: tutorial python simplecv develop development raspberry-pi linux computer-vision
+tags: tutorial python simplecv develop development raspberry-pi linux computer-vision
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/SM_logo_color.png"><br>
 SimpleCV 는 파이썬 언어를 이용하여 컴퓨터 비전 앱을 쉽게 작성 할 수 있도록 도와주는 오픈소스 프레임워크 입니다.

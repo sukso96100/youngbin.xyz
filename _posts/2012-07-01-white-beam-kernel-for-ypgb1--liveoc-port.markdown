@@ -2,7 +2,7 @@
 layout: post
 title: "White Beam Kernel for YP-GB1 | LiveOC port"
 date: 2012-07-01
-categories: migrated(old) android kernel development yp-gb1
+tags: migrated(old) android kernel development yp-gb1
 ---
 
 음.. 커널 조금씩 개발중인대,<br>

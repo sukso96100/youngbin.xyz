@@ -1,0 +1,37 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<div class="home">
+  <h1>All Tags</h1>
+
+  <div class="panel panel-default">
+  <div class="panel-body">
+  {% for tag in site.tags %}
+    <a href="#{{ tag | first }}">
+        <span class="label label-default"><span class="glyphicon glyphicon-tag"></span>/{{ tag | first }}/</span>
+      </a>
+  {% endfor %}
+</div>
+</div>
+
+<h1>Posts by Tag</h1>
+{% for tag in site.tags %}
+<div class="panel panel-default">
+<div class="panel-body">
+  <h2 id="{{ tag | first }}"><span class="glyphicon glyphicon-tag"></span> {{ tag | first }}</h2>
+    {% for posts in tag %}
+      {% for post in posts %}
+<a href="{{ post.url }}">
+  <h4>{{ post.title }} <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4>
+</a>
+      {% endfor %}
+    {% endfor %}
+</div>
+</div>
+{% endfor %}
+
+
+</div>

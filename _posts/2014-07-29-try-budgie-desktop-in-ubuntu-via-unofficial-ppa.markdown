@@ -2,7 +2,7 @@
 layout: post
 title: "Budgie Desktop을 비공식 PPA를 통해 사용해보세요."
 date: 2014-07-29
-categories: budgie-desktop ubuntu ppa
+tags: budgie-desktop ubuntu ppa
 ---
 
 요즘 시간 날떄, Budgie Desktop 이라는 데스크탑 환경을 우분투용으로 패키징하여,<br>

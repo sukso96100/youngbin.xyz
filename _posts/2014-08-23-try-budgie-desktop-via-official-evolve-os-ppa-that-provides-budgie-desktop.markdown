@@ -2,7 +2,7 @@
 layout: post
 title: "Budgie Desktop을 공식 Evolve OS PPA를 통해 사용해 보세요"
 date: "2014-08-23"
-categories: update budgie-desktop ubuntu ppa
+tags: update budgie-desktop ubuntu ppa
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/evolve-os-ppa.png"><br>
 

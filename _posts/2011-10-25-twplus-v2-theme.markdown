@@ -2,7 +2,7 @@
 layout: post
 title: "(테마 배포)TWplus v2"
 date: 2011-10-25
-categories: migrated(old) android theme yp-gb1 yp-gb70
+tags: migrated(old) android theme yp-gb1 yp-gb70
 ---
 TWplus v2테마를 완성해 오랜만에 테마 하나 올립니다(?) 오랜만이라 해야하나?ㅇㅅㅇ<br>
 일단 배포 합니다 테스트를 거쳤고 최적화도 진행되어 완성된 테마입니다.<br>

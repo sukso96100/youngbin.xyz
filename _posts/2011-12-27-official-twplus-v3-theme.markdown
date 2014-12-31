@@ -2,7 +2,7 @@
 layout: post
 title: "(테마배포)/정식판(OFFICAl)TWplus v3"
 date: 2011-12-27
-categories: migrated(old) android theme yp-gb1 yp-gb70
+tags: migrated(old) android theme yp-gb1 yp-gb70
 ---
 
 드디어 정식버전을 베포하는군요 ㅎㅎ<br>

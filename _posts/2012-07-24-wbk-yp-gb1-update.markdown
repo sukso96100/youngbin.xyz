@@ -2,7 +2,7 @@
 layout: post
 title: "(Update | 2012.07.24)WhiteBeam Kernel for YP-GB1 -- CWM사용가능"
 date: 2012-07-24
-categories: migrated(old) android kernel development yp-gb1
+tags: migrated(old) android kernel development yp-gb1
 ---
 
  내.. 하루만에 또 업데이트 하내요(?)<br>

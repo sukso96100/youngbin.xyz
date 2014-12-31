@@ -2,7 +2,7 @@
 layout: post
 title: "간단한 웹기반 자리바꾸기 도구"
 date: "2014-08-21"
-categories: web app update seat_changer
+tags: web app update seat_changer
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/seatchanger1.png"><br>
 <img class="image-wrapper" src="{{ site.url }}/resources/seatchanger2.png"><br>

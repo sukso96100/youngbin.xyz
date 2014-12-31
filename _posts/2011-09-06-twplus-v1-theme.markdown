@@ -2,7 +2,7 @@
 layout: post
 title: "(테마 배포)TW+ v1 "
 date: 2011-09-06
-categories: migrated(old) android theme yp-gb1 yp-gb70
+tags: migrated(old) android theme yp-gb1 yp-gb70
 
 ---
 테스트까지 다 끝마치고 드디어 올리는(?)<br>

@@ -2,7 +2,7 @@
 layout: post
 title: "자기소개서 연습도구(IntroWorkout) 에 저장 기능을 넣었습니다."
 date: "2014-09-14"
-categories: web app update university_enterance introworkout parse_backend
+tags: web app update university_enterance introworkout parse_backend
 ---
 <img class="image-wrapper" src="{{ site.url }}/resources/introworkout_login.png"><br>
 

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: NotoSansCjkKR;
+    src: url(fonts/noto_sans_cjk_kr.woff);
+}
+
+body {
+    font-family: NotoSansCjkKR;
+}

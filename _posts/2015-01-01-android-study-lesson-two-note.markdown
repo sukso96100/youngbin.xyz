@@ -19,7 +19,7 @@ image : /resources/android_study_lesson_one_cover.jpg
 
 - OpenWeatherMap API 를 사용해 날시정보 얻기
 - HttpURLConnection 으로 HttpRequest 보내고 Reponse 받기
-- Log 찍기
+- Log 찍기, Logcat 보기 
 - AsyncTask 를 이용하여 Background Thread 돌리기
 - JSON 파싱
 - Adapter 갱신 + AOSP 소스코드 들여다보기
@@ -50,7 +50,7 @@ Lesson 1 에서 작성한 소스를 안드로이드 스튜디오 에서 열고. 
 {% highlight java %}
 ...
 //새 URL 객체
-String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7"
+String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
 URL url = new URL(WeatherURL); 
 //새 URLConnection
 urlConnection = (HttpURLConnection) url.openConnection();
@@ -68,7 +68,7 @@ Stream 은 데이터를 운반 해 주는 통로 역할을 해 줍니다. 물을
 ...
 HttpURLConnection urlConnection = null; //HttpUrlConnection
 //새 URL 객체
-String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7"
+String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
 URL url = new URL(WeatherURL); 
 //새 URLConnection
 urlConnection = (HttpURLConnection) url.openConnection();
@@ -86,7 +86,7 @@ StringBuffer 은 문자열인 String 과 매우 유사하지만. 다른 접이 �
 HttpURLConnection urlConnection = null; //HttpUrlConnection
 BufferedReader reader = null;   
 //새 URL 객체
-String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7"
+String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
 URL url = new URL(WeatherURL); 
 //새 URLConnection
 urlConnection = (HttpURLConnection) url.openConnection();
@@ -110,9 +110,10 @@ String line;
 ...
 HttpURLConnection urlConnection = null; //HttpUrlConnection
 BufferedReader reader = null;   
+String forecastJsonStr = null;
 try{
     //새 URL 객체
-    String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7"
+    String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
     URL url = new URL(WeatherURL); 
     //새 URLConnection
     urlConnection = (HttpURLConnection) url.openConnection();
@@ -127,7 +128,13 @@ try{
     while ((line = reader.readLine()) != null) {
         buffer.append(line + "\n");
             }
+            if (buffer.length() == 0) {
+        // 불러온 데이터가 비어있음.
+        forecastJsonStr = null;
+    }
+    forecastJsonStr = buffer.toString(); //로드한 데이터 문자열 변수에 저장.
         }catch(IOException e){
+        forecastJsonStr = null;
         }finally{
              if (urlConnection != null) {
             urlConnection.disconnect(); //HttpURLConnection 연결 끊기
@@ -159,4 +166,107 @@ Log.w("로그", "경고!");
 Log.i("로그", "새로운 정보!"); 
 Log.d("로그", "디버깅 결과"); 
 Log.v("로그", "일반적인 정보");
+{% endhighlight %}
+
+## Logcat 보기
+여기까지 작성한 앱을 한번 실행 해 봅시다. 앱이 강제 종료 되지 않나요? 그것이 정상 입니다. Logcat을 확인해서 출력된 Log들을 살펴 봅시다.
+<img src="/resources/networkonmain.png"><br>
+
+보통, Run 버튼을 눌러 앱을 테스트 하면, 자동으로 하단에 Android DDMS 가 나타나고, 그곳에 Logcat 이 나타납니다. Run 버튼과 같은 줄에 위치한 Android Device Monitor(안드로이드 마스코드 모양의 버튼)에서도 Logcat 확인이 가능합니다. 
+<img src="/resources/check_logcat.png"><br>
+
+Logcat 을 한번 확인 해 봅시다.
+<pre>
+01-02 00:01:33.119    4099-4099/com.youngbin.androidstudy D/AndroidRuntime﹕ Shutting down VM
+01-02 00:01:33.127    4099-4099/com.youngbin.androidstudy E/AndroidRuntime﹕ FATAL EXCEPTION: main
+    Process: com.youngbin.androidstudy, PID: 4099
+    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.youngbin.androidstudy/com.youngbin.androidstudy.MainActivity}: android.os.NetworkOnMainThreadException
+            at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
+            at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+            at android.app.ActivityThread.access$800(ActivityThread.java:144)
+            at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+            at android.os.Handler.dispatchMessage(Handler.java:102)
+            at android.os.Looper.loop(Looper.java:135)
+            at android.app.ActivityThread.main(ActivityThread.java:5221)
+            at java.lang.reflect.Method.invoke(Native Method)
+            at java.lang.reflect.Method.invoke(Method.java:372)
+            at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+     Caused by: android.os.NetworkOnMainThreadException
+            at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1147)
+            at java.net.InetAddress.lookupHostByName(InetAddress.java:418)
+            at java.net.InetAddress.getAllByNameImpl(InetAddress.java:252)
+            at java.net.InetAddress.getAllByName(InetAddress.java:215)
+            at com.android.okhttp.HostResolver$1.getAllByName(HostResolver.java:29)
+            at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:232)
+            at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:124)
+            at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:272)
+            at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:211)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:373)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+            at com.youngbin.androidstudy.MainActivity$PlaceholderFragment.onCreateView(MainActivity.java:94)
+            at android.support.v4.app.Fragment.performCreateView(Fragment.java:1786)
+            at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:947)
+            at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:1126)
+            at android.support.v4.app.BackStackRecord.run(BackStackRecord.java:739)
+            at android.support.v4.app.FragmentManagerImpl.execPendingActions(FragmentManager.java:1489)
+            at android.support.v4.app.FragmentActivity.onStart(FragmentActivity.java:548)
+            at android.app.Instrumentation.callActivityOnStart(Instrumentation.java:1220)
+            at android.app.Activity.performStart(Activity.java:5949)
+            at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2261)
+            at android.app.ActivityThread.handleLaunchActivity(ActivityThread.java:2360)
+            at android.app.ActivityThread.access$800(ActivityThread.java:144)
+            at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1278)
+            at android.os.Handler.dispatchMessage(Handler.java:102)
+            at android.os.Looper.loop(Looper.java:135)
+            at android.app.ActivityThread.main(ActivityThread.java:5221)
+            at java.lang.reflect.Method.invoke(Native Method)
+            at java.lang.reflect.Method.invoke(Method.java:372)
+            at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:899)
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+</pre>
+
+우리가 작성한 코드의 네트워크 통신 부분에서 오류가 발생했군요. NetworkOnMainThreadException 오류가 발생했습니다. 우리가 네트워크 작업이 Main Thread 에서 실행되도록 작성해서 그렇습니다. 이를 해결하기 위해, Thread 에 대해서 알아봅시다.
+<pre>
+    ...
+    Process: com.youngbin.androidstudy, PID: 4099
+    java.lang.RuntimeException: Unable to start activity ComponentInfo{com.youngbin.androidstudy/com.youngbin.androidstudy.MainActivity}: android.os.NetworkOnMainThreadException
+            at android.app.ActivityThread.performLaunchActivity(ActivityThread.java:2298)
+            ...
+            at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:694)
+     Caused by: android.os.NetworkOnMainThreadException
+            at android.os.StrictMode$AndroidBlockGuardPolicy.onNetwork(StrictMode.java:1147)
+            ...
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+            at com.youngbin.androidstudy.MainActivity$PlaceholderFragment.onCreateView(MainActivity.java:94)
+            at android.support.v4.app.Fragment.performCreateView(Fragment.java:1786)
+            at android.support.v4.app.FragmentManagerImpl.moveToState(FragmentManager.java:947)
+            ...
+</pre>
+
+## Thread
+어떤 프로그램 또는 프로세스 내부에서 실행이 되는 흐름의 단위를 말합니다. 필요에 따하 둘 이상의 Thread 를 실행 시킬수도 있는대 이러한 실행 방식을 Multithread 하며, 둘 이상의 Thread 를 다루는 것을 보고, MultiThreading 이라고 합니다. 안드로이드 앱 에서는 기본적으로 사용자로 부터의 입력 및 출력을 처리해 주는 UI Thread 가 있습니다. Main Thread 라고도 부릅니다. UI Thread 는 버튼 클릭, 화면 드래그 등의 간단하고 짧은 작업들을 수행합니다. 그런대 여기서 네트워크 작업을 실행하게 되면. 네트워크 작업을 일단 마쳐야 하기 떄문에, 만약 네트워크 작업이 오래 걸리면 사용자로 부터의 입력과 출력 등을 처리하지 못하게 됩니다. 사용자 입장에서는 앱이 먹통인 것으로 보입니다. 그러므로 안드로이드 3.0 부터는 이렇게 작동되면 오류로 처리가 되어 버립니다. 우리는 네트워크 작업을 별도 Thread 에서 실행되도록 할 건대. AsyncTask 를 이용하여 구현 할 것입니다.
+<img src="/resources/multithreading.png"><br>
+
+
+## AsyncTask
+AsyncTask 는 백그라운드 작업을 쉽게 실행 할 수 있도록, 그리고 결과를 UI Thread 로 쉽게 넘길 수 있도록 해줍니다.
+AsyncTask 에는 4가지 메서드가 있습니다. 백그라운드 작업 전에 실행되는 onPreExecute(), 백그라운드 작업을 실행하는 doInBackground(Params...), 중간에 진행 정도를 UI Thread 에 넘겨주는 onProgressUpdate(Progress...), 백그라운드 작업이 끝나고 실행되며 결과를 Ui Thread 로 넘기는 onPostExecute(Result) 가 있습니다. 
+
+AsyncTask 를 구현 할 때는, AsncTask 를 상속받는 클래스로 구현합니다.
+{% highlight java %}
+private class myAsyncTask extends AsyncTask<실행시 받을 매개변수 타입, 진행 현황 변수 타입, 완료시 반환할 변수 타입>{ 
+    protected void onPreExecute() { 
+    // 백그라운드 작업 전에 Main Thread 에 실행 
+        } 
+    protected void doInBackground(Params... params) { 
+    //백그라운드 작업 실행 } 
+    protected void onProgressUpdate(Progress... progress) { 
+    //도중에 진행 정도 변경 시 Main Thread 에서 실행 
+    publishProgress(progress); 
+        } 
+    protected void onPostExecute(Result result) { 
+    //백그라운드 작업 후 실행 
+        }
+    }
 {% endhighlight %}

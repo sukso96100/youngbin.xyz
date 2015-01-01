@@ -49,7 +49,7 @@ sudo rpm -i <파일이름>
 ### Linux - Ubuntu 계열
 터미널에서 다음 명령어로, WebUpd8 JDK 저장소를 추가하고, 설치를 진행합니다.(아래 명령어는 JDK8을 설치합니다)
 {% highlight bash %}
-sudo add-aptt-repository ppa:webupd8team/java
+sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
 sudo apt-get install oracle-java8-installer
 {% endhighlight %}

@@ -270,3 +270,150 @@ private class myAsyncTask extends AsyncTask<실행시 받을 매개변수 타입
         }
     }
 {% endhighlight %}
+
+그럼, 한번 구현해 봅시다. 일단 코드가 슬슬 길어져서 눈으로 읽이 좀 어려우니. Fragment 를 별도의 클래스 파일로 분리합니다.
+새로 클래스 파일을 만들고, 그곳으로 Fragment 부분을 모두 옮기고, 기존에 Activity 클래스 파일의 Fragment 코드는 지웁시다.
+
+수정된 MainActivity,java
+{% highlight java %}
+public class MainActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new WeatherFragment())
+                    .commit();
+        }
+    }
+    ...
+{% endhighlight %}
+
+MainActivity.java 에서 WeatherFragment.java 로 분리된 Fragment 코드
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+
+    public WeatherFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
+        String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+        //ArrayAdapter 초기화
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
+                getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
+                android.R.layout.simple_list_item_1, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                myArray); //ListView 에 표시될 데이터
+        //ListView 찾기
+        ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
+        //Adapter 설정
+        LV.setAdapter(myAdapter);
+
+        HttpURLConnection urlConnection = null; //HttpUrlConnection
+        BufferedReader reader = null;
+        String forecastJsonStr = null;
+        try{
+            //새 URL 객체
+            String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
+            URL url = new URL(WeatherURL);
+            //새 URLConnection
+            urlConnection = (HttpURLConnection) url.openConnection();
+            urlConnection.setRequestMethod("GET");
+            urlConnection.connect();
+            //InputStream 을 사용해 데이터 읽어들이기
+            InputStream inputStream = urlConnection.getInputStream();
+            //StringBuffer 에 데이터 저장
+            StringBuffer buffer = new StringBuffer(); // 새로운 StringBuffer 생성
+            reader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line + "\n");
+            }
+            if (buffer.length() == 0) {
+                // 불러온 데이터가 비어있음.
+                forecastJsonStr = null;
+            }
+            forecastJsonStr = buffer.toString(); //로드한 데이터 문자열 변수에 저장.
+        }catch(IOException e){
+            forecastJsonStr = null;
+        }finally{
+            if (urlConnection != null) {
+                urlConnection.disconnect(); //HttpURLConnection 연결 끊기
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (final IOException e) {
+                }
+            }
+        }
+        return rootView;
+    }
+}
+{% endhighlight %}
+
+일단은, doInBackground() 만 구현해 봅시다. AsyncTask 를 상속하는 내부 클래스를 하나 만들고 doImBackgound() 를 구현한 다음, 그 안에 네트워크 작업 코드를 옮기면 됩니다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+
+    public WeatherFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        ...
+        return rootView;
+    }
+    protected class myAsyncTask extends AsyncTask<Void, Void, Void> {
+        @Override
+        protected Void doInBackground(Void... params) {
+            HttpURLConnection urlConnection = null; //HttpUrlConnection
+            BufferedReader reader = null;
+            String forecastJsonStr = null;
+            try{
+                //새 URL 객체
+                String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
+                URL url = new URL(WeatherURL);
+                //새 URLConnection
+                urlConnection = (HttpURLConnection) url.openConnection();
+                urlConnection.setRequestMethod("GET");
+                urlConnection.connect();
+                //InputStream 을 사용해 데이터 읽어들이기
+                InputStream inputStream = urlConnection.getInputStream();
+                //StringBuffer 에 데이터 저장
+                StringBuffer buffer = new StringBuffer(); // 새로운 StringBuffer 생성
+                reader = new BufferedReader(new InputStreamReader(inputStream));
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line + "\n");
+                }
+                if (buffer.length() == 0) {
+                    // 불러온 데이터가 비어있음.
+                    forecastJsonStr = null;
+                }
+                forecastJsonStr = buffer.toString(); //로드한 데이터 문자열 변수에 저장.
+            }catch(IOException e){
+                forecastJsonStr = null;
+            }finally{
+                if (urlConnection != null) {
+                    urlConnection.disconnect(); //HttpURLConnection 연결 끊기
+                }
+                if (reader != null) {
+                    try {
+                        reader.close();
+                    } catch (final IOException e) {
+                    }
+                }
+            }
+            return null;
+        }
+    }
+}
+{% endhighlight %}

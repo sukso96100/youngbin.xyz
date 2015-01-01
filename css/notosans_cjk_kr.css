@@ -42,6 +42,6 @@
        url(../fonts/Noto Sans CJK KR Bold.ttf) format('truetype');
 }
 
-body .post .post-reading .post-meta .post-title .post-content .post-meta-text #disqus_thread{
+body{
     font-family: 'Noto Sans CJK KR', sans-serif;
 }

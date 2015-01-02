@@ -369,6 +369,8 @@ public class WeatherFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         ...
+        myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+        mat.execute(); //myAsyncTask 실행하기
         return rootView;
     }
     protected class myAsyncTask extends AsyncTask<Void, Void, Void> {
@@ -416,4 +418,36 @@ public class WeatherFragment extends Fragment {
         }
     }
 }
+{% endhighlight %}
+
+## Overflow Menu 
+매번 네트워크 작업이 잘 실행되는지 보기 위해 앱을 죽이고 다시 실행하기는 번거롭습니다. Overflow Menu 를 만들어, 그곳에 새로고침 메뉴를 넣어 봅시다.
+아래 사진이 Overflow Menu 입니다. 안드로이드 디바이스에서 다양한 앱 들을 사용 하시면서, 많이 보셨을 겁니다.
+<img src="/resources/overflow_menu.png"><br>
+
+### xml 파일로 Overflow Menu 정의하기
+우선, Overflow Menu 에 어떤 항목을 넣을지, xml 항목으로 정의 해 줘야 합니다. 먼저, 새로고침 항목에 쓸 문자열을 /res/values/strings.xml 에 추가 합시다.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ...
+    <!--새로 추가한 문자열-->
+    <string name="refresh">Refresh</string>
+</resources>
+{% endhighlight %}
+그 다음, 메뉴 항목을 정의해 줍시다. 새로 메뉴 리소스 파일을 /res/menu/ 에 생성해 주세요. 저는 /res/menu/weatherfragment.xml 파일을 생성 했습니다.
+그리고 아래 코드를 참고하여, 메뉴를 정의해 주세요.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+ <!-- 각 메뉴 항목은 item 태그로 정의합니다. 
+    android:id="@+id/action_refresh" 항목의 id 값 - 여기서는 action_refresh
+    android:title="@string/refresh" 메뉴 항목에 표시할 텍스트
+    android:orderInCategory="100" Overflow Menu 에서 몇 번째로 보일지 지정. 여기서는 100번째
+    app:showAsAction="never" 액션메뉴 버튼으로 보일지 여부. ifRoom 으로 하면 공간이 있을떄,
+        Oveeflow Menu 버튼 옆에 별도 버튼으로. never 로 하면 Overflow Menu 에만 나타남.-->
+ <item android:id="@+id/action_refresh" android:title="@string/refresh"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>
 {% endhighlight %}

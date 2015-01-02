@@ -61,7 +61,7 @@ urlConnection.connect();
 {% endhighlight %}
 
 ## InputStream
-우리가 몇심 리터의 물을 받을 때 어떻게 받나요? 한 손으로 한번에 받나요? 그것을 불가능 합니다. 그 작은 손으로 어떻게 몇 심 리터의 물을 한번에 받겠습니까.
+우리가 수십 리터의 물을 받을 때 어떻게 받나요? 한 손으로 한번에 받나요? 그것을 불가능 합니다. 그 작은 손으로 어떻게 몇 심 리터의 물을 한번에 받겠습니까.
 한 손으로 한번에 받지 않고. 도구를 이용해 조금씩 받습니다. 파이프를 연결해서 흘려받는 것을 예로 들 수 있겠군요.
 우리가 로드하는 데이터 또한 한번에 로드 할 수 없습니다. 그래서 InputStream 을 이용하여 데이터를 로드합니다. InputStream 은 여러가지 Stream 중 하나 인대.
 Stream 은 데이터를 운반 해 주는 통로 역할을 해 줍니다. 물을 흘려보내는 파이프 역할을 한다고 보면 됩니다. Stream 은 연속적인 데이터 흐름을 물에 비유해서 붙여진 이름인대. 물이 한쪽 방향으로만 흐르듯, Stream 은 하나의 방향으로만 통신이 가능해서. 입력/출력을 동시에 처리할 수 없습니다. 그래서 InputStream, OutputStream 이 따로 있습니다. 우리는 데이터를 입력 받으므로. InputStream 을 사용합니다.
@@ -446,7 +446,7 @@ public class WeatherFragment extends Fragment {
        android:id="@+id/action_refresh" 항목의 id 값 - 여기서는 action_refresh
        android:title="@string/refresh" 메뉴 항목에 표시할 텍스트
        android:orderInCategory="100" Overflow Menu 에서 몇 번째로 보일지 지정. 여기서는 100번째
-       app:showAsAction="never" 액션메뉴 버튼으로 보일지 여부. ifRoom 으로 하면 공간이 있을떄,
+       app:showAsAction="never" 액션메뉴 버튼으로 보일지 여부. ifRoom 으로 하면 공간이 있을때,
            Oveeflow Menu 버튼 옆에 별도 버튼으로. never 로 하면 Overflow Menu 에만 나타남.-->
     <item android:id="@+id/action_refresh" android:title="@string/refresh"
         android:orderInCategory="100" app:showAsAction="never" />
@@ -594,7 +594,7 @@ Logcat 에서 이 부분에 주목해 주세요. 이번에는 SecurityException 
 
 이러한 형태의 보안 모델을 샌드박스(Sandbox) 라고 하며, 다시 말해 안드로이드 에서 각 앱들은 별도의 샌드박스 에서 실행 됩니다. 이로 인해 각 앱들은 다른 앱의 리소스나 프로세스에 접근 할 수 없게 됩니다. 또한 그 어떤 앱도 다른 앱, 안드로이드 OS, 또는 사용자에게 영향을 주는 민감한 데이터 접근하는 것 이나, 민감한 작업을 실행하는 것들을 못하도록 해 줍니다.
 
-인터넷을 사용하는 것, 사용자 위치 정보 얻기, 주소록 데이터 수정하기, 메시지 보내기 등을 예로 들 수 있습니다. 이러한 민감한 것들을 앱에서 하고자 할떄, 매번 일일이 권한(Permission) 을 요청 하기 보다는. 개발자가 앱에 요구되는 권한을 Manifest에 정의합니다.
+인터넷을 사용하는 것, 사용자 위치 정보 얻기, 주소록 데이터 수정하기, 메시지 보내기 등을 예로 들 수 있습니다. 이러한 민감한 것들을 앱에서 하고자 할때, 매번 일일이 권한(Permission) 을 요청 하기 보다는. 개발자가 앱에 요구되는 권한을 Manifest에 정의합니다.
 
 그러면, 사용자가 앱을 설치 할 때 아래 사진과 같은 화면이 나타나, 앱이 요구하는 권한을 확인하고 승인 하도록 합니다.
 

@@ -121,7 +121,7 @@ python simplecv.py
 
 #### svgwrite 모듈이 설치되어 있지 않아 오류가 나는 경우.
 
-인터렉티브 쉘로 들어가려 할떄 svgwrite 모듈 미설치로 인한 오류가 나면 아마 아래과 같은 것이 나타날 것입니다.
+인터렉티브 쉘로 들어가려 할때 svgwrite 모듈 미설치로 인한 오류가 나면 아마 아래과 같은 것이 나타날 것입니다.
 {% highlight bash %}
 youngbin@youngbin-ultrabook:~$ simplecv
 ERROR:

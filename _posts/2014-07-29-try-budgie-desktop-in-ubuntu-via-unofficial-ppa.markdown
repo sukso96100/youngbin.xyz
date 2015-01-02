@@ -5,7 +5,7 @@ date: 2014-07-29
 tags: budgie-desktop ubuntu ppa
 ---
 
-요즘 시간 날떄, Budgie Desktop 이라는 데스크탑 환경을 우분투용으로 패키징하여,<br>
+요즘 시간 날때, Budgie Desktop 이라는 데스크탑 환경을 우분투용으로 패키징하여,<br>
 저의 개인 PPA에 올려서 배포하고 있습니다. Ubuntu에서 사용해 보고 싶으신 분들은,<br>
 저의 PPA를 한번 사용해 보시면 좋으실 것 같습니다.<br><br>
 

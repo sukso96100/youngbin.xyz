@@ -20,9 +20,9 @@ tags: migrated(old) android kernel development yp-gb1
    →커널 쓰시는 분들중에 한분이 init.d가 안된다고 하시더군요.<br>
 파일이름이랑 경로 맞는대도<br>
 안된다 해서 '뭐지 이건..'하면서 구글링 좀 해대면서 init.rc 수정해줬습니다. 일단은<br>
-system/etc/init.d 안의 파일들을 실핼시켜주는  userinit.sh를 init.rc를 수정해서 부팅할떄마다 실행하게 했다가<br>
+system/etc/init.d 안의 파일들을 실핼시켜주는  userinit.sh를 init.rc를 수정해서 부팅할때마다 실행하게 했다가<br>
 이번 업대이트를 통해 루트 권한으로 userinit.sh를 실행하도록 수정했습니다.<br>
-→init.d폴더에 스크립트 넣으실떄 파일 이름 형식은 다음과 같습니다.<br>
+→init.d폴더에 스크립트 넣으실때 파일 이름 형식은 다음과 같습니다.<br>
 <br>
 S(숫자)(이름)<br>
 ex) S01Zipalign<br>

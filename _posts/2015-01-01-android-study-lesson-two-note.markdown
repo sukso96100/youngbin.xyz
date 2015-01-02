@@ -1084,6 +1084,7 @@ Lesson 2 에 해당되는 소스코드 입니다.
 ## 귀찮게 HttpURLConnection 쓰고 쓰레드 돌리지 않고 라이브러리 이용해서 쉽게 네트워킹 하기.
 귀찮게 일일이 연결 열고, InputStream 을 String 으로 변환하거나 하지 말고, 라이브러리를 이용해 편리하게 해 봅시다.
 많은 개발자 분들이 안드로이드 에서 사용 가능한 다양한 라이브러리를 개발해 둬서, 라이브러리를 잘 활용해 구현하기 어려운 것도 쉽게 구현 할 수 있습니다.
+
 안드로이드 네트워킹을 쉽게 할 수 있도록 해 주는 라이브러리도 아주 다양합니다. RetroFit, OkHttp, Volley, Loopj Async-HttpClient 등이 있는대.
 이 포스트에서는 [OkHttp](http://square.github.io/okhttp/) 를 한번 다뤄 보고자 합니다. 먼저 라이브러리를 추가 해 줍시다. 우리는 Android Studio 를 사용하죠? Lesson 1 에서 언급한 Gradle 이 알아서 의존성 등을 처리해 줍니다. gradle 빌드 스크립트에 한 줄만 추가하면 라이브러리 추가는 끝납니다. 앱 모듈 디렉토리에 위치한 build.gradle 을 열고, dependencies 에 한줄 추가 합니다.
 {% highlight groovy %}
@@ -1096,7 +1097,7 @@ dependencies {
 ...
 {% endhighlight %}
 [OkHttp 의 Wiki 문서](https://github.com/square/okhttp/wiki)나 [JavaDoc 문서](http://square.github.io/okhttp/javadoc/index.html)를 참고해서 코드를 작성 하시면 됩니다. 아래는 비동기 방식으로 네트워크 작업을 OkHttp 로 하는 방법의 예시 입니다.
-우리가 기존에 사용하덛 방법에 비하면 정말 간단하지 않나요?
+우리가 기존에 사용하던 방법에 비하면 정말 간단하지 않나요?
 {% highlight java %}
   private final OkHttpClient client = new OkHttpClient();
 
@@ -1132,7 +1133,7 @@ dependencies {
 - [OpenWeatherMap API](http://openweathermap.org/api)
 - [Android Develoers - HttpURLConnection](http://developer.android.com/reference/java/net/HttpURLConnection.html)
 - [Android Developers - Log](http://developer.android.com/reference/android/util/Log.html)
-- [Android Developers - Connection to the Network](http://developer.android.com/training/basics/network-ops/connecting.html)
+- [Android Developers - Connecting to the Network](http://developer.android.com/training/basics/network-ops/connecting.html)
 - [Android Developers - System Permissions](http://developer.android.com/guide/topics/security/permissions.html)
 - [Android Developers - org.json](http://developer.android.com/reference/org/json/package-summary.html)
 - [Android Developers - ArrayAdapter](http://developer.android.com/reference/android/widget/ArrayAdapter.html)

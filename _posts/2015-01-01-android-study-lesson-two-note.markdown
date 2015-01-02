@@ -38,7 +38,7 @@ image : /resources/multithreading.png
 
 http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7
 
-- forecast/daily? - 하루에 대항 일기예보
+- forecast/daily? - 하루에 대한 일기예보
 - id=1838716 - 도시 ID 값(여기서는 부천시 ID 값 사용)
 - units=metric - 단위(metric 주로 유럽 국가에서 쓰는 세계 표준 단위 - cm, m, kg ... / imperial 미국이나 영국 등ㅇ서 사용하는 단위 - miles, feet ...)
 - cnt=7 - 일 수(여기서는 7일)

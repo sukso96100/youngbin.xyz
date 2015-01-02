@@ -6,7 +6,7 @@ tags: develop development android app study note
 image : /resources/android_study_lesson_one_cover.jpg
 ---
 
-안녕하세요. 저번에 Lesson 1 노트에 이어 Lesson 2 내용을 정리하여 포스트로 작성 해 보고자 합니다. 원래는 Lesson 하나가 끝날 떄마다 작성 하려 했는대. 스터디 맴버들이 언어 장벽 문제인지, 그냥 안듣는건지... 미리 Udacity 강의를 듣고 오지를 않아서 이렇게 쓴 노트라도 좀 보라고 이번에는 미리 작성하게 되었습니다. 바로 들어가겠습니다.
+안녕하세요. 저번에 Lesson 1 노트에 이어 Lesson 2 내용을 정리하여 포스트로 작성 해 보고자 합니다. Lesson 2 에 대한 정리는... 생각보다 길군요. 바로 들어가겠습니다.
 
 ## 시작하기 앞서...
 - Lesson 1 은 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin-han.kr.pe/2014/12/30/android-study-lesson-one-note.html)
@@ -1076,3 +1076,66 @@ add 를 검색해서, 해당 메서드를 찿아보면, 역시 내부에서 호�
 ## 앱 실행 결과.
 여기까지 Lesson 2 내용 정리 였습니다. 이제 작성한 앱을 실행 해 보세요. 아래 사진과 같이 잘 나오나요??
 <img src="/resources/lesson_two_result.png"><br>
+
+## 소스코드
+Lesson 2 에 해당되는 소스코드 입니다.
+[https://github.com/sukso96100/zionhs_android_study/tree/lesson2](https://github.com/sukso96100/zionhs_android_study/tree/lesson2)
+
+## 귀찮게 HttpURLConnection 쓰고 쓰레드 돌리지 않고 라이브러리 이용해서 쉽게 네트워킹 하기.
+귀찮게 일일이 연결 열고, InputStream 을 String 으로 변환하거나 하지 말고, 라이브러리를 이용해 편리하게 해 봅시다.
+많은 개발자 분들이 안드로이드 에서 사용 가능한 다양한 라이브러리를 개발해 둬서, 라이브러리를 잘 활용해 구현하기 어려운 것도 쉽게 구현 할 수 있습니다.
+안드로이드 네트워킹을 쉽게 할 수 있도록 해 주는 라이브러리도 아주 다양합니다. RetroFit, OkHttp, Volley, Loopj Async-HttpClient 등이 있는대.
+이 포스트에서는 [OkHttp](http://square.github.io/okhttp/) 를 한번 다뤄 보고자 합니다. 먼저 라이브러리를 추가 해 줍시다. 우리는 Android Studio 를 사용하죠? Lesson 1 에서 언급한 Gradle 이 알아서 의존성 등을 처리해 줍니다. gradle 빌드 스크립트에 한 줄만 추가하면 라이브러리 추가는 끝납니다. 앱 모듈 디렉토리에 위치한 build.gradle 을 열고, dependencies 에 한줄 추가 합니다.
+{% highlight groovy %}
+...
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.squareup.okhttp:okhttp:2.2.0' // 이거 한줄만 추가하면 됩니다.
+}
+...
+{% endhighlight %}
+[OkHttp 의 Wiki 문서](https://github.com/square/okhttp/wiki)나 [JavaDoc 문서](http://square.github.io/okhttp/javadoc/index.html)를 참고해서 코드를 작성 하시면 됩니다. 아래는 비동기 방식으로 네트워크 작업을 OkHttp 로 하는 방법의 예시 입니다.
+우리가 기존에 사용하덛 방법에 비하면 정말 간단하지 않나요?
+{% highlight java %}
+  private final OkHttpClient client = new OkHttpClient();
+
+  public void run() throws Exception {
+    Request request = new Request.Builder()
+        .url("http://publicobject.com/helloworld.txt")
+        .build();
+
+    client.newCall(request).enqueue(new Callback() {
+      @Override public void onFailure(Request request, Throwable throwable) {
+        //네트워크 작업 실패한 경우 여기 있는 코드가 실행 됩니다.
+        throwable.printStackTrace();
+      }
+
+      @Override public void onResponse(Response response) throws IOException {
+        if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
+            //네트워크 작업을 성공적으로 마처서 응답을 받은 경우 여기 있는 코드가 실행됩니다.
+            //reponse 가지고 작업 하시면 됩니다.
+        Headers responseHeaders = response.headers();
+        for (int i = 0; i < responseHeaders.size(); i++) {
+          System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
+        }
+
+        System.out.println(response.body().string());
+      }
+    });
+  }
+{% endhighlight %}
+
+## 추가 자료들...
+이 포스트를 보실 때 참고 하시면 좋은 자료들과 웹 사이트 입니다.
+
+- [OpenWeatherMap API](http://openweathermap.org/api)
+- [Android Develoers - HttpURLConnection](http://developer.android.com/reference/java/net/HttpURLConnection.html)
+- [Android Developers - Log](http://developer.android.com/reference/android/util/Log.html)
+- [Android Developers - Connection to the Network](http://developer.android.com/training/basics/network-ops/connecting.html)
+- [Android Developers - System Permissions](http://developer.android.com/guide/topics/security/permissions.html)
+- [Android Developers - org.json](http://developer.android.com/reference/org/json/package-summary.html)
+- [Android Developers - ArrayAdapter](http://developer.android.com/reference/android/widget/ArrayAdapter.html)
+- [Android Framework 에 있는 ArrayAdapter 소스코드](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/widget/ArrayAdapter.java)
+- [OkHttp](http://square.github.io/okhttp/)
+- [hello world » Android의 HTTP 클라이언트 라이브러리](http://helloworld.naver.com/helloworld/textyle/377316)

@@ -106,7 +106,7 @@ String line;
 {% endhighlight %}
 
 ## 불러온 데이터 문자열 변수에 저장. 오류 예외처리
-이제 불러온 데이터는 String 형태의 변수에 저장하고. 불러론 데이터가 비어있어 오류가 나는 경우를 대비하여, 예외처리를 합니다.
+이제 불러온 데이터는 String 형태의 변수에 저장하고. 불러온 데이터가 비어있어 오류가 나는 경우를 대비하여, 예외처리를 합니다.
 {% highlight java %}
 ...
 HttpURLConnection urlConnection = null; //HttpUrlConnection

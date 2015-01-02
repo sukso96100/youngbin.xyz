@@ -17,7 +17,7 @@ image : /resources/multithreading.png
 ## Lesson 2 내용들
 대략 정리하자면 아래와 같습니다
 
-- OpenWeatherMap API 를 사용해 날시정보 얻기
+- OpenWeatherMap API 를 사용해 날씨정보 얻기
 - HttpURLConnection 으로 HttpRequest 보내고 Reponse 받기
 - Log 찍기, Logcat 보기 
 - AsyncTask 를 이용하여 Background Thread 돌리기
@@ -27,14 +27,14 @@ image : /resources/multithreading.png
 
 ## OpenWeatherMap API
 
-이번 Lesson 에서는, OpenWeatherMap 이라는 날시 정보를 제공하는 사이트에서 제공하는 API 를 이용하여 나리 정보를 불러올 것 입니다.
-우리는 일주일 치 날시 정보를 불러들일 것 입니다. [일단 해당 문서를 한번 읽어봅시다.](http://openweathermap.org/forecast)
+이번 Lesson 에서는, OpenWeatherMap 이라는 날씨 정보를 제공하는 사이트에서 제공하는 API 를 이용하여 나리 정보를 불러올 것 입니다.
+우리는 일주일 치 날씨 정보를 불러들일 것 입니다. [일단 해당 문서를 한번 읽어봅시다.](http://openweathermap.org/forecast)
 
 <img src="/resources/openweathermap_api_doc.png"><br>
 
-우리는 도시ID 값으로 특정 도시에 해당되는 날시를 찾고, 일주일치 일기예보 정보를 얻을 것이며, JSON 형식으로 데이터를 받을 것입니다. 아 그리고 온도 단위는 섭씨로 해야겠죠?
+우리는 도시ID 값으로 특정 도시에 해당되는 날씨를 찾고, 일주일치 일기예보 정보를 얻을 것이며, JSON 형식으로 데이터를 받을 것입니다. 아 그리고 온도 단위는 섭씨로 해야겠죠?
 
-예를 들어서 앞에서 나온 조건을 만족하는 경기도 부천지역 날시에 해당되는 API의 URL은 어떻게 될까요? 아래와 같습니다.
+예를 들어서 앞에서 나온 조건을 만족하는 경기도 부천지역 날씨에 해당되는 API의 URL은 어떻게 될까요? 아래와 같습니다.
 
 http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7
 
@@ -44,7 +44,7 @@ http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cn
 - cnt=7 - 일 수(여기서는 7일)
 
 ## HttpURLConnection
-날시 데이터를 얻어낼 URL 도 있으니, 해당 URL 로 부터 데이터를 로드해 봅시다. HttpURLConnection 을 이용해 요청을 보내서 데이터를 얻을 것입니다.
+날씨 데이터를 얻어낼 URL 도 있으니, 해당 URL 로 부터 데이터를 로드해 봅시다. HttpURLConnection 을 이용해 요청을 보내서 데이터를 얻을 것입니다.
 Lesson 1 에서 작성한 소스를 안드로이드 스튜디오 에서 열고. MainActivity.java 의 Fragment 부분에 위치한 onCreateView 부분에서 이어서 작업합시다.
 
 우선 URL 객체를 하나 만듭시다. 그리고 HttpURLConnection 을 이용해 연결하고, 데이터를 로드합시다.
@@ -640,7 +640,7 @@ public class WeatherFragment extends Fragment {
         protected Void doInBackground(String... params) {
             ...
 
-            // 날시 데이터 URL 에 사용될 옵션
+            // 날씨 데이터 URL 에 사용될 옵션
             String format = "json";
             String units = "metric";
             int numDays = 7;
@@ -888,12 +888,12 @@ public class WeatherFragment extends Fragment {
    ]
 }
 {% endhighlight %}
-각 요일별 날시 상태(예를들면 맑은, 눈이 옴, 비가 옴, 흐림 등)와 최대기온, 최저기온을 얻어 봅시다.
+각 요일별 날씨 상태(예를들면 맑은, 눈이 옴, 비가 옴, 흐림 등)와 최대기온, 최저기온을 얻어 봅시다.
 각 요일별 날씨는 "list" 라는 Json Array 안에 있고. 그 안에 있는 각 객체 안에 날씨 데이터가 있습니다.
 최대기온과 최저기온에 해당되는 "max" 와 "min" 은 "temp" 라는 객체 내부에 있고.
-날시 상태에 해당되는 "main" 은 "weather" 라는 Json Array 의 0번째 객체 안에 있습니다.
+날씨 상태에 해당되는 "main" 은 "weather" 라는 Json Array 의 0번째 객체 안에 있습니다.
 
-먼저, 7일치 날시정보를 저장할 String[]을 하나 만들고, 반복문을 작성해서 각 요일별 날시 객체를 얻어냅시다.
+먼저, 7일치 날씨정보를 저장할 String[]을 하나 만들고, 반복문을 작성해서 각 요일별 날씨 객체를 얻어냅시다.
 
 {% highlight java %}
     protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
@@ -909,8 +909,8 @@ public class WeatherFragment extends Fragment {
                 for (int i = 0; i < JsonArray.length(); i++) { //반복문
                     String MaxTemp = null; // 최대기온 저장할 변수
                     String MinTemp = null; // 최저기온 저장할 변수
-                    String WeatherMain = null; // 날시상태 저장할 변수
-                    String Item; // 1일 날시정보 저장할 변수
+                    String WeatherMain = null; // 날씨상태 저장할 변수
+                    String Item; // 1일 날씨정보 저장할 변수
                     JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
                 }
                 return WeatherDataArray; // 데이터 반환
@@ -938,8 +938,8 @@ public class WeatherFragment extends Fragment {
                 for (int i = 0; i < JsonArray.length(); i++) { //반복문
                     String MaxTemp = null; // 최대기온 저장할 변수
                     String MinTemp = null; // 최저기온 저장할 변수
-                    String WeatherMain = null; // 날시상태 저장할 변수
-                    String Item; // 1일 날시정보 저장할 변수
+                    String WeatherMain = null; // 날씨상태 저장할 변수
+                    String Item; // 1일 날씨정보 저장할 변수
                     JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
                     JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
                     MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
@@ -956,7 +956,7 @@ public class WeatherFragment extends Fragment {
          
 {% endhighlight %}
 
-그리고 이어서 날시 상태를 얻어내 봅시다.
+그리고 이어서 날씨 상태를 얻어내 봅시다.
 {% highlight java %}
     protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
         @Override
@@ -971,8 +971,8 @@ public class WeatherFragment extends Fragment {
                 for (int i = 0; i < JsonArray.length(); i++) { //반복문
                     String MaxTemp = null; // 최대기온 저장할 변수
                     String MinTemp = null; // 최저기온 저장할 변수
-                    String WeatherMain = null; // 날시상태 저장할 변수
-                    String Item; // 1일 날시정보 저장할 변수
+                    String WeatherMain = null; // 날씨상태 저장할 변수
+                    String Item; // 1일 날씨정보 저장할 변수
                     JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
                     JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
                     MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
@@ -982,7 +982,7 @@ public class WeatherFragment extends Fragment {
                     JSONArray WeatherArray = EachObj.getJSONArray("weather");
                     // "weather" Json Array 의 0번째 객체 얻기
                     JSONObject WeatherObj = WeatherArray.getJSONObject(0);
-                    // 0번째 객체에서 날시 상태에 해당되는 "main" 얻기
+                    // 0번째 객체에서 날씨 상태에 해당되는 "main" 얻기
                     WeatherMain = WeatherObj.getString("main");
                 }
                 return WeatherDataArray; // 데이터 반환
@@ -1011,8 +1011,8 @@ public class WeatherFragment extends Fragment {
                 for (int i = 0; i < JsonArray.length(); i++) { //반복문
                     String MaxTemp = null; // 최대기온 저장할 변수
                     String MinTemp = null; // 최저기온 저장할 변수
-                    String WeatherMain = null; // 날시상태 저장할 변수
-                    String Item; // 1일 날시정보 저장할 변수
+                    String WeatherMain = null; // 날씨상태 저장할 변수
+                    String Item; // 1일 날씨정보 저장할 변수
                     JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
                     JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
                     MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
@@ -1022,7 +1022,7 @@ public class WeatherFragment extends Fragment {
                     JSONArray WeatherArray = EachObj.getJSONArray("weather");
                     // "weather" Json Array 의 0번째 객체 얻기
                     JSONObject WeatherObj = WeatherArray.getJSONObject(0);
-                    // 0번째 객체에서 날시 상태에 해당되는 "main" 얻기
+                    // 0번째 객체에서 날씨 상태에 해당되는 "main" 얻기
                     WeatherMain = WeatherObj.getString("main");
                         
                     //하나의 문자열로 저장
@@ -1042,7 +1042,7 @@ public class WeatherFragment extends Fragment {
 {% endhighlight %}
 
 ## Adapter 갱신하기
-이제 날시 데이터를 뽑아내기 까지 했으니, Adapter 에 새 데이터를 전달해서, 우리가 뽑아낸 데이터가 ListView 에 나타나도록 해 봅시다.
+이제 날씨 데이터를 뽑아내기 까지 했으니, Adapter 에 새 데이터를 전달해서, 우리가 뽑아낸 데이터가 ListView 에 나타나도록 해 봅시다.
 Adapter 에 접근 하는것은 UI 에 접근 하는 것이기 때문에, doInBackground(Params...) 에서 처리 하면 안 되고.
 onPostExecute(Result) 를 따로 구현해서 처리 해 줘야 합니다.
 {% highlight java %}

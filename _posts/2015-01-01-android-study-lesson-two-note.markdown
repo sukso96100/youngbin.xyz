@@ -429,7 +429,6 @@ public class WeatherFragment extends Fragment {
 우선, Overflow Menu 에 어떤 항목을 넣을지, xml 항목으로 정의 해 줘야 합니다. 먼저, 새로고침 항목에 쓸 문자열을 /res/values/strings.xml 에 추가 합시다.
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
-<?xml version="1.0" encoding="utf-8"?>
 <resources>
     ...
     <!--새로 추가한 문자열-->

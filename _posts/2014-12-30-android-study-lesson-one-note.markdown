@@ -321,6 +321,7 @@ MainActivity.java 를 열어 동작을 구현해 봅시다. 우리듣 Fragment �
 {% endhighlight %}
 
 문자열 배열로 ListView 에 넣을 데이터를 하나 만듭시다. 이름은 myArray 라고 하겠습니다.
+String[] 현태로 데이터를 만들고, 나중에 유동적으로 데이러를 넣고 빼기 위해, List<String>형태로 변환 하겠습니다
 {% highlight java %}
 ...
 
@@ -333,6 +334,7 @@ MainActivity.java 를 열어 동작을 구현해 봅시다. 우리듣 Fragment �
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray));
             return rootView;
         }
     }
@@ -359,11 +361,13 @@ Adapter 는 언급한 바와 같이, AdapterView 와 AdapterView에 표시될 �
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray));
+
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
                     android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
-                    myArray); //ListView 에 표시될 데이터
+                    myArrayㅣ냣); //ListView 에 표시될 데이터
             return rootView;
         }
     ...
@@ -383,11 +387,12 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray));
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
                     android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
-                    myArray); //ListView 에 표시될 데이터
+                    myArrayList); //ListView 에 표시될 데이터
             //ListView 찾기
             ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
             return rootView;
@@ -405,11 +410,12 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray));
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
                     android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
-                    myArray); //ListView 에 표시될 데이터
+                    myArrayList); //ListView 에 표시될 데이터
             //ListView 찾기
             ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
             //Adapter 설정

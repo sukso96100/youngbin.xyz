@@ -689,3 +689,390 @@ public class WeatherFragment extends Fragment {
 {% endhighlight %}
 
 ## JSON Parsing
+이제, 우리가 작성한 코드로 읽어들인 JSON 코드를 분석해서 필요한 데이터만 뽑아 화면에 표시해 봅시다.
+우선, 우리가 읽어들인 데이터가 어떻게 생겼나 볼까요?
+<img src="/resources/json_not_formatted.png"><br>
+이 상태에서는 읽기가 좀 어렵군요. Json Formatter 를 이용해 읽기 쉽도록 해 봅시다.
+[여기](http://jsonformatter.curiousconcept.com/)를 클릭해서 Json Formatter 웹 사이트를 열고, 
+입력칸에 JSON 데이터를 넣은 다음. Process 를 누르면 아래 사진과 같이 나옵니다.
+<img src="/resources/json_formatted.png"><br>
+<img src="/resources/json_formatted_fullscreen.png"><br>
+이제 좀 읽이 편하군요. 한번 우리가 원하는 데이터를 찾아 봅시다.
+{% highlight json %}
+{
+   "cod":"200",
+   "message":0.5484,
+   "city":{
+      "id":1838716,
+      "name":"Bucheon",
+      "coord":{
+         "lon":126.783058,
+         "lat":37.49889
+      },
+      "country":"KR",
+      "population":850731
+   },
+   "cnt":7,
+   "list":[
+      {
+         "dt":1420167600,
+         "temp":{
+            "day":-2.75,
+            "min":-12.96,
+            "max":-1.33,
+            "night":-12.96,
+            "eve":-4.91,
+            "morn":-2.75
+         },
+         "pressure":1025.71,
+         "humidity":66,
+         "weather":[
+            {
+               "id":600,
+               "main":"Snow",
+               "description":"light snow",
+               "icon":"13d"
+            }
+         ],
+         "speed":2.97,
+         "deg":321,
+         "clouds":64,
+         "snow":0.13
+      },
+      {
+         "dt":1420254000,
+         "temp":{
+            "day":-2.05,
+            "min":-16.49,
+            "max":0.28,
+            "night":-6.6,
+            "eve":-3.53,
+            "morn":-16.49
+         },
+         "pressure":1025.72,
+         "humidity":67,
+         "weather":[
+            {
+               "id":802,
+               "main":"Clouds",
+               "description":"scattered clouds",
+               "icon":"03d"
+            }
+         ],
+         "speed":1.96,
+         "deg":128,
+         "clouds":32
+      },
+      {
+         "dt":1420340400,
+         "temp":{
+            "day":8.94,
+            "min":-8.03,
+            "max":8.94,
+            "night":-8.03,
+            "eve":2.42,
+            "morn":-2.2
+         },
+         "pressure":1017.87,
+         "humidity":71,
+         "weather":[
+            {
+               "id":802,
+               "main":"Clouds",
+               "description":"scattered clouds",
+               "icon":"03d"
+            }
+         ],
+         "speed":4.61,
+         "deg":256,
+         "clouds":44
+      },
+      {
+         "dt":1420426800,
+         "temp":{
+            "day":6.69,
+            "min":-3.56,
+            "max":6.69,
+            "night":1.61,
+            "eve":0.58,
+            "morn":-3.56
+         },
+         "pressure":1022.54,
+         "humidity":0,
+         "weather":[
+            {
+               "id":500,
+               "main":"Rain",
+               "description":"light rain",
+               "icon":"10d"
+            }
+         ],
+         "speed":1.67,
+         "deg":174,
+         "clouds":86,
+         "rain":1.94
+      },
+      {
+         "dt":1420513200,
+         "temp":{
+            "day":-2.1,
+            "min":-7.67,
+            "max":1.85,
+            "night":-7.67,
+            "eve":-5.76,
+            "morn":1.85
+         },
+         "pressure":1018.91,
+         "humidity":0,
+         "weather":[
+            {
+               "id":500,
+               "main":"Rain",
+               "description":"light rain",
+               "icon":"10d"
+            }
+         ],
+         "speed":9.3,
+         "deg":317,
+         "clouds":0,
+         "rain":0.53
+      },
+      {
+         "dt":1420599600,
+         "temp":{
+            "day":-3.9,
+            "min":-7.56,
+            "max":-3.9,
+            "night":-6.9,
+            "eve":-5.98,
+            "morn":-7.56
+         },
+         "pressure":1026.48,
+         "humidity":0,
+         "weather":[
+            {
+               "id":800,
+               "main":"Clear",
+               "description":"sky is clear",
+               "icon":"01d"
+            }
+         ],
+         "speed":6.29,
+         "deg":317,
+         "clouds":0
+      },
+      {
+         "dt":1420686000,
+         "temp":{
+            "day":-1,
+            "min":-5.52,
+            "max":-1,
+            "night":-4.93,
+            "eve":-4.1,
+            "morn":-5.52
+         },
+         "pressure":1028.05,
+         "humidity":0,
+         "weather":[
+            {
+               "id":800,
+               "main":"Clear",
+               "description":"sky is clear",
+               "icon":"01d"
+            }
+         ],
+         "speed":6.51,
+         "deg":315,
+         "clouds":0
+      }
+   ]
+}
+{% endhighlight %}
+각 요일별 날시 상태(예를들면 맑은, 눈이 옴, 비가 옴, 흐림 등)와 최대기온, 최저기온을 얻어 봅시다.
+각 요일별 날씨는 "list" 라는 Json Array 안에 있고. 그 안에 있는 각 객체 안에 날씨 데이터가 있습니다.
+최대기온과 최저기온에 해당되는 "max" 와 "min" 은 "temp" 라는 객체 내부에 있고.
+날시 상태에 해당되는 "main" 은 "weather" 라는 Json Array 의 0번째 객체 안에 있습니다.
+
+먼저, 7일치 날시정보를 저장할 String[]을 하나 만들고, 반복문을 작성해서 각 요일별 날시 객체를 얻어냅시다.
+
+{% highlight java %}
+    protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
+        @Override
+        protected String[] doInBackground(String... params) {
+            ...
+            try {
+                JSONObject JsonObj = new JSONObject(forecastJsonStr); //읽어들인 String 을 JSONObject로 변환
+                Log.d("JSON", forecastJsonStr);
+                JSONArray JsonArray = JsonObj.getJSONArray("list"); //"list" Json Array 얻기
+                //데이터를 저장한 String[] 생성. JsonArray 의 항목 수 만큼 데이터를 넣을 수 있도록 생성
+                String[] WeatherDataArray = new String[JsonArray.length()]; 
+                for (int i = 0; i < JsonArray.length(); i++) { //반복문
+                    String MaxTemp = null; // 최대기온 저장할 변수
+                    String MinTemp = null; // 최저기온 저장할 변수
+                    String WeatherMain = null; // 날시상태 저장할 변수
+                    String Item; // 1일 날시정보 저장할 변수
+                    JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
+                }
+                return WeatherDataArray; // 데이터 반환
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+         ...
+         }
+        }
+         
+{% endhighlight %}
+
+먼저 최대 기온과 최저 기온을 얻어내 봅시다.
+{% highlight java %}
+    protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
+        @Override
+        protected String[] doInBackground(String... params) {
+            ...
+            try {
+                JSONObject JsonObj = new JSONObject(forecastJsonStr); //읽어들인 String 을 JSONObject로 변환
+                Log.d("JSON", forecastJsonStr);
+                JSONArray JsonArray = JsonObj.getJSONArray("list"); //"list" Json Array 얻기
+                //데이터를 저장한 String[] 생성. JsonArray 의 항목 수 만큼 데이터를 넣을 수 있도록 생성
+                String[] WeatherDataArray = new String[JsonArray.length()]; 
+                for (int i = 0; i < JsonArray.length(); i++) { //반복문
+                    String MaxTemp = null; // 최대기온 저장할 변수
+                    String MinTemp = null; // 최저기온 저장할 변수
+                    String WeatherMain = null; // 날시상태 저장할 변수
+                    String Item; // 1일 날시정보 저장할 변수
+                    JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
+                    JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
+                    MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
+                    MinTemp = Temp.getString("min"); // "temp" 객체에서 최저기온인 "min" 얻기
+
+                }
+                return WeatherDataArray; // 데이터 반환
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+         ...
+         }
+        }
+         
+{% endhighlight %}
+
+그리고 이어서 날시 상태를 얻어내 봅시다.
+{% highlight java %}
+    protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
+        @Override
+        protected String[] doInBackground(String... params) {
+            ...
+            try {
+                JSONObject JsonObj = new JSONObject(forecastJsonStr); //읽어들인 String 을 JSONObject로 변환
+                Log.d("JSON", forecastJsonStr);
+                JSONArray JsonArray = JsonObj.getJSONArray("list"); //"list" Json Array 얻기
+                //데이터를 저장한 String[] 생성. JsonArray 의 항목 수 만큼 데이터를 넣을 수 있도록 생성
+                String[] WeatherDataArray = new String[JsonArray.length()]; 
+                for (int i = 0; i < JsonArray.length(); i++) { //반복문
+                    String MaxTemp = null; // 최대기온 저장할 변수
+                    String MinTemp = null; // 최저기온 저장할 변수
+                    String WeatherMain = null; // 날시상태 저장할 변수
+                    String Item; // 1일 날시정보 저장할 변수
+                    JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
+                    JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
+                    MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
+                    MinTemp = Temp.getString("min"); // "temp" 객체에서 최저기온인 "min" 얻기
+
+                    // i 번째 객체에서 "weather" Json Array 얻기
+                    JSONArray WeatherArray = EachObj.getJSONArray("weather");
+                    // "weather" Json Array 의 0번째 객체 얻기
+                    JSONObject WeatherObj = WeatherArray.getJSONObject(0);
+                    // 0번째 객체에서 날시 상태에 해당되는 "main" 얻기
+                    WeatherMain = WeatherObj.getString("main");
+                }
+                return WeatherDataArray; // 데이터 반환
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+         ...
+         }
+        }
+         
+{% endhighlight %}
+
+그리고, 하나의 문자열로 묶어서 배열에 넣어 봅시다.
+
+{% highlight java %}
+    protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
+        @Override
+        protected String[] doInBackground(String... params) {
+            ...
+            try {
+                JSONObject JsonObj = new JSONObject(forecastJsonStr); //읽어들인 String 을 JSONObject로 변환
+                Log.d("JSON", forecastJsonStr);
+                JSONArray JsonArray = JsonObj.getJSONArray("list"); //"list" Json Array 얻기
+                //데이터를 저장한 String[] 생성. JsonArray 의 항목 수 만큼 데이터를 넣을 수 있도록 생성
+                String[] WeatherDataArray = new String[JsonArray.length()]; 
+                for (int i = 0; i < JsonArray.length(); i++) { //반복문
+                    String MaxTemp = null; // 최대기온 저장할 변수
+                    String MinTemp = null; // 최저기온 저장할 변수
+                    String WeatherMain = null; // 날시상태 저장할 변수
+                    String Item; // 1일 날시정보 저장할 변수
+                    JSONObject EachObj = JsonArray.getJSONObject(i); // i 번째 객체 얻기
+                    JSONObject Temp = EachObj.getJSONObject("temp"); // i 번쨰 객체에서 "temp" 객체 얻기
+                    MaxTemp = Temp.getString("max"); // "temp" 객체에서 최대기온인 "max" 얻기
+                    MinTemp = Temp.getString("min"); // "temp" 객체에서 최저기온인 "min" 얻기
+
+                    // i 번째 객체에서 "weather" Json Array 얻기
+                    JSONArray WeatherArray = EachObj.getJSONArray("weather");
+                    // "weather" Json Array 의 0번째 객체 얻기
+                    JSONObject WeatherObj = WeatherArray.getJSONObject(0);
+                    // 0번째 객체에서 날시 상태에 해당되는 "main" 얻기
+                    WeatherMain = WeatherObj.getString("main");
+                        
+                    //하나의 문자열로 저장
+                    Item = WeatherMain + " : " + " MAX=" + MaxTemp + " MIN=" + MinTemp;
+                    Log.d("Item",Item);
+                    // WeatherDataArray 에 i 번째 항목으로 넣기
+                    WeatherDataArray[i] = Item;
+                }
+                return WeatherDataArray; // 데이터 반환
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+         ...
+         }
+        }
+         
+{% endhighlight %}
+
+## Adapter 갱신하기
+이제 날시 데이터를 뽑아내기 까지 했으니, Adapter 에 새 데이터를 전달해서, 우리가 뽑아낸 데이터가 ListView 에 나타나도록 해 봅시다.
+Adapter 에 접근 하는것은 UI 에 접근 하는 것이기 때문에, doInBackground(Params...) 에서 처리 하면 안 되고.
+onPostExecute(Result) 를 따로 구현해서 처리 해 줘야 합니다.
+{% highlight java %}
+protected class myAsyncTask extends AsyncTask<String, Void, String[]> {
+...
+        @Override
+        protected void onPostExecute(String[] Data) { // 백그라운드 작업 후, UI Thread 에서 실행 됩니다.
+            if (Data != null) {
+                myAdapter.clear(); // Adapter 가 가진 데이터 모두 지우기
+                for (String dayForecastStr : Data) {
+                    myAdapter.add(dayForecastStr); // 반복문 이용해 데이터 새로 넣기
+                }
+            }
+        }
+}
+{% endhighlight %}
+
+Adapter 가 가진 데이터가 변경되면. Adapter.notifyDataSetChanged(); 를 호출해서 데이터가 변경 되었음을 알려야 합니다. 그러나 우리는 굳이 따로 호출 해 줄 필요가 없습니다.
+우리가 호출한 Adapter.clear(); 와 Adapter.add(String); 이 호출 될 때, Adapter.notifyDataSetChanged(); 이 같이 호출 되기 때문입니다.
+그걸 제가 어떻게 아냐고요? 안드로이드는 오픈소스여서 소스코드를 들여다 볼 수 있습니다. 당연히 API 들이 구현된 Framework 도 들여다 볼 수 있습니다.
+한번 소스를 들여다 봅시다. 그리고 Adapter.clear(); 와 Adapter.add(String); 에서 실제로 Adapter.notifyDataSetChanged(); 이 호출 되는지 확인 해 봅시다.
+[여기](https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/widget/ArrayAdapter.java) 를 클릭해서 ArrayAdapter 클래스 소스코드를 들여다 봅시다.
+
+clear 를 검색해서, 해당 메서드를 찿아보세요. 사진에서 보시다 싶이 실제로 내부에서 호출 되고 있습니다.
+<img src="/resources/arrayadapter_clear_method.png"><br>
+add 를 검색해서, 해당 메서드를 찿아보면, 역시 내부에서 호출 해 주고 있습니다.
+<img src="/resources/arrayadapter_add_method.png"><br>
+안드로이드는 오픈소스 이기 때문에, 이렇게 소스코드를 들여다 보실 수 있습니다. 
+소스코드를 들여다 보시는 것은 여러분들이 안드로이드 시스템이 어떻게 동작 하는지 알아 보실 수 있으며, 이는 앱을 개발 할 때 많은 도움이 될 겁니다.
+
+## 앱 실행 결과.
+여기까지 Lesson 2 내용 정리 였습니다. 이제 작성한 앱을 실행 해 보세요. 아래 사진과 같이 잘 나오나요??
+<img src="/resources/lesson_two_result.png"><br>

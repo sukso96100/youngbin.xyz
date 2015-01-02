@@ -590,7 +590,15 @@ Logcat 에서 이 부분에 주목해 주세요. 이번에는 SecurityException 
 
 ## Permission
 안드로이드 에서 각각의 앱 들은 설치가 될 때 그 앱 만의 고유한 리눅스 사용자 ID 를 부여 받습니다. 그리고 각 앱들은 안드로이드 가상 머신 안의 각 앱의 인스턴스 안에서 실행 됩니다.
-결과적으로, 각 앱들은 각각의 보호된 영역에 완전히 갇혀 실행 되게 됩니다. 또한 외부로 부터 영향을 받지 않으며, 내부에서도 외부에 영향을 주지 못합니다. 이러한 형태의 보안 모델을 샌드박스(Sandbox) 라고 하며, 다시 말해 안드로이드 에서 각 앱들은 별도의 샌드박스 에서 실행 됩니다. 이로 인해 각 앱들은 다른 앱의 리소스나 프로세스에 접근 할 수 없게 됩니다. 또한 그 어떤 앱도 다른 앱, 안드로이드 OS, 또는 사용자에게 영향을 주는 민감한 데이터 접근하는 것 이나, 민감한 작업을 실행하는 것들을 못하도록 해 줍니다. 인터넷을 사용하는 것, 사용자 위치 정보 얻기, 주소록 데이터 수정하기, 메시지 보내기 등을 예로 들 수 있습니다. 이러한 민감한 것들을 앱에서 하고자 할떄, 매번 일일이 권한(Permission) 을 요청 하기 보다는. 개발자가 앱에 요구되는 권한을 Manifest에 정의하며. 사용자가 앱을 설치 할 때 아래 사진과 같은 화면이 나타나, 앱이 요구하는 권한을 확인하고 승인 하도록 합니다. 좋은 앱을 개발하고자 한다면, 가능한 최소의 권한을 요구하도록 앱을 개발하도록 해 보세요. 여러분이 작성한 코드가 권한을 필요로 할 때, 권한을 요구하지 않고 다른 방법으로 할 수는 없는지 생각 해 보시기 바랍니다.
+결과적으로, 각 앱들은 각각의 보호된 영역에 완전히 갇혀 실행 되게 됩니다. 또한 외부로 부터 영향을 받지 않으며, 내부에서도 외부에 영향을 주지 못합니다. 
+
+이러한 형태의 보안 모델을 샌드박스(Sandbox) 라고 하며, 다시 말해 안드로이드 에서 각 앱들은 별도의 샌드박스 에서 실행 됩니다. 이로 인해 각 앱들은 다른 앱의 리소스나 프로세스에 접근 할 수 없게 됩니다. 또한 그 어떤 앱도 다른 앱, 안드로이드 OS, 또는 사용자에게 영향을 주는 민감한 데이터 접근하는 것 이나, 민감한 작업을 실행하는 것들을 못하도록 해 줍니다.
+
+인터넷을 사용하는 것, 사용자 위치 정보 얻기, 주소록 데이터 수정하기, 메시지 보내기 등을 예로 들 수 있습니다. 이러한 민감한 것들을 앱에서 하고자 할떄, 매번 일일이 권한(Permission) 을 요청 하기 보다는. 개발자가 앱에 요구되는 권한을 Manifest에 정의합니다.
+
+그러면, 사용자가 앱을 설치 할 때 아래 사진과 같은 화면이 나타나, 앱이 요구하는 권한을 확인하고 승인 하도록 합니다.
+
+좋은 앱을 개발하고자 한다면, 가능한 최소의 권한을 요구하도록 앱을 개발하도록 해 보세요. 여러분이 작성한 코드가 권한을 필요로 할 때, 권한을 요구하지 않고 다른 방법으로 할 수는 없는지 생각 해 보시기 바랍니다.
 <img src="/resources/google_play_app_permission_dialog.png"><br>
 
 AndroidManifest.xml 이 Manifest 파일 입니다. 여기에 인터넷 권한을 정의 해 봅시다. 아래와 같이 정의 하면 됩니다.
@@ -606,4 +614,76 @@ AndroidManifest.xml 이 Manifest 파일 입니다. 여기에 인터넷 권한을
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         ...
+{% endhighlight %}
+
+## 도시 ID 매개변수로 받기
+이제 JSON 파싱을 해서, 데이터를 화면에 표시 할 건대. 그 전에, 나중에 사용자가 따로 도시 ID 를 설정 할 수 있도록 코드를 작성하기 위해.
+약간의 수정을 해서, 아까 작성한 AsyncTask 를 상속하는 클래스인 myAsyncTask 가 도시 ID 를 매개 변수로 받도록 수정 해 봅시다.
+URL 은 나중에 다른 부분도 사용자가 설정 할 수 있도록 코드를 자성하기 위해, [UriBuilder](http://developer.android.com/reference/android/net/Uri.Builder.html) 를 이용해 작성해 봅시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+
+
+    public WeatherFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        ...
+        mat.execute("1838716"); //myAsyncTask 실행하기
+        return rootView;
+    }
+    protected class myAsyncTask extends AsyncTask<String, Void, Void> {
+        @Override
+        protected Void doInBackground(String... params) {
+            ...
+
+            // 날시 데이터 URL 에 사용될 옵션
+            String format = "json";
+            String units = "metric";
+            int numDays = 7;
+            try{
+                //새 URL 객체
+                //UriBuilder 를 이용해 URL 만들기
+                final String FORECAST_BASE_URL =
+                        "http://api.openweathermap.org/data/2.5/forecast/daily?";
+                final String QUERY_PARAM = "q";
+                final String FORMAT_PARAM = "mode";
+                final String UNITS_PARAM = "units";
+                final String DAYS_PARAM = "cnt";
+
+                Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
+                        .appendQueryParameter(QUERY_PARAM, params[0])
+                        .appendQueryParameter(FORMAT_PARAM, format)
+                        .appendQueryParameter(UNITS_PARAM, units)
+                        .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
+                        .build();
+                
+                URL url = new URL(builtUri.toString());
+               ...
+            }catch(IOException e){
+                forecastJsonStr = null;
+            }finally{
+              ...
+            }
+            return null;
+        }
+}
+   ...
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        ...
+        if (id == R.id.action_refresh) { //id값이 action_refresh 이면.
+            // 네트워크 작업 실행
+            myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+            mat.execute("1838716"); //myAsyncTask 실행하기
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
 {% endhighlight %}

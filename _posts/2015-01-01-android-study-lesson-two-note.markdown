@@ -439,14 +439,45 @@ public class WeatherFragment extends Fragment {
 그리고 아래 코드를 참고하여, 메뉴를 정의해 주세요.
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
- <!-- 각 메뉴 항목은 item 태그로 정의합니다. 
-    android:id="@+id/action_refresh" 항목의 id 값 - 여기서는 action_refresh
-    android:title="@string/refresh" 메뉴 항목에 표시할 텍스트
-    android:orderInCategory="100" Overflow Menu 에서 몇 번째로 보일지 지정. 여기서는 100번째
-    app:showAsAction="never" 액션메뉴 버튼으로 보일지 여부. ifRoom 으로 하면 공간이 있을떄,
-        Oveeflow Menu 버튼 옆에 별도 버튼으로. never 로 하면 Overflow Menu 에만 나타남.-->
- <item android:id="@+id/action_refresh" android:title="@string/refresh"
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- 각 메뉴 항목은 item 태그로 정의합니다.
+       android:id="@+id/action_refresh" 항목의 id 값 - 여기서는 action_refresh
+       android:title="@string/refresh" 메뉴 항목에 표시할 텍스트
+       android:orderInCategory="100" Overflow Menu 에서 몇 번째로 보일지 지정. 여기서는 100번째
+       app:showAsAction="never" 액션메뉴 버튼으로 보일지 여부. ifRoom 으로 하면 공간이 있을떄,
+           Oveeflow Menu 버튼 옆에 별도 버튼으로. never 로 하면 Overflow Menu 에만 나타남.-->
+    <item android:id="@+id/action_refresh" android:title="@string/refresh"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
+{% endhighlight %}
+
+이제, WeatherFragment.java (아까 MainActivity.java 에서 별도 클래스 파일로 분리된 Fragment 클래스 파일) 을 열고, Overflow Menu 동작을 처리해 줍시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        // 정의한 Menu 리소스를 여기서 Inflate 합니다.
+        inflater.inflate(R.menu.weatherfragment, menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // 메뉴 항목 클릭을 여기서 처리합니다..
+        int id = item.getItemId(); // 클릭된 항목 id 값 얻기
+
+        //얻은 id 값에 따라 클릭 처리
+        if (id == R.id.action_refresh) { //id값이 action_refresh 이면.
+            // 네트워크 작업 실행
+            myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+            mat.execute(); //myAsyncTask 실행하기
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
 {% endhighlight %}

@@ -481,3 +481,110 @@ public class WeatherFragment extends Fragment {
     }
 }
 {% endhighlight %}
+아. 그리고 WeatherFragment 가 Overflow Menu 를 가지고 있음을 MainActivity 에 알려서, WeatherFragment 가 가지고 있는 Overflow Menu 를 표시 하도록 해 줍시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+    public WeatherFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        ...
+        // 이 Fragment 가 Overflow Menu 를 가지고 있음을 알리기.
+        setHasOptionsMenu(true);
+        ...
+        return rootView;
+    }
+    ...
+}
+{% endhighlight %}
+
+이제 앱을 다시 한번 실행 해 보세요. 앱이 잘 실행 되나요? 여전히 오류가 날 것입니다. 그것이 정상입니다. Logcat 을 한번 확인 해 볼까요?
+<pre>
+01-02 11:18:54.040  16366-16387/com.youngbin.androidstudy E/AndroidRuntime﹕ FATAL EXCEPTION: AsyncTask #1
+    Process: com.youngbin.androidstudy, PID: 16366
+    java.lang.RuntimeException: An error occured while executing doInBackground()
+            at android.os.AsyncTask$3.done(AsyncTask.java:300)
+            at java.util.concurrent.FutureTask.finishCompletion(FutureTask.java:355)
+            at java.util.concurrent.FutureTask.setException(FutureTask.java:222)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:242)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+            at java.net.InetAddress.lookupHostByName(InetAddress.java:451)
+            at java.net.InetAddress.getAllByNameImpl(InetAddress.java:252)
+            at java.net.InetAddress.getAllByName(InetAddress.java:215)
+            at com.android.okhttp.HostResolver$1.getAllByName(HostResolver.java:29)
+            at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:232)
+            at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:124)
+            at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:272)
+            at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:211)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:373)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:66)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:53)
+            at android.os.AsyncTask$2.call(AsyncTask.java:288)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: android.system.GaiException: android_getaddrinfo failed: EAI_NODATA (No address associated with hostname)
+            at libcore.io.Posix.android_getaddrinfo(Native Method)
+            at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:55)
+            at java.net.InetAddress.lookupHostByName(InetAddress.java:438)
+            at java.net.InetAddress.getAllByNameImpl(InetAddress.java:252)
+            at java.net.InetAddress.getAllByName(InetAddress.java:215)
+            at com.android.okhttp.HostResolver$1.getAllByName(HostResolver.java:29)
+            at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:232)
+            at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:124)
+            at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:272)
+            at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:211)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:373)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:66)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:53)
+            at android.os.AsyncTask$2.call(AsyncTask.java:288)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: android.system.ErrnoException: android_getaddrinfo failed: EACCES (Permission denied)
+            at libcore.io.Posix.android_getaddrinfo(Native Method)
+            at libcore.io.ForwardingOs.android_getaddrinfo(ForwardingOs.java:55)
+            at java.net.InetAddress.lookupHostByName(InetAddress.java:438)
+            at java.net.InetAddress.getAllByNameImpl(InetAddress.java:252)
+            at java.net.InetAddress.getAllByName(InetAddress.java:215)
+            at com.android.okhttp.HostResolver$1.getAllByName(HostResolver.java:29)
+            at com.android.okhttp.internal.http.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:232)
+            at com.android.okhttp.internal.http.RouteSelector.next(RouteSelector.java:124)
+            at com.android.okhttp.internal.http.HttpEngine.connect(HttpEngine.java:272)
+            at com.android.okhttp.internal.http.HttpEngine.sendRequest(HttpEngine.java:211)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.execute(HttpURLConnectionImpl.java:373)
+            at com.android.okhttp.internal.http.HttpURLConnectionImpl.connect(HttpURLConnectionImpl.java:106)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:66)
+            at com.youngbin.androidstudy.WeatherFragment$myAsyncTask.doInBackground(WeatherFragment.java:53)
+            at android.os.AsyncTask$2.call(AsyncTask.java:288)
+            at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+            at android.os.AsyncTask$SerialExecutor$1.run(AsyncTask.java:231)
+            at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1112)
+            at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:587)
+            at java.lang.Thread.run(Thread.java:818)
+</pre>
+
+Logcat 에서 이 부분에 주목해 주세요. 이번에는 SecurityException 때문에 앱이 종료 되었군요. 앱이 인터넷 권한(Permission)을 가지고 있지 않아서 그렇습니다.
+문제를 해결하기 위해, 우선 안드로이드의 Permission 시스템에 대해 알아보고, Manifest 에 인터넷 권한도 정의 해 봅시다.
+<pre>
+            ...
+            at java.lang.Thread.run(Thread.java:818)
+     Caused by: java.lang.SecurityException: Permission denied (missing INTERNET permission?)
+            at java.net.InetAddress.lookupHostByName(InetAddress.java:451)
+            ...
+</pre>
+
+## Permission

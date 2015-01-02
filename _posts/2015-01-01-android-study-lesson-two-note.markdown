@@ -253,6 +253,7 @@ Logcat 을 한번 확인 해 봅시다.
 ## AsyncTask
 AsyncTask 는 백그라운드 작업을 쉽게 실행 할 수 있도록, 그리고 결과를 UI Thread 로 쉽게 넘길 수 있도록 해줍니다.
 AsyncTask 에는 4가지 메서드가 있습니다. 백그라운드 작업 전에 실행되는 onPreExecute(), 백그라운드 작업을 실행하는 doInBackground(Params...), 중간에 진행 정도를 UI Thread 에 넘겨주는 onProgressUpdate(Progress...), 백그라운드 작업이 끝나고 실행되며 결과를 Ui Thread 로 넘기는 onPostExecute(Result) 가 있습니다. 
+<img src="/resources/asynctask_methods.png"><br>
 
 AsyncTask 를 구현 할 때는, AsncTask 를 상속받는 클래스로 구현합니다.
 {% highlight java %}
@@ -261,13 +262,14 @@ private class myAsyncTask extends AsyncTask<실행시 받을 매개변수 타입
     // 백그라운드 작업 전에 Main Thread 에 실행 
         } 
     protected void doInBackground(Params... params) { 
-    //백그라운드 작업 실행 } 
+    //백그라운드 작업 실행 
+    } 
     protected void onProgressUpdate(Progress... progress) { 
     //도중에 진행 정도 변경 시 Main Thread 에서 실행 
     publishProgress(progress); 
         } 
     protected void onPostExecute(Result result) { 
-    //백그라운드 작업 후 실행 
+    //백그라운드 작업 후 Main Thread 실행 
         }
     }
 {% endhighlight %}

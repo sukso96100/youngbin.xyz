@@ -619,7 +619,7 @@ AndroidManifest.xml 이 Manifest 파일 입니다. 여기에 인터넷 권한을
 ## 도시 ID 매개변수로 받기
 이제 JSON 파싱을 해서, 데이터를 화면에 표시 할 건대. 그 전에, 나중에 사용자가 따로 도시 ID 를 설정 할 수 있도록 코드를 작성하기 위해.
 약간의 수정을 해서, 아까 작성한 AsyncTask 를 상속하는 클래스인 myAsyncTask 가 도시 ID 를 매개 변수로 받도록 수정 해 봅시다.
-URL 은 나중에 다른 부분도 사용자가 설정 할 수 있도록 코드를 자성하기 위해, [UriBuilder](http://developer.android.com/reference/android/net/Uri.Builder.html) 를 이용해 작성해 봅시다.
+URL 은 나중에 다른 부분도 사용자가 설정 할 수 있도록 코드를 작성하기 위해, [UriBuilder](http://developer.android.com/reference/android/net/Uri.Builder.html) 를 이용해 작성해 봅시다.
 {% highlight java %}
 public class WeatherFragment extends Fragment {
 
@@ -687,3 +687,5 @@ public class WeatherFragment extends Fragment {
     }
 }
 {% endhighlight %}
+
+## JSON Parsing

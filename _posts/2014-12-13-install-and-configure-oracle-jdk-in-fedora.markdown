@@ -66,7 +66,7 @@ source /etc/profile
 java -version
 {% endhighlight %}
 
-"Java(TM) SE ... "로 출력이 되면 오라클 JDK로 잘 설정이 된 것입니다. 저의 경우는 64비트 시스템에서 JDK8을 설치/설정 했기 떄문에, 아래와 같이 나옵니다.
+"Java(TM) SE ... "로 출력이 되면 오라클 JDK로 잘 설정이 된 것입니다. 저의 경우는 64비트 시스템에서 JDK8을 설치/설정 했기 때문에, 아래와 같이 나옵니다.
 
 {% highlight bash %}
 [youngbin@youngbin-desktop ~]$ java -version

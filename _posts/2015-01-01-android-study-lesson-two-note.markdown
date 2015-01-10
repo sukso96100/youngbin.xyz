@@ -50,6 +50,7 @@ Lesson 1 에서 작성한 소스를 안드로이드 스튜디오 에서 열고. 
 우선 URL 객체를 하나 만듭시다. 그리고 HttpURLConnection 을 이용해 연결하고, 데이터를 로드합시다.
 {% highlight java %}
 ...
+HttpURLConnection urlConnection = null; //HttpUrlConnection
 //새 URL 객체
 String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
 URL url = new URL(WeatherURL); 
@@ -60,6 +61,29 @@ urlConnection.connect();
 ...
 {% endhighlight %}
 
+### 예외 처리
+URL을 다루거나, 데이터를 받아올 때, 예상치 못한 오류에 대비하여 try-catch-finally 를 이용하여 예외처리를 해 봅시다.
+try 에 우리가 평상시에 실행할 코드가 들어가고, catch 에는 특정 오류가 잡히면, 실행된 코드들을 넣어주고, finally 에는 try 와 catch 이후 마지막으로 실행될 코드가 들어갑니다.
+HttpURLConnection 등의 변수들은, try에사만 사용하지 않고, 그 외의 곳에서도 사용되기에. 예외처리 구문 전에 변수를 선언하고 초기화 해줍시다. 
+{% highlight java %}
+...
+HttpURLConnection urlConnection = null; //HttpUrlConnection - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+try {
+        //새 URL 객체
+        String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
+        URL url = new URL(WeatherURL); 
+        //새 URLConnection
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestMethod("GET");
+        urlConnection.connect();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+        }
+        ...
+{% endhighlight %}
 ## InputStream
 우리가 수십 리터의 물을 받을 때 어떻게 받나요? 한 손으로 한번에 받나요? 그것을 불가능 합니다. 그 작은 손으로 어떻게 몇 심 리터의 물을 한번에 받겠습니까.
 한 손으로 한번에 받지 않고. 도구를 이용해 조금씩 받습니다. 파이프를 연결해서 흘려받는 것을 예로 들 수 있겠군요.
@@ -67,16 +91,23 @@ urlConnection.connect();
 Stream 은 데이터를 운반 해 주는 통로 역할을 해 줍니다. 물을 흘려보내는 파이프 역할을 한다고 보면 됩니다. Stream 은 연속적인 데이터 흐름을 물에 비유해서 붙여진 이름인대. 물이 한쪽 방향으로만 흐르듯, Stream 은 하나의 방향으로만 통신이 가능해서. 입력/출력을 동시에 처리할 수 없습니다. 그래서 InputStream, OutputStream 이 따로 있습니다. 우리는 데이터를 입력 받으므로. InputStream 을 사용합니다.
 {% highlight java %}
 ...
-HttpURLConnection urlConnection = null; //HttpUrlConnection
-//새 URL 객체
-String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
-URL url = new URL(WeatherURL); 
-//새 URLConnection
-urlConnection = (HttpURLConnection) url.openConnection();
-urlConnection.setRequestMethod("GET");
-urlConnection.connect();
-//InputStream 을 사용해 데이터 읽어들이기
-InputStream inputStream = urlConnection.getInputStream();
+HttpURLConnection urlConnection = null; //HttpUrlConnection - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+try {
+        //새 URL 객체
+        String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
+        URL url = new URL(WeatherURL); 
+        //새 URLConnection
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestMethod("GET");
+        urlConnection.connect();
+        //InputStream 을 사용해 데이터 읽어들이기
+        InputStream inputStream = urlConnection.getInputStream();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+        }
 ...
 {% endhighlight %}
 
@@ -84,34 +115,41 @@ InputStream inputStream = urlConnection.getInputStream();
 StringBuffer 은 문자열인 String 과 매우 유사하지만. 다른 접이 있습니다. String 이 처음에 만들어 질때 저장된 문자열을 바꾸기 어렵지만. StringBuffer 는 쉽게 바꿀 수 있습니다.
 {% highlight java %}
 ...
-HttpURLConnection urlConnection = null; //HttpUrlConnection
-BufferedReader reader = null;   
-//새 URL 객체
-String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
-URL url = new URL(WeatherURL); 
-//새 URLConnection
-urlConnection = (HttpURLConnection) url.openConnection();
-urlConnection.setRequestMethod("GET");
-urlConnection.connect();
-//InputStream 을 사용해 데이터 읽어들이기
-InputStream inputStream = urlConnection.getInputStream();
-//StringBuffer 에 데이터 저장
-StringBuffer buffer = new StringBuffer(); // 새로운 StringBuffer 생성
-reader = new BufferedReader(new InputStreamReader(inputStream));
-String line;
-    while ((line = reader.readLine()) != null) {
-        buffer.append(line + "\n");
-    }
+HttpURLConnection urlConnection = null; //HttpUrlConnection - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+BufferedReader reader = null; //try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+try {
+        //새 URL 객체
+        String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
+        URL url = new URL(WeatherURL); 
+        //새 URLConnection
+        urlConnection = (HttpURLConnection) url.openConnection();
+        urlConnection.setRequestMethod("GET");
+        urlConnection.connect();
+        //InputStream 을 사용해 데이터 읽어들이기
+        InputStream inputStream = urlConnection.getInputStream();
+        //StringBuffer 에 데이터 저장
+        StringBuffer buffer = new StringBuffer(); // 새로운 StringBuffer 생성
+        reader = new BufferedReader(new InputStreamReader(inputStream));
+        String line;
+            while ((line = reader.readLine()) != null) {
+                buffer.append(line + "\n");
+            }
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+        }
 ...
 {% endhighlight %}
 
 ## 불러온 데이터 문자열 변수에 저장. 오류 예외처리
-이제 불러온 데이터는 String 형태의 변수에 저장하고. 불러온 데이터가 비어있어 오류가 나는 경우를 대비하여, 예외처리를 합니다.
+이제 불러온 데이터는 String 형태의 변수에 저장하고. 위에서 미리 작성한 예외처리에서, catch 부분에 오류 발생시 실행될 코드를 넣어줍니다.
 {% highlight java %}
 ...
 HttpURLConnection urlConnection = null; //HttpUrlConnection
-BufferedReader reader = null;   
-String forecastJsonStr = null;
+BufferedReader reader = null; //try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+String forecastJsonStr = null; //불러온 데이터 저장에 사용할 변수 - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
 try{
     //새 URL 객체
     String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
@@ -134,9 +172,11 @@ try{
         forecastJsonStr = null;
     }
     forecastJsonStr = buffer.toString(); //로드한 데이터 문자열 변수에 저장.
-        }catch(IOException e){
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch(IOException e){
         forecastJsonStr = null;
-        }finally{
+        } finally{
              if (urlConnection != null) {
             urlConnection.disconnect(); //HttpURLConnection 연결 끊기
             }
@@ -307,19 +347,20 @@ public class WeatherFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
         //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
         String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
+        List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray)); //ArrayList로 변환합니다. 동적으로 항목을 추가하거나 뺄 수 있습니다.
         //ArrayAdapter 초기화
         ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                 getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
                 android.R.layout.simple_list_item_1, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
-                myArray); //ListView 에 표시될 데이터
+                myArrayList); //ListView 에 표시될 데이터
         //ListView 찾기
         ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
         //Adapter 설정
         LV.setAdapter(myAdapter);
 
         HttpURLConnection urlConnection = null; //HttpUrlConnection
-        BufferedReader reader = null;
-        String forecastJsonStr = null;
+        BufferedReader reader = null; //try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+        String forecastJsonStr = null; //불러온 데이터 저장에 사용할 변수 - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
         try{
             //새 URL 객체
             String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
@@ -380,8 +421,8 @@ public class WeatherFragment extends Fragment {
         @Override
         protected Void doInBackground(Void... params) {
             HttpURLConnection urlConnection = null; //HttpUrlConnection
-            BufferedReader reader = null;
-            String forecastJsonStr = null;
+            BufferedReader reader = null; //try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
+            String forecastJsonStr = null; //불러온 데이터 저장에 사용할 변수 - try가 아닌 곳에서도 사용 되므로 try 밖에 선언합니다.
             try{
                 //새 URL 객체
                 String WeatherURL = "http://api.openweathermap.org/data/2.5/forecast/daily?id=1838716&units=metric&cnt=7";
@@ -404,6 +445,8 @@ public class WeatherFragment extends Fragment {
                     forecastJsonStr = null;
                 }
                 forecastJsonStr = buffer.toString(); //로드한 데이터 문자열 변수에 저장.
+            } catch (MalformedURLException e) {
+            e.printStackTrace();
             }catch(IOException e){
                 forecastJsonStr = null;
             }finally{
@@ -665,6 +708,8 @@ public class WeatherFragment extends Fragment {
                 
                 URL url = new URL(builtUri.toString());
                ...
+            } catch (MalformedURLException e) {
+            e.printStackTrace();
             }catch(IOException e){
                 forecastJsonStr = null;
             }finally{

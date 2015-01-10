@@ -300,7 +300,7 @@ fragment_main.xml 파일을 수정하여, Layout 을 변경해 봅시다. 우리
 {% endhighlight %}
 
 ### Java 코드 작성하기
-MainActivity.java 를 열어 동작을 구현해 봅시다. 우리듣 Fragment 에 동작을 구현할 것이므로, Framgnet 코드를 먼저 찾으세요. 아래와 같은 코드를 찾았나요?
+MainActivity.java 를 열어 동작을 구현해 봅시다. 우리는 Fragment 에 동작을 구현할 것이므로, Framgnet 코드를 먼저 찾으세요. 아래와 같은 코드를 찾았나요?
 {% highlight java %}
 /**
      * A placeholder fragment containing a simple view.
@@ -334,7 +334,7 @@ String[] 현태로 데이터를 만들고, 나중에 유동적으로 데이러�
             View rootView = inflater.inflate(R.layout.fragment_main, container, false);
             //문자열 배열로 ListView에 넣을 데이터 만들기. 이름은 myArray.
             String[] myArray = {"Sample Item 0", "Sample Item 1", "Sample Item 2", "Sample Item 3", "Sample Item 4"};
-            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray));
+            List<String> myArrayList = new ArrayList<String>(Arrays.asList(myArray)); //ArrayList로 변환합니다. 동적으로 항목을 추가하거나 뺄 수 있습니다.
             return rootView;
         }
     }
@@ -366,7 +366,7 @@ Adapter 는 언급한 바와 같이, AdapterView 와 AdapterView에 표시될 �
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
-                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                    android.R.layout.simple_list_item_1, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
                     myArrayㅣ냣); //ListView 에 표시될 데이터
             return rootView;
         }
@@ -391,7 +391,7 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
-                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                    android.R.layout.simple_list_item_1, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
                     myArrayList); //ListView 에 표시될 데이터
             //ListView 찾기
             ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)
@@ -414,7 +414,7 @@ findViewById 를 이용해 ListView를 id값으로 찾습니다.
             //ArrayAdapter 초기화
             ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
                     getActivity(), //Context - Fragment 는 Context 를 가지지 않으므로 Activity 에서 얻어옴
-                    android.R.layout.simple_list_item_2, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
+                    android.R.layout.simple_list_item_1, //각 항목별 Layout - 일단은 안드로이드 시스템 내장 리소스 얻어옴
                     myArrayList); //ListView 에 표시될 데이터
             //ListView 찾기
             ListView LV = (ListView)rootView.findViewById(R.id.listView); //R.id.(ListView id 값 - Layout 파일에서 확인 가능)

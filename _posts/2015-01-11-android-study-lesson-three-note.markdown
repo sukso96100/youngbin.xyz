@@ -225,8 +225,9 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
     <EditTextPreference
         android:key="pref_city_id"
         android:title="@string/pref_city_id"
-        android:dialogTitle="@string/pref_city_id_dialog"
-        android:defaultValue="@string/pref_city_id_default_value" />
+        android:defaultValue="@string/pref_city_id_default_value" 
+        android:inputType="text"
+        android:singleLine="true"/>
     <!--온도 단위 설정-->
     <ListPreference
         android:key="pref_unit"
@@ -239,6 +240,7 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
 {% endhighlight %}
 
 필요한 문자열도 strings.xml 에 추가 해 줍시다.
+{% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     ...
@@ -247,7 +249,6 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
     <string name="pref_city_id_default_value" translatable="false">1838716</string>
     
     <string name="pref_unit">Unit</string>
-    <string name="pref_unit_dialog">Select Unit</string>
     <string name="pref_unit_default_value" translatable="false">metric</string>
     <string-array name="pref_unit_entry">
         <item>Metric</item>
@@ -258,4 +259,16 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
         <item>imperial</item>
     </string-array>
 </resources>
+{% endhighlight %}
+
+Java 클래스 파일도 슬슬 수정해 봅시다. 먼저 아래와 같이 PreferenceActivity 를 상속하도록 수정합시다.
+그리고 onCreate 메서드에서 평소에 보던 setContentView(); 대신 addPreferencesFromResource(); 를 이용해 조금전 작성한 xml 파일을 로드합니다.
+{% highlight java %}
+public class SettingsActivity extends PreferenceActivity {
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addPreferencesFromResource(R.xml.settings);
+    }
+}
 {% endhighlight %}

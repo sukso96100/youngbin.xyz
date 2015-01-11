@@ -1005,6 +1005,7 @@ public class WeatherFragment extends Fragment {
 
 그리고 이어서 날씨 상태를 얻어내 봅시다.
 {% highlight java %}
+    ...
     protected class myAsyncTask extends AsyncTask<String, Void, String[]> { // 네트워크 작업 후 String[]을 반환 하도록 수정
         @Override
         protected String[] doInBackground(String... params) {
@@ -1039,7 +1040,7 @@ public class WeatherFragment extends Fragment {
          ...
          }
         }
-         
+        ...
 {% endhighlight %}
 
 그리고, 하나의 문자열로 묶어서 배열에 넣어 봅시다.
@@ -1133,7 +1134,7 @@ Lesson 2 에 해당되는 소스코드 입니다.
 많은 개발자 분들이 안드로이드 에서 사용 가능한 다양한 라이브러리를 개발해 둬서, 라이브러리를 잘 활용해 구현하기 어려운 것도 쉽게 구현 할 수 있습니다.
 
 안드로이드 네트워킹을 쉽게 할 수 있도록 해 주는 라이브러리도 아주 다양합니다. RetroFit, OkHttp, Volley, Loopj Async-HttpClient 등이 있는대.
-이 포스트에서는 [OkHttp](http://square.github.io/okhttp/) 를 한번 다뤄 보고자 합니다. 먼저 라이브러리를 추가 해 줍시다. 우리는 Android Studio 를 사용하죠? Lesson 1 에서 언급한 Gradle 이 알아서 의존성 등을 처리해 줍니다. gradle 빌드 스크립트에 한 줄만 추가하면 라이브러리 추가는 끝납니다. 앱 모듈 디렉토리에 위치한 build.gradle 을 열고, dependencies 에 한줄 추가 합니다.
+이 포스트에서는 [OkHttp](http://square.github.io/okhttp/) 를 한번 다뤄 보고자 합니다. 먼저 라이브러리를 추가 해 줍시다. 우리는 Android Studio 를 사용하죠? Lesson 1 에서 언급한 Gradle 이 알아서 의존성 등을 처리해 줍니다. gradle 빌드 스크립트에 한 줄만 추가하면 라이브러리 추가는 끝납니다. 앱 모듈 디렉터리에 위치한 build.gradle 을 열고, dependencies 에 한줄 추가 합니다.
 {% highlight groovy %}
 ...
 dependencies {

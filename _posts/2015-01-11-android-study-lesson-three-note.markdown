@@ -210,3 +210,28 @@ public class DetailActivity extends ActionBarActivity {
     }
 }
 {% endhighlight %}
+
+## PreferenceActivity 를 이용해 설정화면 만들기.
+이번에는 PreferenceActivity를 이용해서 앱 설정 화면을 만들어 봅시다. 일단 우리가 만들 설정 화면에는 지역과 온도 단위 설정을 넣을것입니다.
+안드로이드 스튜디오에 이러한 Activity 를 만들어 주는 기능이 있기는 하지만. 이는 구버전과 최신 버전 모두에 호환되는 코드가 자동으로 생성됩니다. 생성되는 코드가 좀 복잡하기에,
+여기서는. 그냥 빈 Activity 를 하나 만들고 PreferenceActivity 를 상속하도록 수정 한 다음. 필요한 것들을 구현 하겠습니다. DetailActivity 를 생성하실 때와 비슷한 방법으로 하시면 됩니다. 대신 Blank Activity with Fragmnt 가 아닌 Blank Activity 를 선택하여 생성합니다. 이름은 SettingsActivity 로 하고 상위 Acivitiy 는 MainActivity 로 해 줍시다.
+
+SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠습니다. res 디렉터리 안에, xml디렉터리를 하나 생성합니다. 그리고 그 안에 settings.xml 을 생성합시다.
+지역 선택 설정은. 지역 id 코드를 입력 하도록 할 것입니다. 그러므로 EditTextPreference 를 사용하며, 온도 단위 설정은. 단위 목록에서 선택하여 설정 하므로, ListPreference 를 사용합니다.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference
+        android:key="pref_city_id"
+        android:title="@string/pref_city_id"
+        android:dialogTitle="@string/pref_city_id_dialog"
+        android:defaultValue="@string/pref_city_id_default_value" />
+    <ListPreference
+        android:key="pref_unit"
+        android:title="@string/pref_unit"
+        android:dialogTitle="@string/pref_unit_dialog"
+        android:entries="@array/pref_unit_entry"
+        android:entryValues="@array/pref_unit_entry_value"
+        android:defaultValue="@string/pref_unit_default_value" />
+</PreferenceScreen>
+{% endhighlight %}

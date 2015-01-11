@@ -45,7 +45,7 @@ PPA 저장소를 추가하여 설치하는 법이 있습니다.
 아래 링크를 방문하여, 파란색 "Download Android Studio" 버튼을 눌러서 압축 패키지를 받으세요.
 <a href="http://developer.android.com/sdk/installing/studio.html">http://developer.android.com/sdk/installing/studio.html</a>
 
-다운로드 받은 압축 패키지의 압축을 풀으세요. 가능한 상위 디렉토리에 풀어두시는 것을 권장합니다.
+다운로드 받은 압축 패키지의 압축을 풀으세요. 가능한 상위 디렉터리에 풀어두시는 것을 권장합니다.
 앛축 풀린 폴더의 /bin 폴더에 들어가서, studio.sh를 실행하면, 안드로이드 스튜디오가 실행됩니다.
 파일 관리자에서 실행되지 않으면, 터미널에서 실행해보세요.
 예를 들어, 압축 풀린 안드로이드 스튜디오 파일들이, ~/다운로드/android-studio/ 에 있다면, 아래와 같은 명령어를 실행하면 됩니다.

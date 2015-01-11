@@ -83,3 +83,49 @@ Activity 를 하나 더 만들어 줍시다. 이 Activity 는 더 자세한 날�
 이름은 DetailActivity 로 정하고, Hierarchical Parent(계층 부모)는 MainActiity 로 설정하여, 
 DetailActivity 의 상위(또는 부모) Activity 가 MainActivity 가 되도록 합시다.
 <img src="/resources/new_blank_activity_with_fragment.png"><br>
+Activity 를 하나 새로 만들었으나. 아직 우리가 이 Activity 를 실행 하고 있지 않습니다. Intent 를 이용해서 한번 실행해 봅시다.
+
+## Intent
+Intent 는 다른 앱 컴포넌트로부터 액션을 하도록 요청하거나(예를 들면 주소록 추가 화면 열기, 웹 브라우저를 열고 특정 웹사이트로 이동) 앱 컴포넌트들 사이에서 통신을 하는대 사용됩니다.
+보통 아래와 같은 것들을 하기 위해서 Intent 를 많이 사용 합니다
+
+- Activity 를 시작하기 위해
+- Service 를 시작하기 위해 - Service 에 대해서는 추후 더 자세히 다룰 예정.
+- Broadcast(방송)을 전달하기 위해
+
+Intent 는 두가지 종류로 나뉩니다.
+
+- Explicit Intent (명시적 인텐트)
+>정확한 클래스 이름으로 어떤 앱 컴포넌트를 시작할지, 또는 통신할지 명시적으로 정합니다. 보통 자신이 개발하는 앱에 있는 다른 컴포넌트들을 시작하거나 통신하기 위해 명시적 인텐트를 사용합니다. 당연히 자신이 개발하는 앱 이니, 어떤 앱 컴포넌트가 있는지 앱 컴포넌트 이름은 뭔지 다 알고 있으니까요.
+
+- Implicit Intent (암시적 인텐트)
+>정확한 앱 컴포넌트를 명시하지 않습니다. 대신 수행할 일번적인 액션을 정의합니다. 특정 웹페이지를 웹 브라우저 앱에서 열기, 지도 앱에서 사용자 위치 보여주기 등을 예로 들 수 있습니다.
+
+## Explicit Intent 를 사용하여 DetailActivity 시작하기
+Explicit Intent 를 이용해 한번 DetailActivity 로 전환해 봅시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ...
+        mat.execute("1838716"); //myAsyncTask 실행하기
+        //ListView 에 OnItemClickListener 등룩하기.
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //각 항목 클릭시 실행될 코드를 여기에 입력합니다.
+                String ForecastItem = myAdapter.getItem(position); //항목에 해당되는 데이터 얻기
+                //새로운 Intent 객체 만들기
+                //getActivity() - Context 는 Activity 에서 얻습니다.
+                //DetailFragment.class 대상 앱 컴포넌트 입니다.
+                Intent DetailIntent = new Intent(getActivity(), DetailActivity.class);
+                startActivity(DetailIntent); // Activity 시작하기
+            }
+        });
+        return rootView;
+    }
+    ...
+}
+{% endhighlight %}

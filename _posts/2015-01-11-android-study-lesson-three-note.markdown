@@ -75,3 +75,11 @@ public class WeatherFragment extends Fragment {
     ...
 }
 {% endhighlight %}
+
+## Activity 하나 새로 만들기
+Activity 를 하나 더 만들어 줍시다. 이 Activity 는 더 자세한 날시 정보를 표시하는대 사용 할 겁니다.
+아래 사진처럼, 패키지 디렉터리를 우클릭해서, 새로운 Activity 를 만들어 주세요. Blank Activity with Fragment 을 선택하여 생성합니다.
+<img src="/resources/create_new_blank_activity_with_fragment.png"><br>
+이름은 DetailActivity 로 정하고, Hierarchical Parent(계층 부모)는 MainActiity 로 설정하여, 
+DetailActivity 의 상위(또는 부모) Activity 가 MainActivity 가 되도록 합시다.
+<img src="/resources/new_blank_activity_with_fragment.png"><br>

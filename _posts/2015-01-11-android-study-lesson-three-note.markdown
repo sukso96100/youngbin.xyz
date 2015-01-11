@@ -77,7 +77,7 @@ public class WeatherFragment extends Fragment {
 {% endhighlight %}
 
 ## Activity 하나 새로 만들기
-Activity 를 하나 더 만들어 줍시다. 이 Activity 는 더 자세한 날시 정보를 표시하는대 사용 할 겁니다.
+Activity 를 하나 더 만들어 줍시다. 이 Activity 는 더 자세한 날씨 정보를 표시하는대 사용 할 겁니다.
 아래 사진처럼, 패키지 디렉터리를 우클릭해서, 새로운 Activity 를 만들어 주세요. Blank Activity with Fragment 을 선택하여 생성합니다.
 <img src="/resources/create_new_blank_activity_with_fragment.png"><br>
 이름은 DetailActivity 로 정하고, Hierarchical Parent(계층 부모)는 MainActiity 로 설정하여, 
@@ -99,7 +99,7 @@ Intent 는 두가지 종류로 나뉩니다.
 >정확한 클래스 이름으로 어떤 앱 컴포넌트를 시작할지, 또는 통신할지 명시적으로 정합니다. 보통 자신이 개발하는 앱에 있는 다른 컴포넌트들을 시작하거나 통신하기 위해 명시적 인텐트를 사용합니다. 당연히 자신이 개발하는 앱 이니, 어떤 앱 컴포넌트가 있는지 앱 컴포넌트 이름은 뭔지 다 알고 있으니까요.
 
 - Implicit Intent (암시적 인텐트)
->정확한 앱 컴포넌트를 명시하지 않습니다. 대신 수행할 일번적인 액션을 정의합니다. 특정 웹페이지를 웹 브라우저 앱에서 열기, 지도 앱에서 사용자 위치 보여주기 등을 예로 들 수 있습니다.
+>정확한 앱 컴포넌트를 명시하지 않습니다. 대신 수행할 일반적인 액션을 정의합니다. 특정 웹페이지를 웹 브라우저 앱에서 열기, 지도 앱에서 사용자 위치 보여주기 등을 예로 들 수 있습니다.
 
 ## Explicit Intent 를 사용하여 DetailActivity 시작하기
 Explicit Intent 를 이용해 한번 DetailActivity 로 전환해 봅시다.
@@ -127,5 +127,86 @@ public class WeatherFragment extends Fragment {
         return rootView;
     }
     ...
+}
+{% endhighlight %}
+
+## Intent 에 Extra 첨부하기
+Intent 를 이용해 통신을 할 때, Extra 를 첨부하여 간단한 데이터를 주고 받을 수 있습니다. DetailActivity에 날씨 정보를 Extra 로 첨부해 보내봅시다.
+Intent.putExtra("키 이름", 보낼 데이터); 를 이용해 Extra를 넣고, 나중에 받을 때는 getIntent.getStringExtra() / getIntent.getIntExtra() 등으로 받아서 사용하면 됩니다. 우선 첨부해서 보내 봅시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ...
+        mat.execute("1838716"); //myAsyncTask 실행하기
+        //ListView 에 OnItemClickListener 등룩하기.
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //각 항목 클릭시 실행될 코드를 여기에 입력합니다.
+                String ForecastItem = myAdapter.getItem(position); //항목에 해당되는 데이터 얻기
+                //새로운 Intent 객체 만들기
+                //getActivity() - Context 는 Activity 에서 얻습니다.
+                //DetailFragment.class 대상 앱 컴포넌트 입니다.
+                Intent DetailIntent = new Intent(getActivity(), DetailActivity.class);
+                // 키값은 weather_data, 첨부된 데이터는 String 형태인 ForecastItem 로 하였습니다.
+                DetailIntent.putExtra("weather_data", ForecastItem); 
+                startActivity(DetailIntent); // Activity 시작하기
+            }
+        });
+        return rootView;
+    }
+    ...
+}
+{% endhighlight %}
+
+이제, DetailActivity 에서 받아서 표시해 봅시다. DetailActivity 에서도, Fragment 에 코드를 작성할 겁니다. 마찬가지로 Fragment 의 onCreateView 메서드를 찾아 그곳에 코드를 작성합니다. 받은 Intent 는 Activity 가 가지고 있으므로 getActivity 를 이용해 Intent 를 얻습니다.
+
+우선, 레이아웃 파일에서 날씨 정보를 표시할 TextView 를 작업합시다. 일단 기본적으로 들어가 있는 TextView 에 id 값만 지정해 줍시다.
+저는 id 를 weather_data 로 하겠습니다.
+{% highlight java %}
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.youngbin.androidstudy.DetailActivity$PlaceholderFragment">
+
+    <TextView android:text="@string/hello_world" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weather_data"/>
+
+</RelativeLayout>
+{% endhighlight %}
+그리고 이어서 Java 코드 작업을 해 줍시다.
+{% highlight java %}
+public class DetailActivity extends ActionBarActivity {
+    ...
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+
+        public PlaceholderFragment() {
+        }
+
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+
+            View rootView = inflater.inflate(R.layout.fragment_detail, container, false);
+            //날씨 정보 표시에 쓸 TextView 찾기           
+            TextView WeatherTxt = (TextView)rootView.findViewById(R.id.weather_data);
+            //Activity 가 받은 Intent 얻어내어, 같이 Extra 로 온 데이터 얻기
+            String WeatherData = getActivity().getIntent().getStringExtra("weather_data");
+            //TextView 내용을 얻은 데이터로 설정.
+            WeatherTxt.setText(WeatherData);
+            return rootView;
+        }
+    }
 }
 {% endhighlight %}

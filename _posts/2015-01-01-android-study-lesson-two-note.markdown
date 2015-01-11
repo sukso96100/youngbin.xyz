@@ -710,7 +710,7 @@ public class WeatherFragment extends Fragment {
                ...
             } catch (MalformedURLException e) {
             e.printStackTrace();
-            }catch(IOException e){
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }catch(IOException e){
                 forecastJsonStr = null;
             }finally{
               ...

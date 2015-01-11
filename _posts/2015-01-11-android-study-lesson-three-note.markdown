@@ -22,3 +22,56 @@ Lesson 2 에 이어 Lesson 3 노트를 계속 합니다. 이번에는 스터디 
 - PreferenceActivity 를 이용해 설정화면 만들기.
 - 암시적 인텐트 (Implicit Intent) 에 대해 알아보기.
 - BroadcastReceiver 와 Intent Filter 에 대해 알아보기.
+
+## OnItemClickListener 로 ListView 각 항목 클릭 처리하기.
+OnItemClickListener 를 등룩하여, 각 항목별 클릭을 처리해 봅시다. 일단 지금은, ListView 에서 각 항목을 클릭하면 해당 항목 내용이 Toast 메시지로 나타나도록 해 봅시다.
+먼저 OnItemClickListener 를 등룩 해 줍시다.
+
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ...
+        mat.execute("1838716"); //myAsyncTask 실행하기
+        //ListView 에 OnItemClickListener 등룩하기.
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //각 항목 클릭시 실행될 코드를 여기에 입력합니다.
+            }
+        });
+        return rootView;
+    }
+    ...
+}
+{% endhighlight %}
+
+그리고 Adapter 에서 항목에 해당되는 데이터를 얻어서 Toast 메시지로 표시 해 줍시다. 아래 사진이 Toast 메시지가 나타났을 때 사진입니다. 다들 이미 많이 보셨을 겁니다.
+<img src="/resources/toast_message.png"><br>
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ...
+        mat.execute("1838716"); //myAsyncTask 실행하기
+        //ListView 에 OnItemClickListener 등룩하기.
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                //각 항목 클릭시 실행될 코드를 여기에 입력합니다.
+                String ForecastItem = myAdapter.getItem(position); //항목에 해당되는 데이터 얻기
+                Toast.makeText(getActivity(), //Context 는 Activity 로부터 얻습니다.
+                                ForecastItem, //Toast 로 표시할 문자열 입니다.
+                                Toast.LENGTH_SHORT //Toast 메시지를 얼마나 긴 시간동안 표시할지 정합니다.
+                                ).show(); // show() 메서드로 Toast 를 보여줍니다.
+            }
+        });
+        return rootView;
+    }
+    ...
+}
+{% endhighlight %}

@@ -221,11 +221,13 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--도시 id 설정-->
     <EditTextPreference
         android:key="pref_city_id"
         android:title="@string/pref_city_id"
         android:dialogTitle="@string/pref_city_id_dialog"
         android:defaultValue="@string/pref_city_id_default_value" />
+    <!--온도 단위 설정-->
     <ListPreference
         android:key="pref_unit"
         android:title="@string/pref_unit"
@@ -234,4 +236,27 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
         android:entryValues="@array/pref_unit_entry_value"
         android:defaultValue="@string/pref_unit_default_value" />
 </PreferenceScreen>
+{% endhighlight %}
+
+필요한 문자열도 strings.xml 에 추가 해 줍시다.
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ...
+    <string name="pref_city_id">City Id</string>
+    <string name="pref_city_id_dialog">Type City Id</string>
+    <string name="pref_city_id_default_value" translatable="false">1838716</string>
+    
+    <string name="pref_unit">Unit</string>
+    <string name="pref_unit_dialog">Select Unit</string>
+    <string name="pref_unit_default_value" translatable="false">metric</string>
+    <string-array name="pref_unit_entry">
+        <item>Metric</item>
+        <item>Imperial</item>
+    </string-array>
+    <string-array name="pref_unit_entry_value">
+        <item>metric</item>
+        <item>imperial</item>
+    </string-array>
+
+</resources>
 {% endhighlight %}

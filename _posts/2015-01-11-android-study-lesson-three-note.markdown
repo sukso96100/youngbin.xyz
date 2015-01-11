@@ -166,7 +166,7 @@ public class WeatherFragment extends Fragment {
 
 우선, 레이아웃 파일에서 날씨 정보를 표시할 TextView 를 작업합시다. 일단 기본적으로 들어가 있는 TextView 에 id 값만 지정해 줍시다.
 저는 id 를 weather_data 로 하겠습니다.
-{% highlight java %}
+{% highlight xml %}
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"

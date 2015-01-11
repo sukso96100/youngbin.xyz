@@ -10,7 +10,7 @@ image : /resources/multithreading.png
 
 ## 시작하기 앞서...
 - Lesson 1 은 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin-han.kr.pe/2014/12/30/android-study-lesson-one-note.html)
-- Lesson 2 에서 작성한 소스코드를 준비하세요.
+- Lesson 1 에서 작성한 소스코드를 준비하세요.
 - 매우 당연하게도. 안드로이드 스튜디오가 설치된 컴퓨터를 준비하시길.
 - 이 포스트에서 다루기는 하겠지만... InputStream, StringBuffer, Thread 는 미리 공부 하고 오시는 것이 좋습니다.
 

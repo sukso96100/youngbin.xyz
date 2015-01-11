@@ -257,6 +257,5 @@ SettingsActivity 를 생성 하셨으면, 우선 xml 파일 먼저 작성 하겠
         <item>metric</item>
         <item>imperial</item>
     </string-array>
-
 </resources>
 {% endhighlight %}

@@ -554,22 +554,14 @@ actionProviderClass 는 Android Support Library 에 있는 ShareActionProvider �
 이제 DetailActivity 클래스 파일을 수정해 봅시다. 우선 우리는 Fragment 에서 Menu Item 기능을 구현할 것이므로.
 DetailActivity 를 생성할 때, 같이 Activity 쪽에 생성된 onCreateOptionsMenu 와 onOptionsItemSelected 메서드 부분을 통째로 지우고.
 대신 Fragment 쪽에 메서드를 구현해 줍니다. 그리고 공유에 사용할 Implicit Intent 를 만들어 주는 메서드도 만들어 줍시다.
+그리고, Fragment 부분의 onCreateView 메서드에서, setHasOptionsMenu(true); 메서드를 호출하여, Activity 에 Fragment 가 메뉴를 가지고 있음을 알려줍시다.
 {% highlight java %}
 public class DetailActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
-        if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
-                    .commit();
-        }
+        ...
     }
-
-
-
 
     /**
      * A placeholder fragment containing a simple view.
@@ -579,6 +571,8 @@ public class DetailActivity extends ActionBarActivity {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
+                                 // 이 Fragment 가 Overflow Menu 를 가지고 있음을 알리기.
+                                 setHasOptionsMenu(true);
                                  ...
         }
 

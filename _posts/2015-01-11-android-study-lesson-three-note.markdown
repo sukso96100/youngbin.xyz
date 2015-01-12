@@ -288,8 +288,7 @@ public class SettingsActivity extends PreferenceActivity
         // 값 변경을 감지하기 위해 onPreferenceChangeListener 를 등룩합니다.
         preference.setOnPreferenceChangeListener(this);
 
-        // Trigger the listener immediately with the preference's
-        // current value.
+        // onPreferenceChangeListener 를 설정의 현재 값으로 걸어줍니다.
         onPreferenceChange(preference,
                 PreferenceManager
                         .getDefaultSharedPreferences(preference.getContext())
@@ -326,6 +325,7 @@ public class SettingsActivity extends PreferenceActivity
         //설정이 변경되었음을 감지하는 인터페이스
         @Override
         public boolean onPreferenceChange(Preference preference, Object newValue) {
+                String stringValue = newValue.toString();
             if (preference instanceof ListPreference) {
             // ListPreference 인 경우 목록에서 선택된 값을 얻어서 표시합니다.
             ListPreference listPreference = (ListPreference) preference;
@@ -342,43 +342,17 @@ public class SettingsActivity extends PreferenceActivity
     }
 {% endhighlight %}
 
+
+
+
+
+
 설정 화면을 만들었습니다. 이제 설정 사항이 앱이 작동할 때 적용 되도록 해 봅시다. WeatherFragment 를 수정하여 설정값이 사용되도록 합시다.
 PreferenceActivity 에서 설정한 설정값들은 SharedPreference 의 보호된 공간에 저장 됩니다. 다시 저장된 값들을 불러오거나 수정 하는 경우에는.
 SharedPreference 클래스를 이용하면 됩니다.
 
 우선 설정값을 불러온 다음. 그 값을 AsyncTask 작업이 실행 될 때 AsyncTask 클래스로 넘겨줘야 하는대. 매번 메서드를 일일이 호출하기 번거로우니.
 따로 하나의 메서드를 만들어서 묶어버리고. 우리가 만든 메서드만 한번씩 호출해 줍시다.
-
-{% highlight java %}
-public class SettingsActivity extends PreferenceActivity 
-    implements Preference.OnPreferenceChangeListener{
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-            super.onCreate(savedInstanceState);
-            addPreferencesFromResource(R.xml.settings);
-        }
-
-        //onPreferenceChangeListener를 등룩하고, 설정 변경시 값을 onPreferenceChangeListener에 전달해줌.
-        private void bindPreferenceSummaryToValue(Preference preference) {
-        // 값 변경을 감지하기 위해 onPreferenceChangeListener 를 등룩합니다.
-        preference.setOnPreferenceChangeListener(this);
-
-        // Trigger the listener immediately with the preference's
-        // current value.
-        onPreferenceChange(preference,
-                PreferenceManager
-                        .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
-    }
-        //설정이 변경되었음을 감지하는 인터페이스
-        @Override
-        public boolean onPreferenceChange(Preference preference, Object newValue) {
-            return false;
-        }
-    }
-{% endhighlight %}
-onPreferenceChange메서드에 코드를 작성해서, 설정이 변경되면 선택한 내용이 설정 항목 제목 바로 아래 나타나는 Summary 로 나타나도록 해 줍시다.
-먼저 아래와 같은 메서드를 추가해 줍니다.
 {% highlight java %}
 public class WeatherFragment extends Fragment {
 ...
@@ -398,6 +372,103 @@ public class WeatherFragment extends Fragment {
 우리가 기존에 호출한 AsyncTask 를 실행하는 메서드는 방금 추가한 updateWeather 메서드에서 호출되니 모두 지워줍시다.
 아래와 같은 코드들을 지워주면 됩니다.
 {% highlight java %}
- myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
 mat.execute(CityId,Unit); //myAsyncTask 실행하기
+{% endhighlight %}
+
+그리고 그 자리에 updateWeather() 를 호출해 줍시다. 그리고 AsyncTask 클래스에서 추가로 넘겨준 값도 사용하도록 수정해 줍시다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+    ArrayList<String> WeatherData;
+    ArrayAdapter<String> myAdapter;
+
+    public WeatherFragment() {
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        ...
+        //Adapter 설정
+        LV.setAdapter(myAdapter);
+
+
+        updateWeather();
+
+        LV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            ...
+        });
+        return rootView;
+    }
+
+    void updateWeather(){
+        ...
+    }
+
+    protected class myAsyncTask extends AsyncTask<String, Void, String[]> {
+        String forecastJsonStr = null;
+
+        @Override
+        protected String[] doInBackground(String... params) {
+            HttpURLConnection urlConnection = null; //HttpUrlConnection
+            BufferedReader reader = null;
+
+
+            // 날시 데이터 URL 에 사용될 옵션
+            String format = "json";
+            String units = params[1];
+            int numDays = 7;
+            try {
+                //새 URL 객체
+                //UriBuilder 를 이용해 URL 만들기
+                final String FORECAST_BASE_URL =
+                        "http://api.openweathermap.org/data/2.5/forecast/daily?";
+                final String QUERY_PARAM = "id";
+                final String FORMAT_PARAM = "mode";
+                final String UNITS_PARAM = "units";
+                final String DAYS_PARAM = "cnt";
+
+
+                Uri builtUri = Uri.parse(FORECAST_BASE_URL).buildUpon()
+                        .appendQueryParameter(QUERY_PARAM, params[0])
+                        .appendQueryParameter(FORMAT_PARAM, format)
+                        .appendQueryParameter(UNITS_PARAM, units)
+                        .appendQueryParameter(DAYS_PARAM, Integer.toString(numDays))
+                        .build();
+
+                ...
+            } catch (IOException e) {
+                forecastJsonStr = null;
+            } finally {
+                ...
+            }
+
+            try {
+                ...
+                return WeatherDataArray; //데이터 반환
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+       ...
+    }
+   ...
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // 메뉴 항목 클릭을 여기서 처리합니다..
+        int id = item.getItemId(); // 클릭된 항목 id 값 얻기
+
+        //얻은 id 값에 따라 클릭 처리
+        if (id == R.id.action_refresh) { //id값이 action_refresh 이면.
+            // 네트워크 작업 실행
+            updateWeather();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+
 {% endhighlight %}

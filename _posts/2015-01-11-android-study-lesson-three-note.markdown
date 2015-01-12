@@ -495,3 +495,134 @@ Java 코드를 수정하기 앞서, Menu 항목을 추가해 줍시다. 앞서 �
     <string name="web">Open In Web Browser</string>
 </resources>
 {% endhighlight %}
+
+WeatherFragment 클래스 파일에서 onOptionsItemSelected 메서드 부분을 수정해 줍시다.
+SharedPreference 에서 도시ID 값을 불러와서 URL 완성에 사용합니다.
+그리고 암시적 인텐트를 이용에 웹 브라우저에서 열리도록 해 줍시다. 액션은 ACTION_VIEW 로 해줍니다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+    ...
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // 메뉴 항목 클릭을 여기서 처리합니다..
+        int id = item.getItemId(); // 클릭된 항목 id 값 얻기
+
+        //얻은 id 값에 따라 클릭 처리
+        if (id == R.id.action_refresh) { //id값이 action_refresh 이면.
+           ...
+        }else if(id == R.id.action_web){
+            SharedPreferences Pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+            String CityId = Pref.getString("pref_city_id",
+                    getString(R.string.pref_city_id_default_value));
+            String URL = "http://openweathermap.org/city/" + CityId;
+            Uri webpage = Uri.parse(URL);
+            Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+                startActivity(intent);
+
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+}
+{% endhighlight %}
+
+이번에는 ShareActionProvider 를 이용해, DetailActivity 에 공유 버튼을 추가해 봅시다.
+우리가 DetailActivity 를 생성할 떄 같이 생성된 /res/menu/menu_detail.xml 을 편집해 줍시다.
+showAsAction 은 ifRoom 으로 하여, 액션바에 공간이 있을 때 ActionButton 으로 나타나게 하고.
+actionProviderClass 는 Android Support Library 에 있는 ShareActionProvider 로 해 줍니다.
+{% highlight xml %}
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.youngbin.androidstudy.DetailActivity">
+    ...
+    <item android:id="@+id/action_share"
+        android:title="@string/share"
+        app:showAsAction="ifRoom"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+</menu>
+{% endhighlight %}
+마찬가지로 필요한 문자열을 strings.xml 에 추가해 줍니다.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ...
+    <string name="share">Share</string>
+</resources>
+
+{% endhighlight %}
+이제 DetailActivity 클래스 파일을 수정해 봅시다. 우선 우리는 Fragment 에서 Menu Item 기능을 구현할 것이므로.
+DetailActivity 를 생성할 때, 같이 Activity 쪽에 생성된 onCreateOptionsMenu 와 onOptionsItemSelected 메서드 부분을 통째로 지우고.
+대신 Fragment 쪽에 메서드를 구현해 줍니다. 그리고 공유에 사용할 Implicit Intent 를 만들어 주는 메서드도 만들어 줍시다.
+{% highlight java %}
+public class DetailActivity extends ActionBarActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_detail);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .add(R.id.container, new PlaceholderFragment())
+                    .commit();
+        }
+    }
+
+
+
+
+    /**
+     * A placeholder fragment containing a simple view.
+     */
+    public static class PlaceholderFragment extends Fragment {
+        ...
+        @Override
+        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                                 Bundle savedInstanceState) {
+                                 ...
+        }
+
+        @Override
+        public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+            // 정의한 Menu 리소스를 여기서 Inflate 합니다.
+            inflater.inflate(R.menu.menu_detail, menu);
+            // 공유 버튼 찾기
+            MenuItem menuItem = menu.findItem(R.id.action_share);
+
+            // ShareActionProvider 얻기
+            ShareActionProvider mShareActionProvider =
+                    (ShareActionProvider) MenuItemCompat.getActionProvider(menuItem);
+
+            // 공유 버튼에 사용할 Intent 를 만들어 주는 메서드를 호출합니다.
+            if (mShareActionProvider != null ) {
+                mShareActionProvider.setShareIntent(createShareForecastIntent());
+            } else {
+            }
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(MenuItem item) {
+            // 메뉴 항목 클릭을 여기서 처리합니다..
+            int id = item.getItemId(); // 클릭된 항목 id 값 얻기
+            // Retrieve the share menu item
+
+            return super.onOptionsItemSelected(item);
+        }
+
+        // 공유 버튼에 사용할 Intent 를 만들어 주는 메서드 입니다.
+        private Intent createShareForecastIntent() {
+            //액션은 ACTION_SEND 로 합니다.
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            //Flag 를 설정해 줍니다. 공유하기 위해 공유에 사용할 다른 앱의 하나의 Activity 만 열고, 
+            //다시 돌아오면 열었던 Activity 는 꺼야 하기 때문에
+            //FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET 로 해줍니다.
+            shareIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+            //공유할 것의 형태입니다. 우리는 텍스트를 공유합니다.
+            shareIntent.setType("text/plain");
+            //보낼 데이터를 Extra 로 넣어줍니다.
+            shareIntent.putExtra(Intent.EXTRA_TEXT,WeatherData);
+            return shareIntent;
+        }
+    }
+}
+{% endhighlight %}

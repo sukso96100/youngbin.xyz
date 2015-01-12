@@ -272,3 +272,132 @@ public class SettingsActivity extends PreferenceActivity {
     }
 }
 {% endhighlight %}
+
+클래스에 onPreferenceChangeListener를 구현하고, onPreferenceChangeListener에 Value 를 전달해 줄 메서드도 작성합니다.
+{% highlight java %}
+public class SettingsActivity extends PreferenceActivity 
+    implements Preference.OnPreferenceChangeListener{
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.settings);
+        }
+
+        //onPreferenceChangeListener를 등룩하고, 설정 변경시 값을 onPreferenceChangeListener에 전달해줌.
+        private void bindPreferenceSummaryToValue(Preference preference) {
+        // 값 변경을 감지하기 위해 onPreferenceChangeListener 를 등룩합니다.
+        preference.setOnPreferenceChangeListener(this);
+
+        // Trigger the listener immediately with the preference's
+        // current value.
+        onPreferenceChange(preference,
+                PreferenceManager
+                        .getDefaultSharedPreferences(preference.getContext())
+                        .getString(preference.getKey(), ""));
+    }
+        //설정이 변경되었음을 감지하는 인터페이스
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            return false;
+        }
+    }
+{% endhighlight %}
+onPreferenceChange메서드에 코드를 작성해서, 설정이 변경되면 선택한 내용이 설정 항목 제목 바로 아래 나타나는 Summary 로 나타나도록 해 줍시다.
+{% highlight java %}
+public class SettingsActivity extends PreferenceActivity 
+    implements Preference.OnPreferenceChangeListener{
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.settings);
+        }
+
+        //onPreferenceChangeListener를 등룩하고, 설정 변경시 값을 onPreferenceChangeListener에 전달해줌.
+        private void bindPreferenceSummaryToValue(Preference preference) {
+        // 값 변경을 감지하기 위해 onPreferenceChangeListener 를 등룩합니다.
+        preference.setOnPreferenceChangeListener(this);
+
+        // onPreferenceChangeListener 를 설정의 현재 값으로 걸어줍니다.
+        onPreferenceChange(preference,
+                PreferenceManager
+                        .getDefaultSharedPreferences(preference.getContext())
+                        .getString(preference.getKey(), ""));
+    }
+        //설정이 변경되었음을 감지하는 인터페이스
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            if (preference instanceof ListPreference) {
+            // ListPreference 인 경우 목록에서 선택된 값을 얻어서 표시합니다.
+            ListPreference listPreference = (ListPreference) preference;
+            int prefIndex = listPreference.findIndexOfValue(stringValue);
+            if (prefIndex >= 0) {
+                preference.setSummary(listPreference.getEntries()[prefIndex]);
+            }
+        } else {
+            // 다른 Preference 는 간단히 설정된 값으로 표시합니다.
+            preference.setSummary(stringValue);
+        }
+        return true;
+        }
+    }
+{% endhighlight %}
+
+설정 화면을 만들었습니다. 이제 설정 사항이 앱이 작동할 때 적용 되도록 해 봅시다. WeatherFragment 를 수정하여 설정값이 사용되도록 합시다.
+PreferenceActivity 에서 설정한 설정값들은 SharedPreference 의 보호된 공간에 저장 됩니다. 다시 저장된 값들을 불러오거나 수정 하는 경우에는.
+SharedPreference 클래스를 이용하면 됩니다.
+
+우선 설정값을 불러온 다음. 그 값을 AsyncTask 작업이 실행 될 때 AsyncTask 클래스로 넘겨줘야 하는대. 매번 메서드를 일일이 호출하기 번거로우니.
+따로 하나의 메서드를 만들어서 묶어버리고. 우리가 만든 메서드만 한번씩 호출해 줍시다.
+
+{% highlight java %}
+public class SettingsActivity extends PreferenceActivity 
+    implements Preference.OnPreferenceChangeListener{
+        @Override
+        public void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            addPreferencesFromResource(R.xml.settings);
+        }
+
+        //onPreferenceChangeListener를 등룩하고, 설정 변경시 값을 onPreferenceChangeListener에 전달해줌.
+        private void bindPreferenceSummaryToValue(Preference preference) {
+        // 값 변경을 감지하기 위해 onPreferenceChangeListener 를 등룩합니다.
+        preference.setOnPreferenceChangeListener(this);
+
+        // Trigger the listener immediately with the preference's
+        // current value.
+        onPreferenceChange(preference,
+                PreferenceManager
+                        .getDefaultSharedPreferences(preference.getContext())
+                        .getString(preference.getKey(), ""));
+    }
+        //설정이 변경되었음을 감지하는 인터페이스
+        @Override
+        public boolean onPreferenceChange(Preference preference, Object newValue) {
+            return false;
+        }
+    }
+{% endhighlight %}
+onPreferenceChange메서드에 코드를 작성해서, 설정이 변경되면 선택한 내용이 설정 항목 제목 바로 아래 나타나는 Summary 로 나타나도록 해 줍시다.
+먼저 아래와 같은 메서드를 추가해 줍니다.
+{% highlight java %}
+public class WeatherFragment extends Fragment {
+...
+    void updateWeather(){
+        SharedPreferences Pref = PreferenceManager.getDefaultSharedPreferences(getActivity());
+        String CityId = Pref.getString("pref_city_id",
+                getString(R.string.pref_city_id_default_value));
+        String Unit = Pref.getString("pref_unit",
+                getString(R.string.pref_unit_default_value));
+
+        myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+        mat.execute(CityId,Unit); //myAsyncTask 실행하기
+    }
+    ...
+}
+{% endhighlight %}
+우리가 기존에 호출한 AsyncTask 를 실행하는 메서드는 방금 추가한 updateWeather 메서드에서 호출되니 모두 지워줍시다.
+아래와 같은 코드들을 지워주면 됩니다.
+{% highlight java %}
+ myAsyncTask mat = new myAsyncTask(); //myAsyncTask 객체 생성
+mat.execute(CityId,Unit); //myAsyncTask 실행하기
+{% endhighlight %}

@@ -472,3 +472,26 @@ public class WeatherFragment extends Fragment {
 }
 
 {% endhighlight %}
+
+## Implicit Intent
+암시적 인텐트는 앞에서 말했다 싶이 정확히 대상 앱 컴포넌트를 정해주지 않고, 그 대신 일반적인 액션을 정해줍니다.
+이번에는 암시적 인텐트를 이용하여, OpenWeatherMap 사이트에서 날시를 볼수 있도록 하는 것과, 날시 정보를 공유하는 기능을 추가해 봅시다.
+먼저 WeatherFragment 에서 사이트에서 날시 보기 기능을 추가해 줍시다.
+Java 코드를 수정하기 앞서, Menu 항목을 추가해 줍시다. 앞서 만들어 둔 /res/menu/weatherfragment.xml 에 코드를 추가합니다.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    ...
+    <item android:id="@+id/action_web" android:title="@string/web"
+        app:showAsAction="never"/>
+</menu>
+{% endhighlight %}
+필요한 문자열도 strings.xml 에 추가해 줍시다.
+{% highlight xml %}
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    ...
+    <string name="web">Open In Web Browser</string>
+</resources>
+{% endhighlight %}

@@ -666,4 +666,9 @@ unregisterReceiver(myReceiver);
 {% endhighlight %}
 
 ## 곁들여 보면 좋은 추가자료들...
-- [Android Developer - AdapterView.OnItemClickListener](http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html)
+- [Android Developers - AdapterView.OnItemClickListener](http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html)
+- [Android Developers - Intents and Intent Filters](http://developer.android.com/guide/components/intents-filters.html)
+- [Android Developers - Settings](http://developer.android.com/guide/topics/ui/settings.html)
+- [Android Developers - Saving Key-Value Sets](http://developer.android.com/training/basics/data-storage/shared-preferences.html)
+- [Android Developers - PreferenceActivity](http://developer.android.com/reference/android/preference/PreferenceActivity.html)
+- {Android Developers - BroadcastReceiver](http://developer.android.com/reference/android/content/BroadcastReceiver.html)

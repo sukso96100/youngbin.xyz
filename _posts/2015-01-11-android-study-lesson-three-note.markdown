@@ -527,7 +527,7 @@ public class WeatherFragment extends Fragment {
 {% endhighlight %}
 
 이번에는 ShareActionProvider 를 이용해, DetailActivity 에 공유 버튼을 추가해 봅시다.
-우리가 DetailActivity 를 생성할 떄 같이 생성된 /res/menu/menu_detail.xml 을 편집해 줍시다.
+우리가 DetailActivity 를 생성할 때 같이 생성된 /res/menu/menu_detail.xml 을 편집해 줍시다.
 showAsAction 은 ifRoom 으로 하여, 액션바에 공간이 있을 때 ActionButton 으로 나타나게 하고.
 actionProviderClass 는 Android Support Library 에 있는 ShareActionProvider 로 해 줍니다.
 {% highlight xml %}
@@ -620,3 +620,50 @@ public class DetailActivity extends ActionBarActivity {
     }
 }
 {% endhighlight %}
+
+## BroadcastReceiver 와 Intent Filter
+BroadcastReceiver는 말 단어 그대로 방송을 받는 앱 컴포넌트 입니다. 다른 앱이나 안드로이드 시스템에서 sendBroadcast() 메서드를 통해 보내진 Intent 를 받으며,
+그에 따른 것들을 처리해 줍니다. 이때 어떤 Intent 를 받을지 Intent Filter 로 정의해 줍니다. 예를들어 USB케이블 연결에 대한 Intent Filter 를 설정하여, USB 케이블 연결시 보내지는 Intent 를 받아, USB 케이블이 연결되면 남은 스토리지 용량을 보여 주도록 할 수도 있습니다.
+
+아래 코드가 BroadcastReceiver 를 상속하는 클래스 코드 예제 입니다. 간단히 onReceive 메서드 하나로 구성되어 있습니다.
+onReceive 메서드에 Intent 를 수신하면 실행될 코드들을 넣어주시면 됩니다.
+{% highlight java %}
+public class MyReceiver extends BroadcastReceiver {
+    public MyReceiver() {
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        // Intent 를 받으면 실행할 코드를 여기에 넣습니다.
+
+    }
+}
+{% endhighlight %}
+
+Broadcast가 Intent 를 받으려면, 등룩(Register)을 해 줘야 합니다. 두 가지 방법으로 등룩 해 줄 수 있습니다.
+Manifest 에 정의하여 등룩하는 방법과, Java 코드를 이용해 필요할 때만 등룩하는 방법이 있습니다.
+
+아래는 Manifest 에 등룩하는 방법의 에제 입니다. Manifest에 아래와 같은 코드를 넣어서 등룩합니다.
+Intent Filter 태그 안에 어떤 Intent 를 받을지 Intent Filter 를 정의해 줍니다.
+여기서는 전원 케이블 연결에 대한 Intent Filter 를 예시로 넣었습니다.
+{% highlight xml %}
+    <receiver
+            android:name=".MyReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"></action>
+            </intent-filter>
+        </receiver>
+{% endhighlight %}
+
+Java 코드를 이용해 동적으로 등룩하고 해제할 때 아래와 같은 코드를 이용합니다.
+{% highlight java %}
+//myReceiver 객체 생성
+MyReceiver myReceiver = new MyReceiver();
+//myReceiver 등룩
+registerReceiver(myReceiver, new IntentFilter("android.intent.action.ACTION_POWER_CONNECTED"));
+//myReceiver 등룩 해제
+unregisterReceiver(myReceiver);
+{% endhighlight %}
+
+## 곁들여 보면 좋은 추가자료들...
+- [Android Developer - AdapterView.OnItemClickListener](http://developer.android.com/reference/android/widget/AdapterView.OnItemClickListener.html)

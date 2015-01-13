@@ -671,4 +671,4 @@ unregisterReceiver(myReceiver);
 - [Android Developers - Settings](http://developer.android.com/guide/topics/ui/settings.html)
 - [Android Developers - Saving Key-Value Sets](http://developer.android.com/training/basics/data-storage/shared-preferences.html)
 - [Android Developers - PreferenceActivity](http://developer.android.com/reference/android/preference/PreferenceActivity.html)
-- {Android Developers - BroadcastReceiver](http://developer.android.com/reference/android/content/BroadcastReceiver.html)
+- [Android Developers - BroadcastReceiver](http://developer.android.com/reference/android/content/BroadcastReceiver.html)

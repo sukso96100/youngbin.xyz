@@ -9,7 +9,7 @@ tags: domain update
 클릭해닷컴(clickhe.com) 이라는 곳에서 무료로 제공하는 도메인 이구요. 제가 도메인을 설정 마쳤으니. 앞으로는 아래 도메인을 통해서, 
 이 블로그에 들어오실 수 있습니다.
 
-<a href="youngbin-han.kr.pe">youngbin-han.kr.pe</a>
+<a href="youngbin.tk">youngbin.tk</a>
 
 여전히 기존에 이 블로그가 호스팅 되어있는 github에서 제공하는 아래 도메인으로도 들어오실 수 있습니다.
 

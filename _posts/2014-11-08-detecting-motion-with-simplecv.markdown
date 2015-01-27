@@ -8,7 +8,7 @@ tags: tutorial python simplecv develop development raspberry-pi linux computer-v
 SimpleCV를 이용하면 어렴지 않게 카메라를 통해 움직임을 감지해 낼 수 있습니다.
 복잡한 것은 SimpleCV가 거의 다 해주니 우리는 제공되는 API를 잘 활용하면, 금방 만들어 낼 수 있습니다.
 이 글은 여러분들이 이미 SimpleCV를 설치 하셨다는 가정 하에 쓴 글 입니다. 아직 설치 하지 않으셨다면.
-<a href="http://www.youngbin-han.kr.pe/tutorial/python/simplecv/develop/development/raspberry-pi/linux/computer-vision/2014/11/02/how-to-install-simplecv-framework/">먼저 설치를 먼저 하신 다음,</a> 이 글을 보시는 것이 좋습니다.
+<a href="http://www.youngbin.tk/tutorial/python/simplecv/develop/development/raspberry-pi/linux/computer-vision/2014/11/02/how-to-install-simplecv-framework/">먼저 설치를 먼저 하신 다음,</a> 이 글을 보시는 것이 좋습니다.
 
 ## 움직임을 감지하는 과정
 먼저 움직임을 감지하는 과정을 생각 해 봅시다. 움직임을 감지하려면, 사진 두 장을 얻어 차이를 봐야 합니다.

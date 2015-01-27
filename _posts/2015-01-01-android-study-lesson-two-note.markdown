@@ -9,7 +9,7 @@ image : /resources/multithreading.png
 안녕하세요. 저번에 Lesson 1 노트에 이어 이번에 저희 시온고등학교 내 안드로이드 스터디 그룹에서 진도를 나간(부득이하게 온라인으로 나간건 함정...) Lesson 2 내용을 정리하여 포스트로 작성 해 보고자 합니다. Lesson 2 에 대한 정리는... 생각보다 길군요. 바로 들어가겠습니다.
 
 ## 시작하기 앞서...
-- Lesson 1 은 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin-han.kr.pe/2014/12/30/android-study-lesson-one-note.html)
+- Lesson 1 은 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin.tk/2014/12/30/android-study-lesson-one-note.html)
 - Lesson 1 에서 작성한 소스코드를 준비하세요.
 - 매우 당연하게도. 안드로이드 스튜디오가 설치된 컴퓨터를 준비하시길.
 - 이 포스트에서 다루기는 하겠지만... InputStream, StringBuffer, Thread 는 미리 공부 하고 오시는 것이 좋습니다.

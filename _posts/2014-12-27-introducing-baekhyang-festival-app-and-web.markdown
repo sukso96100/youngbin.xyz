@@ -17,7 +17,7 @@ image: /resources/baekhyang14.png
 위 사진이 백향제 웹사이트 사진 입니다. 웹사이트에서 부스 위치를 찿으시거나, 공연 일정 확인이 가능합니다.
 아래 URL이 백향제 웹사이트 주소 입니다. 접속하셔서 이용 하시면 됩니다.
 
-[youngbin-han.kr.pe/baekhyang14](http://www.youngbin-han.kr.pe/baekhyang14/)
+[youngbin.tk/baekhyang14](http://www.youngbin.tk/baekhyang14/)
 
 ## 안드로이드용 앱
 

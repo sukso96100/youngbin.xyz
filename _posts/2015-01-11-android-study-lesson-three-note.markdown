@@ -11,7 +11,7 @@ Lesson 2 에 이어 Lesson 3 노트를 계속 합니다. 이번에는 스터디 
 난이도가 들쭉날쭉 한 것 같내요. 이번 Lesson 3 에서는 새로운 Activity 를 만들고, Activity 사이에서 Intent 등을 이용해 통신하는 방법을 주로 다룹니다.
 
 ## 시작하기 앞서...
-- Lesson 2 는 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin-han.kr.pe/2014/12/30/android-study-lesson-two-note.html)
+- Lesson 2 는 공부 하였나요? [안했으면 먼저 하고 오시길.](http://www.youngbin.tk/2014/12/30/android-study-lesson-two-note.html)
 - Lesson 2 에서 작성한 소스코드를 준비하세요.
 
 ## Lesson 3 내용 요약.

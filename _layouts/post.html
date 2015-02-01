@@ -13,7 +13,7 @@ layout: default
                    style="background-image: url({% if page.image %}{{ page.image }}{% endif %});
                           background-size: cover;">
       <paper-icon-button 
-        id="navicon" icon="menu"></paper-icon-button>
+        id="navicon" icon="menu" class="white"></paper-icon-button>
         <div id="title" class="bottom indent">{{ page.title }}</div>
     </core-toolbar>
     <div class="main-content">
@@ -36,22 +36,3 @@ layout: default
 
 </core-drawer-panel>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
-
-
-
-
-
-
-
-
-
-<div class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-  </header>
-
-  
-
-</div>

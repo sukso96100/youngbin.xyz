@@ -20,7 +20,7 @@ title: Home
     </core-toolbar>
       
     <div class="main-content">
-         {% for post in site.posts %}
+         {% for post in site.posts limit:10 %}
         <paper-shadow class="post-card" z="1">
         <card>
         <p class="card-content"><core-icon icon="today"></core-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
@@ -34,6 +34,9 @@ title: Home
         </paper-shadow>
       
     {% endfor %}
+        <br>
+        <a href="{{ /archive/ | prepend: site.baseurl }}">
+            <paper-button class="card-content">More Posts</paper-button></a>
     </div>
   </core-scroll-header-panel>
 

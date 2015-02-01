@@ -1,42 +1,60 @@
 ---
-layout: page
+layout: default
 title: Archive
 permalink: /archive/
 ---
 
-<div class="archive">
+<core-drawer-panel id="drawerPanel">
 
-  {% for post in site.posts  %}
+  <core-header-panel drawer>
+      {% include drawer.html %}
+   </core-header-panel>
+
+  <core-scroll-header-panel condenses keepcondensedheader main>
+     <core-toolbar class="dark-theme tall" id="toolbar" id="mainheader">
+      <paper-icon-button 
+        id="navicon" icon="menu"></paper-icon-button>
+        <h1 id="title" class="bottom indent title">{{ page.title }}</h1>
+    </core-toolbar>
+    <div class="main-content">
+      
+     {% for post in site.posts  %}
 
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
     {% if forloop.first %}
-    <div class="panel panel-default">
-    <div class="panel-body">
-    <h2 id="{{ this_year }}-ref">{{this_year}}</h2><br>
+         <paper-shadow class="post-card" z="1">
+             <card>
+    <h2 class="card-content" id="{{ this_year }}-ref">{{this_year}}</h2><br>
     <!-- <ul> -->
     {% endif %}
-
-    <li><h4><a href="{{ post.url }}">{{ post.title }}</a>
+    <li><h4 class="card-content"><a href="{{ post.url }}">{{ post.title }}</a>
       <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4></li>
-
     {% if forloop.last %}
-    <!-- </ul> -->
-  </div>
-      </div>
+                   </card>
+              </paper-shadow>
     {% else %}
         {% if this_year != next_year %}
-        <!-- </ul> -->
-      </div>
-          </div>
-          <div class="panel panel-default">
-          <div class="panel-body">
-        <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
-        <!-- <ul> -->
+                  </card>
+              </paper-shadow>
+         <paper-shadow class="post-card" z="1">
+             <card>
+        <h2 class="card-content" id="{{ next_year }}-ref">{{next_year}}</h2>
         {% endif %}
     {% endif %}
-
+             
 {% endfor %}
+        
+    
+  </core-scroll-header-panel>
 
-</div>
+</core-drawer-panel>
+<script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
+
+
+
+
+
+
+

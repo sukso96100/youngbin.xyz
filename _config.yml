@@ -1,6 +1,6 @@
 # Build settings
-markdown: redcarpet
-highlighter: pygments
+markdown: kramdown
+
 
 # Site settings
 title: "Youngbin Han"

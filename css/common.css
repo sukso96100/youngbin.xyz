@@ -1,0 +1,44 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+core-scroll-header-panel {
+  height: 100%;
+}
+
+.main-content, card {
+    padding: 30px;
+}
+
+.post-card{
+    margin-bottom: 30px;
+}
+.card-content {
+    margin-left: 30px;
+}
+
+.page-title{
+    margin-bottom: 30px;
+}
+
+#toolbar{
+background-color: #3F51B5;
+}
+
+#title{
+color: #fff;
+}
+
+.white{
+    color: #fff;
+}
+
+/* drawer is always visible on a wide screen
+   so menu button isn't required */
+core-drawer-panel:not([narrow]) #navicon {
+  display: none;
+}
+
+core-header-panel {
+background-color: white;
+}

@@ -21,6 +21,12 @@ layout: default
     <div class="main-content">
          <article class="post-content">
     {{ content }}
+             
+             <!-- 구글플러스 +1 버튼 -->
+<!-- +1 버튼을(를) 표시하고 싶은 위치에 이 태그를 배치하세요. -->
+<br><br><div class="g-plusone"></div><br>
+<!-- Facebook 좋아요 버튼 -->
+            <div class="fb-like" data-href="{{ page.baseurl }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><br><br>
   </article>
         <paper-shadow class="post-card" z="1">
             <card>
@@ -33,9 +39,16 @@ layout: default
             </card>
            
         </paper-shadow>
+        <paper-shadow class="post-card" z="1">
+            <card>
+                {% include disqus.html %}
+            </card>
+        </paper-shadow>
+        
     </div>
   </core-scroll-header-panel>
 </core-drawer-panel>
 <script src="{{ "/bower_components/jquery/dist/jquery.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/bower_components/jQuery.dotdotdot/src/js/jquery.dotdotdot.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/post.js" | prepend: site.baseurl }}"></script>
+{% include snsjs.html %}

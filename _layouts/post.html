@@ -7,8 +7,11 @@ layout: default
       {% include drawer.html %}
    </core-header-panel>
 
-  <core-scroll-header-panel condenses keepcondensedheader main>
-     <core-toolbar class="dark-theme tall" id="toolbar" id="mainheader">
+  <core-scroll-header-panel condenses keepcondensedheader main
+                            style="height: 100;">
+     <core-toolbar class="dark-theme tall" id="toolbar" id="mainheader"
+                   style="background-image: url({% if page.image %}{{ page.image }}{% endif %});
+                          background-size: cover;">
       <paper-icon-button 
         id="navicon" icon="menu"></paper-icon-button>
         <div id="title" class="bottom indent">{{ page.title }}</div>

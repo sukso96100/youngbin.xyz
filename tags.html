@@ -21,10 +21,12 @@ permalink: /tags/
         <paper-shadow class="post-card" z="1">
             <card>
                 <p class="card-content"><core-icon icon="label"></core-icon> All Tags</p>
+                <section id="right-margin">
                 {% for tag in site.tags %}
-                <a class="card-content" href="#{{ tag | first }}"> 
+                <a class="card-content" href="#{{ tag | first }}" > 
                     <paper-button>{{ tag | first }}</paper-button> </a>
                 {% endfor %}
+                </section>
             </card>
            
         </paper-shadow>
@@ -39,7 +41,7 @@ permalink: /tags/
     {% for posts in tag %}
       {% for post in posts %}
 <a href="{{ post.url }}">
-  <h4 class="card-content">{{ post.title }} <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4>
+  <h4 class="card-content" id="right-margin">{{ post.title }} <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4>
 </a>
       {% endfor %}
     {% endfor %}

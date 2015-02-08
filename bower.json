@@ -13,6 +13,7 @@
     "tests"
   ],
   "dependencies": {
-    "polymer": "Polymer/polymer#~0.5.4"
+    "polymer": "Polymer/polymer#~0.5.4",
+    "github-project-card": "~0.0.1"
   }
 }

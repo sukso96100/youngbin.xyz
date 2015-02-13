@@ -18,7 +18,7 @@ permalink: /about/
 - [Have a Nice Training - 고등학교 2학년때 담임선생님 장기 연수 떄 잘 다녀 오시라고 간단히 만든 웹사이트](https://github.com/sukso96100/have-a-nice-training)
 - [AssistScreen - 처음으로 만든 안드로이드 홈 런처 앱. 출시 안한건 함정](https://github.com/sukso96100/assist-screen)
 - [211 Seat Changer - 고등학교 2학년떄 만은 간단한 웹기반 자리바꾸기 도구](https://github.com/sukso96100/211seatchanger)
-- [IntroWorkout - 고등학교 2학년때 모의면접때 쓸 자기소개서 쓰다가. 망할 hwp 파일 보고 화나서 즉석에서 본인이 쓰려고 만든 웹사이드](https://github.com/sukso96100/introworkout)
+- [ResumeUtil(처음에는 IntroWorkout 이였는대 이름 변경함) - 고등학교 2학년때 모의면접때 쓸 자기소개서 쓰다가. 망할 hwp 파일 보고 화나서 즉석에서 본인이 쓰려고 만든 웹사이트. 처음에는 부트스트랩 기반으로 UI 작성했는대, 그 이후 몇달 후 Polymer 기반으로 UI 다시 짬](https://github.com/sukso96100/resumeutil)
 - [안드로이드용 시온고등학교 앱](https://github.com/sukso96100/zionhs)
 - [안드로이드용 시온고등학교 백향제 2014 앱](https://github.com/sukso96100/baekhyang14-android)
 - [시온고등학교 백향제 2014 웹사이트](https://github.com/sukso96100/baekhyang14)

@@ -1,11 +1,11 @@
 /**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
  * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ * subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
  */
 // @version 0.5.4
 if (typeof WeakMap === "undefined") {
@@ -2043,7 +2043,7 @@ window.ShadowDOMPolyfill = {};
   function matchesSelector(el, selector) {
     return el.matches(selector);
   }
-  var XHTML_NS = "http://www.w3.org/1999/xhtml";
+  var XHTML_NS = "https://www.w3.org/1999/xhtml";
   function matchesTagName(el, localName, localNameLowerCase) {
     var ln = el.localName;
     return ln === localName || ln === localNameLowerCase && el.namespaceURI === XHTML_NS;
@@ -3088,7 +3088,7 @@ window.ShadowDOMPolyfill = {};
   var Element = scope.wrappers.Element;
   var HTMLElement = scope.wrappers.HTMLElement;
   var registerObject = scope.registerObject;
-  var SVG_NS = "http://www.w3.org/2000/svg";
+  var SVG_NS = "https://www.w3.org/2000/svg";
   var svgTitleElement = document.createElementNS(SVG_NS, "title");
   var SVGTitleElement = registerObject(svgTitleElement);
   var SVGElement = Object.getPrototypeOf(SVGTitleElement.prototype).constructor;
@@ -3107,7 +3107,7 @@ window.ShadowDOMPolyfill = {};
   var unwrap = scope.unwrap;
   var wrap = scope.wrap;
   var OriginalSVGUseElement = window.SVGUseElement;
-  var SVG_NS = "http://www.w3.org/2000/svg";
+  var SVG_NS = "https://www.w3.org/2000/svg";
   var gWrapper = wrap(document.createElementNS(SVG_NS, "g"));
   var useElement = document.createElementNS(SVG_NS, "use");
   var SVGGElement = gWrapper.constructor;

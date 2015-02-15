@@ -11,10 +11,10 @@
 ## Maintained by
 - Guille Paz (Front-end developer | Web standards lover)
 - E-mail: [guille87paz@gmail.com](mailto:guille87paz@gmail.com)
-- Twitter: [@pazguille](http://twitter.com/pazguille)
-- Web: [http://pazguille.me](http://pazguille.me)
+- Twitter: [@pazguille](https://twitter.com/pazguille)
+- Web: [https://pazguille.me](https://pazguille.me)
 
 ## License
 Licensed under the MIT license.
 
-Copyright (c) 2014 [@pazguille](http://twitter.com/pazguille).
+Copyright (c) 2014 [@pazguille](https://twitter.com/pazguille).

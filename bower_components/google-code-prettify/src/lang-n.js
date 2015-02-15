@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,11 +16,11 @@
 /**
  * @fileoverview
  * Registers a language handler for the Nemerle language.
- * http://nemerle.org
+ * https://nemerle.org
  * @author Zimin A.V.
  */
 (function () {
-  // http://nemerle.org/wiki/index.php?title=Base_keywords
+  // https://nemerle.org/wiki/index.php?title=Base_keywords
   var keywords = 'abstract|and|as|base|catch|class|def|delegate|enum|event|extern|false|finally|'
          + 'fun|implements|interface|internal|is|macro|match|matches|module|mutable|namespace|new|'
          + 'null|out|override|params|partial|private|protected|public|ref|sealed|static|struct|'

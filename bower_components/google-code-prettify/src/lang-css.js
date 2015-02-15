@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,7 +24,7 @@
  *      <pre class="prettyprint lang-css"></pre>
  *
  *
- * http://www.w3.org/TR/CSS21/grammar.html Section G2 defines the lexical
+ * https://www.w3.org/TR/CSS21/grammar.html Section G2 defines the lexical
  * grammar.  This scheme does not recognize keywords containing escapes.
  *
  * @author mikesamuel@gmail.com
@@ -148,7 +148,7 @@ PR['registerLangHandler'](
           /^-?(?:[_a-z]|(?:\\[\da-f]+ ?))(?:[_a-z\d\-]|\\(?:\\[\da-f]+ ?))*/i]
         ]),
     ['css-kw']);
-// The content of an unquoted URL literal like url(http://foo/img.png) should
+// The content of an unquoted URL literal like url(https://foo/img.png) should
 // be colored as string content.  This language handler is used above in the
 // URL production to do so.
 PR['registerLangHandler'](

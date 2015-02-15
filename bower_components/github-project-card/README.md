@@ -1,6 +1,6 @@
 #&lt;github-project-card&gt;
 
-Polymer component to display github project data. [Check the example page!] (http://josex2r.github.io/github-project-card/)
+Polymer component to display github project data. [Check the example page!] (https://josex2r.github.io/github-project-card/)
 
 ![ScreenShot](https://raw.github.com/josex2r/github-project-card/master/screenshot.jpg)
 
@@ -13,7 +13,7 @@ Inspired by [&lt;github-card&gt;] (https://github.com/pazguille/github-card)
 
 ## Installation
 
-Install the component using [Bower](http://bower.io/):
+Install the component using [Bower](https://bower.io/):
 
 ```sh
 $ bower install github-project-card --save
@@ -52,4 +52,4 @@ Github project name
 
 ##License
 
-github-project-card is released under the [MIT License](http://opensource.org/licenses/MIT).
+github-project-card is released under the [MIT License](https://opensource.org/licenses/MIT).

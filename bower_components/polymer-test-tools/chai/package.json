@@ -3,11 +3,11 @@
   "name": "chai",
   "description": "BDD/TDD assertion library for node.js and the browser. Test framework agnostic.",
   "keywords": [ "test", "assertion", "assert", "testing", "chai" ],
-  "homepage": "http://chaijs.com",
+  "homepage": "https://chaijs.com",
   "license": "MIT",
   "contributors": [
     "Jake Luer <jake@alogicalparadox.com>",
-    "Domenic Denicola <domenic@domenicdenicola.com> (http://domenicdenicola.com)",
+    "Domenic Denicola <domenic@domenicdenicola.com> (https://domenicdenicola.com)",
     "Veselin Todorov <hi@vesln.com>",
     "John Firebaugh <john.firebaugh@gmail.com>"
   ],

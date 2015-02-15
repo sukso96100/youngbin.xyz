@@ -15,7 +15,7 @@ features previously only usable declaratively, and exposes powerful,
 high-performance animation capabilities to developers.
 
 For more details see the
-[W3C specification](http://w3c.github.io/web-animations/).
+[W3C specification](https://w3c.github.io/web-animations/).
 
 What is the polyfill?
 ---------------------
@@ -47,7 +47,7 @@ effect.
 
 Web Animations supports off-main-thread animations, and also allows procedural
 generation of animations and fine-grained control of animation playback. See
-<http://web-animations.github.io> for ideas and inspiration!
+<https://web-animations.github.io> for ideas and inspiration!
 
 Native Fallback
 ---------------
@@ -138,7 +138,7 @@ API and Specification Feedback
 File an issue on GitHub: <https://github.com/w3c/web-animations/issues/new>.
 Alternatively, send an email to <public-fx@w3.org> with subject line
 “[web-animations] … message topic …”
-([archives](http://lists.w3.org/Archives/Public/public-fx/)).
+([archives](https://lists.w3.org/Archives/Public/public-fx/)).
 
 Polyfill Issues
 ---------------

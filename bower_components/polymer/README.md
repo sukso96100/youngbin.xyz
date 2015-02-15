@@ -1,14 +1,14 @@
 # Polymer
 
-[![Polymer build status](http://www.polymer-project.org/build/polymer-dev/status.png "Polymer build status")](http://build.chromium.org/p/client.polymer/waterfall)
+[![Polymer build status](https://www.polymer-project.org/build/polymer-dev/status.png "Polymer build status")](https://build.chromium.org/p/client.polymer/waterfall)
 
 ## Brief Overview
 
-For more detailed info goto [http://polymer-project.org/](http://polymer-project.org/).
+For more detailed info goto [https://polymer-project.org/](https://polymer-project.org/).
 
 Polymer is a new type of library for the web, designed to leverage the existing browser infrastructure to provide the encapsulation and extendability currently only available in JS libraries.
 
-Polymer is based on a set of future technologies, including [Shadow DOM](http://w3c.github.io/webcomponents/spec/shadow/), [Custom Elements](http://w3c.github.io/webcomponents/spec/custom/) and Model Driven Views. Currently these technologies are implemented as polyfills or shims, but as browsers adopt these features natively, the platform code that drives Polymer evacipates, leaving only the value-adds.
+Polymer is based on a set of future technologies, including [Shadow DOM](https://w3c.github.io/webcomponents/spec/shadow/), [Custom Elements](https://w3c.github.io/webcomponents/spec/custom/) and Model Driven Views. Currently these technologies are implemented as polyfills or shims, but as browsers adopt these features natively, the platform code that drives Polymer evacipates, leaving only the value-adds.
 
 ## Tools & Testing
 

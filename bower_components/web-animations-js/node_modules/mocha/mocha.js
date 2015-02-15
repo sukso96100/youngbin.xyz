@@ -71,7 +71,7 @@ require.register("browser/diff.js", function(module, exports, require){
  *
  * These methods are based on the implementation proposed in
  * "An O(ND) Difference Algorithm and its Variations" (Myers, 1986).
- * http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.4.6927
+ * https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.4.6927
  */
 var JsDiff = (function() {
   /*jshint maxparams: 5*/
@@ -396,7 +396,7 @@ var JsDiff = (function() {
       return ret.join('');
     },
 
-    // See: http://code.google.com/p/google-diff-match-patch/wiki/API
+    // See: https://code.google.com/p/google-diff-match-patch/wiki/API
     convertChangesToDMP: function(changes){
       var ret = [], change;
       for ( var i = 0; i < changes.length; i++) {

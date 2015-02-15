@@ -1,11 +1,11 @@
 /**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+ * This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
  * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+ * subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
  */
 // @version 0.5.4
 window.PolymerGestures = {};
@@ -1077,7 +1077,7 @@ window.PolymerGestures = {};
   var CLICK_COUNT_TIMEOUT = 200;
   var HYSTERESIS = 20;
   var ATTRIB = 'touch-action';
-  // TODO(dfreedm): disable until http://crbug.com/399765 is resolved
+  // TODO(dfreedm): disable until https://crbug.com/399765 is resolved
   // var HAS_TOUCH_ACTION = ATTRIB in document.head.style;
   var HAS_TOUCH_ACTION = false;
 
@@ -3190,11 +3190,11 @@ window.PolymerGestures = {};
 })(this);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
 
 (function (global) {
   'use strict';
@@ -5873,11 +5873,11 @@ scope.isIE = isIE;
 })(typeof global !== 'undefined' && global && typeof module !== 'undefined' && module ? global : this || window);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
 
 (function(global) {
   'use strict';
@@ -6075,7 +6075,7 @@ scope.isIE = isIE;
   //
   // This implementation is based upon the HTML spec definition of a
   // "radio button group":
-  //   http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#radio-button-group
+  //   https://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#radio-button-group
   //
   function getAssociatedRadioButtons(element) {
     if (element.form) {
@@ -6217,11 +6217,11 @@ scope.isIE = isIE;
 })(this);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
 
 (function(global) {
   'use strict';
@@ -6394,12 +6394,12 @@ scope.isIE = isIE;
 
   function isSVGTemplate(el) {
     return el.tagName == 'template' &&
-           el.namespaceURI == 'http://www.w3.org/2000/svg';
+           el.namespaceURI == 'https://www.w3.org/2000/svg';
   }
 
   function isHTMLTemplate(el) {
     return el.tagName == 'TEMPLATE' &&
-           el.namespaceURI == 'http://www.w3.org/1999/xhtml';
+           el.namespaceURI == 'https://www.w3.org/1999/xhtml';
   }
 
   function isAttributeTemplate(el) {
@@ -6460,7 +6460,7 @@ scope.isIE = isIE;
     });
   }
 
-  // http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template-contents-owner
+  // https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template-contents-owner
   function getOrCreateTemplateContentsOwner(template) {
     var doc = template.ownerDocument
     if (!doc.defaultView)
@@ -7511,9 +7511,9 @@ scope.isIE = isIE;
   var hasWorkingUrl = false;
   if (!scope.forceJURL) {
     try {
-      var u = new URL('b', 'http://a');
+      var u = new URL('b', 'https://a');
       u.pathname = 'c%20d';
-      hasWorkingUrl = u.href === 'http://a/c%20d';
+      hasWorkingUrl = u.href === 'https://a/c%20d';
     } catch(e) {}
   }
 
@@ -8093,7 +8093,7 @@ scope.isIE = isIE;
   if (OriginalURL) {
     jURL.createObjectURL = function(blob) {
       // IE extension allows a second optional options argument.
-      // http://msdn.microsoft.com/en-us/library/ie/hh772302(v=vs.85).aspx
+      // https://msdn.microsoft.com/en-us/library/ie/hh772302(v=vs.85).aspx
       return OriginalURL.createObjectURL.apply(OriginalURL, arguments);
     };
     jURL.revokeObjectURL = function(url) {

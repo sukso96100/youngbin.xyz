@@ -5,9 +5,9 @@ Distributed under both the W3C Test Suite License [1] and the W3C
 3-clause BSD License [2]. To contribute to a W3C Test Suite, see the
 policies and contribution forms [3].
 
-[1] http://www.w3.org/Consortium/Legal/2008/04-testsuite-license
-[2] http://www.w3.org/Consortium/Legal/2008/03-bsd-license
-[3] http://www.w3.org/2004/10/27-testcases
+[1] https://www.w3.org/Consortium/Legal/2008/04-testsuite-license
+[2] https://www.w3.org/Consortium/Legal/2008/03-bsd-license
+[3] https://www.w3.org/2004/10/27-testcases
 */
 
 /* Documentation is in docs/api.md */
@@ -25,7 +25,7 @@ policies and contribution forms [3].
         test_timeout:null
     };
 
-    var xhtml_ns = "http://www.w3.org/1999/xhtml";
+    var xhtml_ns = "https://www.w3.org/1999/xhtml";
 
     // script_prefix is used by Output.prototype.show_results() to figure out
     // where to get testharness.css from.  It's enclosed in an extra closure to
@@ -163,7 +163,7 @@ policies and contribution forms [3].
         // I use duck-typing instead of instanceof, because
         // instanceof doesn't work if the node is from another window (like an
         // iframe's contentWindow):
-        // http://www.w3.org/Bugs/Public/show_bug.cgi?id=12295
+        // https://www.w3.org/Bugs/Public/show_bug.cgi?id=12295
         if ("nodeType" in object &&
             "nodeName" in object &&
             "nodeValue" in object &&
@@ -1851,7 +1851,7 @@ policies and contribution forms [3].
                 // This issue can be mitigated by relying on the (for now) proprietary
                 // `location.ancestorOrigins` property which returns an ordered list of
                 // the origins of enclosing windows. See:
-                // http://trac.webkit.org/changeset/113945.
+                // https://trac.webkit.org/changeset/113945.
                 if (origins) {
                     so = (location.origin == origins[i]);
                 } else {

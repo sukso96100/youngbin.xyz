@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,9 +24,9 @@
  *      <pre class="prettyprint lang-sql">(my SQL code)</pre>
  *
  *
- * http://savage.net.au/SQL/sql-99.bnf.html is the basis for the grammar, and
- * http://msdn.microsoft.com/en-us/library/aa238507(SQL.80).aspx and
- * http://meta.stackoverflow.com/q/92352/137403 as the bases for the keyword
+ * https://savage.net.au/SQL/sql-99.bnf.html is the basis for the grammar, and
+ * https://msdn.microsoft.com/en-us/library/aa238507(SQL.80).aspx and
+ * https://meta.stackoverflow.com/q/92352/137403 as the bases for the keyword
  * list.
  *
  * @author mikesamuel@gmail.com

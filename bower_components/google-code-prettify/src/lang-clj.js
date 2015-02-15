@@ -5,7 +5,7 @@
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
  *
- *      http://www.apache.org/licenses/LICENSE-2.0
+ *      https://www.apache.org/licenses/LICENSE-2.0
  *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
@@ -36,7 +36,7 @@
  * "About"   = 'Clojure is a lisp for the jvm with concurrency primitives and a richer set of types.'
  *
  *
- * I used <a href="http://clojure.org/Reference">Clojure.org Reference</a> as
+ * I used <a href="https://clojure.org/Reference">Clojure.org Reference</a> as
  * the basis for the reserved word list.
  *
  *

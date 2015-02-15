@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -23,9 +23,9 @@
  *      <pre class="prettyprint lang-r"> code </pre>
  *
  * Language definition from
- * http://cran.r-project.org/doc/manuals/R-lang.html.
+ * https://cran.r-project.org/doc/manuals/R-lang.html.
  * Many of the regexes are shared  with the pygments SLexer,
- * http://pygments.org/.
+ * https://pygments.org/.
  *
  * Original: https://raw.github.com/jrnold/prettify-lang-r-bugs/master/lang-r.js
  *

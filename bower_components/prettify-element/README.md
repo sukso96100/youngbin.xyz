@@ -1,7 +1,7 @@
 prettify-element
 ===================
 
-See the [component page](http://polymer.github.io/prettify-element) for more information.
+See the [component page](https://polymer.github.io/prettify-element) for more information.
 
 prettify-import
 ==================

@@ -34,7 +34,7 @@
 
     If you have any feedback on this change, please start a discussion
     on the public-fx mailing list:
-    http://lists.w3.org/Archives/Public/public-fx/
+    https://lists.w3.org/Archives/Public/public-fx/
 
     Or file an issue against the specification on GitHub:
     https://github.com/w3c/web-animations/issues/new

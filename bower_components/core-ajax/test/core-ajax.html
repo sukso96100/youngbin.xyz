@@ -1,11 +1,11 @@
 <!doctype html>
 <!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
 -->
 <html>
 <head>
@@ -48,7 +48,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           async.series([
             function(cb){
               ajax.handleAs = 'text';
-              ajax.url = "http://example.com/text"
+              ajax.url = "https://example.com/text"
               ajax.auto = true;
               cb();
             },
@@ -71,7 +71,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           async.series([
             function(cb){
               ajax.handleAs = 'xml';
-              ajax.url = "http://example.com/xml"
+              ajax.url = "https://example.com/xml"
               ajax.auto = true;
               cb();
             },
@@ -102,7 +102,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           async.series([
             function(cb){
               ajax.handleAs = 'json';
-              ajax.url = "http://example.com/json"
+              ajax.url = "https://example.com/json"
               ajax.auto = true;
               cb();
             },
@@ -128,7 +128,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           async.series([
             function(cb){
               ajax.handleAs = 'arraybuffer';
-              ajax.url = "http://example.com/data"
+              ajax.url = "https://example.com/data"
               ajax.auto = true;
               cb();
             },
@@ -156,13 +156,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     });
     suite('auto', function() {
       suiteSetup(function(){
-        ajax.url = "http://example.com/"
+        ajax.url = "https://example.com/"
         ajax.auto = true;
       });
       test('url change should trigger request', function(done){
         async.series([
           function(cb){
-            ajax.url = "http://example.com/auto";
+            ajax.url = "https://example.com/auto";
             cb();
           },
           animationFrameFlush,
@@ -215,7 +215,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           animationFrameFlush,
           function(cb){;
             ajax.handleAs = 'text';
-            ajax.url = "http://example.com/text"
+            ajax.url = "https://example.com/text"
             ajax.auto = true;
             cb();
           },

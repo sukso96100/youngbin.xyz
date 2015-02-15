@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -20,8 +20,8 @@
  * macros. It does not try to identify verbatim or R-like regions of
  * macros as that is too complicated for a lexer.  Descriptions of the
  * Rd format can be found
- * http://cran.r-project.org/doc/manuals/R-exts.html and
- * http://developer.r-project.org/parseRd.pdf.
+ * https://cran.r-project.org/doc/manuals/R-exts.html and
+ * https://developer.r-project.org/parseRd.pdf.
  *
  * @author Jeffrey Arnold
  */

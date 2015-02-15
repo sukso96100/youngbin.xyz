@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -27,7 +27,7 @@
  * The regular expressions were adapted from:
  * https://github.com/hansstimer/llvm.tmbundle/blob/76fedd8f50fd6108b1780c51d79fbe3223de5f34/Syntaxes/LLVM.tmLanguage
  * 
- * http://llvm.org/docs/LangRef.html#constants describes the language grammar.
+ * https://llvm.org/docs/LangRef.html#constants describes the language grammar.
  * 
  * @author Nikhil Dabas
  */
@@ -45,7 +45,7 @@ PR['registerLangHandler'](
          // variable.llvm
          [PR['PR_PLAIN'],       /^[%@!](?:[-a-zA-Z$._][-a-zA-Z$._0-9]*|\d+)/],
 
-         // According to http://llvm.org/docs/LangRef.html#well-formedness
+         // According to https://llvm.org/docs/LangRef.html#well-formedness
          // These reserved words cannot conflict with variable names, because none of them start with a prefix character ('%' or '@').
          [PR['PR_KEYWORD'],     /^[A-Za-z_][0-9A-Za-z_]*/, null],
 

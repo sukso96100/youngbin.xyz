@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -19,7 +19,7 @@
  * Registers a language handler for the Go language..
  * <p>
  * Based on the lexical grammar at 
- * http://golang.org/doc/go_spec.html#Lexical_elements
+ * https://golang.org/doc/go_spec.html#Lexical_elements
  * <p>
  * Go uses a minimal style for highlighting so the below does not distinguish
  * strings, keywords, literals, etc. by design.
@@ -27,14 +27,14 @@
  * <pre>
  * On Thursday, July 22, 2010, Mike Samuel <...> wrote:
  * > On Thu, Jul 22, 2010, Rob 'Commander' Pike <...> wrote:
- * >> Personally, I would vote for the subdued style godoc presents at http://golang.org
+ * >> Personally, I would vote for the subdued style godoc presents at https://golang.org
  * >>
  * >> Not as fancy as some like, but a case can be made it's the official style.
  * >> If people want more colors, I wouldn't fight too hard, in the interest of
  * >> encouragement through familiarity, but even then I would ask to shy away
  * >> from technicolor starbursts.
  * >
- * > Like http://golang.org/pkg/go/scanner/ where comments are blue and all
+ * > Like https://golang.org/pkg/go/scanner/ where comments are blue and all
  * > other content is black?  I can do that.
  * </pre>
  *

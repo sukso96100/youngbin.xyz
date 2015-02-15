@@ -1,16 +1,16 @@
 <!--
     @license
     Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+    This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+    subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
 -->
 
 <!--
 `core-a11y-keys` provides a normalized interface for processing keyboard commands that pertain to [WAI-ARIA best
-practices](http://www.w3.org/TR/wai-aria-practices/#kbd_general_binding). The element takes care of browser differences
+practices](https://www.w3.org/TR/wai-aria-practices/#kbd_general_binding). The element takes care of browser differences
 with respect to Keyboard events and uses an expressive syntax to filter key presses.
 
 Use the `keys` attribute to express what combination of keys will trigger the event to fire.
@@ -45,7 +45,7 @@ Down key, Escape key, Space key, Alt and M key.
 Slider Example:
 
 The following is an example of the set of keys that fulfil the WAI-ARIA "slider" role [best
-practices](http://www.w3.org/TR/wai-aria-practices/#slider):
+practices](https://www.w3.org/TR/wai-aria-practices/#slider):
 
     <core-a11y-keys target="{{}}" keys="left pagedown down" on-keys-pressed="{{decrement}}"></core-a11y-keys>
     <core-a11y-keys target="{{}}" keys="right pageup up" on-keys-pressed="{{increment}}"></core-a11y-keys>
@@ -59,7 +59,7 @@ The `setMax` function will move the slider to the maximum value.
 
 Keys Syntax Grammar:
 
-[EBNF](http://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form) Grammar of the `keys` attribute.
+[EBNF](https://en.wikipedia.org/wiki/Extended_Backus%E2%80%93Naur_Form) Grammar of the `keys` attribute.
 
     modifier = "shift" | "ctrl" | "alt";
     ascii = ? /[a-z0-9]/ ? ;
@@ -89,7 +89,7 @@ Keys Syntax Grammar:
      * Chrome uses an older version of DOM Level 3 Keyboard Events
      *
      * Most keys are labeled as text, but some are Unicode codepoints.
-     * Values taken from: http://www.w3.org/TR/2007/WD-DOM-Level-3-Events-20071221/keyset.html#KeySet-Set
+     * Values taken from: https://www.w3.org/TR/2007/WD-DOM-Level-3-Events-20071221/keyset.html#KeySet-Set
      */
     var KEY_IDENTIFIER = {
       'U+0009': 'tab',

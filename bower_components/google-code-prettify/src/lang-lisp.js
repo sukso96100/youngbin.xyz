@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -31,7 +31,7 @@
  *     lang-lsp - FAT 8.3 filename version of lang-lisp.
  *
  *
- * I used http://www.devincook.com/goldparser/doc/meta-language/grammar-LISP.htm
+ * I used https://www.devincook.com/goldparser/doc/meta-language/grammar-LISP.htm
  * as the basis, but added line comments that start with ; and changed the atom
  * production to disallow unquoted semicolons.
  *
@@ -58,7 +58,7 @@
  *            |
  *
  *
- * I used <a href="http://gigamonkeys.com/book/">Practical Common Lisp</a> as
+ * I used <a href="https://gigamonkeys.com/book/">Practical Common Lisp</a> as
  * the basis for the reserved word list.
  *
  *

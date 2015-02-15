@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,7 +24,7 @@
  *      <pre class="prettyprint lang-lua">(my Lua code)</pre>
  *
  *
- * I used http://www.lua.org/manual/5.1/manual.html#2.1
+ * I used https://www.lua.org/manual/5.1/manual.html#2.1
  * Because of the long-bracket concept used in strings and comments, Lua does
  * not have a regular lexical grammar, but luckily it fits within the space
  * of irregular grammars supported by javascript regular expressions.

@@ -154,7 +154,7 @@ For the most part `.deep.equal` will behave the same as it has. However, in orde
 consistent ruleset across all types being tested, the following changes have been made and _might_
 require changes to your tests.
 
-**1.** Strict equality for non-traversable nodes according to [egal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
+**1.** Strict equality for non-traversable nodes according to [egal](https://wiki.ecmascript.org/doku.php?id=harmony:egal).
 
 _Previously:_ Non-traversable equal via `===`.
 
@@ -178,7 +178,7 @@ expect(Array.prototype.slice.call(arguments)).to.deep.equal([]);
 
 ### CI and Browser Testing
 
-Chai now runs the browser CI suite using [Karma](http://karma-runner.github.io/) directed at 
+Chai now runs the browser CI suite using [Karma](https://karma-runner.github.io/) directed at 
 [SauceLabs](https://saucelabs.com/). This means we get to know where our browser support stands...
 and we get a cool badge:
 
@@ -224,7 +224,7 @@ The following changes are required if you are upgrading from the previous versio
 
 ### Official Bower Support
 
-Support has been added for the Bower Package Manager ([bower.io])(http://bower.io/). Though
+Support has been added for the Bower Package Manager ([bower.io])(https://bower.io/). Though
 Chai could be installed via Bower in the past, this update adds official support via the `bower.json`
 specification file. 
 
@@ -427,7 +427,7 @@ Thank you to all who took time to contribute!
 
 **1. Component Support:** Chai now included the proper configuration to be installed as a 
 [component](https://github.com/component/component). Component users are encouraged to consult
-[chaijs.com](http://chaijs.com) for the latest version number as using the master branch
+[chaijs.com](https://chaijs.com) for the latest version number as using the master branch
 does not gaurantee stability. 
 
 ```js
@@ -441,7 +441,7 @@ Alternatively, bleeding-edge is available:
 
     $ component install chaijs/chai
 
-**2. Configurable showDiff:** Some test runners (such as [mocha](http://visionmedia.github.com/mocha/)) 
+**2. Configurable showDiff:** Some test runners (such as [mocha](https://visionmedia.github.com/mocha/)) 
 include support for showing the diff of strings and objects when an equality error occurs. Chai has 
 already included support for this, however some users may not prefer this display behavior. To revert to 
 no diff display, the following configuration is available:

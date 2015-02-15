@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      http://www.apache.org/licenses/LICENSE-2.0
+//      https://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,7 +24,7 @@
  *      <pre class="prettyprint lang-tcl">proc foo {} {puts bar}</pre>
  *
  * I copy-pasted lang-lisp.js, so this is probably not 100% accurate.
- * I used http://wiki.tcl.tk/1019 for the keywords, but tried to only
+ * I used https://wiki.tcl.tk/1019 for the keywords, but tried to only
  * include as keywords that had more impact on the program flow
  * rather than providing convenience. For example, I included 'if'
  * since that provides branching, but left off 'open' since that is more

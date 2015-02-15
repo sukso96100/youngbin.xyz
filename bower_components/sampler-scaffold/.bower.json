@@ -10,7 +10,7 @@
     "core-toolbar": "Polymer/core-toolbar#^0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/sampler-scaffold",
+  "homepage": "http://github.com/Polymer/sampler-scaffold",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

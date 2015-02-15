@@ -1,14 +1,14 @@
 # Google Code Prettify
 
-Direct port of svn into git from https://google-code-prettify.googlecode.com/svn/trunk/
+Direct port of svn into git from http://google-code-prettify.googlecode.com/svn/trunk/
 
 ## Install
 
-via [Bower](https://twitter.github.com/bower/)
+via [Bower](http://twitter.github.com/bower/)
 
 	bower install google-code-prettify
 
-or [Yeoman](https://yeoman.io/)
+or [Yeoman](http://yeoman.io/)
 
 	yeoman install google-code-prettify
 
@@ -51,4 +51,4 @@ Or it may just be used in a global context like the following:
 })();
 ```
 
-More information can be found in the original [README.html](https://google-code-prettify.googlecode.com/svn/trunk/README.html)
+More information can be found in the original [README.html](http://google-code-prettify.googlecode.com/svn/trunk/README.html)

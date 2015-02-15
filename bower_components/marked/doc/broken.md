@@ -258,7 +258,7 @@ Which looks correct to you?
 
 - - -
 
-See: https://github.com/evilstreak/markdown-js/issues/23
+See: http://github.com/evilstreak/markdown-js/issues/23
 
 ``` bash
 $ markdown.pl # upskirt/markdown.js/discount
@@ -315,7 +315,7 @@ $ marked
 
 - - -
 
-See: https://github.com/evilstreak/markdown-js/issues/27
+See: http://github.com/evilstreak/markdown-js/issues/27
 
 ``` bash
 $ markdown.js
@@ -334,7 +334,7 @@ $ marked
 
 - - -
 
-See: https://github.com/evilstreak/markdown-js/issues/24
+See: http://github.com/evilstreak/markdown-js/issues/24
 
 ``` bash
 $ markdown.js

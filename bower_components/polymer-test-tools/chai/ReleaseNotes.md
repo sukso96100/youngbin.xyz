@@ -71,17 +71,17 @@ chai.config.truncateThreshold = 0; // disable truncating
 
 ### Community Contributions
 
-- [#228](https://github.com/chaijs/chai/pull/228) Deep equality check for memebers. [@duncanbeevers](https://github.com/duncanbeevers)
-- [#247](https://github.com/chaijs/chai/pull/247) Proofreading. [@didorellano](https://github.com/didoarellano)
-- [#244](https://github.com/chaijs/chai/pull/244) Fix `contain`/`include` 1.9.0 regression. [@leider](https://github.com/leider)
-- [#233](https://github.com/chaijs/chai/pull/233) Improvements to `ssfi` for `assert` interface. [@refack](https://github.com/refack)
-- [#251](https://github.com/chaijs/chai/pull/251) New config option: object display threshold. [@romario333](https://github.com/romario333)
+- [#228](http://github.com/chaijs/chai/pull/228) Deep equality check for memebers. [@duncanbeevers](http://github.com/duncanbeevers)
+- [#247](http://github.com/chaijs/chai/pull/247) Proofreading. [@didorellano](http://github.com/didoarellano)
+- [#244](http://github.com/chaijs/chai/pull/244) Fix `contain`/`include` 1.9.0 regression. [@leider](http://github.com/leider)
+- [#233](http://github.com/chaijs/chai/pull/233) Improvements to `ssfi` for `assert` interface. [@refack](http://github.com/refack)
+- [#251](http://github.com/chaijs/chai/pull/251) New config option: object display threshold. [@romario333](http://github.com/romario333)
 
 Thank you to all who took time to contribute!
 
 ### Other Bug Fixes
 
-- [#183](https://github.com/chaijs/chai/issues/183) Allow `undefined` for actual. (internal api)
+- [#183](http://github.com/chaijs/chai/issues/183) Allow `undefined` for actual. (internal api)
 - Update Karam(+plugins)/Istanbul to most recent versions.
 
 ## 1.9.0 / 2014-01-29 
@@ -91,28 +91,28 @@ The following changes are required if you are upgrading from the previous versio
 - **Users:**
   - No changes required
 - **Plugin Developers:** 
-  - Review [#219](https://github.com/chaijs/chai/pull/219).
+  - Review [#219](http://github.com/chaijs/chai/pull/219).
 - **Core Contributors:** 
   - Refresh `node_modules` folder for updated dependencies. 
 
 ### Community Contributions
 
-- [#202](https://github.com/chaijs/chai/pull/201) Improve error message for .throw(). [@andreineculau](https://github.com/andreineculau)
-- [#217](https://github.com/chaijs/chai/pull/217) Chai tests can be run with `--watch`. [@demands](https://github.com/demands)
-- [#219](https://github.com/chaijs/chai/pull/219) Add overwriteChainableMethod utility. [@demands](https://github.com/demands)
-- [#224](https://github.com/chaijs/chai/pull/224) Return error on throw method to chain on error properties. [@vbardales](https://github.com/vbardales)
-- [#226](https://github.com/chaijs/chai/pull/226) Add `has` to language chains. [@duncanbeevers](https://github.com/duncanbeevers)
-- [#230](https://github.com/chaijs/chai/pull/230) Support `{a:1,b:2}.should.include({a:1})` [@jkroso](https://github.com/jkroso)
-- [#231](https://github.com/chaijs/chai/pull/231) Update Copyright notices to 2014 [@duncanbeevers](https://github.com/duncanbeevers)
-- [#232](https://github.com/chaijs/chai/pull/232) Avoid error instantiation if possible on assert.throws. [@laconbass](https://github.com/laconbass)
+- [#202](http://github.com/chaijs/chai/pull/201) Improve error message for .throw(). [@andreineculau](http://github.com/andreineculau)
+- [#217](http://github.com/chaijs/chai/pull/217) Chai tests can be run with `--watch`. [@demands](http://github.com/demands)
+- [#219](http://github.com/chaijs/chai/pull/219) Add overwriteChainableMethod utility. [@demands](http://github.com/demands)
+- [#224](http://github.com/chaijs/chai/pull/224) Return error on throw method to chain on error properties. [@vbardales](http://github.com/vbardales)
+- [#226](http://github.com/chaijs/chai/pull/226) Add `has` to language chains. [@duncanbeevers](http://github.com/duncanbeevers)
+- [#230](http://github.com/chaijs/chai/pull/230) Support `{a:1,b:2}.should.include({a:1})` [@jkroso](http://github.com/jkroso)
+- [#231](http://github.com/chaijs/chai/pull/231) Update Copyright notices to 2014 [@duncanbeevers](http://github.com/duncanbeevers)
+- [#232](http://github.com/chaijs/chai/pull/232) Avoid error instantiation if possible on assert.throws. [@laconbass](http://github.com/laconbass)
 
 Thank you to all who took time to contribute!
 
 ### Other Bug Fixes
 
-- [#225](https://github.com/chaijs/chai/pull/225) Improved AMD wrapper provided by upstream `component(1)`.
-- [#185](https://github.com/chaijs/chai/issues/185) `assert.throws()` returns thrown error for further assertions.
-- [#237](https://github.com/chaijs/chai/pull/237) Remove coveralls/jscoverage, include istanbul coverage report in travis test.
+- [#225](http://github.com/chaijs/chai/pull/225) Improved AMD wrapper provided by upstream `component(1)`.
+- [#185](http://github.com/chaijs/chai/issues/185) `assert.throws()` returns thrown error for further assertions.
+- [#237](http://github.com/chaijs/chai/pull/237) Remove coveralls/jscoverage, include istanbul coverage report in travis test.
 - Update Karma and Sauce runner versions for consistent CI results. No more karma@canary.
 
 ## 1.8.1 / 2013-10-10 
@@ -146,7 +146,7 @@ The following changes are required if you are upgrading from the previous versio
 
 This version of Chai focused on a overhaul to the deep equal utility. The code for this
 tool has been removed from the core lib and can now be found at: 
-[chai / deep-eql](https://github.com/chaijs/deep-eql). As stated in previous releases,
+[chai / deep-eql](http://github.com/chaijs/deep-eql). As stated in previous releases,
 this is part of a larger initiative to provide transparency, independent testing, and coverage for
 some of the more complicated internal tools. 
 
@@ -154,7 +154,7 @@ For the most part `.deep.equal` will behave the same as it has. However, in orde
 consistent ruleset across all types being tested, the following changes have been made and _might_
 require changes to your tests.
 
-**1.** Strict equality for non-traversable nodes according to [egal](https://wiki.ecmascript.org/doku.php?id=harmony:egal).
+**1.** Strict equality for non-traversable nodes according to [egal](http://wiki.ecmascript.org/doku.php?id=harmony:egal).
 
 _Previously:_ Non-traversable equal via `===`.
 
@@ -172,21 +172,21 @@ expect(arguments).to.not.deep.equal([]);
 expect(Array.prototype.slice.call(arguments)).to.deep.equal([]);
 ```
 
-- [#156](https://github.com/chaijs/chai/issues/156) Empty object is eql to empty array
-- [#192](https://github.com/chaijs/chai/issues/192) empty object is eql to a Date object
-- [#194](https://github.com/chaijs/chai/issues/194) refactor deep-equal utility
+- [#156](http://github.com/chaijs/chai/issues/156) Empty object is eql to empty array
+- [#192](http://github.com/chaijs/chai/issues/192) empty object is eql to a Date object
+- [#194](http://github.com/chaijs/chai/issues/194) refactor deep-equal utility
 
 ### CI and Browser Testing
 
-Chai now runs the browser CI suite using [Karma](https://karma-runner.github.io/) directed at 
-[SauceLabs](https://saucelabs.com/). This means we get to know where our browser support stands...
+Chai now runs the browser CI suite using [Karma](http://karma-runner.github.io/) directed at 
+[SauceLabs](http://saucelabs.com/). This means we get to know where our browser support stands...
 and we get a cool badge:
 
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/logicalparadox.svg)](https://saucelabs.com/u/logicalparadox)
+[![Selenium Test Status](http://saucelabs.com/browser-matrix/logicalparadox.svg)](http://saucelabs.com/u/logicalparadox)
 
 Look for the list of browsers/versions to expand over the coming releases.
 
-- [#195](https://github.com/chaijs/chai/issues/195) karma test framework
+- [#195](http://github.com/chaijs/chai/issues/195) karma test framework
 
 ## 1.7.2 / 2013-06-27 
 
@@ -203,13 +203,13 @@ The following changes are required if you are upgrading from the previous versio
 
 Coverage reporting has always been available for core-developers but the data has never been published
 for our end users. In our ongoing effort to improve accountability this data will now be published via
-the [coveralls.io](https://coveralls.io/) service. A badge has been added to the README and the full report
-can be viewed online at the [chai coveralls project](https://coveralls.io/r/chaijs/chai). Furthermore, PRs 
+the [coveralls.io](http://coveralls.io/) service. A badge has been added to the README and the full report
+can be viewed online at the [chai coveralls project](http://coveralls.io/r/chaijs/chai). Furthermore, PRs 
 will receive automated messages indicating how their PR impacts test coverage. This service is tied to TravisCI.
 
 ### Other Fixes
 
-- [#175](https://github.com/chaijs/chai/issues/175) Add `bower.json`. (Fix ignore all)
+- [#175](http://github.com/chaijs/chai/issues/175) Add `bower.json`. (Fix ignore all)
 
 ## 1.7.1 / 2013-06-24 
 
@@ -224,11 +224,11 @@ The following changes are required if you are upgrading from the previous versio
 
 ### Official Bower Support
 
-Support has been added for the Bower Package Manager ([bower.io])(https://bower.io/). Though
+Support has been added for the Bower Package Manager ([bower.io])(http://bower.io/). Though
 Chai could be installed via Bower in the past, this update adds official support via the `bower.json`
 specification file. 
 
-- [#175](https://github.com/chaijs/chai/issues/175) Add `bower.json`.
+- [#175](http://github.com/chaijs/chai/issues/175) Add `bower.json`.
 
 ## 1.7.0 / 2013-06-17 
 
@@ -243,7 +243,7 @@ The following changes are required if you are upgrading from the previous versio
 
 ### AssertionError Update Notice
 
-Chai now uses [chaijs/assertion-error](https://github.com/chaijs/assertion-error) instead an internal
+Chai now uses [chaijs/assertion-error](http://github.com/chaijs/assertion-error) instead an internal
 constructor. This will allow for further iteration/experimentation of the AssertionError constructor 
 independant of Chai. Future plans include stack parsing for callsite support. 
 
@@ -298,9 +298,9 @@ Note: The browser packaged version `chai.js` will ALWAYS contain all dependencie
 
 ### Community Contributions
 
-- [#169](https://github.com/chaijs/chai/pull/169) Fix deep equal comparison for Date/Regexp types. [@katsgeorgeek](https://github.com/katsgeorgeek)
-- [#171](https://github.com/chaijs/chai/pull/171) Add `assert.notOk()`. [@Bartvds](https://github.com/Bartvds)
-- [#173](https://github.com/chaijs/chai/pull/173) Fix `inspect` utility. [@domenic](https://github.com/domenic)
+- [#169](http://github.com/chaijs/chai/pull/169) Fix deep equal comparison for Date/Regexp types. [@katsgeorgeek](http://github.com/katsgeorgeek)
+- [#171](http://github.com/chaijs/chai/pull/171) Add `assert.notOk()`. [@Bartvds](http://github.com/Bartvds)
+- [#173](http://github.com/chaijs/chai/pull/173) Fix `inspect` utility. [@domenic](http://github.com/domenic)
 
 Thank you to all who took the time to contribute!
 
@@ -318,12 +318,12 @@ The following changes are required if you are upgrading from the previous versio
 ### Deep Equality
 
 Regular Expressions are now tested as part of all deep equality assertions. In previous versions
-they silently passed for all scenarios. Thanks to [@katsgeorgeek](https://github.com/katsgeorgeek) for the contribution.
+they silently passed for all scenarios. Thanks to [@katsgeorgeek](http://github.com/katsgeorgeek) for the contribution.
 
 ### Community Contributions
 
-- [#161](https://github.com/chaijs/chai/pull/161) Fix documented name for assert interface's isDefined method. [@brandonpayton](https://github.com/brandonpayton)
-- [#168](https://github.com/chaijs/chai/pull/168) Fix comparison equality of two regexps for when using deep equality. [@katsgeorgeek](https://github.com/katsgeorgeek)
+- [#161](http://github.com/chaijs/chai/pull/161) Fix documented name for assert interface's isDefined method. [@brandonpayton](http://github.com/brandonpayton)
+- [#168](http://github.com/chaijs/chai/pull/168) Fix comparison equality of two regexps for when using deep equality. [@katsgeorgeek](http://github.com/katsgeorgeek)
 
 Thank you to all who took the time to contribute!
 
@@ -347,7 +347,7 @@ The following changes are required if you are upgrading from the previous versio
 #### Array Members Inclusion
 
 Asserts that the target is a superset of `set`, or that the target and `set` have the same members.
-Order is not taken into account. Thanks to [@NickHeiner](https://github.com/NickHeiner) for the contribution.
+Order is not taken into account. Thanks to [@NickHeiner](http://github.com/NickHeiner) for the contribution.
 
 ```js
 // (expect/should) full set
@@ -378,15 +378,15 @@ assert.notInclude('foobar', 'baz');
 
 ### Community Contributions
 
-- [#140](https://github.com/chaijs/chai/pull/140) Restore `call`/`apply` methods for plugin interface. [@RubenVerborgh](https://github.com/RubenVerborgh)
-- [#148](https://github.com/chaijs/chai/issues/148)/[#153](https://github.com/chaijs/chai/pull/153) Add `members` and `include.members` assertions. [#NickHeiner](https://github.com/NickHeiner)
+- [#140](http://github.com/chaijs/chai/pull/140) Restore `call`/`apply` methods for plugin interface. [@RubenVerborgh](http://github.com/RubenVerborgh)
+- [#148](http://github.com/chaijs/chai/issues/148)/[#153](http://github.com/chaijs/chai/pull/153) Add `members` and `include.members` assertions. [#NickHeiner](http://github.com/NickHeiner)
 
 Thank you to all who took time to contribute!
 
 ### Other Bug Fixes
 
-- [#142](https://github.com/chaijs/chai/issues/142) `assert#include` will no longer silently pass on wrong-type haystack.
-- [#158](https://github.com/chaijs/chai/issues/158) `assert#notInclude` has been added.
+- [#142](http://github.com/chaijs/chai/issues/142) `assert#include` will no longer silently pass on wrong-type haystack.
+- [#158](http://github.com/chaijs/chai/issues/158) `assert#notInclude` has been added.
 - Travis-CI now tests Node.js `v0.10.x`. Support for `v0.6.x` has been removed. `v0.8.x` is still tested as before.
 
 ## 1.5.0 / 2013-02-03 
@@ -397,8 +397,8 @@ The following changes are required if you are upgrading from the previous versio
 
 - **Users:** 
   - _Update [2013-02-04]:_ Some users may notice a small subset of deep equality assertions will no longer pass. This is the result of 
-  [#120](https://github.com/chaijs/chai/issues/120), an improvement to our deep equality algorithm. Users will need to revise their assertions
-  to be more granular should this occur. Further information: [#139](https://github.com/chaijs/chai/issues/139).
+  [#120](http://github.com/chaijs/chai/issues/120), an improvement to our deep equality algorithm. Users will need to revise their assertions
+  to be more granular should this occur. Further information: [#139](http://github.com/chaijs/chai/issues/139).
 - **Plugin Developers:** 
   - No changes required.
 - **Core Contributors:** 
@@ -406,19 +406,19 @@ The following changes are required if you are upgrading from the previous versio
 
 ### Community Contributions
 
-- [#126](https://github.com/chaijs/chai/pull/126): Add `eqls` alias for `eql`. [@RubenVerborgh](https://github.com/RubenVerborgh)
-- [#127](https://github.com/chaijs/chai/issues/127): Performance refactor for chainable methods. [@RubenVerborgh](https://github.com/RubenVerborgh)
-- [#133](https://github.com/chaijs/chai/pull/133): Assertion `.throw` support for primitives. [@RubenVerborgh](https://github.com/RubenVerborgh)
-- [#137](https://github.com/chaijs/chai/issues/137): Assertion `.throw` support for empty messages. [@timnew](https://github.com/timnew)
-- [#136](https://github.com/chaijs/chai/pull/136): Fix backward negation messages when using `.above()` and `.below()`. [@whatthejeff](https://github.com/whatthejeff)
+- [#126](http://github.com/chaijs/chai/pull/126): Add `eqls` alias for `eql`. [@RubenVerborgh](http://github.com/RubenVerborgh)
+- [#127](http://github.com/chaijs/chai/issues/127): Performance refactor for chainable methods. [@RubenVerborgh](http://github.com/RubenVerborgh)
+- [#133](http://github.com/chaijs/chai/pull/133): Assertion `.throw` support for primitives. [@RubenVerborgh](http://github.com/RubenVerborgh)
+- [#137](http://github.com/chaijs/chai/issues/137): Assertion `.throw` support for empty messages. [@timnew](http://github.com/timnew)
+- [#136](http://github.com/chaijs/chai/pull/136): Fix backward negation messages when using `.above()` and `.below()`. [@whatthejeff](http://github.com/whatthejeff)
 
 Thank you to all who took time to contribute!
 
 ### Other Bug Fixes
 
 - Improve type detection of `.a()`/`.an()` to work in cross-browser scenarios.
-- [#116](https://github.com/chaijs/chai/issues/116): `.throw()` has cleaner display of errors when WebKit browsers.
-- [#120](https://github.com/chaijs/chai/issues/120): `.eql()` now works to compare dom nodes in browsers.
+- [#116](http://github.com/chaijs/chai/issues/116): `.throw()` has cleaner display of errors when WebKit browsers.
+- [#120](http://github.com/chaijs/chai/issues/120): `.eql()` now works to compare dom nodes in browsers.
 
 
 ### Usage Updates
@@ -426,8 +426,8 @@ Thank you to all who took time to contribute!
 #### For Users
 
 **1. Component Support:** Chai now included the proper configuration to be installed as a 
-[component](https://github.com/component/component). Component users are encouraged to consult
-[chaijs.com](https://chaijs.com) for the latest version number as using the master branch
+[component](http://github.com/component/component). Component users are encouraged to consult
+[chaijs.com](http://chaijs.com) for the latest version number as using the master branch
 does not gaurantee stability. 
 
 ```js
@@ -441,7 +441,7 @@ Alternatively, bleeding-edge is available:
 
     $ component install chaijs/chai
 
-**2. Configurable showDiff:** Some test runners (such as [mocha](https://visionmedia.github.com/mocha/)) 
+**2. Configurable showDiff:** Some test runners (such as [mocha](http://visionmedia.github.com/mocha/)) 
 include support for showing the diff of strings and objects when an equality error occurs. Chai has 
 already included support for this, however some users may not prefer this display behavior. To revert to 
 no diff display, the following configuration is available:
@@ -478,5 +478,5 @@ pull requests will now be browser tested in this way.
 _Note: Contributors opening pull requests should still NOT include the browser build._
 
 **2. SauceLabs Testing**: Early SauceLab support has been enabled with the file `./support/mocha-cloud.js`.
-Those interested in trying it out should create a free [Open Sauce](https://saucelabs.com/signup/plan) account
+Those interested in trying it out should create a free [Open Sauce](http://saucelabs.com/signup/plan) account
 and include their credentials in `./test/auth/sauce.json`.

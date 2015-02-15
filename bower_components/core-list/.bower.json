@@ -37,7 +37,7 @@
     "paper-tabs": "Polymer/paper-tabs#master"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/core-list",
+  "homepage": "http://github.com/Polymer/core-list",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

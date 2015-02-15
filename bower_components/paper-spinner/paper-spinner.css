@@ -1,11 +1,11 @@
 /*
     @license
     Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 
 /**************************/
@@ -86,7 +86,7 @@
  * We write out each animation in full (instead of separating animation-name,
  * animation-duration, etc.) because under the polyfill, Safari does not recognize those
  * specific properties properly, treats them as -webkit-animation, and overrides the
- * other animation rules. See https://github.com/Polymer/platform/issues/53.
+ * other animation rules. See http://github.com/Polymer/platform/issues/53.
  */
 .active .spinner-layer.blue {
   /* durations: 4 * ARCTIME */
@@ -140,8 +140,8 @@
  * to do proper subpixel rendering for the elements being animated. This is
  * especially visible in Chrome 39 on Ubuntu 14.04. See:
  *
- * - https://github.com/Polymer/paper-spinner/issues/9
- * - https://code.google.com/p/chromium/issues/detail?id=436255
+ * - http://github.com/Polymer/paper-spinner/issues/9
+ * - http://code.google.com/p/chromium/issues/detail?id=436255
  */
 @-webkit-keyframes blue-fade-in-out {
   from { opacity: 0.99; }

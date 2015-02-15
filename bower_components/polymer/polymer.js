@@ -1,11 +1,11 @@
 /**
  * @license
  * Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+ * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+ * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+ * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
  * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+ * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 // @version 0.5.4
 window.PolymerGestures = {};
@@ -953,8 +953,8 @@ window.PolymerGestures = {};
 
   var HAS_BUTTONS = (function() {
     // firefox on linux returns spec-incorrect values for mouseup.buttons
-    // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent.buttons#See_also
-    // https://codereview.chromium.org/727593003/#msg16
+    // http://developer.mozilla.org/en-US/docs/Web/API/MouseEvent.buttons#See_also
+    // http://codereview.chromium.org/727593003/#msg16
     if (FIREFOX_LINUX.test(navigator.userAgent)) {
       return false;
     }
@@ -1077,7 +1077,7 @@ window.PolymerGestures = {};
   var CLICK_COUNT_TIMEOUT = 200;
   var HYSTERESIS = 20;
   var ATTRIB = 'touch-action';
-  // TODO(dfreedm): disable until https://crbug.com/399765 is resolved
+  // TODO(dfreedm): disable until http://crbug.com/399765 is resolved
   // var HAS_TOUCH_ACTION = ATTRIB in document.head.style;
   var HAS_TOUCH_ACTION = false;
 
@@ -1303,7 +1303,7 @@ window.PolymerGestures = {};
     touchmove: function(inEvent) {
       if (HAS_TOUCH_ACTION) {
         // touchevent.cancelable == false is sent when the page is scrolling under native Touch Action in Chrome 36
-        // https://groups.google.com/a/chromium.org/d/msg/input-dev/wHnyukcYBcA/b9kmtwM1jJQJ
+        // http://groups.google.com/a/chromium.org/d/msg/input-dev/wHnyukcYBcA/b9kmtwM1jJQJ
         if (inEvent.cancelable) {
           this.processTouches(inEvent, this.move);
         }
@@ -1552,7 +1552,7 @@ window.PolymerGestures = {};
     }
   }
 
-  // Work around iOS bugs https://bugs.webkit.org/show_bug.cgi?id=135628 and https://bugs.webkit.org/show_bug.cgi?id=136506
+  // Work around iOS bugs http://bugs.webkit.org/show_bug.cgi?id=135628 and http://bugs.webkit.org/show_bug.cgi?id=136506
   var ua = navigator.userAgent;
   var IS_IOS = ua.match(/iPad|iPhone|iPod/) && 'ontouchstart' in window;
 
@@ -3190,11 +3190,11 @@ window.PolymerGestures = {};
 })(this);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 
 (function (global) {
   'use strict';
@@ -4065,7 +4065,7 @@ function isImportLoaded(link) {
 }
 
 // TODO(sorvell): Workaround for
-// https://www.w3.org/Bugs/Public/show_bug.cgi?id=25007, should be removed when
+// http://www.w3.org/Bugs/Public/show_bug.cgi?id=25007, should be removed when
 // this bug is addressed.
 // (1) Install a mutation observer to see when HTMLImports have loaded
 // (2) if this script is run during document load it will watch any existing
@@ -5873,11 +5873,11 @@ scope.isIE = isIE;
 })(typeof global !== 'undefined' && global && typeof module !== 'undefined' && module ? global : this || window);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 
 (function(global) {
   'use strict';
@@ -6075,7 +6075,7 @@ scope.isIE = isIE;
   //
   // This implementation is based upon the HTML spec definition of a
   // "radio button group":
-  //   https://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#radio-button-group
+  //   http://www.whatwg.org/specs/web-apps/current-work/multipage/number-state.html#radio-button-group
   //
   function getAssociatedRadioButtons(element) {
     if (element.form) {
@@ -6217,11 +6217,11 @@ scope.isIE = isIE;
 })(this);
 
 // Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-// This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-// The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-// The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+// This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+// The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+// The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 // Code distributed by Google as part of the polymer project is also
-// subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+// subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 
 (function(global) {
   'use strict';
@@ -6374,7 +6374,7 @@ scope.isIE = isIE;
   var hasTemplateElement = typeof HTMLTemplateElement !== 'undefined';
   if (hasTemplateElement) {
     // TODO(rafaelw): Remove when fix for
-    // https://codereview.chromium.org/164803002/
+    // http://codereview.chromium.org/164803002/
     // makes it to Chrome release.
     (function() {
       var t = document.createElement('template');
@@ -6394,12 +6394,12 @@ scope.isIE = isIE;
 
   function isSVGTemplate(el) {
     return el.tagName == 'template' &&
-           el.namespaceURI == 'https://www.w3.org/2000/svg';
+           el.namespaceURI == 'http://www.w3.org/2000/svg';
   }
 
   function isHTMLTemplate(el) {
     return el.tagName == 'TEMPLATE' &&
-           el.namespaceURI == 'https://www.w3.org/1999/xhtml';
+           el.namespaceURI == 'http://www.w3.org/1999/xhtml';
   }
 
   function isAttributeTemplate(el) {
@@ -6460,7 +6460,7 @@ scope.isIE = isIE;
     });
   }
 
-  // https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template-contents-owner
+  // http://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html#dfn-template-contents-owner
   function getOrCreateTemplateContentsOwner(template) {
     var doc = template.ownerDocument
     if (!doc.defaultView)
@@ -6485,7 +6485,7 @@ scope.isIE = isIE;
         owner.stagingDocument_ = owner.implementation.createHTMLDocument('');
         owner.stagingDocument_.isStagingDocument = true;
         // TODO(rafaelw): Remove when fix for
-        // https://codereview.chromium.org/164803002/
+        // http://codereview.chromium.org/164803002/
         // makes it to Chrome release.
         var base = owner.stagingDocument_.createElement('base');
         base.href = document.baseURI;
@@ -7511,9 +7511,9 @@ scope.isIE = isIE;
   var hasWorkingUrl = false;
   if (!scope.forceJURL) {
     try {
-      var u = new URL('b', 'https://a');
+      var u = new URL('b', 'http://a');
       u.pathname = 'c%20d';
-      hasWorkingUrl = u.href === 'https://a/c%20d';
+      hasWorkingUrl = u.href === 'http://a/c%20d';
     } catch(e) {}
   }
 
@@ -8093,7 +8093,7 @@ scope.isIE = isIE;
   if (OriginalURL) {
     jURL.createObjectURL = function(blob) {
       // IE extension allows a second optional options argument.
-      // https://msdn.microsoft.com/en-us/library/ie/hh772302(v=vs.85).aspx
+      // http://msdn.microsoft.com/en-us/library/ie/hh772302(v=vs.85).aspx
       return OriginalURL.createObjectURL.apply(OriginalURL, arguments);
     };
     jURL.revokeObjectURL = function(url) {
@@ -10596,7 +10596,7 @@ scope.api.declaration.path = path;
         scope = document.head;
       }
       // TODO(sorvell): necessary for IE
-      // see https://connect.microsoft.com/IE/feedback/details/790212/
+      // see http://connect.microsoft.com/IE/feedback/details/790212/
       // cloning-a-style-element-and-adding-to-document-produces
       // -unexpected-result#details
       // var clone = style.cloneNode(true);
@@ -10841,8 +10841,8 @@ scope.api.declaration.path = path;
     // browser property is not currently supported to help users of Polymer
     // avoid browser bugs:
     //
-    // https://code.google.com/p/chromium/issues/detail?id=43394
-    // https://bugs.webkit.org/show_bug.cgi?id=49739
+    // http://code.google.com/p/chromium/issues/detail?id=43394
+    // http://bugs.webkit.org/show_bug.cgi?id=49739
     //
     // We can lift this restriction when those bugs are fixed.
     filterInvalidAccessorNames: function(propertyNames) {

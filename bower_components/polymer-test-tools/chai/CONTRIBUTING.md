@@ -18,11 +18,11 @@ Following these guidelines helps to communicate that you respect the time of the
 <a name="tldr"></a>
 ## TLDR;
 
-- Creating an Issue or Pull Request requires a [GitHub](https://github.com) account.
-- Issue reports should be **clear**, **concise** and **reproducible**. Check to see if your issue has already been resolved in the [master]() branch or already reported in Chai's [GitHub Issue Tracker](https://github.com/chaijs/chai/issues).
-- Pull Requests must adhere to strict [coding style guidelines](https://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide).
+- Creating an Issue or Pull Request requires a [GitHub](http://github.com) account.
+- Issue reports should be **clear**, **concise** and **reproducible**. Check to see if your issue has already been resolved in the [master]() branch or already reported in Chai's [GitHub Issue Tracker](http://github.com/chaijs/chai/issues).
+- Pull Requests must adhere to strict [coding style guidelines](http://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide).
 - In general, avoid submitting PRs for new Assertions without asking core contributors first. More than likely it would be better implemented as a plugin.
-- Additional support is available via the [Google Group](https://groups.google.com/group/chaijs) or on irc.freenode.net#chaijs.
+- Additional support is available via the [Google Group](http://groups.google.com/group/chaijs) or on irc.freenode.net#chaijs.
 - **IMPORTANT**: By submitting a patch, you agree to allow the project owner to license your work under the same license as that used by the project.
 
 
@@ -35,7 +35,7 @@ The issue tracker is the preferred channel for [bug reports](#bugs),
 requests](#pull-requests), but please respect the following restrictions:
 
 * Please **do not** use the issue tracker for personal support requests (use
-  [Google Group](https://groups.google.com/forum/#!forum/chaijs) or IRC).
+  [Google Group](http://groups.google.com/forum/#!forum/chaijs) or IRC).
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others
 
@@ -75,7 +75,7 @@ Example:
 
 Feature requests are welcome. But take a moment to find out whether your idea fits with the scope and aims of the project. It's up to *you* to make a strong case to convince the project's developers of the merits of this feature. Please provide as much detail and context as possible.
 
-Furthermore, since Chai.js has a [robust plugin API](https://chaijs.com/guide/plugins/), we encourage you to publish **new Assertions** as plugins. If your feature is an enhancement to an **existing Assertion**, please propose your changes as an issue prior to opening a pull request. If the core Chai.js contributors feel your plugin would be better suited as a core assertion, they will invite you to open a PR in [chaijs/chai](https://github.com/chaijs/chai).
+Furthermore, since Chai.js has a [robust plugin API](http://chaijs.com/guide/plugins/), we encourage you to publish **new Assertions** as plugins. If your feature is an enhancement to an **existing Assertion**, please propose your changes as an issue prior to opening a pull request. If the core Chai.js contributors feel your plugin would be better suited as a core assertion, they will invite you to open a PR in [chaijs/chai](http://github.com/chaijs/chai).
 
 <a name="pull-requests"></a>
 ### Pull Requests
@@ -90,19 +90,19 @@ Good pull requests - patches, improvements, new features - are a fantastic help.
 
 **Please ask first** before embarking on any significant pull request (e.g. implementing features, refactoring code), otherwise you risk spending a lot of time working on something that the project's developers might not want to merge into the project.
 
-Please adhere to the coding conventions used throughout a project (indentation, accurate comments, etc.) and any other requirements (such as test coverage). Please review the [Chai.js Coding Style Guide](https://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide).
+Please adhere to the coding conventions used throughout a project (indentation, accurate comments, etc.) and any other requirements (such as test coverage). Please review the [Chai.js Coding Style Guide](http://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide).
 
 Follow this process if you'd like your work considered for inclusion in the project:
 
-1. [Fork](https://help.github.com/fork-a-repo/) the project, clone your fork, and configure the remotes:
+1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork, and configure the remotes:
 
 ```bash
 # Clone your fork of the repo into the current directory
-git clone https://github.com/<your-username>/<repo-name>
+git clone http://github.com/<your-username>/<repo-name>
 # Navigate to the newly cloned directory
 cd <repo-name>
 # Assign the original repo to a remote called "upstream"
-git remote add upstream https://github.com/<upstream-owner>/<repo-name>
+git remote add upstream http://github.com/<upstream-owner>/<repo-name>
 ```
 
 2. If you cloned a while ago, get the latest changes from upstream:
@@ -118,7 +118,7 @@ git pull upstream <dev-branch>
 git checkout -b <topic-branch-name>
 ```
 
-4. Commit your changes in logical chunks. Use Git's [interactive rebase](https://help.github.com/articles/interactive-rebase) feature to tidy up your commits before making them public.
+4. Commit your changes in logical chunks. Use Git's [interactive rebase](http://help.github.com/articles/interactive-rebase) feature to tidy up your commits before making them public.
 
 5. Locally merge (or rebase) the upstream development branch into your topic branch:
 
@@ -132,7 +132,7 @@ git pull [--rebase] upstream <dev-branch>
 git push origin <topic-branch-name>
 ```
 
-7. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/) with a clear title and description.
+7. [Open a Pull Request](http://help.github.com/articles/using-pull-requests/) with a clear title and description.
 
 **IMPORTANT**: By submitting a patch, you agree to allow the project owner to license your work under the same license as that used by the project.
 
@@ -142,21 +142,21 @@ git push origin <topic-branch-name>
 <a name="resources"></a>
 ### Resources
 
-For most of the documentation you are going to want to visit [ChaiJS.com](https://chaijs.com).
+For most of the documentation you are going to want to visit [ChaiJS.com](http://chaijs.com).
 
-- [Getting Started Guide](https://chaijs.com/guide/)
-- [API Reference](https://chaijs.com/api/)
-- [Plugins](https://chaijs.com/plugins/)
+- [Getting Started Guide](http://chaijs.com/guide/)
+- [API Reference](http://chaijs.com/api/)
+- [Plugins](http://chaijs.com/plugins/)
 
-Alternatively, the [wiki](https://github.com/chaijs/chai/wiki) might be what you are looking for.
+Alternatively, the [wiki](http://github.com/chaijs/chai/wiki) might be what you are looking for.
 
-- [Chai Coding Style Guide](https://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide)
-- [Third-party Resources](https://github.com/chaijs/chai/wiki/Third-Party-Resources)
+- [Chai Coding Style Guide](http://github.com/chaijs/chai/wiki/Chai-Coding-Style-Guide)
+- [Third-party Resources](http://github.com/chaijs/chai/wiki/Third-Party-Resources)
 
 Or finally, you may find a core-contributor or like-minded developer in any of our support channels.
 
 - IRC: irc.freenode.org #chaijs
-- [Mailing List / Google Group](https://groups.google.com/forum/#!forum/chaijs)
+- [Mailing List / Google Group](http://groups.google.com/forum/#!forum/chaijs)
 
 <a name="contributors"></a>
 ### Core Contributors
@@ -164,10 +164,10 @@ Or finally, you may find a core-contributor or like-minded developer in any of o
 Feel free to reach out to any of the core-contributors with you questions or concerns. We will do our best to respond in a timely manner.
 
 - Jake Luer
-  - GH: [@logicalparadox](https://github.com/logicalparadox)
-  - TW: [@jakeluer](https://twitter.com/jakeluer)
+  - GH: [@logicalparadox](http://github.com/logicalparadox)
+  - TW: [@jakeluer](http://twitter.com/jakeluer)
   - IRC: logicalparadox
 - Veselin Todorov
-  - GH: [@vesln](https://github.com/vesln/)
-  - TW: [@vesln](https://twitter.com/vesln)
+  - GH: [@vesln](http://github.com/vesln/)
+  - TW: [@vesln](http://twitter.com/vesln)
   - IRC: vesln

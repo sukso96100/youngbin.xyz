@@ -6,7 +6,7 @@
     "google-code-prettify": "*"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/prettify-element",
+  "homepage": "http://github.com/Polymer/prettify-element",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

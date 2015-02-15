@@ -6,7 +6,7 @@
     "polymer": "Polymer/polymer#^0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/PolymerLabs/marked-element",
+  "homepage": "http://github.com/PolymerLabs/marked-element",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

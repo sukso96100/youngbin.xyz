@@ -10,7 +10,7 @@
     "externs/**"
   ],
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/paper-checkbox",
+  "homepage": "http://github.com/Polymer/paper-checkbox",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

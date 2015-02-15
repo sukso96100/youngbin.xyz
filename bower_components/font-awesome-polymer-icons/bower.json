@@ -19,7 +19,7 @@
     "polymer": "Polymer/polymer"
   },
   "license": "MIT",
-  "homepage": "https://github.com/philya/font-awesome-polymer-icons",
+  "homepage": "http://github.com/philya/font-awesome-polymer-icons",
   "ignore": [
     "**/.*",
     "bower_components"

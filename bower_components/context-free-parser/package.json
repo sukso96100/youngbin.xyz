@@ -10,7 +10,7 @@
   "author": "The Polymer Authors",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/Polymer/context-free-parser/issues"
+    "url": "http://github.com/Polymer/context-free-parser/issues"
   },
-  "homepage": "https://github.com/Polymer/context-free-parser"
+  "homepage": "http://github.com/Polymer/context-free-parser"
 }

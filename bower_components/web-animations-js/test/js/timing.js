@@ -23,7 +23,7 @@ suite('timing', function() {
     player.pause();
 
     player.currentTime = 200;
-    // https://www.w3.org/TR/web-animations/#the-current-time-of-a-player
+    // http://www.w3.org/TR/web-animations/#the-current-time-of-a-player
     // currentTime should now mean 'hold time' - this allows scrubbing.
     assert.equal(player.currentTime, 200);
     player.play();

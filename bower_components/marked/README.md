@@ -3,7 +3,7 @@
 > A full-featured markdown parser and compiler, written in JavaScript. Built
 > for speed.
 
-[![NPM version](https://badge.fury.io/js/marked.png)][badge]
+[![NPM version](http://badge.fury.io/js/marked.png)][badge]
 
 ## Install
 
@@ -397,10 +397,10 @@ Copyright (c) 2011-2014, Christopher Jeffrey. (MIT License)
 
 See LICENSE for more info.
 
-[gfm]: https://help.github.com/articles/github-flavored-markdown
-[gfmf]: https://github.github.com/github-flavored-markdown/
-[pygmentize]: https://github.com/rvagg/node-pygmentize-bundled
-[highlight]: https://github.com/isagalaev/highlight.js
-[badge]: https://badge.fury.io/js/marked
-[tables]: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables
-[breaks]: https://help.github.com/articles/github-flavored-markdown#newlines
+[gfm]: http://help.github.com/articles/github-flavored-markdown
+[gfmf]: http://github.github.com/github-flavored-markdown/
+[pygmentize]: http://github.com/rvagg/node-pygmentize-bundled
+[highlight]: http://github.com/isagalaev/highlight.js
+[badge]: http://badge.fury.io/js/marked
+[tables]: http://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#wiki-tables
+[breaks]: http://help.github.com/articles/github-flavored-markdown#newlines

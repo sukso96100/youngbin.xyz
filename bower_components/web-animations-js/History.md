@@ -34,10 +34,10 @@
 
     If you have any feedback on this change, please start a discussion
     on the public-fx mailing list:
-    https://lists.w3.org/Archives/Public/public-fx/
+    http://lists.w3.org/Archives/Public/public-fx/
 
     Or file an issue against the specification on GitHub:
-    https://github.com/w3c/web-animations/issues/new
+    http://github.com/w3c/web-animations/issues/new
 
 ### 1.0.1 - *November 26 2014*
 
@@ -49,10 +49,10 @@
 
   The web-animations-js hackers are pleased to announce the release of
   a new codebase for the Web Animations Polyfill:
-  https://github.com/web-animations/web-animations-js
+  http://github.com/web-animations/web-animations-js
 
   The previous polyfill has been moved to:
-  https://github.com/web-animations/web-animations-js-legacy
+  http://github.com/web-animations/web-animations-js-legacy
 
   The new codebase is focused on code-size -- our smallest target is
   now only 33kb or 11kb after gzip.

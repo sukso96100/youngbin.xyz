@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {},
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/polymer-test-tools",
+  "homepage": "http://github.com/Polymer/polymer-test-tools",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

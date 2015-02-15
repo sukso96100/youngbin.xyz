@@ -15,7 +15,7 @@
     "web-component-tester": "Polymer/web-component-tester#^1.1.4"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/core-menu-button",
+  "homepage": "http://github.com/Polymer/core-menu-button",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

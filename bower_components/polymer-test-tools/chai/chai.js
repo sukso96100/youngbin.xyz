@@ -815,7 +815,7 @@ exports.use(assert);
 require.register("chai/lib/chai/assertion.js", function(exports, require, module){
 /*!
  * chai
- * https://chaijs.com
+ * http://chaijs.com
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
  * MIT Licensed
  */
@@ -1001,7 +1001,7 @@ module.exports = {
 require.register("chai/lib/chai/core/assertions.js", function(exports, require, module){
 /*!
  * chai
- * https://chaijs.com
+ * http://chaijs.com
  * Copyright(c) 2011-2014 Jake Luer <jake@alogicalparadox.com>
  * MIT Licensed
  */
@@ -2022,7 +2022,7 @@ module.exports = function (chai, _) {
    * @param {ErrorConstructor} constructor
    * @param {String|RegExp} expected error message
    * @param {String} message _optional_
-   * @see https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
+   * @see http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
    * @returns error for chaining (null if no error)
    * @api public
    */
@@ -3228,7 +3228,7 @@ module.exports = function (chai, util) {
    * @param {ErrorConstructor} constructor
    * @param {RegExp} regexp
    * @param {String} message
-   * @see https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
+   * @see http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
    * @api public
    */
 
@@ -3256,7 +3256,7 @@ module.exports = function (chai, util) {
    * @param {ErrorConstructor} constructor
    * @param {RegExp} regexp
    * @param {String} message
-   * @see https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
+   * @see http://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Error#Error_types
    * @api public
    */
 
@@ -3410,7 +3410,7 @@ module.exports = function (chai, util) {
       return new Assertion(this, null, shouldGetter);
     }
     function shouldSetter(value) {
-      // See https://github.com/chaijs/chai/issues/86: this makes
+      // See http://github.com/chaijs/chai/issues/86: this makes
       // `whatever.should = someValue` actually set `someValue`, which is
       // especially useful for `global.should = require('chai').should()`.
       //
@@ -3836,7 +3836,7 @@ require.register("chai/lib/chai/utils/getPathValue.js", function(exports, requir
 /*!
  * Chai - getPathValue utility
  * Copyright(c) 2012-2014 Jake Luer <jake@alogicalparadox.com>
- * @see https://github.com/logicalparadox/filtr
+ * @see http://github.com/logicalparadox/filtr
  * MIT Licensed
  */
 
@@ -4094,7 +4094,7 @@ exports.overwriteChainableMethod = require('./overwriteChainableMethod');
 });
 require.register("chai/lib/chai/utils/inspect.js", function(exports, require, module){
 // This is (almost) directly from Node.js utils
-// https://github.com/joyent/node/blob/f8c335d0caf47f16d31413f89aa28eda3878e3aa/lib/util.js
+// http://github.com/joyent/node/blob/f8c335d0caf47f16d31413f89aa28eda3878e3aa/lib/util.js
 
 var getName = require('./getName');
 var getProperties = require('./getProperties');
@@ -4122,10 +4122,10 @@ function inspect(obj, showHidden, depth, colors) {
   return formatValue(ctx, obj, (typeof depth === 'undefined' ? 2 : depth));
 }
 
-// https://gist.github.com/1044128/
+// http://gist.github.com/1044128/
 var getOuterHTML = function(element) {
   if ('outerHTML' in element) return element.outerHTML;
-  var ns = "https://www.w3.org/1999/xhtml";
+  var ns = "http://www.w3.org/1999/xhtml";
   var container = document.createElementNS(ns, '_');
   var elemProto = (window.HTMLElement || window.Element).prototype;
   var xmlSerializer = new XMLSerializer();

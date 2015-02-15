@@ -5,7 +5,7 @@
     "polymer": "Polymer/polymer#^0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/context-free-parser",
+  "homepage": "http://github.com/Polymer/context-free-parser",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

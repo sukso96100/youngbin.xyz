@@ -1,26 +1,26 @@
-[![Chai Documentation](https://chaijs.com/public/img/chai-logo.png)](https://chaijs.com)
+[![Chai Documentation](http://chaijs.com/public/img/chai-logo.png)](http://chaijs.com)
 
-Chai is a BDD / TDD assertion library for [node](https://nodejs.org) and the browser that
+Chai is a BDD / TDD assertion library for [node](http://nodejs.org) and the browser that
 can be delightfully paired with any javascript testing framework.
 
-For more information or to download plugins, view the [documentation](https://chaijs.com).
+For more information or to download plugins, view the [documentation](http://chaijs.com).
 
-[![Build Status](https://travis-ci.org/chaijs/chai.png?branch=master)](https://travis-ci.org/chaijs/chai)
+[![Build Status](http://travis-ci.org/chaijs/chai.png?branch=master)](http://travis-ci.org/chaijs/chai)
 
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/chaijs.svg)](https://saucelabs.com/u/chaijs)
+[![Selenium Test Status](http://saucelabs.com/browser-matrix/chaijs.svg)](http://saucelabs.com/u/chaijs)
 
 ### Plugins
 
 Chai offers a robust Plugin architecture for extending Chai's assertions and interfaces.
 
-- Need a plugin? View the [official plugin list](https://chaijs.com/plugins).
-- Have a plugin and want it listed? Open a Pull Request at [chaijs/chai-docs:plugin.js](https://github.com/chaijs/chai-docs/blob/master/plugins.js#L1-L12). 
-- Want to build a plugin? Read the [plugin api documentation](https://chaijs.com/guide/plugins/).
+- Need a plugin? View the [official plugin list](http://chaijs.com/plugins).
+- Have a plugin and want it listed? Open a Pull Request at [chaijs/chai-docs:plugin.js](http://github.com/chaijs/chai-docs/blob/master/plugins.js#L1-L12). 
+- Want to build a plugin? Read the [plugin api documentation](http://chaijs.com/guide/plugins/).
 
 ### Related Projects
 
-- [chaijs / assertion-error](https://github.com/chaijs/assertion-error): Custom `Error` constructor thrown upon an assertion failing.
-- [chaijs / deep-eql](https://github.com/chaijs/deep-eql): Improved deep equality testing for Node.js and the browser.
+- [chaijs / assertion-error](http://github.com/chaijs/assertion-error): Custom `Error` constructor thrown upon an assertion failing.
+- [chaijs / deep-eql](http://github.com/chaijs/deep-eql): Improved deep equality testing for Node.js and the browser.
 
 ### Contributors
 

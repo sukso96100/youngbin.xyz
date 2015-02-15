@@ -44,7 +44,7 @@ Android)
 Chrome)
   echo "Getting $VERSION of $BROWSER"
   export CHROME=google-chrome-${VERSION}_current_amd64.deb
-  wget https://dl.google.com/linux/direct/$CHROME
+  wget http://dl.google.com/linux/direct/$CHROME
   sudo dpkg --install $CHROME || sudo apt-get -f install
   which google-chrome
   ls -l `which google-chrome`
@@ -57,7 +57,7 @@ Chrome)
   
   # Download a custom chrome-sandbox which works inside OpenVC containers (used on travis).
   sudo rm -f $CHROME_SANDBOX
-  sudo wget https://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
+  sudo wget http://googledrive.com/host/0B5VlNZ_Rvdw6NTJoZDBSVy1ZdkE -O $CHROME_SANDBOX
   sudo chown root:root $CHROME_SANDBOX; sudo chmod 4755 $CHROME_SANDBOX
   sudo md5sum $CHROME_SANDBOX
   

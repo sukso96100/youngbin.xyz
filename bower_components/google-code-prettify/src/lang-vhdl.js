@@ -3,7 +3,7 @@
  * Registers a language handler for VHDL '93.
  *
  * Based on the lexical grammar and keywords at
- * https://www.iis.ee.ethz.ch/~zimmi/download/vhdl93_syntax.html
+ * http://www.iis.ee.ethz.ch/~zimmi/download/vhdl93_syntax.html
  *
  * @author benoit@ryder.fr
  */

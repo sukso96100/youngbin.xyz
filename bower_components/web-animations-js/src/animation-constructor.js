@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 //     You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0
+// http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -51,7 +51,7 @@
     return scope.timeline.play(new scope.Animation(this, effect, timing));
   };
 
-  var nullTarget = document.createElementNS('https://www.w3.org/1999/xhtml', 'div');
+  var nullTarget = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
   scope.newUnderlyingPlayerForAnimation = function(animation) {
     var target = animation.target || nullTarget;
     var effect = animation._effect;

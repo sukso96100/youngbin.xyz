@@ -6,7 +6,7 @@
     "web-animations-js": "web-animations/web-animations-js#1.0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/core-animation",
+  "homepage": "http://github.com/Polymer/core-animation",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

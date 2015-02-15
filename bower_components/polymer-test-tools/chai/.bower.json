@@ -24,7 +24,7 @@
   ],
   "dependencies": {},
   "devDependencies": {},
-  "homepage": "https://github.com/chaijs/chai",
+  "homepage": "http://github.com/chaijs/chai",
   "_release": "1.9.1",
   "_resolution": {
     "type": "version",

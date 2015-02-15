@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 //     You may obtain a copy of the License at
 //
-// https://www.apache.org/licenses/LICENSE-2.0
+// http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -47,7 +47,7 @@
     // Stores the inline style of the element on its behalf while the
     // polyfill uses the element's inline style to simulate web animations.
     // This is needed to fake regular inline style CSSOM access on the element.
-    this._surrogateStyle = document.createElementNS('https://www.w3.org/1999/xhtml', 'div').style;
+    this._surrogateStyle = document.createElementNS('http://www.w3.org/1999/xhtml', 'div').style;
     this._style = element.style;
     this._length = 0;
     this._isAnimatedProperty = {};

@@ -1,7 +1,7 @@
 /**
  * marked - a markdown parser
  * Copyright (c) 2011-2014, Christopher Jeffrey. (MIT Licensed)
- * https://github.com/chjj/marked
+ * http://github.com/chjj/marked
  */
 
 ;(function() {
@@ -1206,7 +1206,7 @@ function marked(src, opt, callback) {
     if (opt) opt = merge({}, marked.defaults, opt);
     return Parser.parse(Lexer.lex(src, opt), opt);
   } catch (e) {
-    e.message += '\nPlease report this to https://github.com/chjj/marked.';
+    e.message += '\nPlease report this to http://github.com/chjj/marked.';
     if ((opt || marked.defaults).silent) {
       return '<p>An error occured:</p><pre>'
         + escape(e.message + '', true)

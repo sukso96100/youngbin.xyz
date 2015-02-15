@@ -3,7 +3,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/web-animations/web-animations-js.git"
+    "url": "http://github.com/web-animations/web-animations-js.git"
   },
   "devDependencies": {
     "mocha": "1.21.4",

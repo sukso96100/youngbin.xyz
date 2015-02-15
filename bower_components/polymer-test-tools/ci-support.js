@@ -160,7 +160,7 @@
     // mocha.
     //
     // For all possible mocha events, see:
-    // https://github.com/visionmedia/mocha/blob/master/lib/runner.js#L36
+    // http://github.com/visionmedia/mocha/blob/master/lib/runner.js#L36
     runner.on('test', function(test) {
       emitEvent('test-start', {test: getTitles(test)});
     });

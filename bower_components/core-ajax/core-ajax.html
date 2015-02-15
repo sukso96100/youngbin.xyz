@@ -1,10 +1,10 @@
 <!--
 Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
 Code distributed by Google as part of the polymer project is also
-subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 
 <!--
@@ -14,7 +14,7 @@ The `core-ajax` element exposes `XMLHttpRequest` functionality.
 
     <core-ajax
         auto
-        url="https://gdata.youtube.com/feeds/api/videos/"
+        url="http://gdata.youtube.com/feeds/api/videos/"
         params='{"alt":"json", "q":"chrome"}'
         handleAs="json"
         on-core-response="{{handleResponse}}"></core-ajax>
@@ -160,7 +160,7 @@ element.
      *
      *     <core-ajax
      *         auto
-     *         url="https://somesite.com"
+     *         url="http://somesite.com"
      *         headers='{"X-Requested-With": "XMLHttpRequest"}'
      *         handleAs="json"
      *         on-core-response="{{handleResponse}}"></core-ajax>
@@ -176,7 +176,7 @@ element.
      *
      * Example:
      *
-     *     <core-ajax method="POST" auto url="https://somesite.com"
+     *     <core-ajax method="POST" auto url="http://somesite.com"
      *         body='{"foo":1, "bar":2}'>
      *     </core-ajax>
      *

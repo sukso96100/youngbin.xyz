@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      https://www.apache.org/licenses/LICENSE-2.0
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,13 +24,13 @@
 // | lang=            | language name | Loads the language handler   | Can    |
 // |                  |               | named "lang-<NAME>.js".      | appear |
 // |                  |               | See available handlers at    | many   |
-// |                  |               | https://code.google.com/p/    | times. |
+// |                  |               | http://code.google.com/p/    | times. |
 // |                  |               | google-code-prettify/source/ |        |
 // |                  |               | browse/trunk/src             |        |
 // +------------------+---------------+------------------------------+--------+
 // | skin=            | skin name     | Loads the skin stylesheet    | none.  |
 // |                  |               | named "<NAME>.css".          |        |
-// |                  |               | https://code.google.com/p/    |        |
+// |                  |               | http://code.google.com/p/    |        |
 // |                  |               | google-code-prettify/source/ |        |
 // |                  |               | browse/trunk/styles          |        |
 // +------------------+---------------+------------------------------+--------+
@@ -51,7 +51,7 @@
 //   2. Loads the sunburst.css stylesheet instead of the default prettify.css
 //      stylesheet.
 //      A gallery of stylesheets is available at
-//      https://google-code-prettify.googlecode.com/svn/trunk/styles/index.html
+//      http://google-code-prettify.googlecode.com/svn/trunk/styles/index.html
 //   3. Since autorun=false is not specified, calls prettyPrint() on page load.
 
 
@@ -67,7 +67,7 @@ var IN_GLOBAL_SCOPE = false;
   var root = doc.documentElement;
   var head = doc['head'] || doc.getElementsByTagName("head")[0] || root;
 
-  // From https://javascript.nwbox.com/ContentLoaded/contentloaded.js
+  // From http://javascript.nwbox.com/ContentLoaded/contentloaded.js
   // Author: Diego Perini (diego.perini at gmail.com)
   // Summary: cross-browser wrapper for DOMContentLoaded
   // Updated: 20101020
@@ -121,9 +121,9 @@ var IN_GLOBAL_SCOPE = false;
       link.rel = 'stylesheet';
       link.type = 'text/css';
       if (i + 1 < n) {
-        // https://pieisgood.org/test/script-link-events/ indicates that many
+        // http://pieisgood.org/test/script-link-events/ indicates that many
         // versions of IE do not support onerror on <link>s, though
-        // https://msdn.microsoft.com/en-us/library/ie/ms535848(v=vs.85).aspx
+        // http://msdn.microsoft.com/en-us/library/ie/ms535848(v=vs.85).aspx
         // indicates that recent IEs do support error.
         link.error = link.onerror = function () { load(i + 1); };
       }
@@ -173,7 +173,7 @@ var IN_GLOBAL_SCOPE = false;
   // This only works if this script is loaded via https : something
   // over which we exercise no control.
   var LOADER_BASE_URL =
-     'https://google-code-prettify.googlecode.com/svn/loader';
+     'http://google-code-prettify.googlecode.com/svn/loader';
 
   for (var i = 0, n = langs.length; i < n; ++i) (function (lang) {
     var script = doc.createElement("script");
@@ -229,7 +229,7 @@ var IN_GLOBAL_SCOPE = false;
     // you may not use this file except in compliance with the License.
     // You may obtain a copy of the License at
     //
-    //      https://www.apache.org/licenses/LICENSE-2.0
+    //      http://www.apache.org/licenses/LICENSE-2.0
     //
     // Unless required by applicable law or agreed to in writing, software
     // distributed under the License is distributed on an "AS IS" BASIS,
@@ -244,7 +244,7 @@ var IN_GLOBAL_SCOPE = false;
      *
      * <p>
      * For a fairly comprehensive set of languages see the
-     * <a href="https://google-code-prettify.googlecode.com/svn/trunk/README.html#langs">README</a>
+     * <a href="http://google-code-prettify.googlecode.com/svn/trunk/README.html#langs">README</a>
      * file that came with this source.  At a minimum, the lexer should work on a
      * number of languages including C and friends, Java, Python, Bash, SQL, HTML,
      * XML, CSS, Javascript, and Makefiles.  It works passably on Ruby, PHP and Awk
@@ -437,7 +437,7 @@ var IN_GLOBAL_SCOPE = false;
       /**
        * A set of tokens that can precede a regular expression literal in
        * javascript
-       * https://web.archive.org/web/20070717142515/https://www.mozilla.org/js/language/js20/rationale/syntax.html
+       * http://web.archive.org/web/20070717142515/http://www.mozilla.org/js/language/js20/rationale/syntax.html
        * has the full list, but I've removed ones that might be problematic when
        * seen in languages that don't support regular expression literals.
        *
@@ -1147,7 +1147,7 @@ var IN_GLOBAL_SCOPE = false;
     
           // so /(?:^|[|&;<>\s])/ is more appropriate.
     
-          // https://gcc.gnu.org/onlinedocs/gcc-2.95.3/cpp_1.html#SEC3
+          // http://gcc.gnu.org/onlinedocs/gcc-2.95.3/cpp_1.html#SEC3
           // suggests that this definition is compatible with a
           // default mode that tries to use a single token definition
           // to recognize both bash/python style comments and C
@@ -1639,8 +1639,8 @@ var IN_GLOBAL_SCOPE = false;
         // We assume that the inner HTML is from a trusted source.
         // The pre-tag is required for IE8 which strips newlines from innerHTML
         // when it is injected into a <pre> tag.
-        // https://stackoverflow.com/questions/451486/pre-tag-loses-line-breaks-when-setting-innerhtml-in-ie
-        // https://stackoverflow.com/questions/195363/inserting-a-newline-into-a-pre-tag-ie-javascript
+        // http://stackoverflow.com/questions/451486/pre-tag-loses-line-breaks-when-setting-innerhtml-in-ie
+        // http://stackoverflow.com/questions/195363/inserting-a-newline-into-a-pre-tag-ie-javascript
         container.innerHTML = '<pre>' + sourceCodeHtml + '</pre>';
         container = container.firstChild;
         if (opt_numberLines) {
@@ -1759,7 +1759,7 @@ var IN_GLOBAL_SCOPE = false;
                 // as passed to PR.registerLangHandler.
                 // HTML5 recommends that a language be specified using "language-"
                 // as the prefix instead.  Google Code Prettify supports both.
-                // https://dev.w3.org/html5/spec-author-view/the-code-element.html
+                // http://dev.w3.org/html5/spec-author-view/the-code-element.html
                 var langExtension = attrs['lang'];
                 if (!langExtension) {
                   langExtension = className.match(langExtensionRe);
@@ -1858,7 +1858,7 @@ var IN_GLOBAL_SCOPE = false;
           };
     
       // Make PR available via the Asynchronous Module Definition (AMD) API.
-      // Per https://github.com/amdjs/amdjs-api/wiki/AMD:
+      // Per http://github.com/amdjs/amdjs-api/wiki/AMD:
       // The Asynchronous Module Definition (AMD) API specifies a
       // mechanism for defining modules such that the module and its
       // dependencies can be asynchronously loaded.

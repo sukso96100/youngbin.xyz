@@ -6,7 +6,7 @@
     "core-iconset": "Polymer/core-iconset#^0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/core-iconset-svg",
+  "homepage": "http://github.com/Polymer/core-iconset-svg",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

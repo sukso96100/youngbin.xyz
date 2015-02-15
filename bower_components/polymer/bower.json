@@ -1,7 +1,7 @@
 {
   "name": "polymer",
   "description": "Polymer is a new type of library for the web, built on top of Web Components, and designed to leverage the evolving web platform on modern browsers.",
-  "homepage": "https://www.polymer-project.org/",
+  "homepage": "http://www.polymer-project.org/",
   "keywords": [
     "util",
     "client",

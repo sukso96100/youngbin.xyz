@@ -8,11 +8,11 @@ iframe { width: 100%; border-style: none; margin: 0; padding: 0 }
 var allThemes = [
   { name: 'default' },
   { name: 'desert',
-    authorHtml: '<a href="https://code.google.com/u/@VhJeSlJYBhVMWgF7/">'
+    authorHtml: '<a href="http://code.google.com/u/@VhJeSlJYBhVMWgF7/">'
         + 'techto&hellip;@<\/a>' },
   { name: 'sunburst', authorHtml: 'David Leibovic' },
   { name: 'sons-of-obsidian',
-    authorHtml: '<a href="https://CodeTunnel.com/blog/post/71'
+    authorHtml: '<a href="http://CodeTunnel.com/blog/post/71'
         + '/google-code-prettify-obsidian-theme">Alex Ford<\/a>' },
   { name: 'doxy', authorHtml: 'Robert Sperberg' },
 ];
@@ -42,7 +42,7 @@ function adjustChildIframeSize(themeName, width, height) {
 <noscript>This page requires JavaScript</noscript>
 
 <h1>Gallery of themes for
-<a href="https://code.google.com/p/google-code-prettify/">code prettify</a></h1>
+<a href="http://code.google.com/p/google-code-prettify/">code prettify</a></h1>
 <p>
 Click on a theme name for a link to the file in revision control.
 Print preview this page to see how the themes work on the printed page.
@@ -62,7 +62,7 @@ Print preview this page to see how the themes work on the printed page.
     header.id = theme.name;
     var linkToThemeSrc = document.createElement('a');
     linkToThemeSrc.href = (
-        'https://code.google.com/p/google-code-prettify/source/browse/trunk/' +
+        'http://code.google.com/p/google-code-prettify/source/browse/trunk/' +
         (theme.name === 'default'
          ? 'src/prettify.css'
          : 'styles/' + encodeURIComponent(theme.name) + '.css'));

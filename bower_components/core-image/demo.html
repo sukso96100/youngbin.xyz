@@ -1,11 +1,11 @@
 <!--
     @license
     Copyright (c) 2014 The Polymer Project Authors. All rights reserved.
-    This code may only be used under the BSD style license found at https://polymer.github.io/LICENSE.txt
-    The complete set of authors may be found at https://polymer.github.io/AUTHORS.txt
-    The complete set of contributors may be found at https://polymer.github.io/CONTRIBUTORS.txt
+    This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+    The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+    The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
     Code distributed by Google as part of the polymer project is also
-    subject to an additional IP rights grant found at https://polymer.github.io/PATENTS.txt
+    subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <!doctype html>
 <html>
@@ -36,15 +36,15 @@
 
 <template is="auto-binding">
   <h3>Sizing: none (naturally sized)</h3>
-  <core-image src="https://lorempixel.com/400/200/sports/1"></core-image>
+  <core-image src="http://lorempixel.com/400/200/sports/1"></core-image>
 
   <h3>Sizing: cover</h3>
-  <core-image class="sized" sizing="cover" src="https://lorempixel.com/400/200/sports/2"></core-image>
-  <core-image class="sized" sizing="cover" src="https://lorempixel.com/200/400/sports/3"></core-image>
+  <core-image class="sized" sizing="cover" src="http://lorempixel.com/400/200/sports/2"></core-image>
+  <core-image class="sized" sizing="cover" src="http://lorempixel.com/200/400/sports/3"></core-image>
 
   <h3>Sizing: contain</h3>
-  <core-image class="sized gray" sizing="contain"  src="https://lorempixel.com/400/200/sports/2"></core-image>
-  <core-image class="sized gray" sizing="contain"  src="https://lorempixel.com/200/400/sports/3"></core-image>
+  <core-image class="sized gray" sizing="contain"  src="http://lorempixel.com/400/200/sports/2"></core-image>
+  <core-image class="sized gray" sizing="contain"  src="http://lorempixel.com/200/400/sports/3"></core-image>
 
   <h3>Preload: none</h3>
   <div class="group">
@@ -164,7 +164,7 @@
     var scope = e.target;
     scope.preload = function(e) {
       var img = document.querySelector('#' + e.target.getAttribute('target'));
-      img.src = 'https://lorempixel.com/1920/1080?' + Math.random();
+      img.src = 'http://lorempixel.com/1920/1080?' + Math.random();
       e.target.textContent = 'Reload image';
     };
   });

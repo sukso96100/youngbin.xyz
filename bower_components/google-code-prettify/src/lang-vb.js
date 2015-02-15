@@ -4,7 +4,7 @@
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//      https://www.apache.org/licenses/LICENSE-2.0
+//      http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -24,7 +24,7 @@
  *      <pre class="prettyprint lang-vb"></pre>
  *
  *
- * https://msdn.microsoft.com/en-us/library/aa711638(VS.71).aspx defines the
+ * http://msdn.microsoft.com/en-us/library/aa711638(VS.71).aspx defines the
  * visual basic grammar lexical grammar.
  *
  * @author mikesamuel@gmail.com
@@ -43,7 +43,7 @@ PR['registerLangHandler'](
          // line.
          // VB6 apparently allows _ as an escape sequence for newlines though
          // this is not a documented feature of VB.net.
-         // https://meta.stackoverflow.com/q/121497/137403
+         // http://meta.stackoverflow.com/q/121497/137403
          [PR['PR_COMMENT'],     /^[\'\u2018\u2019](?:_(?:\r\n?|[^\r]?)|[^\r\n_\u2028\u2029])*/, null, '\'\u2018\u2019']
         ],
         [

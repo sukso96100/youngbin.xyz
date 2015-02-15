@@ -6,7 +6,7 @@
     "paper-radio-button": "Polymer/paper-radio-button#^0.5"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/paper-toggle-button",
+  "homepage": "http://github.com/Polymer/paper-toggle-button",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

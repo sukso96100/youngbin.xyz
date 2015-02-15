@@ -13,7 +13,7 @@
     "yui-compressor",
     "Makefile"
   ],
-  "homepage": "https://github.com/tcollard/google-code-prettify",
+  "homepage": "http://github.com/tcollard/google-code-prettify",
   "_release": "1.0.3",
   "_resolution": {
     "type": "version",

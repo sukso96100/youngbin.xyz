@@ -1,7 +1,7 @@
 
 Font Awesome as a Polymer/core-iconset-svg component
 
-*Note* use the complete iconset for demo and development purposes only. Generate a custom component containing only icons you need using [font-awesome-polymer-icons-generator](https://github.com/philya/font-awesome-polymer-icons-generator)
+*Note* use the complete iconset for demo and development purposes only. Generate a custom component containing only icons you need using [font-awesome-polymer-icons-generator](http://github.com/philya/font-awesome-polymer-icons-generator)
 
 # Set Up
 

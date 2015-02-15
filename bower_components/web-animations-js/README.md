@@ -15,14 +15,14 @@ features previously only usable declaratively, and exposes powerful,
 high-performance animation capabilities to developers.
 
 For more details see the
-[W3C specification](https://w3c.github.io/web-animations/).
+[W3C specification](http://w3c.github.io/web-animations/).
 
 What is the polyfill?
 ---------------------
 
 The polyfill is a JavaScript implementation of the Web Animations API. It works
 on modern versions of all major browsers. For more details about browser
-support see <https://www.polymer-project.org/resources/compatibility.html>.
+support see <http://www.polymer-project.org/resources/compatibility.html>.
 
 Getting Started
 ---------------
@@ -47,7 +47,7 @@ effect.
 
 Web Animations supports off-main-thread animations, and also allows procedural
 generation of animations and fine-grained control of animation playback. See
-<https://web-animations.github.io> for ideas and inspiration!
+<http://web-animations.github.io> for ideas and inspiration!
 
 Native Fallback
 ---------------
@@ -135,16 +135,16 @@ will not work anywhere.
 API and Specification Feedback
 ------------------------------
 
-File an issue on GitHub: <https://github.com/w3c/web-animations/issues/new>.
+File an issue on GitHub: <http://github.com/w3c/web-animations/issues/new>.
 Alternatively, send an email to <public-fx@w3.org> with subject line
 “[web-animations] … message topic …”
-([archives](https://lists.w3.org/Archives/Public/public-fx/)).
+([archives](http://lists.w3.org/Archives/Public/public-fx/)).
 
 Polyfill Issues
 ---------------
 
 Report any issues with this implementation on GitHub:
-<https://github.com/web-animations/web-animations-next/issues/new>.
+<http://github.com/web-animations/web-animations-next/issues/new>.
 
 Breaking changes
 ----------------
@@ -158,4 +158,4 @@ function name) will be removed. *If you see deprecation warnings you
 can't avoid it by not updating*.
 
 We also announce anything that isn't a bug fix on
-[web-animations-changes@googlegroups.com](https://groups.google.com/forum/#!forum/web-animations-changes).
+[web-animations-changes@googlegroups.com](http://groups.google.com/forum/#!forum/web-animations-changes).

@@ -1,12 +1,12 @@
 prettify-element
 ===================
 
-See the [component page](https://polymer.github.io/prettify-element) for more information.
+See the [component page](http://polymer.github.io/prettify-element) for more information.
 
 prettify-import
 ==================
 
-Import files are a new invention, so libraries like [`prettify`](https://code.google.com/p/prettify/) do not yet provide them.
+Import files are a new invention, so libraries like [`prettify`](http://code.google.com/p/prettify/) do not yet provide them.
 
 `prettify-import` is an intermediary that provides an import file for the `prettify` component. 
 `prettify-import` depends on `prettify`.

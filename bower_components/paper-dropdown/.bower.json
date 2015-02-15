@@ -16,7 +16,7 @@
     "web-component-tester": "web-component-tester#master"
   },
   "version": "0.5.4",
-  "homepage": "https://github.com/Polymer/paper-dropdown",
+  "homepage": "http://github.com/Polymer/paper-dropdown",
   "_release": "0.5.4",
   "_resolution": {
     "type": "version",

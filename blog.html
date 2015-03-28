@@ -28,16 +28,14 @@ permalink: /blog/
 
         <h1 class="card-content">{{ post.title }}</h1>
             <p class="card-content" id="right-margin">{{ post.content | strip_html | truncatewords:50 }}</p>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-            <paper-button class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button></a>
+            <paper-button onclick="href('{{ post.url | prepend: site.baseurl }}')" class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button>
             <br><br>
             </card>
         </paper-shadow>
       
     {% endfor %}
         <br>
-        <a href="/archive/">
-            <paper-button class="card-content">More Posts</paper-button></a>
+            <paper-button onclick="href('/archive/')" class="card-content">More Posts</paper-button>
     </div>
   </core-scroll-header-panel>
 

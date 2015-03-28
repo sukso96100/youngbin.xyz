@@ -49,8 +49,8 @@ $.getJSON( "/works.json", function( data ) {
    
         var name = WorksArray[i].title;
         var desc = WorksArray[i].desc;
-        var link = WorksArray[i].link;
-        var element = '<paper-shadow z="1" class="works-card" align="center"><h2>'+name+'</h2><p>'+desc+'</p><paper-fab onclick="href('+'"'+link+'"'+')" icon="arrow-forward"></paper-fab></paper-shadow>';
+        var link = "'"+WorksArray[i].link+"'";
+        var element = '<paper-shadow z="1" class="works-card" align="center"><h2>'+name+'</h2><p>'+desc+'</p><paper-fab onclick="href('+link+')" icon="arrow-forward"></paper-fab></paper-shadow>';
         
   $('#works-contents').append(element);
     }

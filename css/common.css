@@ -51,3 +51,15 @@ img{
     padding: 16px;
 }
 
+.main-card{
+    max-width: 800px;
+    padding: 32px;
+    margin: 16px;
+    background-color: white;
+}
+
+.works-card{
+    padding: 16px;
+    margin: 16px;
+    max-width: 400px;
+}

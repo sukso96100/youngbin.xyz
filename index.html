@@ -2,43 +2,25 @@
 layout: default
 title: Home
 ---
-
-
-<core-drawer-panel id="drawerPanel">
-
-  <core-header-panel drawer flex>
-      {% include drawer.html %}
-   </core-header-panel>
-
-  <core-scroll-header-panel  condenses="true" keepCondensedHeader="true"  main>
-    <core-toolbar class="dark-theme tall" id="toolbar" id="mainheader"
-                  {% if site.cover %}style="background-image: url({{ site.cover }})"{% endif %}>
-      <paper-icon-button 
-        id="navicon" icon="menu" class="white"></paper-icon-button>
-        <h1 id="title" class="bottom title">{{ site.title }}</h1>
-    </core-toolbar>
-    </core-toolbar>
-      
-    <div class="main-content">
-         {% for post in site.posts limit:10 %}
-        <paper-shadow class="post-card" z="1">
-        <card>
-        <p class="card-content"><core-icon icon="today"></core-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
-
-        <h1 class="card-content">{{ post.title }}</h1>
-            <p class="card-content" id="right-margin">{{ post.content | strip_html | truncatewords:50 }}</p>
-            <a href="{{ post.url | prepend: site.baseurl }}">
-            <paper-button class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button></a>
-            <br><br>
-            </card>
-        </paper-shadow>
-      
-    {% endfor %}
-        <br>
-        <a href="/archive/">
-            <paper-button class="card-content">More Posts</paper-button></a>
-    </div>
-  </core-scroll-header-panel>
-
-</core-drawer-panel>
+<style>
+    body{
+        background-color: #ecf0f1
+    }
+</style>
+<div align="center" style="padding-top: 64px;">
+<h1 style="font-size: 4em;">Youngbin Han</h1>
+<p>한영빈의 개인 웹사이트</p>
+    <paper-shadow z="1" class="main-card">
+    <h3>MAIN MENU</h3>
+        <a href="/blog/"><paper-button><core-item icon="subject" label="Blog"</core-item></paper-button></a>
+        <a href="/about/"><paper-button><core-item icon="face" label="About"</core-item></paper-button></a>
+        <a href="/works/"><paper-button><core-item icon="work" label="My Works"</core-item></paper-button></a>
+    </paper-shadow>
+    <paper-shadow z="1" class="main-card">
+    <h3>SNS LINKS</h3>
+            <a href="https://www.facebook.com/hanyoungbin"><paper-button><core-item icon="fa:facebook" label="Facebook"</core-item></paper-button></a>
+            <a href="https://google.com/+한영빈96"><paper-button><core-item icon="fa:google-plus" label="Google Plus"</core-item></paper-button></a>
+            <a href="https://twitter.com/sukso96100"><paper-button><core-item icon="fa:twitter" label="Twitter"</core-item></paper-button></a>
+            <a href="https://github.com/sukso96100"><paper-button><core-item icon="fa:github" label="Github"</core-item></paper-button></a>
+    </paper-shadow>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>

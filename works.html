@@ -1,10 +1,12 @@
 ---
 layout: default
+title: My Works
+permalink: /works/
 ---
 
 <core-drawer-panel id="drawerPanel">
 
-  <core-header-panel drawer flex>
+  <core-header-panel flex drawer>
       {% include drawer-common.html %}
    </core-header-panel>
 
@@ -15,8 +17,13 @@ layout: default
         <h1 id="title" class="bottom indent title">{{ page.title }}</h1>
     </core-toolbar>
     <div class="main-content">
-          {{ content }}
-    </div>
+      <section id="works-contents" horizontal layout wrap>
+       
+         
+        </section>
+     
+        
+      </div>
   </core-scroll-header-panel>
 
 </core-drawer-panel>

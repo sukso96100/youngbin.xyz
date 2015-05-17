@@ -17,7 +17,7 @@ tags: update tips tutorial shell linux ubuntu archlinux fedora
 - 자동완성 기능이 좋습니다. (명령줄 치다 옵션 같은것 기억 안날때, Tab 키 누르면 그 뒤에 나올 것들을 추천해 줍니다.)
 - 명령어 치다가 잘못된 철자 자동으로 고쳐줍니다 (Tab 키 누르면 자동으로...)
 - oh my zsh 를 같이 사용하면 더 강력합니다.(보통 oh my zsh 는 zsh 사용시 같이 사용합니다)
- -- oh my zsh 사용시 플러그인과 다양한 테마 를 사용하실 수 있습니다.
+    - oh my zsh 사용시 플러그인과 다양한 테마 를 사용하실 수 있습니다.
 
 ## zsh 설치 및 초기설정 하기.
 

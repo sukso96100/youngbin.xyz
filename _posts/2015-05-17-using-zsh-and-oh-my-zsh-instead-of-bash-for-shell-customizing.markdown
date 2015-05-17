@@ -51,8 +51,8 @@ $ echo $SHELL
 $ zsh --version
 {% endhighlight %}
 
-.zshrc 설정을 하려면 아래 명령줄을 이용하세요, 쉽게 설정 가능합니다.
-oh my zsh 설치 시 .zshrc 파일 설정을 해 주기에 반디스 하실 필요는 없습니다.
+.zshrc 설정을 하려면 아래 명령줄을 이용하세요, 쉽게 설정 가능합니다.<br>
+oh my zsh 설치 시 .zshrc 파일 설정을 해 주기에 반드시 하실 필요는 없습니다.
 {% highlight bash %}
 $ zsh /usr/share/zsh/functions/Newuser/zsh-newuser-install -f
 {% endhighlight %}

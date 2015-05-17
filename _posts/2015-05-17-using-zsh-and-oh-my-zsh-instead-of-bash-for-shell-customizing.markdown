@@ -5,7 +5,7 @@ date: "2015-05-17"
 tags: update tips tutorial shell linux ubuntu archlinux fedora
 ---
 
-보통 우리가 리눅스나 맥에서 터미널을 사용할 때 사용하게 되는 명령줄은 셸 bash 입니다.
+보통 우리가 리눅스나 맥에서 터미널을 사용할 때 사용하게 되는 명령줄은 셸 bash 입니다.<br>
 이 게시물에서는 기존에 우리가 쓰던 bash 대신 zsh 를 설치하고, zsh 에 대한 간단한 설명과 꾸미는 방법을 간단히 다뤄보고자 합니다.
 
 ## bash? zsh?
@@ -17,7 +17,7 @@ tags: update tips tutorial shell linux ubuntu archlinux fedora
 - 자동완성 기능이 좋습니다. (명령줄 치다 옵션 같은것 기억 안날때, Tab 키 누르면 그 뒤에 나올 것들을 추천해 줍니다.)
 - 명령어 치다가 잘못된 철자 자동으로 고쳐줍니다 (Tab 키 누르면 자동으로...)
 - oh my zsh 를 같이 사용하면 더 강력합니다.(보통 oh my zsh 는 zsh 사용시 같이 사용합니다)
- - oh my zsh 사용시 플러그인과 다양한 테마 를 사용하실 수 있습니다.
+ -- oh my zsh 사용시 플러그인과 다양한 테마 를 사용하실 수 있습니다.
 
 ## zsh 설치 및 초기설정 하기.
 
@@ -27,7 +27,7 @@ tags: update tips tutorial shell linux ubuntu archlinux fedora
 
 Arch Linux
 {% highlight bash %}
-$ sudo pacman -S axh
+$ sudo pacman -S zsh
 {% endhighlight %}
 
 Debian based distros(Debian, Ubuntu, Linux Mint, etc.)
@@ -45,4 +45,8 @@ $ sudo yum install zsh
 $ chsh -s /usr/local/bin/zsh
 {% endhighlight %}
 
-변경 후, 터미널을 닫고 다시 새로 열어주세요.
+변경 후, 터미널을 닫고 다시 새로 열어주세요. 아래 명령줄로 zsh 로 변경 되었는지 확인합니다.
+{% highlight bash %}
+echo $SHELL
+{% endhighlight %}
+## oh my zsh 설치

@@ -47,6 +47,19 @@ $ chsh -s /usr/local/bin/zsh
 
 변경 후, 터미널을 닫고 다시 새로 열어주세요. 아래 명령줄로 zsh 로 변경 되었는지 확인합니다.
 {% highlight bash %}
-echo $SHELL
+$ echo $SHELL
+$ zsh --version
 {% endhighlight %}
 ## oh my zsh 설치
+
+별거 없습니다. 아래 명령줄 중 하나를 실행하세요.
+
+curl 을 이용하여 설치하기
+{% highlight bash %}
+$ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+{% endhighlight %}
+
+wget 을 이용하여 설치하기
+{% highlight bash %}
+$ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+{% endhighlight %}

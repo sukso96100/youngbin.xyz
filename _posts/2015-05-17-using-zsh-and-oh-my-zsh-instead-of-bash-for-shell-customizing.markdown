@@ -17,7 +17,7 @@ tags: update tips tutorial shell linux ubuntu archlinux fedora
 - 자동완성 기능이 좋습니다. (명령줄 치다 옵션 같은것 기억 안날때, Tab 키 누르면 그 뒤에 나올 것들을 추천해 줍니다.)
 - 명령어 치다가 잘못된 철자 자동으로 고쳐줍니다 (Tab 키 누르면 자동으로...)
 - oh my zsh 를 같이 사용하면 더 강력합니다.(보통 oh my zsh 는 zsh 사용시 같이 사용합니다)
-    - oh my zsh 사용시 플러그인과 다양한 테마 를 사용하실 수 있습니다.
+    - oh my zsh 사용시 플러그인과 다양한 테마를 사용하실 수 있습니다.
 
 ## zsh 설치 및 초기설정 하기.
 
@@ -50,6 +50,13 @@ $ chsh -s /usr/local/bin/zsh
 $ echo $SHELL
 $ zsh --version
 {% endhighlight %}
+
+.zshrc 설정을 하려면 아래 명령줄을 이용하세요, 쉽게 설정 가능합니다.
+oh my zsh 설치 시 .zshrc 파일 설정을 해 주기에 반디스 하실 필요는 없습니다.
+{% highlight bash %}
+$ zsh /usr/share/zsh/functions/Newuser/zsh-newuser-install -f
+{% endhighlight %}
+
 ## oh my zsh 설치
 
 별거 없습니다. 아래 명령줄 중 하나를 실행하세요.
@@ -62,4 +69,14 @@ $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh 
 wget 을 이용하여 설치하기
 {% highlight bash %}
 $ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh
+{% endhighlight %}
+
+## 테마 적용하기
+
+테마를 적용하려면, .zshrc 수정 후 저장합니다.
+ZSH_THEME 값을 원하시는 테마 이름으로 바꾸시면 됩니다. [여기](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)에서 어떤 테마가 있는지 살펴보세요.
+{% highlight bash %}
+...
+ZSH_THEME="agnoster"
+...
 {% endhighlight %}

@@ -90,6 +90,11 @@ Download ZIP 을 눌러 폰트를 받으신 후, 압축을 풀어 해당 폴더�
 
 ## 끝!
 <img src="/resources/zsh-is-awesome.png"><br>
-전 여기까지만 알려드릴거고 나머지 다른 커스터마이징은 oh my zsh 문서를 읽어보세요.
-제가 사용중인 zsh 모습은 사진과 같습니다. 참고로 색상 팔레트는 솔라리스 사용중 입니다. gnome-terminal 의 경우 내장되어 있습니다.
-터미널 폰트는 Ubuntu Mono derivative Powerline 사용 중입니다.
+전 여기까지만 알려드릴거고 나머지 다른 커스터마이징은 oh my zsh 문서를 읽어보세요.<br>
+제가 사용중인 zsh 모습은 사진과 같습니다. 참고로 색상 팔레트는 솔라리스 사용중 입니다. gnome-terminal 의 경우 내장되어 있습니다.<br>
+터미널 폰트는 Ubuntu Mono derivative Powerline 사용 중입니다.<br>
+
+- (oh my zsh 위키)[https://github.com/robbyrussell/oh-my-zsh/wiki]
+- (oh my zsh 커스터마이징)[https://github.com/robbyrussell/oh-my-zsh/wiki/Customization]
+- (oh my zsh 웹사이트)[http://ohmyz.sh/]
+- (No, Really. Use Zsh.)[http://fendrich.se/blog/2012/09/28/no/]

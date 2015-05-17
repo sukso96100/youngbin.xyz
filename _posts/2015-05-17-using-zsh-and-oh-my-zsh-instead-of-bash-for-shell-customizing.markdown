@@ -73,10 +73,23 @@ $ wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O 
 
 ## 테마 적용하기
 
-테마를 적용하려면, .zshrc 수정 후 저장합니다.
-ZSH_THEME 값을 원하시는 테마 이름으로 바꾸시면 됩니다. [여기](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)에서 어떤 테마가 있는지 살펴보세요.
+테마를 적용하려면, .zshrc 수정 후 저장합니다.ZSH_THEME 값을 원하시는 테마 이름으로 바꾸시면 됩니다. <br>
+[여기](https://github.com/robbyrussell/oh-my-zsh/wiki/Themes)에서 어떤 테마가 있는지 살펴보세요.
+전 agnoster 테마로 설정하겠습니다.
 {% highlight bash %}
 ...
 ZSH_THEME="agnoster"
 ...
 {% endhighlight %}
+
+agnoster 를 포함한 일부 테마는 특수한 폰트를 요구합니다 (여기)[https://github.com/powerline/fonts] 에서 <br>
+Download ZIP 을 눌러 폰트를 받으신 후, 압축을 풀어 해당 폴더에서 다음과 같은 명령줄을 실행하여 폰트를 설치합니다.
+{% highlight bash %}
+./install.sh
+{% endhighlight %}
+
+## 끝!
+<img src="/resources/zsh-is-awesome.png"><br>
+전 여기까지만 알려드릴거고 나머지 다른 커스터마이징은 oh my zsh 문서를 읽어보세요.
+제가 사용중인 zsh 모습은 사진과 같습니다. 참고로 색상 팔레트는 솔라리스 사용중 입니다. gnome-terminal 의 경우 내장되어 있습니다.
+터미널 폰트는 Ubuntu Mono derivative Powerline 사용 중입니다.

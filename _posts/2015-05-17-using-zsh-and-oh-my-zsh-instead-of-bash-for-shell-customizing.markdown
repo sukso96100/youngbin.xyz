@@ -82,7 +82,7 @@ ZSH_THEME="agnoster"
 ...
 {% endhighlight %}
 
-agnoster 를 포함한 일부 테마는 특수한 폰트를 요구합니다 (여기)[https://github.com/powerline/fonts] 에서 <br>
+agnoster 를 포함한 일부 테마는 특수한 폰트를 요구합니다 [여기](https://github.com/powerline/fonts) 에서 <br>
 Download ZIP 을 눌러 폰트를 받으신 후, 압축을 풀어 해당 폴더에서 다음과 같은 명령줄을 실행하여 폰트를 설치합니다.
 {% highlight bash %}
 ./install.sh

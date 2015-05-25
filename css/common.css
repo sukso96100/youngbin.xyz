@@ -12,6 +12,13 @@ core-scroll-header-panel {
 
 .post-card{
     margin-bottom: 30px;
+    background-color: white;
+}
+
+.post-content{
+    padding: 20px;
+    margin-top: 80px;
+    background-color: white;
 }
 .card-content {
     margin-left: 30px;
@@ -48,7 +55,8 @@ background-color: white;
 }
 
 img{
-    padding: 16px;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }
 
 .main-card{
@@ -62,4 +70,8 @@ img{
     padding: 16px;
     margin: 16px;
     max-width: 400px;
+}
+
+.nopadding{
+    padding: 0px;
 }

@@ -10,11 +10,11 @@ permalink: /works/
       {% include drawer-common.html %}
    </core-header-panel>
 
-  <core-scroll-header-panel condenses keepcondensedheader main>
-    <core-toolbar class="dark-theme tall" id="toolbar" id="mainheader">
+  <core-header-panel main>
+    <core-toolbar id="toolbar" id="mainheader">
       <paper-icon-button 
         id="navicon" icon="menu" class="white"></paper-icon-button>
-        <h1 id="title" class="bottom indent title">{{ page.title }}</h1>
+        <span flex>{{ page.title }}</span>
     </core-toolbar>
     <div class="main-content">
       <section id="works-contents" horizontal layout wrap>
@@ -24,7 +24,7 @@ permalink: /works/
      
         
       </div>
-  </core-scroll-header-panel>
+  </core-header-panel>
 
 </core-drawer-panel>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>

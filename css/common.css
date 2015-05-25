@@ -33,7 +33,8 @@ core-scroll-header-panel {
 }
 
 #toolbar{
-background-color: #3F51B5;
+    background-color: #3F51B5;
+    color: white;
 }
 
 #title{

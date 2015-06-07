@@ -26,6 +26,7 @@ document.addEventListener('polymer-ready', function() {
   navicon.addEventListener('click', function() {
     drawerPanel.togglePanel();
   });
+    loadWorksData();
 });
 
 function href(url){

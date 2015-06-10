@@ -1,73 +1,55 @@
 ---
 layout: default
 ---
-<core-drawer-panel id="drawerPanel">
 
-  <core-header-panel flex drawer>
-      {% include drawer.html %}
-   </core-header-panel>
-
-  <core-header-panel mode="cover" main
-                            style="height: 100;">
-     <core-toolbar class="tall" id="toolbar" id="mainheader"
-                   style="{% if page.image %}
-                          background-image: url({{ page.image }});
-                          background-size: cover;
-                          {% endif %}">
-<!--
-         
-          <core-toolbar class="dark-theme" id="toolbar" id="mainheader"
-                   style="{% if page.image %}
-                          background-image: url({{ page.image }});
-                          background-size: cover;
-                          {% endif %}">
--->
-      
-    </core-toolbar>
-    <div class="main-content">
-        <paper-shadow  z="1"style="background-color:white;">
-            <paper-icon-button id="navicon" icon="menu"
-                               style="margin:16px;"></paper-icon-button>
-           <img class="nopadding" src="{{ page.image }}">
-         <article class="post-card post-content">
-             <p><core-icon icon="today"></core-icon> {{ page.date | date: "%Y.%m.%d" }}</p> 
+<paper-scroll-header-panel class="flex">
+    <paper-toolbar>
+        <paper-icon-button icon="arrow-back" onclick="href('/blog/')"></paper-icon-button>
+    </paper-toolbar>
+    <div>
+         {% if page.image %}
+       
+        <img class="container" src="{{ page.image }}">
+       
+         {% endif %}
+    <paper-material style="margin:24px; padding:24px;"> 
+     
+            <p><iron-icon icon="today"></iron-icon> {{ page.date | date: "%Y.%m.%d" }}</p> 
              <p style="font-size:2.5em;">{{ page.title }}</p>
-             <hr>
-             <br>
-    {{ content }}
-             
-             <!-- 구글플러스 +1 버튼 -->
+             <hr><br>
+            {{ content }}
+                     <!-- 구글플러스 +1 버튼 -->
 <!-- +1 버튼을(를) 표시하고 싶은 위치에 이 태그를 배치하세요. -->
 <br><br><div class="g-plusone"></div><br>
 <!-- Facebook 좋아요 버튼 -->
             <div class="fb-like" data-href="{{ page.baseurl }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><br><br>
-  </article>
-        </paper-shadow>
-        <paper-shadow class="post-card" z="1">
-            <card>
-                <p class="card-content"><core-icon icon="label"></core-icon> Tags</p>
-                <section id="right-margin">
+        </paper-material>
+        
+         <paper-material style="margin:24px; padding:24px;" z="1">
+           
+                <p><iron-icon icon="label"></iron-icon> Tags</p>
+                
                  {% for tag in page.tags %}
                 <a class="card-content" href="{{ site.baseurl }}/tags/#{{ tag }}"> 
                     <paper-button>{{ tag }}</paper-button> </a>
                 {% endfor %}
-                </section>
-            </card>
+              
            
-        </paper-shadow>
-        <paper-shadow class="post-card" z="1">
-            <card>
-                <section class="card-content" id="right-margin">
-                                {% include disqus.html %}
-                </section>
-            </card>
-        </paper-shadow>
+        </paper-material>
         
-    </div>
-  </core-scroll-header-panel>
-</core-drawer-panel>
+         <paper-material style="margin:24px; padding:24px;" z="1">
+            {% include disqus.html %}
+           
+        </paper-material>
+   </div>
+</paper-scroll-header-panel>
+
+
+
+
 <script src="{{ "/bower_components/jquery/dist/jquery.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/bower_components/jQuery.dotdotdot/src/js/jquery.dotdotdot.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/post.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
 {% include javascripts.html %}
+

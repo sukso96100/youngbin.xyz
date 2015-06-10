@@ -5,37 +5,35 @@ permalink: /blog/
 ---
 
 
-<core-drawer-panel id="drawerPanel">
+<paper-drawer-panel id="drawerPanel">
 
-  <core-header-panel drawer flex>
+  <paper-header-panel drawer flex>
       {% include drawer.html %}
-   </core-header-panel>
+   </paper-header-panel>
 
- <core-header-panel main>
-    <core-toolbar id="toolbar" id="mainheader">
-      <paper-icon-button 
-        id="navicon" icon="menu" class="white"></paper-icon-button>
+ <paper-scroll-header-panel main>
+    <paper-toolbar id="toolbar" id="mainheader">
+      <paper-icon-button id="navicon" icon="menu" ></paper-icon-button>
         <span flex style="color:white;">{{ page.title }}</span>
-    </core-toolbar>
+    </paper-toolbar>
       
     <div class="main-content">
          {% for post in site.posts limit:10 %}
-        <paper-shadow class="post-card" z="1">
+        <paper-material class="post-card" elavation="1">
         <card>
-        <p class="card-content"><core-icon icon="today"></core-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
+        <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
 
         <h1 class="card-content">{{ post.title }}</h1>
             <p class="card-content" id="right-margin">{{ post.content | strip_html | truncatewords:50 }}</p>
-            <paper-button onclick="href('{{ post.url | prepend: site.baseurl }}')" class="card-content"><core-icon icon="add-box"></core-icon> Read More</paper-button>
+            <paper-button onclick="href('{{ post.url | prepend: site.baseurl }}')" class="card-content"><iron-icon icon="add-box"></iron-icon> Read More</paper-button>
             <br><br>
             </card>
-        </paper-shadow>
+        </paper-material>
       
     {% endfor %}
         <br>
             <paper-button onclick="href('/archive/')" class="card-content">More Posts</paper-button>
     </div>
-  </core-header-panel>
-
-</core-drawer-panel>
+    </paper-scroll-header-panel>
+</paper-drawer-panel>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>

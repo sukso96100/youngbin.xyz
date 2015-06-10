@@ -8,14 +8,15 @@ layout: default
     </paper-toolbar>
     <div>
          {% if page.image %}
-       
-        <img class="container" src="{{ page.image }}">
-       
+        <paper-material>
+            <paper-ripple onclick="href('#TITLE')"></paper-ripple>
+         <img class="container" src="{{ page.image }}">
+            </paper-material>
          {% endif %}
     <paper-material style="margin:24px; padding:24px;"> 
      
             <p><iron-icon icon="today"></iron-icon> {{ page.date | date: "%Y.%m.%d" }}</p> 
-             <p style="font-size:2.5em;">{{ page.title }}</p>
+             <p id="TITLE" style="font-size:2.5em;">{{ page.title }}</p>
              <hr><br>
             {{ content }}
                      <!-- 구글플러스 +1 버튼 -->

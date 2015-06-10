@@ -4,27 +4,20 @@ title: Archive
 permalink: /archive/
 ---
 
-<core-drawer-panel id="drawerPanel">
-
-  <core-header-panel flex drawer>
-      {% include drawer.html %}
-   </core-header-panel>
-
- <core-header-panel main>
-    <core-toolbar id="toolbar" id="mainheader">
-      <paper-icon-button 
-        id="navicon" icon="menu" class="white"></paper-icon-button>
+ <paper-scroll-header-panel class="flex">
+    <paper-toolbar id="toolbar" id="mainheader">
+      <paper-icon-button onclick="href('/blog/')" icon="arrow-back" ></paper-icon-button>
         <span flex style="color:white;">{{ page.title }}</span>
-    </core-toolbar>
-    <div class="main-content">
+    </paper-toolbar>
       
-     {% for post in site.posts  %}
+    <div class="main-content">
+      {% for post in site.posts  %}
 
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
     {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
     {% if forloop.first %}
-         <paper-shadow class="post-card" z="1">
+         <paper-material class="post-card" z="1">
              <card>
     <h2 class="card-content" id="{{ this_year }}-ref">{{this_year}}</h2><br>
     <!-- <ul> -->
@@ -33,25 +26,23 @@ permalink: /archive/
       <br><small>{{ post.date | date: "%Y/%m/%d" }}</small></h4></li>
     {% if forloop.last %}
                    </card>
-              </paper-shadow>
+              </paper-material>
     {% else %}
         {% if this_year != next_year %}
                   </card>
-              </paper-shadow>
-         <paper-shadow class="post-card" z="1">
+              </paper-material>
+         <paper-material class="post-card" z="1">
              <card>
         <h2 class="card-content" id="{{ next_year }}-ref">{{next_year}}</h2>
         {% endif %}
     {% endif %}
              
 {% endfor %}
-        
-    
-  </core-header-panel>
+    </div>
+    </paper-scroll-header-panel>
 
-</core-drawer-panel>
+
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
-
 
 
 

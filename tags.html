@@ -4,40 +4,24 @@ title: Tags
 permalink: /tags/
 ---
 
-<core-drawer-panel id="drawerPanel">
-
-  <core-header-panel flex drawer>
-      {% include drawer.html %}
-   </core-header-panel>
-
-  <core-header-panel main>
-    <core-toolbar id="toolbar" id="mainheader">
-      <paper-icon-button 
-        id="navicon" icon="menu" class="white"></paper-icon-button>
+ <paper-scroll-header-panel class="flex">
+    <paper-toolbar id="toolbar" id="mainheader">
+      <paper-icon-button onclick="href('/blog/')" icon="arrow-back" ></paper-icon-button>
         <span flex style="color:white;">{{ page.title }}</span>
-    </core-toolbar>
-    <div class="main-content">
+    </paper-toolbar>
       
-        <paper-shadow class="post-card" z="1">
-            <card>
-                <p class="card-content"><core-icon icon="label"></core-icon> All Tags</p>
-                <section id="right-margin">
+    <div class="main-content">
+       <paper-material style="margin:24px; padding:24px;" z="1">
+
+                <h3><iron-icon icon="label"></iron-icon> All Tags</h3>
                 {% for tag in site.tags %}
-                <a class="card-content" href="#{{ tag | first }}" > 
-                    <paper-button>{{ tag | first }}</paper-button> </a>
+                    <paper-button onclick="href('#{{ tag | first }}')">{{ tag | first }}</paper-button>
                 {% endfor %}
-                </section>
-            </card>
-           
-        </paper-shadow>
+        </paper-material>
         
-        
-    
-    
-{% for tag in site.tags %}
-<paper-shadow class="post-card" z="1">
-            <card>
-  <p class="card-content" id="{{ tag | first }}"><core-icon icon="label"></core-icon> {{ tag | first }}</p>
+        {% for tag in site.tags %}
+<paper-material style="margin:24px; padding:24px;" z="1">
+  <p class="card-content" id="{{ tag | first }}"><iron-icon icon="label"></iron-icon> {{ tag | first }}</p>
     {% for posts in tag %}
       {% for post in posts %}
 <a href="{{ post.url }}">
@@ -45,12 +29,14 @@ permalink: /tags/
 </a>
       {% endfor %}
     {% endfor %}
- </card>
-        </paper-shadow>
+        </paper-material>
 {% endfor %}
-  </core-header-panel>
+    </div>
+    </paper-scroll-header-panel>
 
-</core-drawer-panel>
+
+
+
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
 
 

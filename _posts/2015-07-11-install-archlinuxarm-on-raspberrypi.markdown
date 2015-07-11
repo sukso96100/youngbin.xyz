@@ -15,7 +15,7 @@ nodejs, npm 패키지 모두 있었지만, 설치해도 제대로 작동하지 �
 그 방법을 이 글에서 소개하고자 합니다. 참고로 이 글에서는 라즈베리파이 2 가 아닌
 기존버전의 라즈베라파이 모델 B+ 에 설치하는 법을 다룹니다.(제가 가진것이 모델 B+라... ㅎㅎㅎ)
 
-먼저 리눅스 베포판이 설치된 컴퓨터(또느 노트북) 과 sd 카드를 컴퓨터와 연결할 도구를 준비하시고.
+먼저 리눅스 베포판이 설치된 컴퓨터(또는 노트북) 과 sd 카드를 컴퓨터와 연결할 도구를 준비하시고.
 컴퓨터에 sd 카드를 연결합니다.
 
 터미널을 열고, 루트 계정으로 전환합시다. 대부분의 명령을 실행할 때, 루트권한이 필요해서 그렇습니다.
@@ -23,13 +23,13 @@ nodejs, npm 패키지 모두 있었지만, 설치해도 제대로 작동하지 �
 
 {% highlight bash %}
 sudo su
-{% endhighlight % }
+{% endhighlight %}
 
 fdisk 를 이용하여 파티션 작업을 합니다. sd카드가 마운트 된 위치를 확인하신 후,
 fdisk 를 실행합니다. 저의 경우에는 sd카드가 /dev/sdb 에 마운트 되어 있어, 다음과 같은 명령을 실행했습니다.
 {% highlight bash %}
 fdisk /dev/sdb
-{% endhighlight % }
+{% endhighlight %}
 
 이제 다음 사항을 그대로 따라하세요!
 
@@ -47,29 +47,29 @@ fdisk /dev/sdb
 mkfs.vfat /dev/sdb1
 mkdir boot
 mount /dev/sdb1 boot
-{% endhighlight %
+{% endhighlight %}
 다음으로, ext4 파일 시스템을 만들고 마운트 합니다. 아래 명령줄들을 실행하세요.
 {% highlight bash %}
 mkfs.ext4 /dev/sdb2
 mkdir root
 mount /dev/sdb2 root
-{% endhighlight % }
+{% endhighlight %}
 
 루트 파일시스템을 다운로드 받아 sdb2 를 마운트한 root 폴더에 압축을 풀어줍시다.
 {% highlight bash %}
 wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.tar.gz
 bsdtar -xpf ArchLinuxARM-rpi-latest.tar.gz -C root
 sync
-{% endhighlight % }
+{% endhighlight %}
 
 boot 파일들을 첫번째 파티션을 마운트한 boot 폴더로 옮깁니다.
 {% highlight bash %}
 mv root/boot/* boot
-{% endhighlight % }
+{% endhighlight %}
 설치가 끝났습니다. 이제 마운트를 해제하세요.
 {% highlight bash %}
 umount boot root
-{% endhighlight % }
+{% endhighlight %}
 
 만들어둔 폴더들과 다운받은 파일은 불필요 하신 경우 지줘줍시다.
 {% highlight bash %}

@@ -77,3 +77,5 @@ rm -rf boot
 rm -rf root
 rm ArchLinuxARM-rpi-latest.tar.gz
 ```
+다 되었습니다. 이제 sd카드를 라즈베리파이에 삽입하시고, 부팅하셔서 사용하세요!
+ssh나 시리얼로 연결하실 수 있습니다. 기본으로 있는 계정은 root 이며, 기본 비밀번호도 root 입니다.

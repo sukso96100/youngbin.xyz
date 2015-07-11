@@ -65,7 +65,7 @@ sync
 boot 파일들을 첫번째 파티션을 마운트한 boot 폴더로 옮깁니다.
 {% highlight bash %}
 mv root/boot/* boot
-{% endhighlight %
+{% endhighlight % }
 설치가 끝났습니다. 이제 마운트를 해제하세요.
 {% highlight bash %}
 umount boot root

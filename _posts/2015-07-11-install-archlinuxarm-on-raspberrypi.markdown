@@ -23,13 +23,13 @@ nodejs, npm 패키지 모두 있었지만, 설치해도 제대로 작동하지 �
 
 {% highlight bash %}
 sudo su
-{% endhighlight %
+{% endhighlight % }
 
 fdisk 를 이용하여 파티션 작업을 합니다. sd카드가 마운트 된 위치를 확인하신 후,
 fdisk 를 실행합니다. 저의 경우에는 sd카드가 /dev/sdb 에 마운트 되어 있어, 다음과 같은 명령을 실행했습니다.
 {% highlight bash %}
 fdisk /dev/sdb
-{% endhighlight %
+{% endhighlight % }
 
 이제 다음 사항을 그대로 따라하세요!
 
@@ -53,14 +53,14 @@ mount /dev/sdb1 boot
 mkfs.ext4 /dev/sdb2
 mkdir root
 mount /dev/sdb2 root
-{% endhighlight %
+{% endhighlight % }
 
 루트 파일시스템을 다운로드 받아 sdb2 를 마운트한 root 폴더에 압축을 풀어줍시다.
 {% highlight bash %}
 wget http://archlinuxarm.org/os/ArchLinuxARM-rpi-latest.tar.gz
 bsdtar -xpf ArchLinuxARM-rpi-latest.tar.gz -C root
 sync
-{% endhighlight %
+{% endhighlight % }
 
 boot 파일들을 첫번째 파티션을 마운트한 boot 폴더로 옮깁니다.
 {% highlight bash %}
@@ -69,7 +69,7 @@ mv root/boot/* boot
 설치가 끝났습니다. 이제 마운트를 해제하세요.
 {% highlight bash %}
 umount boot root
-{% endhighlight %
+{% endhighlight % }
 
 만들어둔 폴더들과 다운받은 파일은 불필요 하신 경우 지줘줍시다.
 {% highlight bash %}

@@ -29,7 +29,7 @@ permalink: /blog/
    <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp" style="max-width:1300px;">
            <div class="mdl-card__media mdl-color-text--grey-50"
            {% if post.image %}style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('{{ post.image }}'); height:200px;"{% endif %}>
-             <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>
+             <h1 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h1>
            </div>
            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
              {{ post.content | strip_html | truncatewords:50 }}

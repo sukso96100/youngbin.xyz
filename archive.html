@@ -4,12 +4,15 @@ title: Archive
 permalink: /archive/
 ---
 
+
+
+
  <paper-scroll-header-panel class="flex">
     <paper-toolbar id="toolbar" id="mainheader">
       <paper-icon-button onclick="href('/blog/')" icon="arrow-back" ></paper-icon-button>
         <span flex style="color:white;">{{ page.title }}</span>
     </paper-toolbar>
-      
+
     <div class="main-content">
       {% for post in site.posts  %}
 
@@ -36,16 +39,10 @@ permalink: /archive/
         <h2 class="card-content" id="{{ next_year }}-ref">{{next_year}}</h2>
         {% endif %}
     {% endif %}
-             
+
 {% endfor %}
     </div>
     </paper-scroll-header-panel>
 
-
+<script src="{{ "/js/material.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
-
-
-
-
-
-

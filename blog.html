@@ -23,10 +23,10 @@ permalink: /blog/
     </nav>
   </div>
   <main class="mdl-layout__content">
-    <div class="page-content" style="padding:64px;">
+    <div class="page-content" style="padding:32px;" align="center">
     {% for post in site.posts limit:15 %}
 
-   <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+   <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp" style="max-width:1300px;">
            <div class="mdl-card__media mdl-color-text--grey-50"
            {% if post.image %}style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('{{ post.image }}'); height:200px;"{% endif %}>
              <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>

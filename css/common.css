@@ -67,8 +67,6 @@ img{
     background-color: white;
 }
 
-
-
 .nopadding{
     padding: 0px;
 }
@@ -104,7 +102,7 @@ img{
 
 .postlayout-content {
   border-radius: 2px;
-  padding: 80px 56px;
+  padding: 32px;
   margin-bottom: 80px;
 }
 

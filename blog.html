@@ -4,36 +4,47 @@ title: Recent Posts
 permalink: /blog/
 ---
 
-
-<paper-drawer-panel id="drawerPanel">
-
-  <paper-header-panel drawer flex>
-      {% include drawer.html %}
-   </paper-header-panel>
-
- <paper-scroll-header-panel main>
-    <paper-toolbar id="toolbar" id="mainheader">
-      <paper-icon-button id="navicon" icon="menu" ></paper-icon-button>
-        <span flex style="color:white;">{{ page.title }}</span>
-    </paper-toolbar>
-      
-    <div class="main-content">
-         {% for post in site.posts limit:10 %}
-        <paper-material class="post-card" elavation="1">
-        <card>
-        <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
-
-        <h1 class="card-content">{{ post.title }}</h1>
-            <p class="card-content" id="right-margin">{{ post.content | strip_html | truncatewords:50 }}</p>
-            <paper-button onclick="href('{{ post.url | prepend: site.baseurl }}')" class="card-content"><iron-icon icon="add-box"></iron-icon> Read More</paper-button>
-            <br><br>
-            </card>
-        </paper-material>
-      
-    {% endfor %}
-        <br>
-            <paper-button onclick="href('/archive/')" class="card-content">More Posts</paper-button>
+<!-- Always shows a header, even in smaller screens. -->
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+      <!-- Title -->
+      <span class="mdl-layout-title">Youngbin Han's Blog</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
     </div>
-    </paper-scroll-header-panel>
-</paper-drawer-panel>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Blog</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" href="/">Home</a>
+      <a class="mdl-navigation__link" href="/archive/">Archive</a>
+      <a class="mdl-navigation__link" href="/tags/">Tags</a>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+    <div class="page-content" style="padding:64px;">
+    {% for post in site.posts limit:15 %}
+
+   <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+           <div class="mdl-card__media mdl-color-text--grey-50"
+           {% if post.image %}style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('{{ post.image }}'); height:200px;"{% endif %}>
+             <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>
+           </div>
+           <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+             {{ post.content | strip_html | truncatewords:50 }}
+           </div>
+           <div>
+               <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
+             </div>
+         </div>
+         <br>
+{% endfor %}
+<paper-button onclick="href('/archive/')" class="card-content">More Posts</paper-button>
+</div>
+  </main>
+</div>
+
+
+<script src="{{ "/js/material.min.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>

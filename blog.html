@@ -25,19 +25,18 @@ permalink: /blog/
   <main class="mdl-layout__content">
     <div class="page-content" style="padding:32px;" align="center">
     {% for post in site.posts limit:15 %}
-
-   <div class="mdl-card mdl-cell mdl-cell--12-col mdl-shadow--4dp" style="max-width:1300px;">
-           <div class="mdl-card__media mdl-color-text--grey-50"
-           {% if post.image %}style="background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('{{ post.image }}'); height:200px;"{% endif %}>
-             <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>
-           </div>
-           <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
-             {{ post.content | strip_html | truncatewords:50 }}
-           </div>
-           <div>
-               <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
-             </div>
-         </div>
+    <div class="mdl-card mdl-shadow--2dp demo-card-image mdl-cell mdl-cell--12-col mdl-shadow--4dp"
+     style="{% if post.image %}background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url('{{ post.image }}');{% endif %}
+     background-color: #5F7D8B; max-width:1300px;">
+      <div class="mdl-card__title mdl-card--expand"></div>
+      <div class="mdl-card__actions">
+        <span class="demo-card-image__filename" style="color:white;">
+        <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>
+        <p>{{ post.content | strip_html | truncatewords:50 }}</p>
+        <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
+        </span>
+      </div>
+    </div>
          <br>
 {% endfor %}
 <paper-button onclick="href('/archive/')" class="card-content">More Posts</paper-button>

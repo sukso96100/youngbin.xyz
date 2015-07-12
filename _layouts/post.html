@@ -2,49 +2,51 @@
 layout: default
 ---
 
-<paper-scroll-header-panel class="flex">
-    <paper-toolbar>
-        <paper-icon-button icon="arrow-back" onclick="href('/blog/')"></paper-icon-button>
-    </paper-toolbar>
-    <div>
-         {% if page.image %}
-        <paper-material>
-            <paper-ripple onclick="href('#TITLE')"></paper-ripple>
-         <img class="container" src="{{ page.image }}">
-            </paper-material>
-         {% endif %}
-    <paper-material style="margin:24px; padding:24px;"> 
-     
-            <p><iron-icon icon="today"></iron-icon> {{ page.date | date: "%Y.%m.%d" }}</p> 
-             <p id="TITLE" style="font-size:2.5em;">{{ page.title }}</p>
-             <hr><br>
-            {{ content }}
-                     <!-- 구글플러스 +1 버튼 -->
-<!-- +1 버튼을(를) 표시하고 싶은 위치에 이 태그를 배치하세요. -->
-<br><br><div class="g-plusone"></div><br>
-<!-- Facebook 좋아요 버튼 -->
-            <div class="fb-like" data-href="{{ page.baseurl }}" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div><br><br>
-        </paper-material>
-        
-         <paper-material style="margin:24px; padding:24px;" z="1">
-           
-                <p><iron-icon icon="label"></iron-icon> Tags</p>
-                
-                 {% for tag in page.tags %}
-                <a class="card-content" href="{{ site.baseurl }}/tags/#{{ tag }}"> 
-                    <paper-button>{{ tag }}</paper-button> </a>
-                {% endfor %}
-              
-           
-        </paper-material>
-        
-         <paper-material style="margin:24px; padding:24px;" z="1">
-            {% include disqus.html %}
-           
-        </paper-material>
-   </div>
-</paper-scroll-header-panel>
 
+<!-- Always shows a header, even in smaller screens. -->
+   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+     <header class="mdl-layout__header">
+       <div class="mdl-layout__header-row">
+         <!-- Title -->
+         <span class="mdl-layout-title">Youngbin Han's Blog</span>
+         <!-- Add spacer, to align navigation to the right -->
+         <div class="mdl-layout-spacer"></div>
+       </div>
+     </header>
+     <div class="mdl-layout__drawer">
+       <span class="mdl-layout-title">Blog</span>
+       <nav class="mdl-navigation">
+         <a class="mdl-navigation__link" href="/blog/">Posts</a>
+         <a class="mdl-navigation__link" href="/archive/">Archive</a>
+         <a class="mdl-navigation__link" href="/tags/">Tags</a>
+       </nav>
+     </div>
+     <main class="mdl-layout__content">
+       <div class="page-content"><!-- Your content goes here -->
+      <div class="demo-ribbon"
+       {% if page.image %}style="background: url('{{ page.image }}') center / cover;"{% endif %}></div>
+
+     <main class="demo-main mdl-layout__content" style="width: 100%;">
+       <div class="demo-container mdl-grid">
+         <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+         <div class="demo-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+
+           <p><iron-icon icon="today"></iron-icon> {{ page.date | date: "%Y.%m.%d" }}</p>
+            <h1 id="TITLE">{{ page.title }}</h1>
+            <hr><br>
+            {{ content }}
+            <br>
+            {% for tag in page.tags %}
+           <a class="card-content" href="{{ site.baseurl }}/tags/#{{ tag }}">
+               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">{{ tag }}</button> </a>
+           {% endfor %}
+           <br>
+           {% include disqus.html %}
+
+         </div>
+       </div>
+     </main>
+   </div>
 
 
 
@@ -52,5 +54,5 @@ layout: default
 <script src="{{ "/bower_components/jQuery.dotdotdot/src/js/jquery.dotdotdot.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/post.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/material.min.js" | prepend: site.baseurl }}"></script>
 {% include javascripts.html %}
-

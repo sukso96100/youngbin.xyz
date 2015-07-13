@@ -11,6 +11,7 @@ permalink: /archive/
       <span class="mdl-layout-title">Youngbin Han's Blog</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
+       <a href="#top" style="color: inherit;"><i class="material-icons">vertical_align_top</i></a>
     </div>
   </header>
   <div class="mdl-layout__drawer">
@@ -23,6 +24,7 @@ permalink: /archive/
   </div>
   <main class="mdl-layout__content">
     <div class="page-content" style="padding:32px;" align="center">
+      <section id="top"></section>
       {% for post in site.posts  %}
 
     {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}

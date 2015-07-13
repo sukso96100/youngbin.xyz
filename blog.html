@@ -35,7 +35,7 @@ permalink: /blog/
         <span class="demo-card-image__filename" style="color:white;">
         <h3 style="padding: 16px;"><a href="{{ post.url | prepend: site.baseurl }}" style="color:white;">{{ post.title }}</a></h3>
         <p>{{ post.content | strip_html | truncatewords:50 }}</p>
-        <p class="card-content"><iron-icon icon="today"></iron-icon> {{ post.date | date: "%Y.%m.%d" }}</p>
+        <table><tr><td><i class="material-icons">today</i></td><td>{{ post.date | date: "%Y.%m.%d" }}</td></tr></table>
         </span>
       </div>
     </div>

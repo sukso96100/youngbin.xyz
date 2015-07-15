@@ -67,6 +67,6 @@ sudo python relay.py
 {% endhighlight %}
 
 잘 작동하나요? 아래 영상처럼 작동한다면, 잘 작동하는 겁니다.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/TvI9tKXkbiQ" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TvI9tKXkbiQ" frameborder="0" allowfullscreen> </iframe>
 
 여기까지 릴레이 모듈 테스트 였습니다. 다음 포스트에서 나머지 내용들을 다루겠습니다.

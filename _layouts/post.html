@@ -48,7 +48,7 @@ layout: default
             <br>
             {% for tag in page.tags %}
            <a class="card-content" href="{{ site.baseurl }}/tags/#{{ tag }}">
-               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">{{ tag }}</button> </a>
+               <button class="mdl-button mdl-js-button mdl-js-ripple-effect">#{{ tag }}</button> </a>
            {% endfor %}
            <br>
            {% include disqus.html %}

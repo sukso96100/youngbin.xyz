@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "숭실대학교 모의전형 체험(SSU 미래인재 Week) 참가 후기"
-date: 2015-07-25
+date: 2015-07-28
 tags: interview review ssu soongsil_university note university_enterance
 image: /resources/ssuweek.jpg
 ---

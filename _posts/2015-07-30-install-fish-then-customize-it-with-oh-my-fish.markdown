@@ -62,7 +62,7 @@ chsh -s /usr/bin/fish
 
 ### Oh My Fish 로 커스터마이징 하기
 
-설치는 명령줄 한나면 됩니다.
+설치는 명령줄 하나면 됩니다.
 {% highlight bash %}
 curl -L https://github.com/oh-my-fish/oh-my-fish/raw/master/tools/install.fish | fish
 {% endhighlight %}

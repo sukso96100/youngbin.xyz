@@ -3,7 +3,7 @@ layout: post
 title: "Fish 셸 설치하고, Oh My Fish 로 커스터마이징 하기"
 date: 2015-07-30
 tags: fish_shell oh_my_fish update tips tutorial shell linux ubuntu archlinux fedora
-image: /resources/ssuweek.jpg
+image: /resources/fish-shell.png
 ---
 
 필자는 기본적으로 리눅스 배포판에 있는 bash 를 사용하다가, 전에 한번 zsh 로 갈아탔고.
@@ -90,3 +90,12 @@ theme agnoster
 
  더 많은 테마와 플러그인은 [여기](https://github.com/oh-my-fish?page=1) 에서 찾으실 수 있습니다.
  설정 파일에 사용할 테마나 플러그인을``` Theme '테마이름' Plugin '플러그인 이름'```형식으로 정의하시면 됩니다.
+
+여기까지 작성하도록 하겠습니다. 자세한 사항은 아래 링크들을 참조하시면 좋을 것 같습니다.
+<img src="/resources/awesome-fish.png"><br>
+
+- [fish shell](http://fishshell.com/)
+- [fish shell 문서](http://fishshell.com/docs/current/)
+- [Oh My Fish - GitHub 저장소](https://github.com/oh-my-fish/oh-my-fish)
+- [Oh My Fish - 플러그인 및 테마](https://github.com/oh-my-fish)
+- [Oh My Fish Wiki](https://github.com/oh-my-fish/oh-my-fish/wiki)

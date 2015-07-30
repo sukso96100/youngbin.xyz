@@ -2,7 +2,7 @@
 layout: post
 title: "zsh 와 oh my zsh 를 이용해 셸 꾸미기(대신 bash 버리기)"
 date: "2015-05-17"
-tags: update tips tutorial shell linux ubuntu archlinux fedora zsh
+tags: update tips tutorial shell linux ubuntu archlinux fedora zsh oh_my_zsh
 image : /resources/zsh-is-awesome.png
 ---
 

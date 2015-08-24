@@ -3,11 +3,11 @@ layout: post
 title: "브리츠 BR-3000 Mini 블루투스 스피커 사용 후기"
 date: 2015-08-24
 tags: review gadget ssu soongsil_university
-image: /resources/SAM_1344.jpg
+image: /resources/SAM_1344.JPG
 ---
 
-<img src="/resources/IMG_20150824_174221.jpg"><br>
-<img src="/resources/IMG_20150824_174239jpg"><br>
+<img src="/resources/11873429_983924731659836_6789396665988454229_n.jpg"><br>
+<img src="/resources/11028023_983924754993167_2806264849500715027_n.jpg"><br>
 <img src="/resources/IMG_20150824_194221.jpg"><br>
 <img src="/resources/IMG_20150824_194607.jpg"><br>
 <img src="/resources/Screenshot_2015-08-24-20-23-16.png"><br>

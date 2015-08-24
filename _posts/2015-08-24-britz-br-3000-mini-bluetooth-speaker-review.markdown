@@ -11,6 +11,7 @@ image: /resources/SAM_1344.JPG
 <img src="/resources/IMG_20150824_194221.jpg"><br>
 <img src="/resources/IMG_20150824_194607.jpg"><br>
 <img src="/resources/Screenshot_2015-08-24-20-23-16.png"><br>
+<img src="/resources/SAM_1344.JPG"><br>
 
 오늘 학교 수업 끝나고 폰 받아 켜보니(저희반은 폰을 걷습니다) 웬 택배가 집에 와있다고 문자가 와 있더군요.<br>
 뭔가 했더니. 저번에 숭실대학교 모의전형 후기 쓰고 이벤트 당첨되서 온 상품이였네요.ㅎㅎㅎ<br>

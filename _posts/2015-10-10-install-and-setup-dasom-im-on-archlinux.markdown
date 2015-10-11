@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아치리눅스에서 다솜 입력기 설치 및 설정하여 사용하기"
-date: 2012-10-10
+date: 2015-10-10
 tags: korean-input linux archlinux dasom-im
 ---
 어제(10.09) 다솜 입력기 정식 버전이 나왔습니다. 그래서 아치 리눅스에서 사용하려고, 제가 패키징 하여 AUR에 올렸습니다.

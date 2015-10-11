@@ -53,9 +53,9 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMMod
 이제, 로그아웃 후 다시 로그인 하시면, 다솜 입력기를 사용하실 수 있습니다,
 
 ### 참고자료 & 관련자료
--[다솜 입력기 소스코드](https://github.com/cogniti/dasom)
--[다솜 입력기 AUR]{https://aur.archlinux.org/packages/dasom-git/}
--[아치 위키 - Korean input (한국어)](https://wiki.archlinux.org/index.php/Korean_input_%28%ED%95%9C%EA%B5%AD%EC%96%B4%29)
--[AUR - libindicator](https://aur.archlinux.org/pkgbase/libindicator/)
--[Arch Linux Forums - Fcitx not work in Gnome 3.16](https://bbs.archlinux.org/viewtopic.php?id=196069)
--[우분투 한국 커뮤니티 포럼 - 다솜 입력기 1.0 출시합니다.](https://forum.ubuntu-kr.org/viewtopic.php?f=6&t=28301)
+- [다솜 입력기 소스코드](https://github.com/cogniti/dasom)
+- [다솜 입력기 AUR](https://aur.archlinux.org/packages/dasom-git/)
+- [아치 위키 - Korean input (한국어)](https://wiki.archlinux.org/index.php/Korean_input_%28%ED%95%9C%EA%B5%AD%EC%96%B4%29)
+- [AUR - libindicator](https://aur.archlinux.org/pkgbase/libindicator/)
+- [Arch Linux Forums - Fcitx not work in Gnome 3.16](https://bbs.archlinux.org/viewtopic.php?id=196069)
+- [우분투 한국 커뮤니티 포럼 - 다솜 입력기 1.0 출시합니다.](https://forum.ubuntu-kr.org/viewtopic.php?f=6&t=28301)

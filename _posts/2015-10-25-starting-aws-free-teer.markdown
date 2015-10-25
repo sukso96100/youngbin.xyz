@@ -47,6 +47,7 @@ VISA 또는 MasterCard 브랟드의 해외 결제가 가능한 신용카드 또�
 <img src="/blogimgs/aws7.png"><br>
 
 참고자료
+
  - [AWS 프리티어](https://aws.amazon.com/ko/free/)
  - [AWS 요금](https://aws.amazon.com/ko/pricing/?nc2=h_ql)
  - [AWS 프리티어 FAQ](https://aws.amazon.com/ko/free/faqs/)

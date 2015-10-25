@@ -26,5 +26,5 @@ sudo apt-get install budgie-desktop
 참고로, Budgie Desktop은 아직 기능도 많이 부족하고, 불안정하며. 현재 개발되고 있습니다.<br>
 메인 데스크탑 환경으로 사용하시기에는 불편하신 점이 많으실 수도 있습니다.<br><br>
 
-<img class="image-wrapper" src="{{ site.url }}/resources/menu_51.png"><br>
+<img class="image-wrapper" src="{{ site.url }}/blogimgs/menu_51.png"><br>
 이미지 출처 - https://evolve-os.com/release_images/menu_51.png

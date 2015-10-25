@@ -27,13 +27,13 @@ http://www.mediafire.com/?ylba94csxxbjrp1<br>
 <br>
 (위 URL들은 더이상 사용이 불가합니다.)<br>
 
-  ![Device Info]({{ site.url }}/resources/SC20110818-101119.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101135.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101155.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101224.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101251.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101339.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101359.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101423.png)
-![Device Info]({{ site.url }}/resources/SC20110818-101620.png)
-![Device Info]({{ site.url }}/resources/SC20110818-102941.png)
+  ![Device Info]({{ site.url }}/blogimgs/SC20110818-101119.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101135.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101155.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101224.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101251.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101339.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101359.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101423.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-101620.png)
+![Device Info]({{ site.url }}/blogimgs/SC20110818-102941.png)

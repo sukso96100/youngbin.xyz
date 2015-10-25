@@ -28,9 +28,9 @@ rw-r--r--로 설정하시면 됩니다,<br>
 <br>
 허락 안받고 퍼온 사진이라 ㅇㅅㅇ 퍼온 부분은 범생군님께서 삭제 요청하시면 그 부분만 삭제하겟습니다.(범생군님 허락없이 퍼가서 죄송합니다;;;)<br>
 <br>
-![Img]({{ site.url }}/resources/lock1_qotkd1481.png)
-![Img]({{ site.url }}/resources/myf2_qotkd1481.png)
-![Img]({{ site.url }}/resources/SC20111025-180718.jpg)
-![Img]({{ site.url }}/resources/SC20111025-180750.jpg)
-![Img]({{ site.url }}/resources/SC20111025-180823.jpg)
-![Img]({{ site.url }}/resources/snap20111018_002649_qotkd1481.png)
+![Img]({{ site.url }}/blogimgs/lock1_qotkd1481.png)
+![Img]({{ site.url }}/blogimgs/myf2_qotkd1481.png)
+![Img]({{ site.url }}/blogimgs/SC20111025-180718.jpg)
+![Img]({{ site.url }}/blogimgs/SC20111025-180750.jpg)
+![Img]({{ site.url }}/blogimgs/SC20111025-180823.jpg)
+![Img]({{ site.url }}/blogimgs/snap20111018_002649_qotkd1481.png)

@@ -20,8 +20,8 @@ tags: migrated(old) android kernel development yp-gb1
 
 YP-GB1 KRKPC펌웨어 사용자분들만 이 커널 사용 가능합니다<br>
 <br><br>
-![Img]({{ site.url }}/resources/-956075117.png)
-![Img]({{ site.url }}/resources/-959769201.png)
+![Img]({{ site.url }}/blogimgs/-956075117.png)
+![Img]({{ site.url }}/blogimgs/-959769201.png)
 <br>
 
 다운로드 링크(2012/07/09 일자 빌드)<br>

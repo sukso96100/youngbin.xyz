@@ -4,7 +4,7 @@ title: "Assist Screen 알파 테스트에 참여해 보세요."
 date: 2014-08-16
 tags: android app update test assist_screen
 ---
-<img class="image-wrapper" src="{{ site.url }}/resources/assistscreen_website.png"><br>
+<img class="image-wrapper" src="{{ site.url }}/blogimgs/assistscreen_website.png"><br>
 
 안녕하세요, 몇주 전(?) Assist Screen 이라는 안드로이드 런처를 하나 개발하였습니다.<br>
 보통 런처가 홈화면에 아이콘과 위젯을 배치하는대 초점을 맟춘다면, 이 런처는 홈 화면을 단순화하고, <br>

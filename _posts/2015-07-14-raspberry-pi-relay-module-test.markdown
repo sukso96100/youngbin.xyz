@@ -3,7 +3,7 @@ layout: post
 title: "라즈베리파이 모델B+ 릴레이 모듈 테스트."
 date: 2015-07-14
 tags: raspberry-pi linux tutorial tips
-image: /resources/connect_relay_to_rpi_with_jumper.png
+image: /blogimgs/connect_relay_to_rpi_with_jumper.png
 ---
 최근 가지고 있던 라즈베리파이에, 릴레이 모듈을 연결해서 뭐 하나 만들어 보는 중 입니다.
 라즈베리파이와 릴레이 모듈을 연결하여, 방에 있는 가전제품 전원은 제어해 보려구요.
@@ -18,7 +18,7 @@ image: /resources/connect_relay_to_rpi_with_jumper.png
 
 아래 그림을 참고해서 릴레이 모듈을 점퍼 케이블을 이용해 연결해 봅시다.
 그림에는 파이와 릴레이 사이 연결할 부분만 표시해 두었습니다.
-<img src="/resources/connect_relay_to_rpi_with_jumper.png"><br>
+<img src="/blogimgs/connect_relay_to_rpi_with_jumper.png"><br>
 
 연결 하셨스면. 이제 테스트를 한번 해 봅시다.
 아래 Python 스크립트로 테스트 해 봅시다. 단순히 릴레이 모듈 각 체널 스위치 켜고 끄는 스크립트 입니다.

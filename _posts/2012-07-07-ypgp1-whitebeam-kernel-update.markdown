@@ -16,5 +16,5 @@ http://sourceforge.net/projects/wbcypgb1/files/WBK_YP-GB1_GB_20120706.tar/downlo
 커널 소스코드(Github)
 https://github.com/sukso96100/WhiteBeam-Kernel-For-YP-GB1 <br>
 <br>
-![Img]({{ site.url }}/resources/SC20120707-133022.png)
+![Img]({{ site.url }}/blogimgs/SC20120707-133022.png)
 

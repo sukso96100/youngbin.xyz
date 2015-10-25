@@ -30,12 +30,12 @@ http://www.mediafire.com/?b2k1na5167favma<br>
 (9/6 갤칠용 다운로드 링크 변경했습니다,<br>
 설정어플 오류가 있다는 제보가 있어 급히 수정하고 다시 링크 올립니다.)<br>
 (위 URL들은 더이상 이용이 불가합니다, 참고하세요)<br>
-![Img]({{ site.url }}/resources/SC20110905-235139.png)
-![Img]({{ site.url }}/resources/SC20110905-235150.png)
-![Img]({{ site.url }}/resources/SC20110905-235317.png)
-![Img]({{ site.url }}/resources/SC20110905-235346.png)
-![Img]({{ site.url }}/resources/SC20110905-235430.png)
-![Img]({{ site.url }}/resources/SC20110905-235445.png)
-![Img]({{ site.url }}/resources/SC20110906-000049.png)
-![Img]({{ site.url }}/resources/SC20110906-000228.png)
-![Img]({{ site.url }}/resources/SC20110906-000342.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235139.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235150.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235317.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235346.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235430.png)
+![Img]({{ site.url }}/blogimgs/SC20110905-235445.png)
+![Img]({{ site.url }}/blogimgs/SC20110906-000049.png)
+![Img]({{ site.url }}/blogimgs/SC20110906-000228.png)
+![Img]({{ site.url }}/blogimgs/SC20110906-000342.png)

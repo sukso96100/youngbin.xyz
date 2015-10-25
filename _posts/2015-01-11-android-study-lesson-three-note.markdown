@@ -3,7 +3,7 @@ layout: post
 title: "시온고 안드로이드 스터디 노트 - 3.New Activities And Intents"
 date: "2015-01-11"
 tags: develop development android app study note
-image : /resources/android_study_tshirts.jpg
+image : /blogimgs/android_study_tshirts.jpg
 ---
 
 Lesson 2 에 이어 Lesson 3 노트를 계속 합니다. 이번에는 스터디 맴버들이 Udacity 강의와 함께 보면서 공부 할 수 있도록. 일찍 노트를 작성하게 되었습니다.
@@ -49,7 +49,7 @@ public class WeatherFragment extends Fragment {
 {% endhighlight %}
 
 그리고 Adapter 에서 항목에 해당되는 데이터를 얻어서 Toast 메시지로 표시 해 줍시다. 아래 사진이 Toast 메시지가 나타났을 때 사진입니다. 다들 이미 많이 보셨을 겁니다.
-<img src="/resources/toast_message.png"><br>
+<img src="/blogimgs/toast_message.png"><br>
 {% highlight java %}
 public class WeatherFragment extends Fragment {
 ...
@@ -79,10 +79,10 @@ public class WeatherFragment extends Fragment {
 ## Activity 하나 새로 만들기
 Activity 를 하나 더 만들어 줍시다. 이 Activity 는 더 자세한 날씨 정보를 표시하는대 사용 할 겁니다.
 아래 사진처럼, 패키지 디렉터리를 우클릭해서, 새로운 Activity 를 만들어 주세요. Blank Activity with Fragment 을 선택하여 생성합니다.
-<img src="/resources/create_new_blank_activity_with_fragment.png"><br>
+<img src="/blogimgs/create_new_blank_activity_with_fragment.png"><br>
 이름은 DetailActivity 로 정하고, Hierarchical Parent(계층 부모)는 MainActiity 로 설정하여, 
 DetailActivity 의 상위(또는 부모) Activity 가 MainActivity 가 되도록 합시다.
-<img src="/resources/new_blank_activity_with_fragment.png"><br>
+<img src="/blogimgs/new_blank_activity_with_fragment.png"><br>
 Activity 를 하나 새로 만들었으나. 아직 우리가 이 Activity 를 실행 하고 있지 않습니다. Intent 를 이용해서 한번 실행해 봅시다.
 
 ## Intent

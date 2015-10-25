@@ -3,7 +3,7 @@ layout: post
 title: "라즈베리파이에 Node.js 설치하기"
 date: 2015-07-16
 tags: raspberry-pi linux tutorial tips nodejs
-image: /resources/node_arm.png
+image: /blogimgs/node_arm.png
 ---
 
 라즈베리파이에 Node.js 를 설치해 봅시다. Node.js 로 작성한 앱을 실행하려면 필요하니, 설치해 봅시다.

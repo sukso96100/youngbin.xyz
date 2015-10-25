@@ -26,5 +26,5 @@ https://play.google.com/store/apps/details?id=mobi.cyann.nstools&amp;feature=sea
 <br><br>
 아, YP-GB1 KRKPC펌웨어에서만 됩니다.<br>
 
-![Device Info]({{ site.url }}/resources/SC20120701-181312.png)
-![Device Info]({{ site.url }}/resources/SC20120701-175608.png)
+![Device Info]({{ site.url }}/blogimgs/SC20120701-181312.png)
+![Device Info]({{ site.url }}/blogimgs/SC20120701-175608.png)

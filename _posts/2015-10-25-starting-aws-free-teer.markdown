@@ -14,6 +14,7 @@ tags: aws server tip tutorial note update
 일단은 아마존 웹서비스 프리티어 하면 뭘 무료로 제공하나 봅시다.
 <img src="/blogimgs/aws1.png"><br>
 대략 아래와 같은 사항을 무료로 제공합니다.
+
  - (컴퓨팅) Amazon EC2 : 월 750시간, Windows 및 Linux t2.micro 인스턴스
  - (스토리지) Amazon S3 : 5GB
  - (데이터베이스) Amazone RDS : 마이크로 DB 인스턴스, 월 750시간
@@ -44,3 +45,8 @@ VISA 또는 MasterCard 브랟드의 해외 결제가 가능한 신용카드 또�
 
 가입이 다 끝났네요. "콘솔에 로그인"을 눌러 로그입 합시다. 이제 아마존 프리티어 해택으로 제공되는 것들을 사용 할 수 있습니다. 이 포스트는 여기에서 마치도록 하겠습니다.
 <img src="/blogimgs/aws7.png"><br>
+
+참고자료
+ - [AWS 프리티어](https://aws.amazon.com/ko/free/)
+ - [AWS 요금](https://aws.amazon.com/ko/pricing/?nc2=h_ql)
+ - [AWS 프리티어 FAQ](https://aws.amazon.com/ko/free/faqs/)

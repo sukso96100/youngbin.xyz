@@ -1,7 +1,7 @@
 ---
 layout: post
 date: 2015-10-25
-title: "AWS 프리터어 가입하기"
+title: "AWS 프리티어 가입하기"
 tags: aws server tip tutorial note update
 ---
 

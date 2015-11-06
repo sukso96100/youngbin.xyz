@@ -5,7 +5,7 @@ title: "AWS EC2 인스턴스 생성하기"
 tags: aws server tip tutorial note update
 ---
 
-(AWS 프리티어에 가입하는 내용을 다루는 저번 글에)[{{ "/2015/10/25/starting-aws-free-teer.html" | prepend: site.baseurl }}] 이어,
+[AWS 프리티어에 가입하는 내용을 다루는 저번 글에]({{ "/2015/10/25/starting-aws-free-teer.html" | prepend: site.baseurl }}) 이어,
 이 글에서는 AWS 에서 제공하는 가상서버에 해당되는 EC2 인스턴스를 프리티어를 통해 제공하는 선을 넘지 않는 한도에서 생성해 보도록 합시다.
 
 먼저, AWS 콘솔에 로그인 하세요. 본인의 AWS 계정으로 로그인 하면 됩니다. 그럼 아래 사진처럼, AWS 제품들이 나타납니다.

@@ -56,8 +56,7 @@ sudo docker run hello-world
 {% endhighlight %}
 
 
-## 설정 하기
-### Docker 그룹 만들기.
+## (설정하기) Docker 그룹 만들기.
 Docker 는 TCP 소켓 대신, 유닉스 소켓에 붙어 있습니다. 기본적으로 이 유닉스 소켓은 ```root```사용자의 소유이며,
 다른 사용자들은 ```sudo```를 사용하여 접근할 수 있습니다. Docker 데몬의 경우는 그래서 항상 ```root``` 사용자로 실행됩니다.
 
@@ -73,20 +72,20 @@ sudo usermod -aG docker ubuntu
  docker run hello-world
  {% endhighlight %}
 
- ### 부팅시 Docker 데몬 자동 시작되도록 설정하기.
+## (설정하기) 부팅시 Docker 데몬 자동 시작되도록 설정하기.
 
- 우분투 15.04 이상은, systemd로 서비스를 관리합니다. 아래 명령으로 부팅시 자동시작 되도록 설정합니다.
+우분투 15.04 이상은, systemd로 서비스를 관리합니다. 아래 명령으로 부팅시 자동시작 되도록 설정합니다.
  {% highlight bash %}
 sudo systemctl enable docker
  {% endhighlight %}
  
- 우분투 14.10 이하는, upstart 로 서비스를 관리하는데, 위의 과정에서 설치중 자동으로 설정되므로, 따로 설정하실 필요가 없습니다.
+우분투 14.10 이하는, upstart 로 서비스를 관리하는데, 위의 과정에서 설치중 자동으로 설정되므로, 따로 설정하실 필요가 없습니다.
 
- ---
+---
 
- 이번 포스트는 여기까지 입니다. 아래 링크를 참조하시면 좀 더 도움이 될 겁니다.
+이번 포스트는 여기까지 입니다. 아래 링크를 참조하시면 좀 더 도움이 될 겁니다.
 
- ## 참고 및 추가자료 링크
+## 참고 및 추가자료 링크
  
-  - [What is Docker](https://www.docker.com/what-docker)
-  - [Installation on Ubuntu](https://docs.docker.com/v1.8/installation/ubuntulinux)
+ - [What is Docker](https://www.docker.com/what-docker)
+ - [Installation on Ubuntu](https://docs.docker.com/v1.8/installation/ubuntulinux)

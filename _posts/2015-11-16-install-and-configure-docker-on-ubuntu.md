@@ -12,12 +12,12 @@ tags: aws server docker ubuntu linux tip tutorial note update
 도커(Docker)는, 리눅스 컨테이너 기술을 기반으로, 앱을 배포할 때 필요한 모든 것을 하나의 컨테이너에 담아 OS에 상관없이 앱을 패키징하여 배포할 수 있도록 해 주는 프로그램 입니다. 기존 가상머신을 이용하여 배포를 하는 경우에는, 호스트 OS 위에 가성머신을 올리고, 각 가상머신 마다 게스트 OS와 바이너리 및 라이브러리를 넣어 그 위애 앱 하나씩 올려 배포한다면. 도커의 경우에는, 호스트 OS 위에 바로 도커 엔진이 그 위에 바로 각 앱과 바이너리 및 라이브러리가 포함된 컨테이너가 있는 구조 입니다.
 
 <img src="/blogimgs/vm-diagram.png"><br>
->VM의 구조
->출처 : https://www.docker.com/what-docker
+> VM의 구조
+> 출처 : https://www.docker.com/what-docker
 
 <img src="/blogimgs/docker-diagram.png"><br>
->Docker의 구조
->출처 : https://www.docker.com/what-docker
+> Docker의 구조
+> 출처 : https://www.docker.com/what-docker
 
 ## 설치해 봅시다.
 필자는 EC2 인스턴스에 우분투 서버 14.04LTS 를 돌리므로 이를 기준으로 설명 하겠습니다.
@@ -55,8 +55,8 @@ curl -sSL https://get.docker.com/ | sh
 sudo docker run hello-world
 {% endhighlight %}
 
-## 설정 하기
 
+## 설정 하기
 ### Docker 그룹 만들기.
 Docker 는 TCP 소켓 대신, 유닉스 소켓에 붙어 있습니다. 기본적으로 이 유닉스 소켓은 ```root```사용자의 소유이며,
 다른 사용자들은 ```sudo```를 사용하여 접근할 수 있습니다. Docker 데몬의 경우는 그래서 항상 ```root``` 사용자로 실행됩니다.
@@ -88,5 +88,6 @@ sudo systemctl enable docker
  이번 포스트는 여기까지 입니다. 아래 링크를 참조하시면 좀 더 도움이 될 겁니다.
 
  ## 참고 및 추가자료 링크
+ 
   - [What is Docker](https://www.docker.com/what-docker)
   - [Installation on Ubuntu](https://docs.docker.com/v1.8/installation/ubuntulinux)

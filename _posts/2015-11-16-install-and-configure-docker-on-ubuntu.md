@@ -1,6 +1,6 @@
 ---
 layout: post
-date: 2016-11-16
+date: 2015-11-16
 title: "Ubuntu Server 에 Docker 설치하고 설정하기."
 tags: aws server docker ubuntu linux tip tutorial note update
 ---

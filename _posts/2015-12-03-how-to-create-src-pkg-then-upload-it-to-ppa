@@ -1,9 +1,0 @@
----
-layout: post
-date: 2015-12-03
-title: "소스 패키지 만들어 런치패드 PPA 에 업로드 하기"
-tags: ubuntu linux tip tutorial note update ppa
----
-
-이 포스트에서는 프로그램의 소스코드로부터, 런치패드 PPA 에 업로드 하기 위한 소스 패키지를 만들고, 이를 PPA 에 업로드 하는 방법을 다룹니다.
-

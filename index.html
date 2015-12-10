@@ -1,40 +1,57 @@
----
-layout: default
-title: Home
----
-<style>
-    body{
-        background-color: #ecf0f1
-    }
-</style>
-<div align="center" style="padding-top: 64px;">
-<h1 style="font-size: 4em;">Youngbin Han</h1>
-<p>한영빈의 개인 웹사이트</p>
-    <paper-material z="1" class="main-card">
-    <h3>MAIN MENU</h3>
-        <paper-button onclick="href('/blog/')"><iron-icon icon="subject"></iron-icon> Blog</paper-button>
-        <paper-button onclick="href('/about/')"><iron-icon icon="face"></iron-icon> About</paper-button>
-        <paper-button onclick="href('/portfolio/')"><iron-icon icon="work"></iron-icon> Portfolio</paper-button>
-        <paper-button onclick="href('https://youngbinnet-slack.herokuapp.com/')"><iron-icon icon="question-answer"></iron-icon> Chat(Slack)</paper-button>
-    </paper-material>
-    <paper-material z="1" class="main-card">
-    <h3>LINKS</h3>
-            <paper-button onclick="href('https://www.facebook.com/hanyoungbin')"><i class="fa fa-facebook fa-lg"></i> Facebook</paper-button>
-            <paper-button onclick="href('https://google.com/+한영빈96')"><i class="fa fa-google-plus fa-lg"></i> Google Plus</paper-button>
-            <paper-button onclick="href('https://twitter.com/sukso96100')"><i class="fa fa-twitter fa-lg"></i> Twitter</paper-button>
-            <paper-button onclick="href('https://github.com/sukso96100')"><i class="fa fa-github fa-lg"></i> GitHub</paper-button>
-            <paper-button onclick="href('https://play.google.com/store/apps/dev?id=8834426665679982263')"><iron-icon icon="android"></iron-icon> Google Play</paper-button>
-    </paper-material>
-     <paper-material z="1" class="main-card">
-    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- 블로그 포스트 광고 -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7051197638651710"
-     data-ad-slot="3015305584"
-     data-ad-format="auto"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-    </paper-material>
-<script src="{{ "/js/common.js" | prepend: site.baseurl }}"></script>
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <title>YoungbinLab</title>
+    <meta name="description" content="Youngbin Han's Laboratory">
+
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+      <link rel="stylesheet" href="css/simplegrid.css">
+    <link rel="stylesheet" href="iconfont/material-icons.css">
+
+</head>
+<body>
+<div align="center">
+  <img src="img/youngbinlab.svg" width="250px" height="250px">
+  <h1>YoungbinLab</h1>
+  <h4>Youngbin Han's Laboratory</h4>
+
+
+
+  <div class="grid grid-pad">
+      <div class="col-1-3">
+         <div class="content">
+           <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">subject</i>
+</button>
+             <h4>Blog</h4>
+         </div>
+      </div>
+      <div class="col-1-3">
+         <div class="content">
+           <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">account_circle</i>
+</button>
+             <h4>About</h4>
+         </div>
+      </div>
+      <div class="col-1-3">
+         <div class="content">
+           <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">
+  <i class="material-icons">work</i>
+</button>
+             <h4>Portfolio</h4>
+         </div>
+      </div>
+  </div>
+
+</div>
+</div>
+<script type="text/javascript" src="js/material.min.js"></script>
+</body>
+</html>

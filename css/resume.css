@@ -1,0 +1,9 @@
+body{
+  padding-top: 32px;
+  background: black;
+}
+
+.resumecard{
+  padding: 16px;
+  max-width: 1000px;
+}

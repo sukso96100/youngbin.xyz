@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Donate to Youngbin Han | YoungbinLab</title>
+    <meta name="description" content="Youngbin Han's Laboratory">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.1/js/all.js"></script>
+  </head>
+  <body>
+    <!doctype html>
+    <html>
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>YoungbinLab</title>
+        <meta name="description" content="Youngbin Han's Laboratory">
+
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+      </head>
+      <body>
+        <header class="header">
+          <h1>Donate to<br />Youngbin Han</h1>
+          <p>
+            You can support me and my works with various method.<br />
+            If you want to support by making donations, please choose method from below.
+          </p>
+        </header>
+        <div class="content">
+          <div class="button" onclick="location.href='/'">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            Back to YoungbinLab
+          </div>
+          <div class="button"
+            onclick="document.getElementById('bank-transfer').hidden = !document.getElementById('bank-transfer').hidden">
+            <i class="fas fa-money-bill-alt"></i>
+            Bank Transfer
+          </div>
+          <div class="details" id="bank-transfer" hidden="true">
+            <h2><i class="fas fa-money-bill-alt"></i> Bank Transfer</h2>
+            <p>
+              Send some money to the following bank account.
+            </p>
+            <ul align="start">
+              <li>
+                BANK NAME : INDUSTRIAL BANK OF KOREA
+              </li>
+              <li>
+                SWIFT CODE : IBKOKRSE
+              </li>
+              <li>
+                BANK ACCOUNT NUMBER : 276-033561-01-021
+              </li>
+              <li>
+                BANK ACCOUNT OWNER : 한영빈
+              </li>
+            </ul>
+          </div>
+          <div class="button"
+            onclick="location.href='https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JAAHYJTBY9GAJ'">
+            <i class="fab fa-paypal"></i>
+            PayPal
+          </div>
+          <div class="button"
+            onclick="location.href='https://flattr.com/profile/sukso96100'">
+            <i class="fas fa-retweet"></i>
+            Flattr
+          </div>
+          <div class="button"
+            onclick="document.getElementById('bitcoin').hidden = !document.getElementById('bitcoin').hidden">
+            <i class="fab fa-btc"></i>
+            Bitcoin
+          </div>
+          <div class="details" id="bitcoin" hidden="true">
+            <h2><i class="fab fa-btc"></i> Bitcoin</h2>
+            <img src="img/walletaddr.png" />
+            <ul align="start">
+              <li>
+                Send some bitcoins to the following bitcoin wallet.
+              </li>
+              <li>
+                Bitcoin Wallet Address : 3AidnXi7h36pgwRmvUBjoLd7sp5aAbGq4B
+              </li>
+            </ul>
+          </div>
+          <div class="button"
+            onclick="document.getElementById('monero').hidden = !document.getElementById('monero').hidden">
+            <i class="fab fa-monero"></i>
+            Web Monero Mining
+          </div>
+          <div class="details" id="monero" hidden="true">
+            <h2><i class="fab fa-monero"></i></i> Web Monero Mining</h2>
+
+            <ul align="start">
+              <li>
+                You can mine some monero (a kind of cryptocurrency) for me by starting the web miner from below.
+              </li>
+              <li>
+                Running miner will use your CPU resources. You can control resource usage from the web miner ui.
+              </li>
+              <li>
+                Don't run the miner on your mobile devices. It will drain the battery of your device.
+              </li>
+            </ul>
+            <script src="https://authedmine.com/lib/simple-ui.min.js" async></script>
+            <div class="coinhive-miner"
+            	style="width: 100%; height: 300px;"
+            	data-key="jXepLL4Yglrjb4Lo0aftL9PJzVeA0pba">
+            	<em>Loading Web Monero Miner...<br />
+                Please turn Ad Blocker off if you can't see miner interface.</em>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>

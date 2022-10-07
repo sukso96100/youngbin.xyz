@@ -1,0 +1,69 @@
+{{ define "main" }}
+<main class="container mx-auto px-10 py-10">
+
+    <div class="avatar">
+        <div class="w-24 rounded-full ">
+            <img src="{{.Site.Params.profileImage}}" style="margin:auto; border-radius: 50%; max-width: 10rem;" />
+        </div>
+    </div>
+    <div class="navbar bg-base-100 py-2">
+        <div class="navbar-start">
+        </div>
+        <div class="navbar-center">
+            <a class="btn btn-ghost normal-case text-xl" href="{{ .Site.BaseURL  | relURL }}">{{.Site.Title}}</a>
+        </div>
+        <div class="navbar-end">
+        </div>
+    </div>
+    <div style="display: none;" class="w-full" id="search">
+        <input type="text" placeholder="Search" class="input input-bordered w-full" id="searchinput" />
+        <ul class="menu bg-base-100 w-full p-2 rounded-box" id="searchresults">
+        </ul>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 grid-flow-row-dense gap-4 py-4">
+        <div class="card w-full bg-base-100 shadow-xl h-100">
+            <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}">
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+
+        <div class="card w-full bg-base-100 shadow-xl h-100">
+            <ul class="menu bg-base-100 w-56 p-2 rounded-box">
+                <li>
+                    <a href="{{.Site.Params.social.github}}">
+                        Github
+                    </a>
+                </li>
+                <li>
+                    <a href="{{.Site.Params.social.facebook}}">
+                        Facebook
+                    </a>
+                </li>
+                <li>
+                    <a href="{{.Site.Params.social.twitter}}">
+                        Twitter
+                    </a>
+                </li>
+                <li>
+                    <a href="{{.Site.Params.social.instagram}}">
+                        Instagram
+                    </a>
+                </li>
+                <li>
+                    <a href="{{.Site.Params.social.linkedin}}">
+                        LinkedIn
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</main>
+{{ end }}

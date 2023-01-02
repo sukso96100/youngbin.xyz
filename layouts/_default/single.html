@@ -7,7 +7,6 @@
     <div class="hero-content text-center {{if .Params.image}}text-neutral-content{{end}}">
       <div class="max-w-2xl">
         <h1 class="mb-5 text-5xl font-bold">{{ .Title }}</h1>
-        <p class="mb-5">{{.Date.Format "2006-01-02"}}</p>
         {{ range .Params.tags }}
         <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">
           <span class="badge">{{ . }}</span>

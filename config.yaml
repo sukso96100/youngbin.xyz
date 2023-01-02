@@ -26,7 +26,7 @@ menu:
       weight: 20
     - identifier: meeting
       name: 영빈님과 약속 잡기 Book a meeting
-      url: /meeting
+      url: /meeting/
       weight: 30
     - identifier: contact
       name: 이메일로 연락하기 Contact with Email
@@ -34,7 +34,7 @@ menu:
       weight: 40
     - identifier: donate
       name: 후원하기 Donate
-      url: /donate
+      url: /donate/
       weight: 40
 
 outputs: 

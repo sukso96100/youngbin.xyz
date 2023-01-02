@@ -21,20 +21,20 @@ params:
 menu:
   main:
     - identifier: blog
-      name: 블로그 방문하기
+      name: 블로그 방문하기 Visit blog
       url: https://blog.youngbin.xyz
       weight: 20
     - identifier: meeting
-      name: 영빈님과 약속 잡기
+      name: 영빈님과 약속 잡기 Book a meeting
       url: /meeting
       weight: 30
     - identifier: contact
-      name: 이메일로 연락하기
+      name: 이메일로 연락하기 Contact with Email
       url: mailto:me@youngbin.xyz
       weight: 40
     - identifier: donate
-      name: 후원하기 (PayPal)
-      url: https://paypal.me/YoungbinHan
+      name: 후원하기 Donate
+      url: /donate
       weight: 40
 
 outputs: 

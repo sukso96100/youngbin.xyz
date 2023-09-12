@@ -17,7 +17,7 @@ params:
     instagram: 'https://www.instagram.com/hanyoungbin'
     linkedin: 'https://www.linkedin.com/in/youngbin-han/'
     github: 'https://github.com/sukso96100'
-    calcom: youngbin
+    googlecal: AcZssZ28AT5-oP3gK25wzbIryhuI4LqRwAF2NB0g2z_x_r6OOoa9xPWApPgIygk7fQNLlByjdc7nKV3L
 menu:
   main:
     - identifier: blog

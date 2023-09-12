@@ -2,7 +2,7 @@
 <main class="container mx-auto px-4 py-10">
     {{- partial "header.html" . -}}
     <!-- Google Calendar Appointment Scheduling begin -->
-<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ28AT5-oP3gK25wzbIryhuI4LqRwAF2NB0g2z_x_r6OOoa9xPWApPgIygk7fQNLlByjdc7nKV3L?gv=true"
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/{{.Site.Params.googlecal}}?gv=true"
     style="border: 0" width="100%" height="600" frameborder="0"></iframe>
 <!-- end Google Calendar Appointment Scheduling -->
 </main>

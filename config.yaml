@@ -26,7 +26,7 @@ menu:
       weight: 20
     - identifier: meeting
       name: 영빈님과 약속 잡기 Book a meeting
-      url: /meeting/
+      url: https://cal.com/youngbin
       weight: 30
     - identifier: contact
       name: 이메일로 연락하기 Contact with Email

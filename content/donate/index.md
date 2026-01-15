@@ -8,5 +8,6 @@ title: 후원하기
 If you liked my blog posting or my projects on GitHub, Why don't you donate me a bit of money so that i can continue?   
 Frequently read my blog postings? Turning off ad block software is also helpful for me! Ads on my blog only displayed once at the end of each postings and it does not really bothers readers.
 
+- [GitHub Sponsors로 후원하기 / Donate with GitHub Sponsors](https://github.com/sponsors/sukso96100)
 - [Paypal로 후원하기 / Donate with Paypal](https://paypal.me/YoungbinHan)
 - [Buy me a coffee로 후원하기 / Donate with Buy me a coffee](https://www.buymeacoffee.com/sukso96100)
